@@ -1,0 +1,20 @@
+extends ../../../../../../layout/forms/formQuize/formQuize
+
+block quize__wrapper1
+  div(class=classSliderMainSlide)
+    div(class=classSliderMainSlideWrapper)
+      div(class=classSliderMainSlideInner)
+        block quize__title-1
+          h3(class=classTitleThird + margin__bottom__2rem) У вас уже есть сайт?
+          block quize__1
+            div(class=inputsWrapper)
+              div(class=inputWrapper)
+                input(class=inputRadioBtn type=typeRadio id=adressWebsiteNope name='adressWebsite'  value="nope")
+                label(class=label for=adressWebsiteNope) нет
+              div(class=inputWrapper)
+                textarea(class='' type='text' id=adressWebsite name='adressWebsite' value="yes")
+                label(class=label for=price2)  укажите адрес вашего сайта
+
+              p(class=quzieParagraph) 
+                | ваш ответ поможет нам выстроить наиболее эфективное сотрудничество,
+                | заметно ускорит процесс решения ваших запросов.

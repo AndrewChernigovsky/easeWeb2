@@ -1,0 +1,21 @@
+extends ../layout/main.pug
+include ../modules/mixins/mixins
+
+block variables
+	include ../abstraction/variables
+
+block head 
+	include ../partials/head/head
+
+block title
+	each title in titles
+		if title == indexTitles
+			title= title.index
+block content
+	div(class='overlay')
+	button(type=button class="btnclose" id='btnclose')
+		span(class='spanbtnclose')
+		span(class='spanbtnclose')
+	include ../sections/header/header
+	main(class=main)
+		include ../sections/intro-section/intro-section

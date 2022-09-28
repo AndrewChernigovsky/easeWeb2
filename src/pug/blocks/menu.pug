@@ -1,0 +1,12 @@
+nav(class=menuClasses[0])
+    div(class=menuClasses[1])
+        include logo
+    div(class=menuClasses[2])
+        each ul in menuClasses
+            if ul === navUlClasses
+                ul(class=ul)
+                    for val in menuItems
+                        li(class=menuClasses[4])
+                            +aLink(val.url, menuClasses[5], val.title)
+            
+        button(class=menuButton, alt='Заказать звонок', id=menubtn) Заказать звонок

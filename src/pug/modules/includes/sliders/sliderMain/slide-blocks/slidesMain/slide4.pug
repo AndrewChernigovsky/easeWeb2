@@ -1,0 +1,20 @@
+extends ../../../../../../layout/forms/formQuize/formQuize
+
+block quize__wrapper1
+    div(class=classSliderMainSlide)
+        div(class=classSliderMainSlideWrapper)
+            div(class=classSliderMainSlideInner)
+                block quize__title-1
+                    h3(class=classTitleThird + margin__bottom__2rem) Вы знаете свою ЦА и её боль?
+                    block quize__1
+                       div(class=inputsWrapper)
+                        div(class=inputWrapper)
+                            input(class=inputRadioBtn type=typeRadio id=auditory1 name='auditory1'  value="yes" checked)
+                            label(class=label for=auditory1) да
+                        div(class=inputWrapper)
+                            input(class=inputRadioBtn type=typeRadio id=auditory2 name='auditory1' value="no")
+                            label(class=label for=auditory2)  нет
+                        div(class=inputWrapper)
+                            input(class=inputRadioBtn type=typeRadio id=auditory3 name='auditory1' value="I-need-help")
+                            label(class=label for=auditory3)  в поиске, нужна помощь
+                        p(class=quzieParagraph) Знание своей целевой аудитории значительно повышает конверсию продаж

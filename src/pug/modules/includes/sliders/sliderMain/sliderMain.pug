@@ -1,0 +1,22 @@
+extends ../../../../layout/sliders/sliderMain/sliderMain
+
+block form
+	form(id='formMainSlider')
+		block mainWrapper
+			div(class=classSliderMain id=swiperMainID)
+				block wrapper
+					div(class=classSliderMainWrapper)
+						block includes
+							include slide-blocks/slidesMain/slide2
+							include slide-blocks/slidesMain/slide3
+							include slide-blocks/slidesMain/slide4
+							include slide-blocks/slidesMain/slide5
+
+						block pagination
+							div(class=swiperPagination)
+						block navigation
+							div(class=swiperButtonPrev)
+							div(class=swiperButtonNext)
+						block scrollbar
+							div(class=swiperScrollbar)
+

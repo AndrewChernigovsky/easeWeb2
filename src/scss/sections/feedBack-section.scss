@@ -1,0 +1,70 @@
+.feedBackSection {
+    background: linear-gradient(45deg, $gray, $gray1);
+    position: relative;
+
+    .feedBackSection-titleH2 {
+        border-bottom: 1px solid $white;
+        padding-bottom: 1rem;
+    }
+
+    .feedBackSection-paraghraph {
+        margin-bottom: 5px;
+    }
+
+    .feedBackSection-p__price {
+        position: absolute;
+        bottom: 3rem;
+        padding: 0.5rem 0.5rem 0.5rem 0;
+        border-bottom: 1px solid $white;
+    }
+
+    &__wrapper {
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+
+        @include media(">=tablet") {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        padding-bottom: 90px;
+
+        button {
+            color: $white;
+            font-size: 2rem;
+            position: absolute;
+            bottom: 0;
+            transition: $base-transition;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+
+        .title__h3 {
+            color: $orange;
+        }
+    }
+    
+    &__inner-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem 0 2rem 0;
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+        svg {
+            margin-left: 1rem;
+            width: 50px;
+            height: 50px;
+            fill: $white;
+        }
+    }
+}

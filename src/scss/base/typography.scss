@@ -1,0 +1,146 @@
+.main-title {
+  font-size: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+}
+
+.base-text {
+  font-size: 1.6rem;
+}
+
+.title-third {
+  font-size: 2rem;
+}
+
+.title-default {
+  margin-bottom: 2rem;
+}
+
+.title__h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+
+  @include media(">=phone") {
+    font-size: 3rem;
+  }
+
+  @include media('>=tablet') {
+    font-size: 4.2rem;
+    margin-bottom: 2rem;
+  }
+  @include media('>=desktop') {
+    font-size: 6.6rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.title__h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+
+  @include media('>=tablet') {
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+  }
+  @include media('>=desktop') {
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.title__h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+
+  @include media('>=tablet') {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  @include media('>=desktop') {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.quzieParagraph {
+  font-size: 1.2rem;
+}
+
+.paragraph-base {
+  font-size: 2.4rem;
+}
+
+.base-link {
+  cursor: pointer;
+  transition: $base-transition;
+
+  &:hover {
+    color: $orange;
+  }
+  &:visited {
+    color: $orange;
+  }
+  &:active {
+    color: $orange;
+    border-bottom: 1px solid $orange;
+  }
+}
+
+.color-w{
+  color: $white;
+}
+
+.introBlock-titleH1 {
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px $black;
+}
+
+.introBlock-paraghraph {
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px $black;
+  font-size: 2rem;
+
+  @include media(">=tablet") { 
+    font-size: 4rem;
+  }
+}
+
+.introBlock-paraghraphMin {
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px $black;
+  font-size: 1.5rem;
+  overflow: hidden;
+  
+  
+
+  @include media('>=desktop') {
+    font-size: 2.4rem;
+    width: 62ch;
+    animation: cursor 0.75s step-end infinite, printed_text 8s steps(62);
+    animation-iteration-count: infinite;
+    white-space: nowrap;
+    border-right: 3px solid $white;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    border-color: $white;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+
+  100% {
+    border-color: $white;
+  }
+}
+
+@keyframes printed_text {
+  from {
+    width: 0;
+  }
+}

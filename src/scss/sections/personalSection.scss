@@ -1,0 +1,63 @@
+.personalSection {
+    background-color: $white;
+    color: $black;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 500px;
+        height: 500px;
+        background: url('../images/decor/photo.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        top: 0;
+        right: -200px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        background-color: rgba($white, 0.6);
+
+        @include media(">=tablet") { 
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__inner {
+        padding: 1rem 1rem 0 1rem;
+        border-radius: 5px;
+
+        @include media(">=tablet") { 
+            padding: 1rem 1rem 1rem 1rem;
+        }
+    }
+
+    &__inner-image {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 0 1rem 0;
+
+        @include media(">=tablet") { 
+            margin: 2rem 0 2rem 0;
+        }
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+        svg {
+            margin-left: 1rem;
+            width: 25px;
+            height: 25px;
+            fill: $black;
+        }
+    }
+}

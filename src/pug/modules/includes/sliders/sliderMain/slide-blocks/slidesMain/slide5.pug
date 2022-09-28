@@ -1,0 +1,24 @@
+extends ../../../../../../layout/forms/formQuize/formQuize
+
+block quize__wrapper1
+    div(class=classSliderMainSlide)
+        div(class=classSliderMainSlideWrapper)
+            div(class=classSliderMainSlideInner)
+                block quize__title-1
+                    h3(class=classTitleThird + margin__bottom__2rem) Какую цель вы хотите реализовать от нашего сотрудничества в первую очередь?
+                    block quize__1
+                       div(class=inputsWrapper)
+                        div(class=inputWrapper)
+                            input(class=inputRadioBtn type=typeRadio id=target1 name='target'  value="sellers UP" checked)
+                            label(class=label for=target1) повысить продажи
+                        div(class=inputWrapper)
+                            input(class=inputRadioBtn type=typeRadio id=target2 name='target' value="brand and UP reputation, influence")
+                            label(class=label for=target2)  развить бренд и повысить репутацию, узнаваемость
+                        div(class=inputWrapper)
+                            input(class=inputRadioBtn type=typeRadio id=target3 name='target' value="UP loyality aditory, expert information")
+                            label(class=label for=target3)  разогревать и просвещать холодную аудиторию для дальнейших продаж
+                        div(class=inputWrapper)
+                            input(class=inputRadioBtn type=typeRadio id=target4 name='target' value="all together")
+                            label(class=label for=target4)  всё вместе
+                        p(class=quzieParagraph) Цена влияет на время создания и функционал сайта
+                        button(class=buttonFormSliderMain type=submit id=buttonFormSliderMain)

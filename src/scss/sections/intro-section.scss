@@ -1,0 +1,31 @@
+.intro-section {
+    min-width: 100%;
+    min-height: 150px;
+    padding-top: 2rem;
+    background-color: $white;
+
+    @include media(">=tablet") { 
+        min-height: 250px;
+    }
+
+    .main-title {
+        margin: 0 auto;
+        text-align: center;
+
+        @include media(">=tablet") { 
+            margin: 0;
+            text-align: left;
+        }
+    }
+}
+
+.class-offer {
+    background-color: $white;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+
+    img {
+        max-height: 500px;
+    }
+}

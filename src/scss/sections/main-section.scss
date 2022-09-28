@@ -1,0 +1,15 @@
+.main {
+    background: linear-gradient($blue3, $black);
+    background-size: cover;
+}
+
+.main-section {
+    min-width: 100%;
+    min-height: 150px;
+    padding: 2rem;
+
+    @include media(">=tablet") { 
+        min-height: 250px;
+        padding: 2.5rem;
+    }
+}

@@ -1,0 +1,11 @@
+extends ../../../../../../layout/forms/formQuize/formQuize
+
+block quize__wrapper1
+    div(class=classSliderMainSlide)
+        div(class=classSliderMainSlideWrapper)
+            div(class=classSliderMainSlideInner)
+                block quize__title-1
+                    each val in sectionTitleTexts
+                        +h2(sectionTitleClass, val.pageIndex__sectionIntro_ParagraphTitle)
+                        +h2(sectionTitleClass, val.pageIndex__sectionIntro_ParagraphThirdTitle)
+                        button(type=button class=classButton id='btnOffer') пройти

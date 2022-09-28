@@ -1,0 +1,268 @@
+.header {
+  background-color: $white;
+  width: 100%;
+  border-bottom: 2px solid $white;
+
+  &__wrapper {
+    @extend %d-flex-center-between;
+    min-width: 100%;
+    background-color: transparent;
+
+    @include media(">=desktop") {
+      justify-content: center;
+    }
+  }
+}
+
+.nav {
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding: 83px 16px 16px 16px;
+  z-index: 5;
+  transition: $base-transition;
+  transform: translateX(-110%);
+  background-color: $white;
+  background-image: url('../../images/decor/bg-menu2.jpg');
+  background-size: cover;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $black;
+    opacity: 0.3;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+
+    @include media(">=desktop") {
+      display: none;
+    }
+  }
+
+  @include media(">=desktop") {
+    display: flex;
+    justify-content: space-between;
+    position: static;
+    background-color: transparent;
+    color: $white;
+    transform: translateX(0);
+    left: 0;
+    padding: 2rem 1.3rem;
+    width: 100%;
+    background-image: none;
+  }
+
+  @include media(">=widescreen-lg") {
+    padding: 2rem 7.3rem;
+  }
+
+  &.active {
+    transform: translateX(0);
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin-left: 0;
+    z-index: 89;
+  }
+
+  &__list {
+    font-size: 16px;
+    line-height: 2;
+    @extend %d-flex-column;
+
+    @include media(">=desktop") {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    & + & {
+      margin-top: 15px;
+      @include media(">=desktop") {
+        margin-left: 15px;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.logo {
+  position: relative;
+  z-index: 6;
+  width: 100px;
+  margin-right: 2rem;
+
+  a {
+    width: 75px;
+    height: 20px;
+  }
+}
+
+.burger {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 90;
+  @extend %d-flex-column;
+  justify-content: center;
+  align-items: center;
+  @include media(">=desktop") {
+    display: none;
+  }
+
+  &.active {
+    span {
+      position: absolute;
+      &:nth-child(1) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+
+  span {
+    width: 80%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $black;
+    transition: $base-transition;
+
+    &:nth-child(1) {
+      margin-bottom: 4px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 4px;
+    }
+  }
+}
+
+.menu {
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 10px;
+
+    @include media(">=desktop") { 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+  }
+
+  &__list {
+    margin-bottom: 4rem;
+
+    @include media(">=desktop") { 
+      justify-content: flex-start;
+      margin-right: 3.9rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav-item {
+    @include media(">=desktop") { 
+      margin-left: 2rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &:last-of-type {
+      font-family: 'Montserrat-Bold';
+      margin-left: 0;
+
+      @include media(">=desktop") {
+        margin-left: 10.9rem;
+      }
+    }
+  }
+
+  &__nav-link {
+    color: $black;
+    font-size: 2.4rem;
+
+    &:visited {
+      color: $white;
+    }
+
+    &:hover {
+      color: $orange;
+      transition: $base-transition;
+    }
+
+    &:active {
+      color: $white;
+    }
+  }
+
+  .menuButton {
+    color: $white;
+    font-size: 2.4rem;
+    background-color: $black;
+    font-weight: 700;
+    transition: $base-transition;
+    border-radius: 200px;
+    min-height: 70px;
+    padding: 0.5rem 2.3rem;
+
+    @include media(">=desktop") { 
+      padding: 0.5rem 2.3rem;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.line-menu {
+  border-color: $black;
+  position: relative;
+  display: none;
+  
+  @include media(">=desktop") { 
+    display: block;
+  }
+
+  &::before, &::after {
+    @extend %pseudo;
+    width: 30px;
+    height: 1px;
+    background-color: $black;
+    top: -15px;
+    transform: rotate(90deg);
+  }
+
+  &::before{
+    left: -15px;
+  }
+
+  &::after {
+    right: -15px;
+  }
+}

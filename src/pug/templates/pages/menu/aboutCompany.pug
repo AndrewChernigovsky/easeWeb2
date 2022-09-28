@@ -1,0 +1,27 @@
+doctype html
+block variables
+    include ../../../abstraction/variables
+    include ../../../modules/mixins/mixins
+    -   let innerPage= true
+    -   let swiperVar = 0
+    -   let srcVal = 0
+
+html(lang="en")
+    block head
+    
+    body 
+        include ../../../layout/header
+        block content
+            //- include ../../../../modules/includes/sliders/sliderMain
+        block footer
+            include ../../../layout/footer
+        block scripts
+        include ../../../partials/scripts/common
+
+            if (mainPage)
+                h3 sexes
+                h1 3
+            else if (innerPage)
+
+            else
+                h2 eseees22
