@@ -1,31 +1,144 @@
 .intro-section {
-    min-width: 100%;
-    min-height: 150px;
-    padding-top: 2rem;
-    background-color: $white;
+    &__wrapper {
 
-    @include media(">=tablet") { 
-        min-height: 250px;
     }
+    
+    &__inner {
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
 
-    .main-title {
-        margin: 0 auto;
-        text-align: center;
-
-        @include media(">=tablet") { 
-            margin: 0;
-            text-align: left;
+        @include media(">=desktop") {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
-}
 
-.class-offer {
-    background-color: $white;
-    min-width: 100%;
-    min-height: 100%;
-    background-size: cover;
+    &__title {
+        font-family: $SyncopateBold;
 
-    img {
-        max-height: 500px;
+        @include media(">=phone") {
+            margin-bottom: 20rem;
+        }
+
+        span {
+            text-transform: uppercase;
+        }
+    }
+
+    &__h1-span {
+        font-family: $MontserratBold;
+
+        &:last-of-type {
+            display: none;
+            transition: $base-transition;
+        }
+    }
+
+    &__form-wrapper {
+        display: grid;
+        align-items: left;
+        max-width: 391px;
+        gap: 2rem;
+
+        .introButton {
+            font-family: $MontserratBold;
+            font-size: 2.4rem;
+            border: 1px solid $black;
+            background-color: $black;
+            padding: 1rem;
+            height: 70px;
+            max-width: 320px;
+
+            @include media(">=phone") {
+                max-width: 391px;
+                padding: 1rem 2.8rem 1rem 2.1rem;
+            }
+    
+            @include media(">=tablet") {
+                max-width: 391px;
+                padding: 2rem 3.5rem 2rem 5.1rem;
+            }
+    
+            &:hover {
+                @extend %hoverButton;
+            }
+
+            &:focus {
+                @extend %hoverButton;
+             }
+        }
+    }
+
+    &__form-inner {
+        display: grid;
+        align-items: left;
+        gap: 2rem;
+        max-width: min-content;
+
+        @include media(">=phone") {
+
+        }
+
+        input {
+            font-size: 2.4rem;
+            font-family: $Montserrat;
+            border: 2px solid $black;
+            height: 70px;
+            position: relative;
+        }
+    }
+
+    &__image-wrapper {
+        position: relative;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        @include media(">=phone") {
+            height: 300px;
+        }
+
+        @include media(">=tablet") {
+            height: 400px;
+        }
+
+        @include media(">=desktop") {
+            height: 500px;
+            flex-basis: 50%;
+        }
+    }
+
+    &__image {
+        background-color: $red;
+        object-fit: cover;
+        position: absolute;
+        height: inherit;
+        z-index: -1;
+        top: -505px;
+        left: 140px;
+
+        @include media(">=phone") {
+            top: -365px;
+            left: 288px;
+        }
+
+        @include media(">=tablet") {
+            top: -365px;
+            left: 288px;
+        }
+
+        @include media(">=desktop") {
+            top: -200px;
+            left: -50px;
+        }
+        
+        @include media(">=widescreen-lg") {
+            top: -240px;
+            left: -100px;
+        }
     }
 }

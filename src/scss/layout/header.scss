@@ -2,6 +2,16 @@
   background-color: $white;
   width: 100%;
   border-bottom: 2px solid $white;
+  margin-bottom: 1.8rem;
+
+  @include media(">=desktop") {
+    margin-bottom: 4.8rem;
+  }
+
+  @include media(">=widescreen-lg") {
+    margin-bottom: 7.8rem;
+  }
+
 
   &__wrapper {
     @extend %d-flex-center-between;
@@ -29,6 +39,19 @@
   background-image: url('../../images/decor/bg-menu2.jpg');
   background-size: cover;
 
+  @include media(">=desktop") {
+    display: flex;
+    justify-content: space-between;
+    position: static;
+    background-color: transparent;
+    color: $white;
+    transform: translateX(0);
+    left: 0;
+    padding: 2rem 1.3rem;
+    width: 100%;
+    background-image: none;
+  }
+
   &::after {
     content: '';
     display: block;
@@ -46,22 +69,6 @@
     }
   }
 
-  @include media(">=desktop") {
-    display: flex;
-    justify-content: space-between;
-    position: static;
-    background-color: transparent;
-    color: $white;
-    transform: translateX(0);
-    left: 0;
-    padding: 2rem 1.3rem;
-    width: 100%;
-    background-image: none;
-  }
-
-  @include media(">=widescreen-lg") {
-    padding: 2rem 7.3rem;
-  }
 
   &.active {
     transform: translateX(0);
@@ -98,6 +105,7 @@
   z-index: 6;
   width: 100px;
   margin-right: 2rem;
+  margin-left: -1rem;
 
   a {
     width: 75px;
@@ -229,13 +237,18 @@
     border-radius: 200px;
     min-height: 70px;
     padding: 0.5rem 2.3rem;
+    border: 2px solid $black;
 
     @include media(">=desktop") { 
       padding: 0.5rem 2.3rem;
     }
 
     &:hover {
-      color: $orange;
+      @extend %hoverButton;
+    }
+
+    &:focus {
+      @extend %hoverButton;
     }
   }
 }
@@ -244,9 +257,19 @@
   border-color: $black;
   position: relative;
   display: none;
+  max-width: calc(100% - 60px);
+  margin-top: -1.8rem;
+  margin-bottom: 1.8rem;
   
-  @include media(">=desktop") { 
+  @include media(">=desktop") {
     display: block;
+    margin-top: -4.8rem;
+    margin-bottom: 4.8rem;
+  }
+
+  @include media(">=widescreen-lg") {
+    margin-top: -7.8rem;
+    margin-bottom: 7.8rem;
   }
 
   &::before, &::after {

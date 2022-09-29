@@ -1,0 +1,47 @@
+.helpers-section {
+    &__wrapper {
+
+    }
+    
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: $SyncopateBold;
+
+        span:first-of-type {
+            text-transform: uppercase;
+        }
+    }
+
+    &__h2-span {
+        font-family: $MazzardH;
+
+        &:last-of-type {
+            transition: $base-transition;
+        }
+    }
+
+    &__image-wrapper {
+        position: relative;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 50%;
+    }
+
+    &__image {
+        background-color: $red;
+        object-fit: cover;
+        position: absolute;
+        top: -240px;
+        left: -100px;
+        width: 100%;
+        height: inherit;
+        z-index: -1;
+    }
+}

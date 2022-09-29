@@ -1,14 +1,13 @@
 extends ../../layout/header.pug
 
 block header
-  header(class=header)
-    block container
-      div(class=container)
-        block headerWrapper
-          div(class=headerWrapper)
-            include ../../blocks/menu.pug
-          hr(class=classmenuLine)
-          button(type=typeButton class=(burger + ' ' + jsBurgerOpen))
-            span(class=burgerSpan)
-            span(class=burgerSpan)
-            span(class=burgerSpan)
+	header(class=header)
+		block container
+			div(class=container)
+				block headerWrapper
+					div(class=headerWrapper)
+						include ../../blocks/menu.pug
+			button(type=typeButton class=(burger + ' ' + jsBurgerOpen))
+				span(class=burgerSpan)
+				span(class=burgerSpan)
+				span(class=burgerSpan)

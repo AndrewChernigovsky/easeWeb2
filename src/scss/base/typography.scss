@@ -34,6 +34,9 @@
     font-size: 6.6rem;
     margin-bottom: 3rem;
   }
+  @include media('>=widescreen-lg') {
+    font-size: 9.6rem;
+  }
 }
 
 .title__h2 {
@@ -88,59 +91,10 @@
   }
 }
 
-.color-w{
+.color-white {
   color: $white;
 }
 
-.introBlock-titleH1 {
-  text-transform: uppercase;
-  text-shadow: 1px 1px 1px $black;
-}
-
-.introBlock-paraghraph {
-  text-transform: uppercase;
-  text-shadow: 1px 1px 1px $black;
-  font-size: 2rem;
-
-  @include media(">=tablet") { 
-    font-size: 4rem;
-  }
-}
-
-.introBlock-paraghraphMin {
-  text-transform: uppercase;
-  text-shadow: 1px 1px 1px $black;
-  font-size: 1.5rem;
-  overflow: hidden;
-  
-  
-
-  @include media('>=desktop') {
-    font-size: 2.4rem;
-    width: 62ch;
-    animation: cursor 0.75s step-end infinite, printed_text 8s steps(62);
-    animation-iteration-count: infinite;
-    white-space: nowrap;
-    border-right: 3px solid $white;
-  }
-}
-
-@keyframes cursor {
-  0% {
-    border-color: $white;
-  }
-
-  50% {
-    border-color: transparent;
-  }
-
-  100% {
-    border-color: $white;
-  }
-}
-
-@keyframes printed_text {
-  from {
-    width: 0;
-  }
+.color-black {
+  color: $black;
 }

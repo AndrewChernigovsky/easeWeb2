@@ -26,7 +26,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1520px;
   padding: 0 2rem;
   margin: 0 auto;
 }
@@ -41,11 +41,6 @@ body {
   background-color: rgba(0, 0, 0, 0.75);
   border-radius: 10px;
 }
-
-// Media
-// @include media(">=desktop") {
-
-// }
 
 img {
   content-visibility: auto;

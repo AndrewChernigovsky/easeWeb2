@@ -295,3 +295,9 @@ $animation-speed: 0.3s !default;
   font-size: $pxSize;
   font-size: ($pxSize / 10px) + rem;
 }
+
+%hoverButton {
+  background-color: $white;
+  border: 2px solid $black;
+  color: $black;
+}
