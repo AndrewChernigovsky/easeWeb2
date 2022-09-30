@@ -1,4 +1,33 @@
 .button-more {
-    border: 2px solid $orange;
-    
+    height: 70px;
+    min-width: 220px;
+    border-radius: 46.5px;
+    font-family: $MontserratBold;
+    font-size: 2.4rem;
+    box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2),  -6px -6px 15px 5px rgba(34, 60, 80, 0.2) inset;
+    background: linear-gradient(to left, $orange1, $orange);
+    padding-right: 3rem;
+    position: relative;
+
+    &::after {
+        @extend %pseudo;
+        width: 28px;
+        height: 50px;
+        right: 15px;
+        top: 10px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('../images/icons/arrowMoreDefault.svg');
+    }
+
+    &:hover,
+    &:active {
+        box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2),  7px 7px 7px 2px rgba(34, 60, 80, 0.2) inset;
+        text-shadow: 1px 1px 1px $black;
+        color: $white;
+    }
+}
+
+.button-more:hover::after {
+    background-image: url('../images/icons/arrowMoreActive.svg');
 }
