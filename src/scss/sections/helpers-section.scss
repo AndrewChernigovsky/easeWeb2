@@ -15,6 +15,10 @@
         }
 
         @include media(">=tablet") {
+            gap: 2px;
+        }  
+
+        @include media(">=desktop") {
             gap: 2%;
         }  
     }
@@ -67,6 +71,10 @@
         flex-direction: column;
         margin-bottom: 2rem;
         white-space: nowrap;
+        background-image: url('../../images/content/3.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
 
         @include media(">=phone-lg") {
           height: 350px;
@@ -85,6 +93,8 @@
         @include media(">=widescreen") {
           padding: 3rem;
         }
+
+       
 
         .paragraph-base {
             margin-bottom: 2.4rem;

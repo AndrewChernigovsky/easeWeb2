@@ -1,3 +1,130 @@
 .footer {
   padding: 2rem 0;
+  background-color: $black;
+  color: $white;
+  font-family: $Montserrat;
+
+  &__wrapper {
+    display: grid;
+    min-width: 100%;
+  }
+
+  &__inner {
+    display: grid;
+    min-width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    &:last-of-type {
+      border-top: 1px solid $gray;
+    }
+
+    @include media(">=phone-lg") {
+      display: flex;
+    }
+
+    @include media(">=widescreen-lg") {
+    }
+  }
+
+  &__block {
+    display: grid;
+
+   &-company {
+      font-size: 2.4rem;
+    }
+
+   &-polite {
+      font-size: 2.4rem;
+      font-family: $MontserratItalic;
+      text-decoration: underline;
+    }
+
+   &-telephone {
+      font-size: 3.8rem;
+      font-family: $MontserratBold;
+    }
+
+    &:first-of-type {
+      margin-bottom: 2.5rem;
+
+      @include media(">=phone-lg") {
+        margin-bottom: 3.5rem;
+      }
+
+      @include media(">=widescreen-lg") {
+        margin-bottom: 7.5rem;
+      }
+    }
+
+    &:last-of-type {
+      text-align: right;
+    }
+  }
+
+  &__line {
+    border-color: $white;
+    position: relative;
+    max-width: calc(100% - 60px);
+
+    &::before, &::after {
+      @extend %pseudo;
+      width: 30px;
+      height: 1px;
+      background-color: $white;
+      top: 15px;
+      transform: rotate(90deg);
+    }
+  
+    &::before{
+      left: -15px;
+    }
+  
+    &::after {
+      right: -15px;
+    }
+  }
+}
+
+.navFooter {
+  min-width: 100%;
+  padding-top: 2rem;
+
+  @include media(">=phone-lg") {
+    padding: 2rem 2.5rem 1rem 2.5rem;
+  }
+
+  @include media(">=desktop") {
+    padding: 4rem 5rem 1rem 5rem;
+  }
+
+  &__list {
+    display: grid;
+    min-width: 100%;
+    font-size: 1.6rem;
+
+    @include media(">=phone-lg") {
+    
+    }
+
+    @include media(">=desktop") {
+      font-size: 2.6rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media(">=widescreen-lg") {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+
+    @include media(">=desktop") {
+
+    }
+  }
+  &__link {
+    color: $white;
+  }
 }

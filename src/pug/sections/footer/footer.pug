@@ -1,0 +1,22 @@
+footer(class=footer)
+    hr(class=classmenuLine+ClassfooterLine)
+    .container
+        div(class=ClassfooterWrapper)
+            div(class=ClassfooterInner)
+                div(class=ClassfooterBlock)
+                    include ../../blocks/logo
+                    p(class=ClassfooterBlock__company)= footerMain.p1_1
+                div(class=ClassfooterBlock)
+                    p(class=ClassfooterBlock__telephone)= footerMain.tel
+                    p(class=ClassfooterBlock__polite)= footerMain.polite
+            div(class=ClassfooterInner)
+                nav(class=ClassNavListFooter)
+                    ul(class=ClassListFooter)
+                        li(class=ClassItemFooter)
+                            a(class=ClassLinkFooter href="#")= footerMain.link__1
+                        li(class=ClassItemFooter)
+                            a(class=ClassLinkFooter href="#")= footerMain.link__2
+                        li(class=ClassItemFooter)
+                            a(class=ClassLinkFooter href="#")= footerMain.link__3
+                        li(class=ClassItemFooter)
+                            a(class=ClassLinkFooter href="#")= footerMain.link__4
