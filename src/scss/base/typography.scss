@@ -42,14 +42,18 @@
 .title__h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
+  font-family: $MontserratBold;
 
   @include media('>=tablet') {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     margin-bottom: 2rem;
   }
   @include media('>=desktop') {
     font-size: 3.2rem;
     margin-bottom: 3rem;
+  }
+  @include media('>=widescreen-lg') {
+    font-size: 5.6rem;
   }
 }
 
@@ -72,7 +76,15 @@
 }
 
 .paragraph-base {
-  font-size: 2.4rem;
+  font-size: 1.6rem;
+  font-family: $Montserrat;
+
+  @include media('>=tablet') {
+    font-size: 1.6rem;
+  }
+  @include media('>=desktop') {
+    font-size: 2.1rem;
+  }
 }
 
 .base-link {
