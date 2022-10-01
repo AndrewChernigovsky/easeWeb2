@@ -5,11 +5,7 @@
 
 //import Accordion from './components/accordion';
 import menuBurger from './components/burger-menu';
-import swiperMain from './components/sliders/swiperMain';
-import swiperCase from './components/sliders/swiperCase';
-import swiperOffer from './components/sliders/swiperOffer';
-import swiperFeedBack from './components/sliders/swiperFeedBack';
-import tabs from './components/tabs';
+import initSelects from './components/select';
 // import bntOFFER from './components/btnOffer';
 
 (($) => {
@@ -17,10 +13,6 @@ import tabs from './components/tabs';
   $(() => {
     //const accordions = new Accordion();
     menuBurger.init();
-    swiperMain.init();
-    swiperOffer.init();
-    swiperCase.init();
-    swiperFeedBack.init();
-    tabs.init();
+    initSelects.init();
   });
 })(jQuery);
