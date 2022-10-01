@@ -6,6 +6,9 @@ mixin aLink(urlLink, className, ...links)
 mixin a(urlLink, text)
     a(href=urlLink, class=base__text+base__link)= text
 
+mixin aClassName(className, urlLink, text)
+    a(href=urlLink, class=base__text+base__link+' '+className)= text
+
 //- buttons
 
 mixin button(type, text)

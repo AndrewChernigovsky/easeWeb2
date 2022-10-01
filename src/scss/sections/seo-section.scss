@@ -1,5 +1,123 @@
 .seo-section {
-    height: 500px;
+    min-height: 500px;
     width: 100%;
     background-color: $black;
+
+    @include media(">=widescreen-lg") {
+        padding-bottom: 20rem;
+    }
+
+    &__wrapper {
+        @include media(">=widescreen-lg") {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    &__block {
+        position: relative;
+        padding-bottom: 2rem;
+        min-height: 490px;
+
+        @include media(">=widescreen-lg") {
+            min-height: 490px;
+        }
+
+        &:last-of-type{
+            .seo-section__block-link{
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+
+    &__image-block {
+        padding-bottom: 2rem;
+    }
+
+    &__image-block-title {
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        font-family: $MontserratBold;
+    }
+
+    &__image-wrapper {
+        min-width: 390px;
+        height: 400px;
+        background-color: $red;
+        overflow: hidden;
+    }
+
+    &__image {
+        min-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__block-span {
+        @include media(">=widescreen-lg") {
+           font-size: 38rem;
+           font-family: $MontserratThin;
+        }
+    }
+
+    &__block-link {
+        font-family: $MontserratBold;
+        position: relative;
+        border-width: 0;
+        border-bottom: 1px solid transparent;
+        transition: all 0.25s linear;
+        padding-bottom: 10px;
+    
+        &::before {
+            @extend %pseudo;
+            width: 100%;
+            left: 0;
+            height: 1px;
+            background-color: $white;
+            transform-origin: left; 
+            transform: scale(0);
+            transition: 0.25s linear;
+            bottom: 0;
+        }
+    
+        &:visited {
+          color: $white;
+        }
+
+        &:hover {
+            color: $white;
+        }
+    
+        &:hover::before,
+        &:active::before {
+            transform: scale(1);
+        }
+
+        &::after{
+            @extend %pseudo;
+            width: 100px;
+            height: 50px;
+            background-image: url('../../images/icons/arrowMoreSimple.svg');
+            right: -100px;
+            top: -10px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &__block-paragraph,
+    &__block-link {
+        @include media(">=widescreen-lg") {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__block-paragraph2 {
+        @include media(">=widescreen-lg") {
+            font-size: 5.6rem;
+            line-height: 2.5;
+        }
+    }
 }

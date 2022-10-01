@@ -1,8 +1,12 @@
 .footer {
-  padding: 2rem 0;
+  padding: 2rem 0 2rem 0;
   background-color: $black;
   color: $white;
   font-family: $Montserrat;
+
+  @include media(">=widescreen-lg") {
+	padding: 6rem 0 2rem 0;
+  }
 
   &__wrapper {
     display: grid;
@@ -34,15 +38,33 @@
       font-size: 2.4rem;
     }
 
+	&-polite,
+	&-telephone {
+		cursor: pointer;
+		color: $white;
+		height: min-content;
+	}
+
    &-polite {
-      font-size: 2.4rem;
-      font-family: $MontserratItalic;
-      text-decoration: underline;
+		font-size: 2.4rem;
+		font-family: $MontserratItalic;
+		border-bottom: 1px solid $white;
+		
+
+	  	&:hover {
+			transition: $base-transition;
+			border-bottom: 1px solid transparent;
+		}
     }
 
    &-telephone {
       font-size: 3.8rem;
       font-family: $MontserratBold;
+
+	  &:hover {
+			transition: $base-transition;
+			opacity: 0.6;
+		}
     }
 
     &:first-of-type {
@@ -125,6 +147,43 @@
     }
   }
   &__link {
-    color: $white;
+	color: $white;
+    font-size: 2.4rem;
+    border-width: 0;
+    border-bottom: 1px solid transparent;
+    position: relative;
+    transition: all 0.25s linear;
+	padding-bottom: 10px;
+
+    &::before {
+        @extend %pseudo;
+        width: 100%;
+        left: 0;
+        height: 1px;
+        background-color: $white;
+        transform-origin: left; 
+        transform: scale(0);
+        transition: 0.25s linear;
+        bottom: 0;
+    }
+
+    &:visited {
+      color: $white;
+    }
+
+    &:hover::before,
+    &:active::before {
+        transform: scale(1);
+    }
+  }
+
+  &__link.active {
+	opacity: 0.4;
+	cursor: auto;
+
+    &:hover::before, &:focus::before {
+		transform: scale(0);
+		
+    }
   }
 }

@@ -7,13 +7,16 @@ footer(class=footer)
                     include ../../blocks/logo
                     p(class=ClassfooterBlock__company)= footerMain.p1_1
                 div(class=ClassfooterBlock)
-                    p(class=ClassfooterBlock__telephone)= footerMain.tel
-                    p(class=ClassfooterBlock__polite)= footerMain.polite
+                    a(class=ClassfooterBlock__telephone href="tel:+79998062321")= footerMain.tel
+                    a(class=ClassfooterBlock__polite href="../../pages/polite.html")= footerMain.polite
             div(class=ClassfooterInner)
                 nav(class=ClassNavListFooter)
                     ul(class=ClassListFooter)
                         li(class=ClassItemFooter)
-                            a(class=ClassLinkFooter href="#")= footerMain.link__1
+                            if mainPage
+                                a(class=ClassLinkFooter+ ' active' href="#")= footerMain.link__1
+                            else
+                                a(class=ClassLinkFooter href="#")= footerMain.link__1
                         li(class=ClassItemFooter)
                             a(class=ClassLinkFooter href="#")= footerMain.link__2
                         li(class=ClassItemFooter)

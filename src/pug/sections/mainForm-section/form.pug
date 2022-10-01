@@ -1,0 +1,26 @@
+form(class=MainForm id=MainFormID name=MainFormIName action=MainFormPHP method=get)
+	div(class=ClassMainForm__Wrapper)
+		p(class=ClassMainForm__title)
+			| Хотите увеличить поток клиентов?
+		div(class=ClassMainForm__Inner)
+			input(type="text" placeholder='Name' name='name' value='' required)
+			input(type="tel" placeholder='Telephone' name='telephone' value='' required)
+			div(class=ClassMainForm__selectBlock)
+				input(type="radio" name='site' id='id1')
+				label(for='id1') Консультация
+				input(type="radio" name='site' id='id2')
+				label(for='id2') Разработка сайта
+				input(type="radio" name='site' id='id3')
+				label(for='id3') Консультация
+				input(type="radio" name='site' id='id4')
+				label(for='id4') Разработка сайта
+				input(type="radio" name='site' id='id5')
+				label(for='id5') Консультация
+
+					//- select(class=ClassMainForm__select name="select")
+					//-     option(value="value1" selected) Консультация
+					//-     option(value="value2") Разработка сайта
+					//-     option(value="value3") Продвижение сайта
+					//-     option(value="value4") Редизайн
+					//-     option(value="value5") Другое
+		include ../../blocks/formButton

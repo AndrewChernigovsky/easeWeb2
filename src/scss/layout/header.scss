@@ -223,18 +223,30 @@
   &__nav-link {
     color: $black;
     font-size: 2.4rem;
+    border-width: 0;
+    border-bottom: 1px solid transparent;
+    position: relative;
+    transition: all 0.25s linear;
+
+    &::before {
+        @extend %pseudo;
+        width: 100%;
+        left: 0;
+        height: 1px;
+        background-color: $black;
+        transform-origin: left; 
+        transform: scale(0);
+        transition: 0.25s linear;
+        bottom: 0;
+    }
 
     &:visited {
       color: $white;
     }
 
-    &:hover {
-      color: $orange;
-      transition: $base-transition;
-    }
-
-    &:active {
-      color: $white;
+    &:hover::before,
+    &:active::before {
+        transform: scale(1);
     }
   }
 
