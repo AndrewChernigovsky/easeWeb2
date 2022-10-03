@@ -2,6 +2,15 @@
     min-height: 500px;
     width: 100%;
     background-color: $black;
+    padding-bottom: 2rem;
+
+    @include media(">=phone-lg") {
+        padding-bottom: 6rem;
+    }
+
+    @include media(">=desktop") {
+        padding-bottom: 10rem;
+    }
 
     @include media(">=widescreen-lg") {
         padding-bottom: 20rem;
@@ -15,19 +24,69 @@
         }
     }
 
+   &__block-wrapper {
+        display: grid;
+        gap: 1rem;
+
+        @include media(">=tablet") {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include media(">=desktop") {
+            gap: 2rem;
+        }
+
+        @include media(">=widescreen-lg") {
+            gap: 6rem;
+        }
+    }
+       
+
     &__block {
         position: relative;
-        padding-bottom: 2rem;
-        min-height: 490px;
+        min-height: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+
+        @include media('>=phone-lg') {
+            min-height: 250px;
+        }
+
+        @include media('>=tablet') {
+            min-height: 250px;
+            align-items: flex-start;
+            text-align: left;
+        }
 
         @include media(">=widescreen-lg") {
             min-height: 490px;
+            text-align: left;
         }
 
         &:last-of-type{
             .seo-section__block-link{
-                position: absolute;
-                bottom: 0;
+                margin-left: -60px;
+
+                @include media('>=phone-lg') {
+                    position: absolute;
+                    bottom: 0;    
+                }
+
+                @include media('>=tablet') {
+                    margin-left: 0;
+                    left: 0;
+                }
+
+                @include media('>=widescreen-lg') {
+                    position: absolute;
+                    bottom: 0;    
+                    margin-left: 0;
+                    left: 0;
+                }
             }
         }
     }
@@ -43,10 +102,14 @@
     }
 
     &__image-wrapper {
-        min-width: 390px;
+        min-width: 280px;
         height: 400px;
         background-color: $red;
         overflow: hidden;
+
+        @include media('>=tablet') {
+            min-width: 390px;
+        }
     }
 
     &__image {
@@ -56,9 +119,28 @@
     }
 
     &__block-span {
+        font-family: $MontserratThin;
+        font-size: 18rem;
+  
+        
+        @include media('>=phone') {
+            font-size: 25rem;
+        }
+
+        @include media('>=phone-lg') {
+            font-size: 28rem;
+        }
+
+        @include media(">=desktop") {
+            font-size: 30rem;
+        }
+
+        @include media(">=widescreen") {
+            font-size: 35rem;
+        }
+
         @include media(">=widescreen-lg") {
            font-size: 38rem;
-           font-family: $MontserratThin;
         }
     }
 
@@ -97,24 +179,64 @@
 
         &::after{
             @extend %pseudo;
-            width: 100px;
-            height: 50px;
             background-image: url('../../images/icons/arrowMoreSimple.svg');
-            right: -100px;
-            top: -10px;
             background-repeat: no-repeat;
             background-position: center;
+            background-size: 40px;
+            width: 50px;
+            height: 27px;
+            right: -56px;
+            top: -4px;
+            
+
+            @include media('>=phone-lg') {
+                width: 100px;
+                height: 50px;
+                right: -90px;
+                top: -12px;
+                background-size: 40px;
+            }
+
+            @include media('>=tablet') {
+                width: 100px;
+                height: 50px;
+                right: -100px;
+                top: -10px;
+                background-size: 53px;
+            }
         }
     }
 
     &__block-paragraph,
     &__block-link {
+        font-size: 1.6rem;
+
+        @include media('>=phone-lg') {
+            font-size: 2rem;
+        }
+
         @include media(">=widescreen-lg") {
             font-size: 2.4rem;
         }
     }
 
+    &__block-paragraph {
+
+        @include media('>=phone') {
+            font-size: 2rem;
+        }
+    }
+
     &__block-paragraph2 {
+        font-size: 2.6rem;
+        margin-bottom: 2rem;
+        text-align: left;
+        line-height: 1.4;
+
+        @include media('>=phone-lg') {
+            font-size: 3.6rem;
+        }
+
         @include media(">=widescreen-lg") {
             font-size: 5.6rem;
             line-height: 2.5;

@@ -10,17 +10,18 @@ section(class=seoSection)
                     +pictureClassNamePng(ClassseoSection__Image, 'image', 'webp',
                     '../../images/content/3',
                     '../../images/content/3')
-            div(class=ClassseoSection__Block)
-                span(class=ClassseoSection__Block__Span)= '7'
-                p(class=ClassseoSection__Block__Paragraph)
-                    | Специалистов работают 
-                    br
-                    | над вашим проектом
-            div(class=ClassseoSection__Block)
-                p(class=ClassseoSection__Block__Paragraph2)
-                    | Современно
-                    br
-                    | Качественно
-                    br
-                    | С результатом
-                +aClassName(ClassseoSection__Block__link, '../../pages/seo.html', 'Подробнее')
+            div(class=ClassseoSection__Block__Wrapper)
+                div(class=ClassseoSection__Block)
+                    span(class=ClassseoSection__Block__Span)= '7'
+                    p(class=ClassseoSection__Block__Paragraph)
+                        | Специалистов работают 
+                        br
+                        | над вашим проектом
+                div(class=ClassseoSection__Block)
+                    p(class=ClassseoSection__Block__Paragraph2)
+                        span= 'Современно'
+                        br
+                        span=  'Качественно'
+                        br
+                        span= 'С результатом'
+                    +aClassName(ClassseoSection__Block__link, '../../pages/seo.html', 'Подробнее')

@@ -1,7 +1,7 @@
 form(class=MainForm id=MainFormID name=MainFormIName action=MainFormPHP method=get)
 	div(class=ClassMainForm__Wrapper)
 		p(class=ClassMainForm__title)
-			| Хотите увеличить поток клиентов?
+			| Обсудить проект со специалистом
 		div(class=ClassMainForm__Inner)
 			div(class='inputs')
 				input(type="text" placeholder='Name' name='name' value='' required)
@@ -15,5 +15,6 @@ form(class=MainForm id=MainFormID name=MainFormIName action=MainFormPHP method=g
 						option(class='js-select-option' value="value3") Продвижение сайта
 						option(class='js-select-option' value="value4") Редизайн
 						option(class='js-select-option' value="value5") Другое
-				include ../../blocks/formButton
+				div(class='wrapperButton')
+					include ../../blocks/formButton
 			

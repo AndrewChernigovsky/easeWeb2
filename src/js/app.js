@@ -5,14 +5,17 @@
 
 //import Accordion from './components/accordion';
 import menuBurger from './components/burger-menu';
-import initSelects from './components/select';
+import scrollSmooth from './components/scroll-smooth';
+// import shapeResize from './components/animations/shapeResize';
+// import initSelects from './components/select';
 // import bntOFFER from './components/btnOffer';
+const SHAPE = document.getElementById('mainFormShape');
 
 (($) => {
   // When DOM is ready
   $(() => {
     //const accordions = new Accordion();
+    scrollSmooth.init();
     menuBurger.init();
-    initSelects.init();
   });
 })(jQuery);
