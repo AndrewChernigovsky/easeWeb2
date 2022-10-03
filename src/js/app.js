@@ -26,15 +26,24 @@ const SHAPE = document.getElementById('mainFormShape');
 window.addEventListener("resize", function() {
   const windowInnerWidth  = document.documentElement.clientWidth;
   const windowInnerHeight = document.documentElement.clientHeight;
-  console.log(windowInnerWidth, windowInnerHeight)
+  console.log('width Browser ', windowInnerWidth, 'height Browser ', windowInnerHeight)
 }, false);
 
+const windowInnerWidth  =screen.width;
+const windowInnerHeight = document.documentElement.clientHeight;
+console.log('height Browser:' + windowInnerHeight)
+
+if(SHAPE) {
+  var c = SHAPE.getBoundingClientRect();
+}
+console.log('shape sizes:' + c.height)
 // 1) Отслеживаем высоту документа, его скролл
 window.addEventListener('scroll', function() {
   // console.log(scrollY + 'px');
   var c = SHAPE.getBoundingClientRect();
   let elHeigth =  SHAPE.offsetHeight;
-  let scrolltop = (document.body.scrollTop + c.top) + elHeigth;
+  // let scrolltop = (document.body.scrollTop + c.top) + elHeigth;
+  let scrolltop = document.body.scrollTop + c.top;
   let scrollleft = document.body.scrollLeft + c.left;
   console.log('top:' + scrolltop + ' left: ' + scrollleft + '');
 });
