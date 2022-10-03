@@ -9,7 +9,6 @@ import scrollSmooth from './components/scroll-smooth';
 // import shapeResize from './components/animations/shapeResize';
 // import initSelects from './components/select';
 // import bntOFFER from './components/btnOffer';
-const SHAPE = document.getElementById('mainFormShape');
 
 (($) => {
   // When DOM is ready
@@ -19,3 +18,29 @@ const SHAPE = document.getElementById('mainFormShape');
     menuBurger.init();
   });
 })(jQuery);
+
+const SHAPE = document.getElementById('mainFormShape');
+
+
+// Отслеживаем изменение окна браузера
+window.addEventListener("resize", function() {
+  const windowInnerWidth  = document.documentElement.clientWidth;
+  const windowInnerHeight = document.documentElement.clientHeight;
+  console.log(windowInnerWidth, windowInnerHeight)
+}, false);
+
+// 1) Отслеживаем высоту документа, его скролл
+window.addEventListener('scroll', function() {
+  // console.log(scrollY + 'px');
+  var c = SHAPE.getBoundingClientRect();
+  let elHeigth =  SHAPE.offsetHeight;
+  let scrolltop = (document.body.scrollTop + c.top) + elHeigth;
+  let scrollleft = document.body.scrollLeft + c.left;
+  console.log('top:' + scrolltop + ' left: ' + scrollleft + '');
+});
+
+window.addEventListener('scroll', function() {
+
+});
+
+// 2) Отслеживаем положение блока Элемента
