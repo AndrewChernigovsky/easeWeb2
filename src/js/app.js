@@ -92,10 +92,15 @@ window.addEventListener('scroll', function(){
 
     // 9 Если граница блока и низа отобржаемого окна совпадают, начать изменение блока в + иначе в -
     if(scrolltop >= topSHAPE) {
-      let x = Math.floor(scrollY, 0) / 15 + '%';
+
+      let x = Math.floor(scrollY, 0) / 50 + 1 + '%';
       let x1 = Math.floor(scrollY, 0) / 18 + '%';
       let x2 = Math.floor(scrollY, 0) / 25 + '%';
-      let y = (SHAPE.style.borderRadius = `${x} 100% 100% 100% / ${x1} ${x2} 0% 0%`);
+      if(x > 100){
+        x = 0;
+      }
+
+      let y = (SHAPE.style.borderRadius = `${x} ${x} ${x} ${x} / ${x} ${x} 0% 0%`);
       // let y = (SHAPE.style.borderRadius = `${x} 100% 100% 100% / 100% 100% 0% 0%`);
       console.log('centerrrr');
       console.log('бордер-радиус', y);
