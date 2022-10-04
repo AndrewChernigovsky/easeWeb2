@@ -53,17 +53,52 @@ import scrollSmooth from './components/scroll-smooth';
 
 const SHAPE = document.getElementById('mainFormShape');
 
-
+let coordinatsSHAPE = SHAPE.getBoundingClientRect();
 
 window.addEventListener('scroll', function(){
+
     // 1 Вычислить всю высоту документа h
+    let screenHeight = document.body.scrollHeight
+    console.log('Высота всего документа h', Math.floor(screenHeight, 1) + ' px')
+
     // 2 Вычислить всю высоту отображаемого окна h1
+    let windowInnerWidth = document.documentElement.clientWidth
+    let windowInnerHeight = document.documentElement.clientHeight
+
+    console.log('высота отображаемого окна h1', Math.floor(windowInnerHeight, 1) + ' px')
+
     // 3 Вычислить высоту от вверха документа до вверхней границы блока t,h2
-    var coordinatsSHAPE = SHAPE.getBoundingClientRect();
     console.log('Вычисляем координаты блока', coordinatsSHAPE)
+
     // 4 Вычислить центр отображаемого окна относительно всего документа c
+    let scrolltop1 = document.body.scrollTop + windowInnerHeight + scrollY;
+    let centerScreen = (scrolltop1 + scrollY) / 2;
+    console.log('Вычисляем центр:' + Math.floor(centerScreen, 1) + ' px');
+
     // 5 Вычислить рассотояние скроллинга
-    // 6 Если граница блока и низа отобржаемого окна совпадают, начать изменение блока в + иначе в -
+    console.log('Вычисляем рассотояние скроллинга ' + Math.floor(scrollY, 1) + ' px');
 
+    // 6 Вычисляем расстояние низа отображаемого документа до верхней границы блока
+    let scrolltop = document.body.scrollTop + windowInnerHeight + scrollY;
+    console.log('нижняя граница отображаемого окна:' + Math.floor(scrolltop, 1) + ' px');
 
+    // 7 Вычисляем расстояние от верха всего документа до верхней границы блока
+    let offsetTop = screenHeight - scrollY - coordinatsSHAPE.bottom + coordinatsSHAPE.height;
+    console.log('расстояние от верха всего документа до верхней границы блока:' + Math.floor(offsetTop, 1) + ' px');
+
+    // 8 Координата вверха блока
+    let topSHAPE = coordinatsSHAPE.top
+    console.log('верхняя граница блока:' + Math.floor(topSHAPE, 1) + ' px');
+
+    // 9 Если граница блока и низа отобржаемого окна совпадают, начать изменение блока в + иначе в -
+    if(scrolltop >= topSHAPE) {
+      let x = Math.floor(scrollY, 0) / 15 + '%';
+      let x1 = Math.floor(scrollY, 0) / 18 + '%';
+      let x2 = Math.floor(scrollY, 0) / 25 + '%';
+      let y = (SHAPE.style.borderRadius = `${x} 100% 100% 100% / ${x1} ${x2} 0% 0%`);
+      // let y = (SHAPE.style.borderRadius = `${x} 100% 100% 100% / 100% 100% 0% 0%`);
+      console.log('centerrrr');
+      console.log('бордер-радиус', y);
+      console.log('loggg')
+    }
 })
