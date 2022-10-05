@@ -1,0 +1,29 @@
+.integration-section {
+    min-height: 400px;
+    background-color: $white;
+    color: $black;
+
+    &__wrapper {
+        overflow: hidden;
+    }
+
+    .title__h2 {
+        font-size: 3.2rem;
+        font-family: $MazzardH;
+    }
+
+
+    &__title {
+        font-size: 6.4rem;
+        font-family: $MontserratBold;
+        white-space: nowrap;
+    }
+
+    &__span {
+        text-transform: uppercase;
+
+        &:first-of-type {
+            font-family: $MazzardHBold;
+        }
+    }
+}
