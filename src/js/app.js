@@ -93,17 +93,27 @@ window.addEventListener('scroll', function(){
     // 9 Если граница блока и низа отобржаемого окна совпадают, начать изменение блока в + иначе в -
     if(scrolltop >= topSHAPE) {
 
-      let x = Math.floor(scrollY, 0) / 50 + 1 + '%';
-      let x1 = Math.floor(scrollY, 0) / 18 + '%';
-      let x2 = Math.floor(scrollY, 0) / 25 + '%';
+      let s = Math.floor(scrollY, 0);
+
+      let x = s - 100 + '%';
+      let x1 = ((s+100) - s) + '%';
+      console.log(x)
       if(x > 100){
         x = 0;
       }
 
-      let y = (SHAPE.style.borderRadius = `${x} ${x} ${x} ${x} / ${x} ${x} 0% 0%`);
-      // let y = (SHAPE.style.borderRadius = `${x} 100% 100% 100% / 100% 100% 0% 0%`);
+      if(topSHAPE >= centerScreen) {
+        SHAPE.style.borderRadius = `${x} ${x} 0% 0%`;
+      } else {
+        SHAPE.style.borderRadius = `${x1} ${x1} 0% 0%`;
+      }
+
+      // let y = (SHAPE.style.borderRadius = `100% 100% 0% 0%`);
+      let y = (SHAPE.style.borderRadius = `${x} ${x} 0% 0%`);
+      SHAPE.style.borderRadius = `${x} ${x} 0% 0%`;
       console.log('centerrrr');
-      console.log('бордер-радиус', y);
+      // console.log('бордер-радиус', y);
       console.log('loggg')
     }
 })
+
