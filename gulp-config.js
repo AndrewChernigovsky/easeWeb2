@@ -14,6 +14,8 @@ module.exports = {
     mainScssMin: 'styles.min.css',
     vendorScss: 'vendor.scss',
     vendorScssMin: 'vendor.min.css',
+    // js
+    developJs: 'develop-app.js',
   },
   fileIncludepug: {
     templates: 'src/pug/templates',
@@ -42,6 +44,8 @@ module.exports = {
     copyFoldersProduction: 'copy-folders-production',
     browserSync: 'browser-sync-server',
     watch: 'watch',
+    // js
+    developJS: 'developJS-build-custom',
   },
   autoprefixer: {
     browserslist: ['.browserslistrc'],

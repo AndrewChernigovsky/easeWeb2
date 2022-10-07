@@ -49,6 +49,13 @@
     checkProduction: true,
   });
 
+  requireTask(`${gulpConfig.task.developJS}`, `./${gulpConfig.folder.tasks}/`, {
+    src: gulpConfig.folder.src,
+    dest: gulpConfig.folder.build,
+    developJs: gulpConfig.file.developJs,
+    checkProduction: true,
+  });
+
   // BUILDJSVENDO;S
 
   requireTask(`${gulpConfig.task.buildJsVendors}`, `./${gulpConfig.folder.tasks}/`, {
@@ -138,7 +145,7 @@
       src: gulpConfig.folder.src,
       dest: gulpConfig.folder.build
     });
-  
+
   /**
    * Start browserSync server
    */
@@ -166,6 +173,7 @@
         copyFolders: gulpConfig.task.copyFolders,
         svgSprite: gulpConfig.task.svgSprite,
         imageResize: gulpConfig.task.imageResize,
+        developJS: gulpConfig.task.developJS,
       },
     },
     false
@@ -179,7 +187,10 @@
         gulp.parallel(
           gulp.series(gulpConfig.task.fileIncludepug),
           gulp.series(gulpConfig.task.buildSass, gulpConfig.task.buildSassCustom, gulpConfig.task.buildStylesVendors),
-          gulp.series(gulpConfig.task.buildCustomJs, gulpConfig.task.buildJsVendors),
+          gulp.series(
+            gulpConfig.task.buildCustomJs,
+            gulpConfig.task.developJS,
+            gulpConfig.task.buildJsVendors),
           gulp.parallel(gulpConfig.task.svgSprite, gulpConfig.task.imageWebP)
         ),
         gulpConfig.task.copyFolders,
@@ -190,7 +201,7 @@
   gulp.task(
     'build',
     gulp.series(
-        
+
         gulp.parallel(gulpConfig.task.cleanProd, gulpConfig.task.cleanBuild),
         gulpConfig.task.esLint,
         gulp.parallel(
@@ -207,7 +218,7 @@
     );
 
   gulp.task(
-    'webp', 
+    'webp',
     gulp.series(
             gulpConfig.task.imageMin,
             gulpConfig.task.imageWebP
@@ -215,7 +226,7 @@
     );
 
   gulp.task(
-    'sprite', 
+    'sprite',
     gulp.series(
           gulpConfig.task.svgSprite
         )

@@ -7,7 +7,9 @@ const gulp = require('gulp');
 
 module.exports = function (options) {
   return () => {
-    gulp.watch(`./${options.src}/js/**/*`, gulp.series(options.tasks.esLint, options.tasks.buildCustomJs));
+    gulp.watch(`[!./${options.src}/js/another/**, ./${options.src}/js/**/*]`, gulp.series(options.tasks.esLint, options.tasks.buildCustomJs));
+
+    gulp.watch(`./${options.src}/js/another/*.js`, gulp.series(options.tasks.esLint, options.tasks.developJS));
 
     gulp.watch(`./${options.src}/scss/**/*`, gulp.series(options.tasks.buildSass, options.tasks.buildSassCustom));
 
