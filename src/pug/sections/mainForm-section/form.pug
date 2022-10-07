@@ -1,4 +1,4 @@
-form(class=MainForm id=MainFormID name=MainFormIName action=MainFormPHP method=get)
+form(class=MainForm id=MainFormID name=MainFormName action=MainFormPHP method=get)
 	div(class=ClassMainForm__Wrapper)
 		p(class=ClassMainForm__title)
 			| Обсудить проект со специалистом
@@ -8,8 +8,8 @@ form(class=MainForm id=MainFormID name=MainFormIName action=MainFormPHP method=g
 				input(type="tel" placeholder='Telephone' name='telephone' value='' required)
 			div(class="wrapperButtons")
 				div(class=ClassMainForm__selectBlock id=MainFormSelectID)
-					button(type='button' class='js-select-btn')
-					select(class='js-select-list' required)
+					button(type='button' class='js-select-btn' aria-label='Выбрать вид услуги' required)
+					select(class='js-select-list')
 						option(class='js-select-option' value="value1") Консультация
 						option(class='js-select-option' value="value2") Разработка сайта
 						option(class='js-select-option' value="value3") Продвижение сайта
@@ -17,4 +17,3 @@ form(class=MainForm id=MainFormID name=MainFormIName action=MainFormPHP method=g
 						option(class='js-select-option' value="value5") Другое
 				div(class='wrapperButton')
 					include ../../blocks/formButton
-			

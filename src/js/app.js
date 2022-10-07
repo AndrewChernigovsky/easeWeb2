@@ -116,4 +116,34 @@ window.addEventListener('scroll', function(){
       console.log('loggg')
     }
 })
+const active = 'active';
+// const overlay = 'overlay';
+const overlay = document.querySelector('.overlay');
+const menuBtn = document.getElementById('menuBtn');
+const popupCall = document.getElementById('popupCall__mainID');
+const btnClosePopupCall = document.getElementById('popupCallBtnCloseID');
 
+menuBtn.addEventListener('click', ()=> {
+    if(popupCall.classList.contains(active)) {
+        popupCall.classList.remove(active)
+        overlay.classList.remove(active)
+
+    } else {
+        popupCall.classList.add(active)
+        overlay.classList.add(active)
+    }
+})
+
+overlay.addEventListener('click', ()=> {
+    if(overlay.classList.contains(active)) {
+        overlay.classList.remove(active)
+        popupCall.classList.remove(active)
+    }
+})
+
+btnClosePopupCall.addEventListener('click', ()=> {
+    if(popupCall.classList.contains(active)) {
+        overlay.classList.remove(active)
+        popupCall.classList.remove(active)
+    }
+})

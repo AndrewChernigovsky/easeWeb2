@@ -11,9 +11,11 @@ block title
 	each title in titles
 		if title == indexTitles
 			title= title.index
+block styles
+	//- include ../partials/styles/style
 block content
 	div(class='overlay')
-	button(type=button class="btnclose" id='btnclose')
+	button(type=button class="btnclose", id='btnclose')
 		span(class='spanbtnclose')
 		span(class='spanbtnclose')
 	include ../sections/header/header
@@ -26,3 +28,5 @@ block content
 		include ../sections/seo-section/seo-section
 block footer
 	include  ../sections/footer/footer
+block templates
+	include  ../blocks/popups/popupCall

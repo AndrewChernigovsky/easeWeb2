@@ -1,0 +1,19 @@
+div(class=ClassPopupCall id=popupCall__mainID)
+	.container
+		div(class=ClassPopupCallBtnWrapper)
+			button(class=ClassCallButtonClose type=button id=popupCallButtonCLoseID)
+				span Закрыть
+		form(action=popupCallPHP name=popupCallName method=get class=ClasspopupCallForm id=popupCallID)
+			div(class=ClassPopupCall__wrapper)
+				div(class='inputs')
+					input(type="text", placeholder='Name', name='name', value='' required)
+					input(type="tel", placeholder='Telephone', name='telephone', value='' required)
+				div(class='politeCheckboxWrapper')
+					input(type="checkbox", name='polite', id='politeCheckbox' checked required)
+					label(class='labelCallPopupCheckbox', name='polite', for="politeCheckbox")
+					p я прочитал и согласен с
+						a(href='polite.html') политикой конфиденциальности
+
+				div(class='wrapperButton')
+					if callPopup
+						include ../../blocks/formButton
