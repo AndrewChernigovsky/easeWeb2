@@ -6,6 +6,7 @@
 //import Accordion from './components/accordion';
 import menuBurger from './components/burger-menu';
 import scrollSmooth from './components/scroll-smooth';
+import swiperMain from './components/sliders/swiperMain';
 // import shapeResize from './components/animations/shapeResize';
 // import initSelects from './components/select';
 // import bntOFFER from './components/btnOffer';
@@ -16,6 +17,7 @@ import scrollSmooth from './components/scroll-smooth';
     //const accordions = new Accordion();
     scrollSmooth.init();
     menuBurger.init();
+    swiperMain.init();
   });
 })(jQuery);
 

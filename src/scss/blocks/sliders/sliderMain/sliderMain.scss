@@ -30,25 +30,10 @@
 }
 
 .swiper-main {
-    background-image: url('../../images/decor/file2@2000x2000.jpg');
     background: linear-gradient(249deg, $darkblue, transparent);
     background-size: cover;
-    max-width: 600px;
     margin: 0 auto;
-    opacity: 0;
-    z-index: -1;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: 50%;
-    margin-top: -225px;
 
-    @include media(">=tablet") { 
-        background-image: url('../../images/decor/file2@3000x3000.jpg');
-    }
-    @include media(">=desktop") { 
-        background-image: url('../../images/decor/file2@3500x3500.jpg');
-    }
 
     &__wrapper {
         min-height: 350px;
