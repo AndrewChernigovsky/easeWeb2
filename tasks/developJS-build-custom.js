@@ -12,7 +12,7 @@
 
    return function () {
      return browserify({
-       entries: `./${options.src}/js/${options.developJs}`
+       entries: `./${options.src}/js/another/${options.developJs}`
      })
        .transform('babelify', {
          presets: ['@babel/preset-env']

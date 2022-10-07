@@ -186,7 +186,9 @@
         gulpConfig.task.esLint,
         gulp.parallel(
           gulp.series(gulpConfig.task.fileIncludepug),
-          gulp.series(gulpConfig.task.buildSass, gulpConfig.task.buildSassCustom, gulpConfig.task.buildStylesVendors),
+          gulp.series(gulpConfig.task.buildSass,
+            gulpConfig.task.buildSassCustom,
+            gulpConfig.task.buildStylesVendors),
           gulp.series(
             gulpConfig.task.buildCustomJs,
             gulpConfig.task.developJS,
