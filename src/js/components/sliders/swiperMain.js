@@ -39,15 +39,30 @@ const swiperMain = (() => {
         },
     });
 
-    const swiper = document.querySelector('.swiper-main');
-    let screenWidth = window.screen.width;
-    let swiperWidth = swiper.offsetWidth;
+    // const swiper = document.querySelector('.variantsSitesSection');
+    // const container = document.querySelector('.container');
+    // let screenWidth = window.screen.width;
+    // let swiperWidth = swiper.clientWidth;
+    // let containerWidth = container.clientWidth;
 
-    window.addEventListener('resize', ()=> {
-        if(swiperWidth > screenWidth) {
-            swiper.style.maxWidth = screenWidth+'px';
-        }
-    })
+    // let marginsContainer = screenWidth - containerWidth;
+    // let marginContainer = marginsContainer / 2;
+
+    // let marginsSwiper = screenWidth - swiperWidth;
+    // let marginSwiper = marginsSwiper / 2;
+
+    // console.log(screenWidth, 'ШиРИНА экрана')
+    // console.log(swiperWidth, 'ШиРИНА свайпера')
+    // console.log(marginsSwiper, 'маржины')
+    // console.log(marginSwiper, 'маржин')
+
+    // swiper.style.marginLeft = marginContainer+'px';
+    // swiper.style.marginRight = -marginContainer+'px';
+
+    // window.addEventListener('resize', ()=> {
+    //     swiper.style.marginLeft = marginContainer+'px';
+    //     swiper.style.marginRight = -marginContainer+'px';
+    // })
 
     const init = () => {};
 

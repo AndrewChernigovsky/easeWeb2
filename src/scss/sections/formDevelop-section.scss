@@ -1,0 +1,40 @@
+.formDevelop {
+    &__wrapper{
+        color: $black;
+        min-width: 100%;
+        border: 40px solid gray;
+        padding: 6.4rem;
+
+        .button-more {
+            border-radius: 0;
+            min-width: 260px;
+            height: 70px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        input{
+            height: 70px;
+            flex-basis: 50%;
+            font-size: 2.4rem;
+            font-family: $Montserrat;
+        }
+    }
+
+    &__text{
+        margin-bottom: 3.5rem;
+
+        span {
+            font-size: 2.4rem;
+            font-family: $Montserrat;
+
+            &:first-of-type {
+                text-transform: uppercase;
+            }
+        }
+    }
+}

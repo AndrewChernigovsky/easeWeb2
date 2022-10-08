@@ -2,10 +2,6 @@
   overflow: hidden;
   position: relative;
 
-  &__wrapper {
-
-  }
-
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
@@ -37,7 +33,6 @@
   background-size: cover;
   margin: 0 auto;
   position: absolute;
-  max-width: calc(100%+);
 
   &__wrapper {
     min-height: 350px;
