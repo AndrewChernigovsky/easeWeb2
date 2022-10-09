@@ -125,6 +125,11 @@ const menuBtn = document.getElementById('menuBtn');
 const popupCall = document.getElementById('popupCall__mainID');
 const btnClosePopupCall = document.getElementById('popupCallBtnCloseID');
 
+const tarifWrapper = document.querySelectorAll('.prices-section__tarif-wrapper');
+const tarifTitle = document.querySelector('.prices-section__title');
+
+
+
 document.addEventListener("DOMContentLoaded", ()=>{
     menuBtn.addEventListener('click', ()=> {
         if(popupCall.classList.contains(active)) {
@@ -150,4 +155,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
             popupCall.classList.remove(active)
         }
     })
-});
+
+    tarifWrapper.forEach( e => {
+        e.addEventListener('click', ()=> {
+            if (e.classList.contains('active')) {
+                e.classList.remove('active');
+                e.firstElementChild.classList.remove('active');
+            } else {
+                e.classList.add('active');
+                e.firstElementChild.classList.add('active');
+            }
+        })
+    })
+})

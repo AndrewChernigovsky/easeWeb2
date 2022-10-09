@@ -1,0 +1,43 @@
+.tarifsHelp-section {
+    color: $black;
+
+    &__inner {
+        position: relative;
+        min-width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        .title__h2 {
+            position: absolute;
+            z-index: 12;
+            right: 260px;
+            top: 190px;
+        }
+    }
+
+    &__image-wrapper {
+        width: 300px;
+        height: 320px;
+
+        @include media('>=desktop') {
+          width: 500px;
+          height: 400px;
+        }
+
+        @include media('>=widescreen') {
+          width: 600px;
+          height: 500px;
+        }
+
+        @include media('>=widescreen-lg') {
+          width: 620px;
+        }
+      }
+
+      &__image {
+        background-color: $red;
+        object-fit: cover;
+        height: inherit;
+        width: 100%;
+      }
+}

@@ -1,0 +1,97 @@
+.prices-section {
+    background: $white;
+    color: $black;
+
+    &__wrapper{
+        display: grid;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    &__title {
+        font-family: $Montserrat;
+        font-size: 2.4rem;
+        padding: 2rem 1rem 1rem 1rem;
+        margin-bottom: 3rem;
+        border: 2px solid $black;
+        height: 70px;
+        display: flex;
+        position: relative;
+
+        &::after {
+            @extend %pseudo;
+            width: 0;
+            height: 0;
+            right: 10px;
+            top: 28px;
+            border-style: solid;
+            border-width: 15px 15px 0 15px;
+            border-color: $black transparent transparent transparent;
+            transition: $base-transition;
+        }
+
+        span {
+            font-size: 2.4rem;
+            font-family: $MazzardHBold;
+            color: $gray;
+            text-transform: uppercase;
+        }
+    }
+
+    &__title.active {
+        border: none;
+
+        &::after {
+            transition: $base-transition;
+            border-width: 0 15px 15px 15px;
+            border-color: transparent transparent $black transparent;
+        }
+    }
+
+    &__tarif-wrapper {
+        max-width: 480px;
+        min-width: 480px;
+        border-bottom: 2px solid transparent;
+
+        .prices-section__tarif-content {
+            display: none;
+        }
+    }
+
+    &__tarif-wrapper.active {
+        border: 2px solid $black;
+
+        .prices-section__tarif-content {
+            display: block;
+        }
+    }
+
+    &__tarif-content {
+        position: relative;
+        min-height: 700px;
+        max-width: 480px;
+        padding: 0 3.7rem 4.8rem 2.5rem;
+
+        ul {
+            list-style-type: disc;
+            margin-left: 3rem;
+            font-family: $Montserrat;
+            font-size: 2.4rem;
+            padding-bottom: 15rem;
+            min-height: 100%;
+            line-height: 1.5;
+        }
+
+        p {
+            font-family: $MontserratBold;
+            font-size: 5.6rem;
+            position: absolute;
+            bottom: 5rem;
+        }
+    }
+}

@@ -6,8 +6,10 @@
     font-size: 2.4rem;
     box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2),  -6px -6px 15px 5px rgba(34, 60, 80, 0.2) inset;
     background: linear-gradient(to left, $orange1, $orange);
+    padding: 2rem;
     padding-right: 3rem;
     position: relative;
+    color: $black;
 
     &::after {
         @extend %pseudo;
@@ -25,6 +27,10 @@
         box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2),  7px 7px 7px 2px rgba(34, 60, 80, 0.2) inset;
         text-shadow: 1px 1px 1px $black;
         color: $white;
+    }
+
+    &:visited {
+        color: $black;
     }
 }
 
