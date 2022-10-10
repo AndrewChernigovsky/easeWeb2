@@ -7,24 +7,23 @@ const BODY = document.querySelector('body');
 const CLASS_OVERFLOW = 'overflow';
 const CLASS_ACTIVE = 'active';
 
-const menuBurger =(() => {
-  const menuBurgers = function menuBurger(){
-    BURGER.addEventListener('click', (e) => {
-      e.preventDefault();
-      NAV.classList.toggle(CLASS_ACTIVE);
-      BODY.classList.toggle(CLASS_OVERFLOW)
-      BURGER.classList.toggle(CLASS_ACTIVE)
-    })
-  };
+const menuBurger = (() => {
+	const menuBurgers = function menuBurger() {
+		BURGER.addEventListener('click', (e) => {
+			e.preventDefault();
+			NAV.classList.toggle(CLASS_ACTIVE);
+			BODY.classList.toggle(CLASS_OVERFLOW);
+			BURGER.classList.toggle(CLASS_ACTIVE);
+		});
+	};
 
-  const init = () => {
-    menuBurgers();
-  };
+	const init = () => {
+		menuBurgers();
+	};
 
-  return {
-    init,
-  }
+	return {
+		init,
+	};
 })();
-
 
 export default menuBurger;

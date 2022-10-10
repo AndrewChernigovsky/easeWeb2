@@ -1,74 +1,74 @@
 const swiperMain = (() => {
-    const accountantInit = new Swiper('.swiper-main', {
-        slidesPerView: 1.5,
-        spaceBetween: 20,
-        speed: 800,
+	const accountantInit = new Swiper('.swiper-main', {
+		slidesPerView: 1.5,
+		spaceBetween: 20,
+		speed: 800,
 
-        centeredSlides: false,
-        autoplay: {
-        delay: 1000500,
-        disableOnInteraction: false,
-        },
-        centerInsufficientSlides: false,
-        pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        },
-        navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-        },
-        scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-        },
-        breakpoints: {
-        768: {
-            spaceBetween: 40,
-            slidesPerView: 2.5,
-        },
-        1024: {
-            spaceBetween: 40,
-            slidesPerView: 3.5,
-        },
-        1200: {
-            spaceBetween: 200,
-            slidesPerView: 3.1,
-        },
-        },
-    });
+		centeredSlides: false,
+		autoplay: {
+			delay: 1000500,
+			disableOnInteraction: false,
+		},
+		centerInsufficientSlides: false,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+		},
+		breakpoints: {
+			768: {
+				spaceBetween: 40,
+				slidesPerView: 2.5,
+			},
+			1024: {
+				spaceBetween: 40,
+				slidesPerView: 3.5,
+			},
+			1200: {
+				spaceBetween: 200,
+				slidesPerView: 3.1,
+			},
+		},
+	});
 
-    // const swiper = document.querySelector('.variantsSitesSection');
-    // const container = document.querySelector('.container');
-    // let screenWidth = window.screen.width;
-    // let swiperWidth = swiper.clientWidth;
-    // let containerWidth = container.clientWidth;
+	// const swiper = document.querySelector('.variantsSitesSection');
+	// const container = document.querySelector('.container');
+	// let screenWidth = window.screen.width;
+	// let swiperWidth = swiper.clientWidth;
+	// let containerWidth = container.clientWidth;
 
-    // let marginsContainer = screenWidth - containerWidth;
-    // let marginContainer = marginsContainer / 2;
+	// let marginsContainer = screenWidth - containerWidth;
+	// let marginContainer = marginsContainer / 2;
 
-    // let marginsSwiper = screenWidth - swiperWidth;
-    // let marginSwiper = marginsSwiper / 2;
+	// let marginsSwiper = screenWidth - swiperWidth;
+	// let marginSwiper = marginsSwiper / 2;
 
-    // console.log(screenWidth, 'ШиРИНА экрана')
-    // console.log(swiperWidth, 'ШиРИНА свайпера')
-    // console.log(marginsSwiper, 'маржины')
-    // console.log(marginSwiper, 'маржин')
+	// console.log(screenWidth, 'ШиРИНА экрана')
+	// console.log(swiperWidth, 'ШиРИНА свайпера')
+	// console.log(marginsSwiper, 'маржины')
+	// console.log(marginSwiper, 'маржин')
 
-    // swiper.style.marginLeft = marginContainer+'px';
-    // swiper.style.marginRight = -marginContainer+'px';
+	// swiper.style.marginLeft = marginContainer+'px';
+	// swiper.style.marginRight = -marginContainer+'px';
 
-    // window.addEventListener('resize', ()=> {
-    //     swiper.style.marginLeft = marginContainer+'px';
-    //     swiper.style.marginRight = -marginContainer+'px';
-    // })
+	// window.addEventListener('resize', ()=> {
+	//     swiper.style.marginLeft = marginContainer+'px';
+	//     swiper.style.marginRight = -marginContainer+'px';
+	// })
 
-    const init = () => {};
+	const init = () => {};
 
-    return {
-        init,
-    };
+	return {
+		init,
+	};
 })();
 
-  export default swiperMain;
+export default swiperMain;

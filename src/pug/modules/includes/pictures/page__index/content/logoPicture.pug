@@ -1,6 +1,14 @@
-+icon(
-    logoIcons.viewBox,
-    logoIcons.width,
-    logoIcons.height,
-    logoIcons.id,
-)
+if mainPage
+	+icon(
+		logoIcons.viewBox,
+		logoIcons.width,
+		logoIcons.height,
+		logoIcons.id,
+	)
+else
+	+icon(
+		logoIcons.viewBox,
+		logoIcons.width,
+		logoIcons.height,
+		logoIcons.id = logoIconsPath2,
+	)

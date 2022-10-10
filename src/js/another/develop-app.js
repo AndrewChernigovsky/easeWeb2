@@ -5,11 +5,11 @@ import scrollSmooth from '../components/scroll-smooth';
 // import bntOFFER from './components/btnOffer';
 
 (($) => {
-  // When DOM is ready
-  $(() => {
-    const accordions = new Accordion();
-    scrollSmooth.init();
-  });
+	// When DOM is ready
+	$(() => {
+		const accordions = new Accordion();
+		scrollSmooth.init();
+	});
 })(jQuery);
 const SHAPE = document.getElementById('mainFormShape');
 // 1) Отслеживаем высоту документа, его скролл
@@ -40,6 +40,6 @@ const SHAPE = document.getElementById('mainFormShape');
 //   }
 // });
 
- // let scrolltop = document.body.scrollTop + c.top;
+// let scrolltop = document.body.scrollTop + c.top;
 
 //  1231234567
