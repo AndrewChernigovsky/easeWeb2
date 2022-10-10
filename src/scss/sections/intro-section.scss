@@ -176,6 +176,14 @@
     width: 100%;
   }
 
+  &__texts-inner {
+	position: relative;
+	height: 500px;
+	min-width: 100%;
+	display: grid;
+    align-items: end;
+  }
+
   &__texts {
 	position: absolute;
 	right: 0;
@@ -183,27 +191,46 @@
 	font-size: 4.8rem;
 	font-family: $MontserratBold;
 	display: flex;
-	max-width: 500px;
-	overflow: hidden;
+	max-width: 700px;
+	min-width: 700px;
+    overflow: hidden;
+    height: 500px;
   }
 
   &__text {
-	animation: anima 3s ease-in-out infinite;
+	position: absolute;
+	text-align: right;
+	display: none;
   }
+
+  &__text.anima1 {
+	animation: anima 3s ease-in-out infinite;
+	animation-delay: 0s;
+  }
+  &__text.anima2 {
+	animation: anima 3s ease-in-out infinite;
+	animation-delay: 8s;
+  }
+//   &__text.anima3 {
+// 	animation: anima 9s ease-in-out infinite;
+// 	animation-delay: 6s;
+//   }
 }
 
 
 @keyframes anima {
 	10% {
-		margin-right: 10px;
+		opacity: 0.9;
+		display: block;
 	}
-	50% {
-		margin-right: 50px;
+	20% {
+		opacity: 0.7;
 	}
 	70% {
-		margin-right: 80px;
+		opacity: 0.5;
 	}
 	100% {
-		margin-right: 100px;
+		opacity: 0;
+		display: none;
 	}
 }
