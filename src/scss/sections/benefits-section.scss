@@ -1,0 +1,75 @@
+.benefits-section {
+	&__wrapper {
+		width: 500px;
+		height: 500px;
+		border-radius: 50%;
+		border: 2px solid $black;
+		position: relative;
+		margin: 0 auto;
+	}
+	&__inner {
+		position: absolute;
+	}
+	&__inner.h3 {
+		top: 100px;
+		left: -200px;
+
+		.title__h3::before {
+			right: -46px;
+    		top: 10px;
+		}
+	}
+	&__inner.h3-2 {
+		top: 100px;
+		right: -250px;
+
+		.title__h3::before {
+			left: -45px;
+		}
+	}
+	&__inner.h3-3 {
+	    top: 330px;
+    	left: -235px;
+
+		.title__h3::before {
+			right: -33px;
+		}
+	}
+	&__inner.h3-4 {
+		top: 220px;
+		left: -330px;
+		.title__h3::before {
+			right: -30px;
+		}
+	}
+	&__inner.h3-5 {
+		top: 200px;
+		right: -250px;
+
+		.title__h3::before {
+			left: -67px;
+		}
+	}
+	&__inner.h3-6 {
+		top: 300px;
+		right: -250px;
+
+		.title__h3::before {
+			left: -60px;
+		}
+	}
+
+	.title__h3 {
+		color: $black;
+		text-align: right;
+		position: relative;
+
+		&::before {
+			@extend %pseudo;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: $black;
+		}
+	}
+}
