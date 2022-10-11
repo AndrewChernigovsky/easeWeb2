@@ -27,7 +27,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1520px;
+  max-width: 1600px;
   padding: 0 2rem;
   margin: 0 auto;
 }
@@ -66,10 +66,10 @@ img {
   transition: $base-transition;
   background-size: cover;
   background-image: url('../../images/decor/file7@2000x2000.jpg');
-  @include media(">=tablet") { 
+  @include media(">=tablet") {
     background-image: url('../../images/decor/file7@3000x3000.jpg');
   }
-  @include media(">=desktop") { 
+  @include media(">=desktop") {
     background-image: url('../../images/decor/file7@3500x3500.jpg');
   }
 }
@@ -108,9 +108,9 @@ section {
   padding-bottom: 1rem;
   color: $white;
 
-  @include media(">=tablet") { 
+  @include media(">=tablet") {
     padding-top: 2rem;
-    padding-bottom: 2rem;  
+    padding-bottom: 2rem;
   }
 }
 

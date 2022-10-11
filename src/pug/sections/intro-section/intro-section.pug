@@ -5,20 +5,31 @@ section(class=introSection)
 			h1(class=titleDefault__H1+ ' ' + ClassintroSection__H1+ ' ' +colorTextBlack)
 				span= 'easeweb'
 				br
-				span(class=ClassintroSection__h1__span3)= 'разработка сайтов'
-				span(class=ClassintroSection__h1__span3)= 'продвижение'
-			div(class=ClassintroSectionInner)
+				if mainPage
+					span(class=ClassintroSection__h1__span3)= 'разработка сайтов'
+					span(class=ClassintroSection__h1__span3)= 'продвижение'
+				if developPage
+					span(class=ClassintroSection__h1__span3)= 'разработка сайтов'
+					span(class=ClassintroSection__h1__span3)= 'продвижение'
+				if seoPage
+					span(class=ClassintroSection__h1__span4)= 'Продвижение сайтов'
+				div(class=ClassintroSectionInner)
 				include form
 				include image
 			if developPage
 				div(class=ClassIntroSectionTexts)
 					div(class=ClassIntroSectionTextsInner)
-						h2(class=ClassIntroSectionText+' anima1')
+						h2(class=ClassIntroSectionText)
 							|   Создание сайта
 							br
 							|   «под—ключ»
-						h2(class=ClassIntroSectionText+' anima2')= 'Редизайн'
-						h2(class=ClassIntroSectionText+' anima3')
+						h2(class=ClassIntroSectionText)= 'Редизайн'
+						h2(class=ClassIntroSectionText)
 							|   Поддержка
 							br
 							|   готового сайта
+			if seoPage
+				div(class=ClassIntroSectionTexts)
+					div(class=ClassIntroSectionTextsInner)
+						h2(class=ClassIntroSectionText)
+							|	Настройка рекламы

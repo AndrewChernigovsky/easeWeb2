@@ -60,6 +60,9 @@
       transition: $base-transition;
     }
   }
+  &__h1-span2 {
+    font-family: $MontserratBold;
+  }
 
   &__form {
     @include media('>=phone') {
@@ -176,14 +179,6 @@
     width: 100%;
   }
 
-  &__texts-inner {
-	position: relative;
-	height: 500px;
-	min-width: 100%;
-	display: grid;
-    align-items: end;
-  }
-
   &__texts {
 	position: absolute;
 	right: 0;
@@ -193,44 +188,50 @@
 	display: flex;
 	max-width: 700px;
 	min-width: 700px;
-    overflow: hidden;
-    height: 500px;
+    height: 200px;
+  }
+
+  &__texts-inner {
+	position: relative;
+	height: 200px;
+	min-width: 100%;
+	display: grid;
+    align-items: end;
+	overflow: hidden;
   }
 
   &__text {
-	position: absolute;
-	text-align: right;
-	display: none;
+    position: absolute;
+    text-align: right;
   }
 
-  &__text.anima1 {
-	animation: anima 3s ease-in-out infinite;
-	animation-delay: 0s;
+  &__text.anima {
+	animation: anima 4s ease-in-out infinite;
+	// animation-timing-function: steps(3, end);
+	// animation-delay: 1s;
+	// transition-delay: 1s;
   }
-  &__text.anima2 {
-	animation: anima 3s ease-in-out infinite;
-	animation-delay: 8s;
-  }
-//   &__text.anima3 {
-// 	animation: anima 9s ease-in-out infinite;
-// 	animation-delay: 6s;
+
+//   &__text.anima2 {
+// 	animation: anima 6s ease-in-out infinite;
+// 	animation-timing-function: steps(6, end);
+// 	// animation-delay: 3s;
+// 	// transition-delay: 3s;
+//   }
+
+//   &__text.anima3  {
+// 	animation: anima 10s ease-in-out infinite;
+// 	animation-timing-function: steps(9, end);
+// 	// animation-delay: 5s;
+// 	// transition-delay: 5s;
 //   }
 }
 
-
 @keyframes anima {
-	10% {
-		opacity: 0.9;
-		display: block;
-	}
-	20% {
-		opacity: 0.7;
-	}
-	70% {
-		opacity: 0.5;
+	0% {
+	  opacity: 1;
 	}
 	100% {
-		opacity: 0;
-		display: none;
+	  opacity: 0;
 	}
 }

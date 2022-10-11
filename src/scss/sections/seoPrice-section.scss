@@ -1,0 +1,18 @@
+.seoPrice-section {
+	color: $black;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+	}
+
+	&__card {
+		border: 2px solid $black;
+		padding: 2rem;
+	}
+
+	.title__h2 {
+		color: $black;
+	}
+}

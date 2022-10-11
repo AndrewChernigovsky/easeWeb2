@@ -93,7 +93,7 @@
 
             @include media('>=phone-lg') {
                 font-size: 2.4rem;
-            }    
+            }
 
             &::placeholder {
                 color: $white;
@@ -156,7 +156,7 @@
 
             @include media('>=phone-lg') {
                 font-size: 2.4rem;
-            }    
+            }
 
             option {
                 background-color: $black
@@ -185,7 +185,7 @@
         }
 
         &::after {
-            @extend %pseudo;       
+            @extend %pseudo;
             right: 10px;
             top: 30px;
             border: 10px solid transparent;
@@ -193,4 +193,14 @@
             z-index: 0;
         }
     }
+}
+
+.mainFormInput {
+	color: $white;
+	opacity: 1;
+	display: block;
+}
+
+.seoAdd {
+	padding-bottom: 20rem;
 }

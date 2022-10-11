@@ -11,7 +11,7 @@ block head
 block title
 	each title in titles
 		if title == indexTitles
-			title= title.index
+			title= title.develop
 block content
 	div(class='overlay')
 	button(type=button class="btnclose", id='btnclose')
@@ -20,7 +20,6 @@ block content
 	include ../../sections/header/header
 	main(class=main)
 		include ../../sections/intro-section/intro-section
-		//- include ../../sections/variantsSites-section/variantsSites-section
 		include ../../sections/formDevelop-section/formDevelop-section
 		include ../../sections/circles-section/circles-section
 		include ../../sections/prices-section/prices-section

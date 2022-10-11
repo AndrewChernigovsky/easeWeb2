@@ -1,0 +1,110 @@
+.trust-section {
+	&__wrapper {
+
+	}
+	&__argument {
+		padding: 2rem;
+
+		&:nth-of-type(1) {
+			border-top: 2px solid $orange1;
+
+		}
+
+		&:nth-of-type(2) {
+			border-bottom: 2px solid $orange1;
+			position: relative;
+
+			p {
+				text-align: left;
+			}
+
+			&::after {
+				@extend %pseudo;
+				background-color: $orange1;
+			}
+
+			&::after {
+				width: 70px;
+				height: 2px;
+				transform: rotate(90deg);
+				bottom: -36px;
+    			right: -35px;
+			}
+		}
+
+		&:nth-of-type(3) {
+			border-left: 2px solid $orange1;
+			border-bottom: 2px solid $orange1;
+			border-right: 2px solid transparent;
+			border-top: 2px solid transparent;
+			position: relative;
+
+
+			p {
+				text-align: left;
+				
+				&:nth-of-type(2) {
+					text-align: right;
+				}
+			}
+
+			&::before,
+			&::after {
+				@extend %pseudo;
+				background-color: $orange1;
+			}
+
+			&::before {
+				width: 50px;
+				height: 2px;
+				top: 0;
+				left: 40px;
+			}
+
+			&::after {
+				width: 70px;
+				height: 2px;
+				transform: rotate(90deg);
+				bottom: 33px;
+    			right: -35px;
+			}
+		}
+
+		&:nth-of-type(4) {
+			p {
+				text-align: right;
+			}
+		}
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 5rem;
+	}
+
+
+	&__argument-inner {
+
+	}
+
+	&__border {
+		position: absolute;
+		width: 40px;
+		height: calc(100% + 20px);
+		left: 0;
+		top: -10px;
+		border-top: 10px solid $white;
+		border-bottom: 10px solid $white;
+	}
+
+	&__text {
+		color: $black;
+		font-size: 2.4rem;
+		font-family: $Montserrat;
+	}
+
+	.title__h2 {
+		color: $black;
+	}
+}
