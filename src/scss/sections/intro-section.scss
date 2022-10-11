@@ -64,6 +64,10 @@
     font-family: $MontserratBold;
   }
 
+  &__h1-span2.right {
+    text-align: right;
+  }
+
   &__form {
     @include media('>=phone') {
       max-width: 391px;
