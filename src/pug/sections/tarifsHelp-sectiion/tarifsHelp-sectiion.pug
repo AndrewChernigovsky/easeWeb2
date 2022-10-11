@@ -2,9 +2,29 @@ section(class=ClassTarifsHelpSection)
 	.container
 		div(class=ClassTarifsHelpSectionWrapper)
 			div(class=ClassTarifsHelpSectionInner)
-				h2(class=titleDefault__H2)
-					|   Реализуем любую идею или
+				if developPage
+					h2(class=titleDefault__H2)
+						|   Реализуем любую идею или
+						br
+						|   техническое задание
+					div(class=ClassTarifsHelpSection__imageWrapper)
+						img(class=ClassTarifsHelpSection__image src="/images/content/3.png", alt="image")
+				if seoPage
+					h2(class=titleDefault__H2)
+						|   Продвижение сайтов —
+						br
+						|   с оплатой за результат
+					div(class=ClassTarifsHelpSection__imageWrapper)
+						img(class=ClassTarifsHelpSection__image src="/images/content/3.png", alt="image")
+				if addTasksPage
+					h2(class=titleDefault__H2)
+						|   Доверьте работу команде
+						br
+						|   профессионалов
+					p Экономите свой бюджет
 					br
-					|   техническое задание
-				div(class=ClassTarifsHelpSection__imageWrapper)
-					img(class=ClassTarifsHelpSection__image src="/images/content/3.png", alt="image")
+					p Тратите меньше времени
+					br
+					p Надежнее, чем несколько разноплановых фрилансеров
+					div(class=ClassTarifsHelpSection__imageWrapper)
+						img(class=ClassTarifsHelpSection__image src="/images/content/3.png", alt="image")
