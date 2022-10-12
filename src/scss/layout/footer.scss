@@ -46,10 +46,18 @@
 	}
 
    &-polite {
-		font-size: 2.4rem;
+		font-size: 1.8rem;
 		font-family: $MontserratItalic;
 		border-bottom: 1px solid $white;
-		
+
+		@include media(">=phone-lg") {
+			font-size: 1.8rem;
+		}
+
+		  @include media(">=widescreen-lg") {
+			font-size: 2.4rem;
+		}
+
 
 	  	&:hover {
 			transition: $base-transition;
@@ -71,7 +79,7 @@
       margin-bottom: 2.5rem;
 
       @include media(">=phone-lg") {
-        margin-bottom: 3.5rem;
+        margin-bottom: 5.5rem;
       }
 
       @include media(">=widescreen-lg") {
@@ -97,11 +105,11 @@
       top: 15px;
       transform: rotate(90deg);
     }
-  
+
     &::before{
       left: -15px;
     }
-  
+
     &::after {
       right: -15px;
     }
@@ -126,7 +134,7 @@
     font-size: 1.6rem;
 
     @include media(">=phone-lg") {
-    
+
     }
 
     @include media(">=desktop") {
@@ -161,7 +169,7 @@
         left: 0;
         height: 1px;
         background-color: $white;
-        transform-origin: left; 
+        transform-origin: left;
         transform: scale(0);
         transition: 0.25s linear;
         bottom: 0;
@@ -183,7 +191,7 @@
 
     &:hover::before, &:focus::before {
 		transform: scale(0);
-		
+
     }
   }
 }

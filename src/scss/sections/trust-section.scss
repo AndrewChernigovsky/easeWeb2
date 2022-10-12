@@ -94,11 +94,6 @@
 		}
 	}
 
-
-	&__argument-inner {
-
-	}
-
 	&__border {
 		position: absolute;
 		width: 40px;
@@ -113,7 +108,6 @@
 		color: $black;
 		font-size: 1.4rem;
 		font-family: $Montserrat;
-
 
 		@include media('>=phone-lg') {
 			font-size: 1.8rem;
