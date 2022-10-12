@@ -1,15 +1,17 @@
 const swiperMain = (() => {
 	const accountantInit = new Swiper('.swiper-main', {
-		slidesPerView: 1.5,
-		spaceBetween: 20,
+		slidesPerView: 2.15,
+		spaceBetween: 10,
 		speed: 800,
 
 		centeredSlides: false,
+		grabCursor: true,
+		loop: true,
 		autoplay: {
-			delay: 1000500,
+			delay: 10000500,
 			disableOnInteraction: false,
 		},
-		centerInsufficientSlides: false,
+		centerInsufficientSlides: true,
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'bullets',
@@ -23,20 +25,20 @@ const swiperMain = (() => {
 			el: '.swiper-scrollbar',
 			draggable: true,
 		},
-		breakpoints: {
-			768: {
-				spaceBetween: 40,
-				slidesPerView: 2.5,
-			},
-			1024: {
-				spaceBetween: 40,
-				slidesPerView: 3.5,
-			},
-			1200: {
-				spaceBetween: 200,
-				slidesPerView: 3.1,
-			},
-		},
+		// breakpoints: {
+		// 	768: {
+		// 		spaceBetween: 40,
+		// 		slidesPerView: 2.5,
+		// 	},
+		// 	1024: {
+		// 		spaceBetween: 40,
+		// 		slidesPerView: 3.5,
+		// 	},
+		// 	1200: {
+		// 		spaceBetween: 80,
+		// 		slidesPerView: 3.5,
+		// 	},
+		// },
 	});
 
 	// const swiper = document.querySelector('.variantsSitesSection');

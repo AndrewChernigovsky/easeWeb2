@@ -38,17 +38,18 @@
 
   &__title {
     font-family: $SyncopateBold;
-    text-align: center;
-
-    @include media('>=phone') {
-    }
-
-    @include media('>=tablet') {
-      text-align: left;
-    }
 
     span {
       text-transform: uppercase;
+
+      &:first-of-type {
+        text-align: center;
+
+        @include media('>=tablet') {
+          text-align: left;
+        }
+
+      }
     }
   }
 
@@ -66,6 +67,7 @@
 
   &__h1-span2.right {
     text-align: right;
+    display: block;
   }
 
   &__form {
@@ -207,35 +209,36 @@
   &__text {
     position: absolute;
     text-align: right;
+	opacity: 0;
   }
 
-  &__text.anima {
-	animation: anima 4s ease-in-out infinite;
-	// animation-timing-function: steps(3, end);
-	// animation-delay: 1s;
-	// transition-delay: 1s;
-  }
+//   &__text.anima {
+// 	animation: anima 4s ease-in-out infinite;
+// 	animation-timing-function: steps(3, end);
+// 	animation-delay: 1s;
+// 	transition-delay: 1s;
+//   }
 
 //   &__text.anima2 {
-// 	animation: anima 6s ease-in-out infinite;
-// 	animation-timing-function: steps(6, end);
-// 	// animation-delay: 3s;
-// 	// transition-delay: 3s;
+// 	animation: anima 10s ease-in-out infinite;
+// 	animation-timing-function: steps(15, end);
+// 	animation-delay: 3s;
+// 	transition-delay: 3s;
 //   }
 
 //   &__text.anima3  {
-// 	animation: anima 10s ease-in-out infinite;
-// 	animation-timing-function: steps(9, end);
-// 	// animation-delay: 5s;
-// 	// transition-delay: 5s;
+// 	animation: anima 15s ease-in-out infinite;
+// 	animation-timing-function: steps(30, end);
+// 	animation-delay: 5s;
+// 	transition-delay: 5s;
 //   }
 }
 
 @keyframes anima {
 	0% {
-	  opacity: 1;
+	  opacity: 0;
 	}
 	100% {
-	  opacity: 0;
+	  opacity: 1;
 	}
 }

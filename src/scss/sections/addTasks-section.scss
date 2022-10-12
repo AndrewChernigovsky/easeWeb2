@@ -1,0 +1,36 @@
+.addTasks-section {
+	color: $black;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 2rem;
+	}
+
+	&__card {
+		position: relative;
+		min-height: 600px;
+		display: grid;
+		align-content: end;
+		padding: 1rem;
+		overflow: hidden;
+		border: 2px solid $black;
+
+		.title__h2 {
+			position: relative;
+			z-index: 2;
+			font-family: $MazzardHBold;
+			margin-bottom: 0;
+		}
+	}
+
+	&__card-image {
+		position: absolute;
+		max-height: 600px;
+
+		img {
+			min-height: 600px;
+			object-fit: cover;
+		}
+	}
+}

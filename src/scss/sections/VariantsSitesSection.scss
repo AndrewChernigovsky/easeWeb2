@@ -8,9 +8,16 @@
     min-height: 760px;
 	overflow: hidden;
 
+	.swiper-main {
+		position: absolute;
+		left: 180px;
+	}
+	.swiper-wrapper {
+		display: flex;
+	}
+
     &__card {
         min-height: 250px;
-        min-width: max-content;
         max-width: 560px;
         padding: 1rem 1rem 5rem 5rem;
         border: 2px solid $black;
@@ -26,6 +33,11 @@
 
         .title__h2 {
             word-break: break-all;
+			font-size: 5.2rem;
         }
     }
+
+	.swiper-main__slide.swiper-main-card1 {
+		flex-shrink: 2;
+	}
 }

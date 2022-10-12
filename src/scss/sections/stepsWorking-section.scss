@@ -24,8 +24,16 @@
 
     &__text,
     &__text1 {
-        font-size: 2.4rem;
+		font-size: 1.8rem;
         font-family: $Montserrat;
+
+		@include media('>=phone-lg'){
+			font-size: 2rem;
+		}
+
+		@include media('>=widescreen-lg'){
+			font-size: 2.4rem;
+		}
     }
 
     &__text1 {
@@ -102,9 +110,31 @@
         display: flex;
         align-items: flex-end;
         border: 2px solid $black;
-        padding: 5rem;
-        min-height: 500px;
-        flex-basis: 65%;
+		min-height: 500px;
+		padding: 1rem;
+		margin-left: 10px;
+
+		@include media('>=widescreen'){
+
+		}
+		@include media('>=widescreen'){
+
+		}
+		@include media('>=tablet'){
+			padding: 2rem;
+			flex-basis: 50%;
+			margin-left: 20px;
+		}
+
+		@include media('>=widescreen-lg'){
+			padding: 5rem;
+			min-height: 500px;
+			flex-basis: 65%;
+		}
+
+		&:first-of-type {
+			margin-left: 0;
+		}
     }
 
     &__title {
@@ -112,6 +142,14 @@
         font-family: $MontserratBold;
         position: absolute;
         left: -135px;
-        bottom: 150px;
+		bottom: 200px;
+
+		@include media('>=tablet'){
+			bottom: 200px;
+		}
+
+		@include media('>=widescreen-lg'){
+			bottom: 150px;
+		}
     }
 }
