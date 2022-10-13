@@ -119,3 +119,21 @@ section {
   position: absolute;
   content: '';
 }
+
+.outerWrapper {
+    height: 100vh;
+    background-color: black;
+}
+.stop-scroll {
+    overflow: hidden;
+}
+.overflowY {
+    height: 500vh;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+}
+.blocks-wrapper {
+    display: flex;
+    overflow-x: scroll;
+}

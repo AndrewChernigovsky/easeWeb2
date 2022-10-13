@@ -6,7 +6,8 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        overflow: scroll;
+        overflow-x: scroll;
+		height: 700px;
     }
 
     &__inner {
