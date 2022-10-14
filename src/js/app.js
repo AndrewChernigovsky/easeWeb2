@@ -151,7 +151,7 @@ const btnClosePopupCall = document.getElementById('popupCallBtnCloseID');
 const tarifWrapper = document.querySelectorAll('.prices-section__tarif-wrapper');
 const tarifTitle = document.querySelector('.prices-section__title');
 
-let coordinatsSHAPE = SHAPE.getBoundingClientRect();
+// let coordinatsSHAPE = SHAPE.getBoundingClientRect();
 
 document.addEventListener('DOMContentLoaded', () => {
 	menuBtn.addEventListener('click', () => {
@@ -204,7 +204,6 @@ targetStepWorking.addEventListener('wheel', event => {
 	  event.preventDefault()
 	  targetStepWorking.scrollLeft += event.deltaY
 	  console.log('условия первое')
-	  BODY.classList.add("stop-scroll");
 	}
 
 	if (targetStepWorking.scrollLeft >= diff || (targetStepWorking.scrollLeft <= (diff - diff) && event.deltaY < 0)) {
@@ -212,21 +211,23 @@ targetStepWorking.addEventListener('wheel', event => {
 		BODY.classList.remove("stop-scroll");
 	}
 
-	console.log('event.deltaY ', event.deltaY)
-	console.log('targetStepWorking.scrollLeft ', targetStepWorking.scrollLeft)
-	console.log('targetStepWorking.scrollWidth ',  targetStepWorking.scrollWidth)
+	// console.log('event.deltaY ', event.deltaY)
+	// console.log('targetStepWorking.scrollLeft ', targetStepWorking.scrollLeft)
+	// console.log('targetStepWorking.scrollWidth ',  targetStepWorking.scrollWidth)
 });
 
 const blockWrapperSteps = document.querySelector('.stepsWorking-section__wrapper1');
 const blocksStepsWorking = document.querySelectorAll('.stepsWorking-section__step-block');
+
+const blockContacts =  document.querySelector('#contacts');
 
 let lastBlockInner = blocksStepsWorking[blocksStepsWorking.length - 1];
 
 (function Function__lastBlockInnerID() {
 	lastBlockInner.setAttribute('id', 'stepsWorkingLastBlock')
 })();
+const lastBlockInnerID =  document.querySelector('#stepsWorkingLastBlock');
 
-let lastBlockInnerID =  document.querySelector('#stepsWorkingLastBlock');
 
 let optionsOuter = {
     root: null,
@@ -241,7 +242,7 @@ let optionsList = {
 
 let optionsSHAPE = {
     root: null,
-    rootMargin: "0px",
+    rootMargin: "0%",
     threshold: buildThresholdList()
 };
 
@@ -266,8 +267,8 @@ function buildThresholdList() {
 let callbackOuter = function (entries, observer) {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            console.log("пересек");
-            // BODY.classList.add("stop-scroll");
+            // console.log("пересек");
+            BODY.classList.add("stop-scroll");
 		}
 	});
 };
@@ -275,25 +276,24 @@ let callbackOuter = function (entries, observer) {
 let callbackList = function (entries, observer) {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            console.log("пересек последний");
-            // BODY.classList.remove("stop-scroll");
-			// blockWrapperSteps.style.overflowX = 'hidden';
-
+            // console.log("пересек последний");
+            BODY.classList.remove("stop-scroll");
         }
     });
 };
 
-let i = 100;
+let i = 0;
+let y = 0;
 
 let callbackSHAPE = function (entries, observer) {
 	entries.forEach((entry) => {
 		console.log(i, 'i')
-		let y = (entry.intersectionRatio * i--) + '%';
+		y = (entry.intersectionRatio * i++) + '%';
 		console.log(y, 'ратио')
 
 		if (entry.intersectionRatio > prevRatio) {
 			entry.target.style.borderRadius = `${y} ${y} 0 0`;
-			console.log(entry.target.style.borderRadius)
+			console.log('border-radius ', entry.target.style.borderRadius)
 		}
 
 		prevRatio = entry.intersectionRatio;
@@ -306,6 +306,6 @@ let observerSHAPE = new IntersectionObserver(callbackSHAPE, optionsSHAPE);
 
 observerOuter.observe(blockWrapperSteps);
 observerList.observe(lastBlockInnerID);
-observerSHAPE.observe(SHAPE);
+observerSHAPE.observe(blockContacts);
 
 
