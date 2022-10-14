@@ -197,14 +197,24 @@ targetStepWorking.addEventListener('wheel', event => {
 	const toLeft  = event.deltaY < 0 && targetStepWorking.scrollLeft > 0
 	const toRight = event.deltaY > 0 && targetStepWorking.scrollLeft < targetStepWorking.scrollWidth - targetStepWorking.clientWidth
 
+	let diff = targetStepWorking.scrollWidth / 2 + 20;
+	console.log(diff, ' diff')
+
 	if (toLeft || toRight) {
 	  event.preventDefault()
 	  targetStepWorking.scrollLeft += event.deltaY
-	} else event.preventDefault()
-
-	if (targetStepWorking.scrollLeft > targetStepWorking.scrollWidth) {
-		event.preventDefault()
+	  console.log('условия первое')
+	  BODY.classList.add("stop-scroll");
 	}
+
+	if (targetStepWorking.scrollLeft >= diff || (targetStepWorking.scrollLeft <= (diff - diff) && event.deltaY < 0)) {
+		console.log('условия второе')
+		BODY.classList.remove("stop-scroll");
+	}
+
+	console.log('event.deltaY ', event.deltaY)
+	console.log('targetStepWorking.scrollLeft ', targetStepWorking.scrollLeft)
+	console.log('targetStepWorking.scrollWidth ',  targetStepWorking.scrollWidth)
 });
 
 const blockWrapperSteps = document.querySelector('.stepsWorking-section__wrapper1');
@@ -239,6 +249,8 @@ const numSteps = 100.0;
 let boxElement;
 let prevRatio = 0.0;
 
+console.log(optionsSHAPE.threshold)
+
 function buildThresholdList() {
 	let thresholds = [];
 	let numSteps = 100;
@@ -247,8 +259,6 @@ function buildThresholdList() {
 	  let ratio = i/numSteps;
 	  thresholds.push(ratio);
 	}
-
-	thresholds.push(0);
 	return thresholds;
 }
 
@@ -257,7 +267,7 @@ let callbackOuter = function (entries, observer) {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             console.log("пересек");
-            BODY.classList.add("stop-scroll");
+            // BODY.classList.add("stop-scroll");
 		}
 	});
 };
@@ -266,8 +276,9 @@ let callbackList = function (entries, observer) {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             console.log("пересек последний");
-            BODY.classList.remove("stop-scroll");
-			blockWrapperSteps.style.overflowX = 'hidden';
+            // BODY.classList.remove("stop-scroll");
+			// blockWrapperSteps.style.overflowX = 'hidden';
+
         }
     });
 };
@@ -277,22 +288,13 @@ let i = 100;
 let callbackSHAPE = function (entries, observer) {
 	entries.forEach((entry) => {
 		console.log(i, 'i')
-		// let y = entry.intersectionRatio * 100 + '%';
-		let y1 = (entry.intersectionRatio * i--) + '%';
-		console.log(y1, '123123132 6666666666666')
+		let y = (entry.intersectionRatio * i--) + '%';
+		console.log(y, 'ратио')
 
 		if (entry.intersectionRatio > prevRatio) {
-			entry.target.style.borderRadius = `${y1} ${y1} 0 0`;
-			console.log(entry.intersectionRatio, '123123222')
+			entry.target.style.borderRadius = `${y} ${y} 0 0`;
 			console.log(entry.target.style.borderRadius)
 		}
-		// if (entry.intersectionRatio < prevRatio) {
-		// 	entry.target.style.borderRadius = `'${y} ${y} 0 0`;
-		// 	console.log(entry.intersectionRatio, '123123222')
-		// 	console.log(entry.target.style.borderRadius)
-		// } else {
-		//   	entry.target.style.borderRadius = `${y1} ${y1} 0 0`;
-		// }
 
 		prevRatio = entry.intersectionRatio;
 	});
