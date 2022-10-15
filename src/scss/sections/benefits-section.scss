@@ -1,61 +1,149 @@
 .benefits-section {
+	padding-bottom: 5rem;
+
 	&__wrapper {
-		width: 500px;
-		height: 500px;
-		border-radius: 50%;
-		border: 2px solid $black;
+		width: 100%;
+		height: min-content;
 		position: relative;
 		margin: 0 auto;
+
+		@include media(">=tablet") {
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			border: 2px solid $black;
+		}
+		@include media(">=widescreen") {
+			width: 500px;
+			height: 500px;
+		}
 	}
 	&__inner {
-		position: absolute;
+
+		@include media(">=tablet") {
+			position: absolute;
+		}
 	}
 	&__inner.h3 {
 		top: 100px;
 		left: -200px;
 
+		@include media(">=tablet") {
+			left: -180px;
+		}
+
 		.title__h3::before {
 			right: -46px;
     		top: 10px;
+
+			@include media(">=tablet") {
+				right: -35px;
+			}
+			@include media(">=widescreen") {
+				right: -46px;
+			}
 		}
 	}
 	&__inner.h3-2 {
 		top: 100px;
 		right: -250px;
 
+		@include media(">=tablet") {
+			right: -215px;
+		}
+
 		.title__h3::before {
 			left: -45px;
+
+			@include media(">=tablet") {
+				left: -27px;
+			}
+			@include media(">=widescreen") {
+				left: -45px;
+			}
 		}
 	}
 	&__inner.h3-3 {
 	    top: 330px;
     	left: -235px;
 
+		@include media(">=tablet") {
+			right: 150px;
+			top: 305px;
+		}
 		.title__h3::before {
 			right: -33px;
+
+			@include media(">=tablet") {
+			    right: -4px;
+    			top: -20px;
+			}
 		}
 	}
 	&__inner.h3-4 {
 		top: 220px;
 		left: -330px;
+
+		@include media(">=tablet") {
+			left: -235px;
+		}
+
 		.title__h3::before {
 			right: -30px;
+
+			@include media(">=tablet") {
+				right: -25px;
+			}
+			@include media(">=widescreen") {
+				right: -30px;
+			}
 		}
 	}
 	&__inner.h3-5 {
 		top: 200px;
 		right: -250px;
 
+			@include media(">=tablet") {
+				right: -150px;
+
+			}
+			@include media(">=widescreen") {
+				right: -250px;
+			}
+
 		.title__h3::before {
 			left: -67px;
+
+			@include media(">=tablet") {
+				left: -20px;
+			}
+			@include media(">=widescreen") {
+				left: -67px;
+			}
 		}
 	}
 	&__inner.h3-6 {
 		top: 300px;
 		right: -250px;
 
+		@include media(">=tablet") {
+			top: 300px;
+    		right: -120px;
+		}
+		@include media(">=widescreen") {
+			left: -60px;
+		}
+
 		.title__h3::before {
 			left: -60px;
+
+			@include media(">=tablet") {
+				left: -38px;
+    			top: -38px;
+			}
+			@include media(">=widescreen") {
+				left: -60px;
+			}
 		}
 	}
 
@@ -66,10 +154,14 @@
 
 		&::before {
 			@extend %pseudo;
-			width: 20px;
-			height: 20px;
-			border-radius: 50%;
-			background-color: $black;
+			@include media(">=tablet") {
+
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: $black;
+			}
+
 		}
 	}
 }

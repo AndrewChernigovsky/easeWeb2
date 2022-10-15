@@ -23,9 +23,13 @@
     }
 
     &__wrapper {
-        padding: 4rem 2rem;
+        padding: 0;
         display: grid;
         gap: 2rem;
+
+		@include media('>=tablet') {
+			padding: 4rem 2rem;
+		}
     }
 
     .PopupCallBtnClose {
@@ -82,16 +86,28 @@
     }
 
     .inputs {
-        display: flex;
-        justify-content: space-between;
+		display: grid;
+        justify-content: center;
         gap: 2rem;
+
+
+		@include media('>=tablet') {
+			display: flex;
+			justify-content: space-between;
+		}
 
         input {
             font-family: $Montserrat;
             font-size: 2.4rem;
             border: 2px solid $white;
             height: 70px;
-            flex-basis: 50%;
+			max-width: 280px;
+
+
+			@include media('>=tablet') {
+				flex-basis: 50%;
+				max-width: 100%;
+			}
         }
     }
 
@@ -106,14 +122,23 @@
 
         p,a {
             color: $white;
-            font-size: 2.4rem;
+            font-size: 1.6rem;
             font-family: $Montserrat;
             position: relative;
             z-index: 200;
+
+			@include media('>=tablet') {
+				font-size: 2.4rem;
+			}
         }
 
         p {
-            padding-left: 5rem;
+            padding-left: 1rem;
+
+
+			@include media('>=tablet') {
+				padding-left: 5rem;
+			}
         }
 
         a {

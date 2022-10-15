@@ -2,10 +2,14 @@
 	color: $black;
 
 	&__inner {
-		display: flex;
-		justify-content: space-between;
-		gap: 2rem;
+		display: grid;
 		margin-bottom: 2rem;
+		gap: 2rem;
+
+		@include media(">=widescreen") {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 	&__card {
@@ -14,8 +18,12 @@
 		position: relative;
 
 		p:not(.seoPrice-section__price) {
-			font-size: 2.4rem;
+			font-size: 1.6rem;
 			font-family: $Montserrat;
+
+			@include media('>=tablet') {
+				font-size: 2.4rem;
+			}
 		}
 
 		p:first-of-type {
@@ -29,8 +37,12 @@
 		}
 
 		li {
-			font-size: 2.4rem;
+			font-size: 1.4rem;
 			font-family: $Montserrat;
+
+			@include media('>=tablet') {
+				font-size: 2.4rem;
+			}
 		}
 	}
 
@@ -41,20 +53,32 @@
 	}
 
 	&__price {
-		font-size: 5.6rem;
+		font-size: 2.6rem;
 		font-family: $MontserratBold;
+
+		@include media('>=tablet') {
+			font-size: 5.6rem;
+		}
 	}
 
 	&__cost {
-		font-size: 2.1rem;
+		font-size: 1.4rem;
 		font-family: $Montserrat;
+
+		@include media('>=tablet') {
+			font-size: 2.1rem;
+		}
 	}
 
 	&__pro {
 		font-family: $SyncopateBold;
-		font-size: 2.4rem;
+		font-size: 1.4rem;
 		color: $gray;
 		text-transform: uppercase;
+
+		@include media('>=tablet') {
+			font-size: 2.1rem;
+		}
 	}
 
 	.title__h2 {

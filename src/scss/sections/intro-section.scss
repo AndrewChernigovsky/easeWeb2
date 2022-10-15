@@ -1,8 +1,22 @@
 .intro-section {
 	padding-top: 3rem;
+	padding-bottom: 3rem;
 
 	@include media('>=tablet') {
 		padding-top: 1rem;
+		padding-bottom: 10rem;
+	}
+
+    @include media('>=desktop') {
+		padding-bottom: 15rem;
+	}
+
+    @include media('>=widescreen') {
+		padding-bottom: 20rem;
+	}
+
+    @include media('>=widescreen-lg') {
+		padding-bottom: 25rem;
 	}
 
   &__wrapper {
@@ -151,39 +165,48 @@
       transform: translate(-50%, 35px);
     }
 
+    @include media('>=phone-lg') {
+		width: 530px;
+    }
+
     @include media('>=tablet') {
-      top: -30px;
-      right: -160px;
-      width: 400px;
+      top: 50px;
+      right: -220px;
+      width: 420px;
     }
 
     @include media('<=tablet') {
       left: 50%;
       transform: translate(-50%, 0px);
+
     }
 
     @include media('>=desktop') {
-      top: -25px;
-      right: -200px;
+	  top: 60px;
+      right: -265px;
       width: 500px;
       height: 400px;
     }
 
     @include media('>=widescreen') {
-      top: -25px;
+      top: 25px;
+	  right: -300px;
       width: 600px;
       height: 500px;
     }
 
     @include media('>=widescreen-lg') {
-      top: -20px;
-      right: -170px;
-      width: 620px;
+    //   top: -20px;
+    //   right: -170px;
+    //   width: 620px;
+
+	  top: 130px;
+	  right: -360px;
+	  width: 680px;
     }
   }
 
   &__image {
-    background-color: $red;
     object-fit: cover;
     position: absolute;
     height: inherit;
@@ -217,27 +240,6 @@
     text-align: right;
 	opacity: 0;
   }
-
-//   &__text.anima {
-// 	animation: anima 4s ease-in-out infinite;
-// 	animation-timing-function: steps(3, end);
-// 	animation-delay: 1s;
-// 	transition-delay: 1s;
-//   }
-
-//   &__text.anima2 {
-// 	animation: anima 10s ease-in-out infinite;
-// 	animation-timing-function: steps(15, end);
-// 	animation-delay: 3s;
-// 	transition-delay: 3s;
-//   }
-
-//   &__text.anima3  {
-// 	animation: anima 15s ease-in-out infinite;
-// 	animation-timing-function: steps(30, end);
-// 	animation-delay: 5s;
-// 	transition-delay: 5s;
-//   }
 }
 
 @keyframes anima {

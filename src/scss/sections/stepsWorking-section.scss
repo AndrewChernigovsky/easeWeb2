@@ -7,7 +7,15 @@
         justify-content: flex-start;
         align-items: flex-start;
         overflow-x: scroll;
-		height: 700px;
+		min-height: 540px;
+
+		@include media('>=phone-lg'){
+			min-height: 600px;
+		}
+
+		@include media('>=tablet'){
+			min-height: 700px;
+		}
     }
 
     &__inner {
@@ -15,8 +23,15 @@
     }
 
     &__step-block {
-        padding-bottom: 7rem;
+        padding-bottom: 2rem;
         min-width: 100%;
+
+		@include media('>=phone-lg'){
+			padding-bottom: 3rem;
+		}
+		@include media('>=desktop'){
+			padding-bottom: 5rem;
+		}
     }
 
     .title__h2 {
