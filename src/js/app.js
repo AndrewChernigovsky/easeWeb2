@@ -227,6 +227,8 @@ let lastBlockInner = blocksStepsWorking[blocksStepsWorking.length - 1];
 	lastBlockInner.setAttribute('id', 'stepsWorkingLastBlock')
 })();
 const lastBlockInnerID =  document.querySelector('#stepsWorkingLastBlock');
+const integrationBlock =  document.querySelector('#integration');
+const integrationTitles =  document.querySelectorAll('.integration-section__title');
 
 
 let optionsOuter = {
@@ -244,6 +246,12 @@ let optionsSHAPE = {
     root: null,
     rootMargin: "0%",
     threshold: buildThresholdList()
+};
+
+let optionsIntegration = {
+    root: null,
+    rootMargin: "0%",
+    threshold: 0.3,
 };
 
 const numSteps = 100.0;
@@ -282,30 +290,51 @@ let callbackList = function (entries, observer) {
     });
 };
 
+let callbackIntegration = function (entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            console.log("пересек Integration");
+			integrationTitles.forEach(e=>{
+				if(e.classList.contains(active)){
+					e.classList.remove(active)
+				} else {
+					e.classList.add(active)
+				}
+			})
+        }
+    });
+};
+
 let i = 0;
 let y = 0;
 
-let callbackSHAPE = function (entries, observer) {
-	entries.forEach((entry) => {
-		console.log(i, 'i')
-		y = (entry.intersectionRatio * i++) + '%';
-		console.log(y, 'ратио')
+// let callbackSHAPE = function (entries, observer) {
+// 	entries.forEach((entry) => {
+// 		console.log(i, 'i')
+// 		while (i <= 100) {
+// 			y = (entry.intersectionRatio * i++) + '%';
+// 			console.log(y, 'ратио')
+// 		}
 
-		if (entry.intersectionRatio > prevRatio) {
-			entry.target.style.borderRadius = `${y} ${y} 0 0`;
-			console.log('border-radius ', entry.target.style.borderRadius)
-		}
+// 		console.log(y, 'ратио')
 
-		prevRatio = entry.intersectionRatio;
-	});
-};
+// 		if (entry.intersectionRatio > prevRatio) {
+// 			entry.target.style.borderRadius = `${y} ${y} 0 0`;
+// 			console.log('border-radius ', entry.target.style.borderRadius)
+// 		}
+
+// 		prevRatio = entry.intersectionRatio;
+// 	});
+// };
 
 let observerOuter = new IntersectionObserver(callbackOuter, optionsOuter);
 let observerList = new IntersectionObserver(callbackList, optionsList);
-let observerSHAPE = new IntersectionObserver(callbackSHAPE, optionsSHAPE);
+// let observerSHAPE = new IntersectionObserver(callbackSHAPE, optionsSHAPE);
+let observerIntegration = new IntersectionObserver(callbackIntegration, optionsIntegration);
 
 observerOuter.observe(blockWrapperSteps);
 observerList.observe(lastBlockInnerID);
-observerSHAPE.observe(blockContacts);
+// observerSHAPE.observe(SHAPE);
+observerIntegration.observe(integrationBlock);
 
 
