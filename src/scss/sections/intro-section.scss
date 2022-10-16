@@ -68,7 +68,6 @@
         @include media('>=tablet') {
           text-align: left;
         }
-
       }
     }
   }
@@ -234,6 +233,35 @@
     position: absolute;
     text-align: right;
 	opacity: 0;
+  }
+
+  &__text.animaH2 {
+    position: absolute;
+    text-align: right;
+	font-size: 2.4rem;
+	font-family: $Montserrat;
+	top: -70px;
+    right: 25px;
+
+	@include media('>=phone') {
+		right: -40px;
+	}
+	@include media('>=phone-lg') {
+		top: -40px;
+	}
+	@include media('>=tablet') {
+		right: 0;
+		top: 9px;
+	}
+	@include media('>=desktop') {
+		top: 25px;
+	}
+	@include media('>=widescreen') {
+		top: 60px;
+	}
+	@include media('>=widescreen-lg') {
+		top: 60px;
+	}
   }
 }
 
