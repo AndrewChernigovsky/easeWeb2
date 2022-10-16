@@ -4,6 +4,11 @@ section(class=introSection)
 		div(class=introSectionWrapper)
 			h1(class=titleDefault__H1+ ' ' + ClassintroSection__H1+ ' ' +colorTextBlack)
 				span= 'easeweb'
+				if seoPage
+					span(class=ClassIntroSectionText + ' animaH2')
+						|	Настройка рекламы
+					span(class=ClassIntroSectionText + ' animaH2')
+						|	Защита от скликивания
 				br
 				if mainPage
 					span(class=ClassintroSection__h1__span3)= 'разработка сайтов'
@@ -33,8 +38,3 @@ section(class=introSection)
 							|   Поддержка
 							br
 							|   готового сайта
-			if seoPage
-				div(class=ClassIntroSectionTexts)
-					div(class=ClassIntroSectionTextsInner)
-						h2(class=ClassIntroSectionText + ' animaH2')
-							|	Настройка рекламы

@@ -178,7 +178,6 @@
     @include media('<=tablet') {
       left: 50%;
       transform: translate(-50%, 0px);
-
     }
 
     @include media('>=desktop') {
@@ -196,10 +195,6 @@
     }
 
     @include media('>=widescreen-lg') {
-    //   top: -20px;
-    //   right: -170px;
-    //   width: 620px;
-
 	  top: 130px;
 	  right: -360px;
 	  width: 680px;

@@ -1,2 +1,5 @@
 div(class=ClassintroSection__imageWrapper)
-    img(class=ClassintroSection__image src="/images/content/logoGif.gif" alt='image')
+	if mainPage
+		img(class=ClassintroSection__image src="/images/content/logoGif.gif", alt='image-logo-easeweb')
+	if seoPage
+		img(class=ClassintroSection__image src="/images/content/planeGif.gif", alt='image-plane')
