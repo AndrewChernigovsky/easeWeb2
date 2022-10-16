@@ -3,12 +3,12 @@ section(class=introSection)
 	.container
 		div(class=introSectionWrapper)
 			h1(class=titleDefault__H1+ ' ' + ClassintroSection__H1+ ' ' +colorTextBlack)
-				span= 'easeweb'
-				if seoPage
-					span(class=ClassIntroSectionText + ' animaH2')
-						|	Настройка рекламы
-					span(class=ClassIntroSectionText + ' animaH2')
-						|	Защита от скликивания
+				span(class='title-company-introSection')= 'easeweb'
+					if seoPage
+						span(class=ClassIntroSectionText + ' animaH2')
+							|	Настройка рекламы
+						span(class=ClassIntroSectionText + ' animaH2')
+							|	Защита от скликивания
 				br
 				if mainPage
 					span(class=ClassintroSection__h1__span3)= 'разработка сайтов'

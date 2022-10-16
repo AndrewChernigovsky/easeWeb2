@@ -2,8 +2,9 @@
     &__wrapper{
         color: $black;
         min-width: 100%;
-        border: 40px solid gray;
+        border: 20px solid $gray1;
         padding: 6.4rem;
+		border-radius: 23px;
 
         .button-more {
             border-radius: 0;

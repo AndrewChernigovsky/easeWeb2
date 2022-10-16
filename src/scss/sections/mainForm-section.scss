@@ -202,5 +202,9 @@
 }
 
 .seoAdd {
-	padding-bottom: 20rem;
+	padding-bottom: 2rem;
+
+	@include media('>=desktop') {
+		padding-bottom: 20rem;
+	}
 }

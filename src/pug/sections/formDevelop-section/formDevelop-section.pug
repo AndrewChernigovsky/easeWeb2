@@ -2,7 +2,10 @@
 section(class=formDevelop)
 	.container
 		div(class=formDevelopSectionWrapper)
-			h2(class=titleDefault__H2) Нужен продающий сайт?
+			if developPage
+				h2(class=titleDefault__H2) Нужен продающий сайт?
+			if seoPage
+				h2(class=titleDefault__H2) Хотите увеличить поток клиентов?
 			p(class=formDevelopText)
 				span easeweb
 				span= ' поможет'

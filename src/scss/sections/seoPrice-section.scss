@@ -1,6 +1,15 @@
 .seoPrice-section {
 	color: $black;
 
+	&__wrapper {
+		&:hover {
+			.seoPrice-section__cost {
+				opacity: 1;
+				transition: 1s ease-in-out;
+			}
+		}
+	}
+
 	&__inner {
 		display: grid;
 		margin-bottom: 2rem;
@@ -64,9 +73,13 @@
 	&__cost {
 		font-size: 1.4rem;
 		font-family: $Montserrat;
+		opacity: 1;
 
 		@include media('>=tablet') {
 			font-size: 2.1rem;
+		}
+		@include media('>=widescreen') {
+			opacity: 0;
 		}
 	}
 

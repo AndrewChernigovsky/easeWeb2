@@ -157,6 +157,10 @@
 
 .menu {
 
+	&__wrapper {
+		width: 100px;
+	}
+
   &__inner {
     display: flex;
     align-items: flex-start;
