@@ -9,6 +9,17 @@ section(class=introSection)
 							|	Настройка рекламы
 						span(class=ClassIntroSectionText + ' animaH2')
 							|	Защита от скликивания
+					if developPage
+						span(class=ClassIntroSectionText + ' animaH2 ' + 'a1')
+							|   Создание сайта
+							br
+							|   «под—ключ»
+						span(class=ClassIntroSectionText + ' animaH2 ' + 'a1')
+							|	Редизайн
+						span(class=ClassIntroSectionText + ' animaH2 ' + 'a1')
+							|   Поддержка
+							br
+							|   готового сайта
 				br
 				if mainPage
 					span(class=ClassintroSection__h1__span3)= 'разработка сайтов'
@@ -26,15 +37,3 @@ section(class=introSection)
 				div(class=ClassintroSectionInner)
 			include form
 			include image
-			if developPage
-				div(class=ClassIntroSectionTexts)
-					div(class=ClassIntroSectionTextsInner)
-						h2(class=ClassIntroSectionText+ ' anima')
-							|   Создание сайта
-							br
-							|   «под—ключ»
-						h2(class=ClassIntroSectionText+ ' anima')= 'Редизайн'
-						h2(class=ClassIntroSectionText+ ' anima')
-							|   Поддержка
-							br
-							|   готового сайта

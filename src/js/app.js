@@ -43,6 +43,18 @@ const BODY = document.querySelector('body');
 				}
 			})
 		});
+		$(function () {
+			$('.intro-section__image-wrapper .anima').each(function (i) {
+				for (let z = 0; z < 10000; z++) {
+					$(this)
+						.delay(i++ * 1000).animate({
+							top: '20px'
+						}, 1500).animate({
+							top: '-20px'
+						}, 1500)
+				}
+			})
+		});
 	});
 })(jQuery);
 

@@ -246,7 +246,7 @@
 
 
 	@include media('>=phone') {
-	
+
 	}
 	@include media('>=phone-lg') {
 		top: -40px;
@@ -266,6 +266,30 @@
 	@include media('>=widescreen-lg') {
 		top: 50px;
 		right: -460px;
+		min-width: 400px;
+	}
+  }
+
+  &__text.animaH2.a1 {
+	@include media('>=phone-lg') {
+		top: -40px;
+	}
+	@include media('>=tablet') {
+		right: -285px;
+		top: 9px;
+	}
+	@include media('>=desktop') {
+		top: 25px;
+		right: -325px;
+	}
+	@include media('>=widescreen') {
+		top: 25px;
+		right: -280px;
+	}
+	@include media('>=widescreen-lg') {
+		top: 25px;
+		right: -460px;
+		left: 670px;
 		min-width: 400px;
 	}
   }
