@@ -22,11 +22,13 @@
 	&__circle-wrapper {
 		position: relative;
 
-        span {
+        span.circles-section__circle-text,
+		span.circles-section__circle-text1 {
             font-size: 2.4rem;
             font-family: $Montserrat;
             position: absolute;
             width: min-content;
+
 
             &::before{
                 @extend %pseudo;
@@ -35,6 +37,10 @@
                 border-radius: 50%;
                 background-color: $black;
             }
+
+			&:first-of-type {
+				opacity: 1;
+			}
         }
 	}
 
@@ -77,6 +83,18 @@
 		}
     }
 
+    &__circle-text1.w {
+		top: 180px;
+		left: -170px;
+		text-transform: uppercase;
+
+		&::before{
+			left: auto;
+			top: 10px;
+			right: -13px;
+		}
+    }
+
 	&__circle-runString1 {
 		transform: rotate(45deg);
 		position: absolute;
@@ -85,11 +103,13 @@
 	}
 
 	&__circle-runString2 {
-		transform: rotate(347deg);
+		transform: rotate(10deg);
 		position: absolute;
 		bottom: 145px;
 		right: -10px;
 		z-index: -1;
+		white-space: nowrap;
+		border: 1px solid $black;
 	}
 
 	&__circle-runString3 {
@@ -106,5 +126,18 @@
 		bottom: 145px;
 		right: -10px;
 		z-index: -1;
+		white-space: nowrap;
+		border: 1px solid $black;
 	}
+
+	&__circle-text-wrapper {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	&__circle-text-wrapper.a1 {
+		left: 0;
+		right: auto;
+	}
+
 }

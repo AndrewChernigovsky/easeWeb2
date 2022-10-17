@@ -208,6 +208,12 @@
     width: 100%;
   }
 
+  &__image.anima {
+	&:first-of-type {
+		z-index: -10;
+	}
+  }
+
   &__texts {
 	position: absolute;
 	right: 0;
@@ -291,6 +297,28 @@
 		right: -460px;
 		left: 670px;
 		min-width: 400px;
+	}
+  }
+  &__text.animaH2.an1 {
+	@include media('>=phone-lg') {
+		top: -40px;
+	}
+	@include media('>=tablet') {
+		right: -285px;
+		top: 9px;
+	}
+	@include media('>=desktop') {
+		top: 25px;
+		right: -325px;
+	}
+	@include media('>=widescreen') {
+		top: 25px;
+		right: -280px;
+	}
+	@include media('>=widescreen-lg') {
+	    right: -420px;
+    	left: auto;
+		top: 45px;
 	}
   }
 }

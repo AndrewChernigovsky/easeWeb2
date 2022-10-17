@@ -22,39 +22,50 @@ const BODY = document.querySelector('body');
 		menuBurger.init();
 		swiperMain.init();
 
-		$(function () {
-			$('.intro-section__title .animaH2').each(function (i) {
-				for (let z = 0; z < 10000; z++) {
-					$(this)
-						.delay(i++ * 2000)
-						.fadeTo(1000, 1)
-						.fadeTo(1000, 0);
-				}
-			})
-		});
-
-		$(function () {
-			$('.intro-section__texts-inner .anima').each(function (i) {
-				for (let z = 0; z < 10000; z++) {
-					$(this)
-						.delay(i++ * 2000)
-						.fadeTo(1000, 1)
-						.fadeTo(1000, 0);
-				}
-			})
-		});
-		$(function () {
-			$('.intro-section__image-wrapper .anima').each(function (i) {
-				for (let z = 0; z < 10000; z++) {
-					$(this)
-						.delay(i++ * 1000).animate({
-							top: '20px'
-						}, 1500).animate({
-							top: '-20px'
-						}, 1500)
-				}
-			})
-		});
+		$('.intro-section__title .animaH2').each(function (i) {
+			for (let z = 0; z < 1000; z++) {
+				$(this)
+					.delay(i++ * 2000)
+					.fadeTo(1000, 1)
+					.fadeTo(1000, 0);
+			}
+		})
+		$('.intro-section__texts-inner .anima').each(function (i) {
+			for (let z = 0; z < 1000; z++) {
+				$(this)
+					.delay(i++ * 2000)
+					.fadeTo(1000, 1)
+					.fadeTo(1000, 0);
+			}
+		})
+		$('.intro-section__image-wrapper .anima').each(function (i) {
+			for (let z = 0; z < 1000; z++) {
+				$(this)
+				.delay(0).animate({
+					top: '50px'
+				}, 5000).animate({
+					top: '-50px'
+				}, 5000)
+			}
+		})
+		$('.circles-section__circle-text-wrapper .anima').each(function (i) {
+			for (let z = 0; z < 1000; z++) {
+				$(this)
+				.delay(i++ * 2000)
+				.fadeTo(0, 0)
+				.fadeTo(1000, 1)
+				.fadeTo(1000, 0);
+			}
+		})
+		$('.circles-section__circle-text-wrapper .anima1').each(function (i) {
+			for (let z = 0; z < 1000; z++) {
+				$(this)
+				.delay(i++ * 2000)
+				.fadeTo(0, 0)
+				.fadeTo(1000, 1)
+				.fadeTo(1000, 0);
+			}
+		})
 	});
 })(jQuery);
 
@@ -111,11 +122,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (e.classList.contains('active')) {
 				e.classList.remove('active');
 				e.firstElementChild.classList.remove('active');
-				BODY.style.overflow = 'auto';
+				// BODY.style.overflow = 'auto';
 			} else {
 				e.classList.add('active');
 				e.firstElementChild.classList.add('active');
-				BODY.style.overflow = 'hidden';
+				// BODY.style.overflow = 'hidden';
 			}
 		});
 	});
