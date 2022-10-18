@@ -125,7 +125,6 @@
             font-size: 1.6rem;
             font-family: $Montserrat;
             position: relative;
-            z-index: 200;
 
 			@include media('>=tablet') {
 				font-size: 2.4rem;
@@ -134,7 +133,7 @@
 
         p {
             padding-left: 1rem;
-
+			z-index: -1;
 
 			@include media('>=tablet') {
 				padding-left: 5rem;
@@ -143,7 +142,13 @@
 
         a {
             text-decoration: underline;
+
+			&:hover {
+				opacity: 0.8;
+			}
         }
+
+
     }
 
     input[type='checkbox'] {
@@ -153,6 +158,10 @@
         position: absolute;
         left: 0;
         top: 0;
+
+		&:hover {
+			cursor: pointer;
+		}
     }
 
     input[type='checkbox'] + label:before{
@@ -179,6 +188,7 @@
         height: 30px;
         border: 2px solid $white;
         text-align: center;
+		z-index: -1;
     }
 }
 
@@ -191,4 +201,8 @@
     position: absolute;
     left: -25px;
     top: -25px;
+}
+
+.polite-p-wrapper {
+	display: flex;
 }

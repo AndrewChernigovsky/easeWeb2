@@ -11,9 +11,10 @@ div(class=ClassPopupCall id=popupCall__mainID)
 				div(class='politeCheckboxWrapper')
 					input(type="checkbox", name='polite', id='politeCheckbox' checked required)
 					label(class='labelCallPopupCheckbox', name='polite', for="politeCheckbox")
-					p я прочитал и согласен с
-						= ' '
-						a(href='pages/polite.html') политикой конфиденциальности
+					div(class='polite-p-wrapper')
+						p я прочитал и согласен с &nbsp
+						a(href='../pages/polite.html') политикой конфиденциальности
+
 
 				div(class='wrapperButton')
 					if callPopup

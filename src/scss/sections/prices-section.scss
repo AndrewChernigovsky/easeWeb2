@@ -11,6 +11,7 @@
         align-items: flex-start;
         justify-content: space-between;
         gap: 2rem;
+		flex-wrap: wrap;
     }
 
     &__title {
@@ -61,6 +62,11 @@
         .prices-section__tarif-content {
             display: none;
         }
+
+		&:hover {
+			opacity: 0.6;
+			cursor: pointer;
+		}
     }
 
     &__tarif-wrapper.active {
@@ -69,6 +75,10 @@
         .prices-section__tarif-content {
             display: block;
         }
+
+		&:hover {
+			opacity: 1;
+		}
     }
 
     &__tarif-content {

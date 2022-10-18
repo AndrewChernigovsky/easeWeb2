@@ -28,12 +28,18 @@
         }
     }
 
+	&__inner {
+		animation-name: integration;
+		animation-duration: 2s;
+		opacity: 1;
+		animation-iteration-count: 1;
+	}
+
 
     &__title {
         font-size: 1.1rem;
         font-family: $MontserratBold;
         white-space: nowrap;
-		opacity: 0;
 
 		@include media(">=phone-lg") {
 			font-size: 1.8rem;
@@ -67,6 +73,8 @@
 		animation-name: integration;
 		animation-duration: 4s;
 		opacity: 1;
+		animation-iteration-count: 1;
+		transform: translateX(0%);
 
 		&:first-of-type {
 			animation-delay: 0s;
@@ -96,10 +104,12 @@
 	0% {
 		padding-left: 100%;
 		opacity: 0;
+		transform: translateX(1000%);
 	}
 
 	100% {
 		padding-left: 0%;
 		opacity: 1;
+		transform: translateX(0%);
 	}
 }

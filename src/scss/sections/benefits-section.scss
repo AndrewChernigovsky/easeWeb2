@@ -5,6 +5,7 @@
 
 	&__wrapper {
 		display: flex;
+		flex-wrap: wrap;
 	}
 	&__inner1 {
 		display: grid;
@@ -33,12 +34,16 @@
 		&:last-of-type() {
 			&:before {
 				@extend %pseudo;
-				left: 150px;
+				left: 88px;
 				top: 130px;
 				width: 380px;
 				height: 2px;
 				background-color: $black;
 				transform: rotate(90deg);
+
+				@include media('>=desktop') {
+					left: 150px;
+				}
 			}
 		}
 	}

@@ -75,7 +75,6 @@ const menuBtn = document.getElementById('menuBtn');
 const popupCall = document.getElementById('popupCall__mainID');
 const btnClosePopupCall = document.getElementById('popupCallBtnCloseID');
 const tarifWrapper = document.querySelectorAll('.prices-section__tarif-wrapper');
-const tarifTitle = document.querySelector('.prices-section__title');
 const NAV = document.querySelector('.js-burger');
 const BURGER = document.querySelector('.burger');
 const blockWrapperSteps = document.querySelector('.stepsWorking-section__wrapper1');
@@ -85,6 +84,7 @@ let lastBlockInner = blocksStepsWorking[blocksStepsWorking.length - 1];
 const lastBlockInnerID = document.querySelector('#stepsWorkingLastBlock');
 const integrationBlock = document.querySelector('#integration');
 const integrationTitles = document.querySelectorAll('.integration-section__title');
+const contactsLink = document.querySelector('#contactsLink');
 
 document.addEventListener('DOMContentLoaded', () => {
 	menuBtn.addEventListener('click', () => {
@@ -103,9 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (popupCall.classList.contains(active)) {
 			popupCall.classList.remove(active);
 			BODY.style.overflow = 'auto';
+			overlay.classList.remove(active)
 		} else {
 			popupCall.classList.add(active);
 			BODY.style.overflow = 'hidden';
+			overlay.classList.add(active)
 		}
 	});
 
@@ -130,6 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	});
+
+	contactsLink.addEventListener('click', () => {
+		if(BODY.classList.contains('stop-scroll')) {
+			BODY.classList.remove('stop-scroll');
+		}
+	})
 });
 
 let targetStepWorking = document.getElementById('stepsWorkingSectionWrapper1');
@@ -165,14 +173,17 @@ let optionsList = {
 	rootMargin: '0px',
 	threshold: 1,
 };
-
 let optionsSHAPE = {
 	root: null,
 	rootMargin: '0px 0px -50% 0px',
 	threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
 };
-
 let optionsIntegration = {
+	root: null,
+	rootMargin: '20% 0%',
+	threshold: 1,
+};
+let optionsContacts = {
 	root: null,
 	rootMargin: '0%',
 	threshold: 1,
@@ -201,6 +212,8 @@ let callbackIntegration = function (entries, observer) {
 			integrationTitles.forEach((e) => {
 				if (e.classList.contains(active)) {
 					e.classList.remove(active);
+					observerIntegration.unobserve(integrationBlock);
+
 				} else {
 					e.classList.add(active);
 				}
@@ -209,6 +222,13 @@ let callbackIntegration = function (entries, observer) {
 	});
 };
 
+let callbackContacts = function (entries, observer) {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			BODY.classList.remove('stop-scroll');
+		}
+	});
+};
 let callbackSHAPE = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
@@ -234,6 +254,7 @@ let observerOuter = new IntersectionObserver(callbackOuter, optionsOuter);
 let observerList = new IntersectionObserver(callbackList, optionsList);
 let observerSHAPE = new IntersectionObserver(callbackSHAPE, optionsSHAPE);
 let observerIntegration = new IntersectionObserver(callbackIntegration, optionsIntegration);
+let observerContacts = new IntersectionObserver(callbackContacts, optionsContacts);
 
 if (blockWrapperSteps) {
 	observerOuter.observe(blockWrapperSteps);
@@ -242,7 +263,10 @@ if (lastBlockInnerID) {
 	observerList.observe(lastBlockInnerID);
 }
 if (integrationBlock) {
-	observerIntegration.observe(integrationBlock);
+	observerIntegration.observe(integrationBlock)
+}
+if (blockContacts) {
+	observerContacts.observe(blockContacts);
 }
 if (SHAPE) {
 	if (observerSHAPE.observe(SHAPE)) {

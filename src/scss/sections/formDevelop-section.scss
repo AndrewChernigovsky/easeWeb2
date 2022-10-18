@@ -2,9 +2,19 @@
     &__wrapper{
         color: $black;
         min-width: 100%;
-        border: 20px solid $gray1;
-        padding: 6.4rem;
+		max-width: 100%;
+        padding: 1.4rem;
 		border-radius: 23px;
+		box-sizing: border-box;
+
+		@include media('>=phone-lg') {
+			border: 10px solid $gray1;
+		}
+
+		@include media('>=desktop') {
+			padding: 6.4rem;
+			border: 20px solid $gray1;
+		}
 
         .button-more {
             border-radius: 0;
@@ -15,15 +25,25 @@
     }
 
     &__inner {
-        display: flex;
+        display: grid;
+		grid-template-columns: 1fr;
         align-items: center;
         gap: 3rem;
+		max-width: inherit;
+
+		@include media('>=desktop') {
+			display: flex;
+		}
 
         input{
             height: 70px;
-            flex-basis: 50%;
+			max-width: inherit;
             font-size: 2.4rem;
             font-family: $Montserrat;
+
+			@include media('>=desktop') {
+				flex-basis: 50%;
+			}
         }
     }
 
