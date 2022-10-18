@@ -29,17 +29,22 @@
     }
 
 	&__inner {
+		opacity: 0;
+	}
+
+	&__inner.active {
 		animation-name: integration;
 		animation-duration: 2s;
+		animation-delay: 0s;
 		opacity: 1;
 		animation-iteration-count: 1;
 	}
-
 
     &__title {
         font-size: 1.1rem;
         font-family: $MontserratBold;
         white-space: nowrap;
+		transform: translateX(100000%);
 
 		@include media(">=phone-lg") {
 			font-size: 1.8rem;
@@ -71,7 +76,7 @@
 
 	&__title.active {
 		animation-name: integration;
-		animation-duration: 4s;
+		animation-duration: 2s;
 		opacity: 1;
 		animation-iteration-count: 1;
 		transform: translateX(0%);

@@ -85,6 +85,7 @@ const lastBlockInnerID = document.querySelector('#stepsWorkingLastBlock');
 const integrationBlock = document.querySelector('#integration');
 const integrationTitles = document.querySelectorAll('.integration-section__title');
 const contactsLink = document.querySelector('#contactsLink');
+const integrationInner = document.querySelector('.integration-section__inner');
 
 document.addEventListener('DOMContentLoaded', () => {
 	menuBtn.addEventListener('click', () => {
@@ -171,7 +172,7 @@ let optionsOuter = {
 let optionsList = {
 	root: null,
 	rootMargin: '0px',
-	threshold: 1,
+	threshold: 0.4,
 };
 let optionsSHAPE = {
 	root: null,
@@ -180,7 +181,7 @@ let optionsSHAPE = {
 };
 let optionsIntegration = {
 	root: null,
-	rootMargin: '20% 0%',
+	rootMargin: '0% 0%',
 	threshold: 1,
 };
 let optionsContacts = {
@@ -189,7 +190,7 @@ let optionsContacts = {
 	threshold: 1,
 };
 
-// функция обратного вызова
+
 let callbackOuter = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
@@ -197,7 +198,6 @@ let callbackOuter = function (entries, observer) {
 		}
 	});
 };
-
 let callbackList = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
@@ -205,23 +205,24 @@ let callbackList = function (entries, observer) {
 		}
 	});
 };
-
 let callbackIntegration = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
 			integrationTitles.forEach((e) => {
 				if (e.classList.contains(active)) {
 					e.classList.remove(active);
+					integrationInner.classList.remove(active);
 					observerIntegration.unobserve(integrationBlock);
 
 				} else {
 					e.classList.add(active);
+					integrationInner.classList.add(active);
+					observerIntegration.unobserve(integrationBlock);
 				}
 			});
 		}
 	});
 };
-
 let callbackContacts = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
