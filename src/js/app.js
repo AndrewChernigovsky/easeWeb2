@@ -87,6 +87,10 @@ const integrationTitles = document.querySelectorAll('.integration-section__title
 const contactsLink = document.querySelector('#contactsLink');
 const integrationInner = document.querySelector('.integration-section__inner');
 
+const getCall = document.querySelector(".PopupCall button[type='submit']");
+const politeCheckbox = document.querySelector(".PopupCall input[type='checkbox']")
+
+
 document.addEventListener('DOMContentLoaded', () => {
 	menuBtn.addEventListener('click', () => {
 		btnClosePopupCall.addEventListener('click', () => {
@@ -139,6 +143,25 @@ document.addEventListener('DOMContentLoaded', () => {
 			BODY.classList.remove('stop-scroll');
 		}
 	})
+
+
+
+	// politeCheckbox.addEventListener('onchage', ()=> {
+	// 	getCall.removeAttribute('disabled')
+	// })
+
+	politeCheckbox.addEventListener('click', (e)=> {
+
+		if(politeCheckbox.hasAttribute('checked', 'checked')) {
+			politeCheckbox.removeAttribute('checked')
+			getCall.setAttribute('disabled', 'disabled')
+		} else {
+			politeCheckbox.setAttribute('checked', 'checked')
+			getCall.removeAttribute('disabled')
+		}
+	}
+
+	)
 });
 
 let targetStepWorking = document.getElementById('stepsWorkingSectionWrapper1');

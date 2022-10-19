@@ -93,29 +93,60 @@
 
     &__image-block {
         padding-bottom: 2rem;
+		max-height: 400px;
     }
 
     &__image-block-title {
         margin-bottom: 2rem;
         text-transform: uppercase;
         font-family: $MontserratBold;
+		position: relative;
+		z-index: 1;
     }
 
     &__image-wrapper {
         min-width: 280px;
         height: 400px;
-        background-color: $red;
-        overflow: hidden;
+        position: relative;
 
         @include media('>=tablet') {
             min-width: 390px;
+			height: 500px;
+        }
+		@include media('>=widescreen-lg') {
+			height: 700px;
         }
     }
 
     &__image {
-        min-width: 100%;
+		width: 300px;
+		top: -90px;
+		left: -15px;
         height: 100%;
         object-fit: cover;
+		position: absolute;
+		z-index: 0;
+		transform: rotate(-38deg);
+
+
+        @include media('>=phone-lg') {
+            width: 500px;
+			top: -50px;
+    		left: -80px;
+        }
+        @include media('>=tablet') {
+			width: 600px;
+			top: -50px;
+    		left: -80px;
+        }
+        @include media('>=widescreen-lg') {
+			width: 800px;
+			top: -100px;
+    		left: -30px;
+
+			top: -120px;
+    		left: 40px;
+        }
     }
 
     &__block-span {

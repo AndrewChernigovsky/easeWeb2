@@ -336,7 +336,12 @@
 
 .titleIntro-anima {
 	position: relative;
-	min-height: 200px;
+	min-height: 20px;
+
+	@include media('>=tablet') {
+		min-height: 200px;
+	}
+
 	.intro-section__h1-span.animaH2.an1 {
 		position: absolute;
 		left: 0;
