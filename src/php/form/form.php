@@ -1,33 +1,46 @@
-<meta charset="utf-8">
 <?php
-error_reporting( E_ERROR );
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
-if (isset($_POST['username']))			{$username			= $_POST['username'];		if ($username == '')	{unset($username);}}
-if (isset($_POST['userphone']))		{$userphone		= $_POST['userphone'];		if ($userphone == '')	{unset($userphone);}}
-if (isset($_POST['sab']))			{$sab			= $_POST['sab'];		if ($sab == '')		{unset($sab);}}
+//require 'phpmailer/PHPMailer.php';
+require 'phpmailer/PHPMailerAutoload.php';
 
-if (isset($username) ) {
-$username=stripslashes($username);
-$username=htmlspecialchars($username);
+if (!empty($_POST['username'])) {
+
+    $mail = new PHPMailer;
+    $mail->isSMTP();
+
+    $mail->SMTPDebug = 1;
+
+    $mail->Host = 'smtp.mail.ru';
+
+    $mail->SMTPAuth = true;
+    $mail->Username = 'easewebcompany@mail.ru'; // логин от вашей почты
+    $mail->Password = 'Sinkhr0fazatron'; // пароль от почтового ящика
+    $mail->SMTPSecure = 'SSL';
+    $mail->Port = '465';
+
+    $mail->CharSet = 'UTF-8';
+    $mail->From = 'easewebcompany@mail.ru';  // адрес почты, с которой идет отправка
+    $mail->FromName = 'Easeweb | сайты, который продают'; // имя отправителя
+    $mail->addAddress('easeweb@mail.ru', 'Easeweb');
+
+    $mail->isHTML(true);
+
+    $mail->Subject = $_POST['subject'];
+    $mail->Body = "Имя: {$_POST['username']}<br> Телефон: {$_POST['userphone']}<br> Сообщение: " . nl2br($_POST['body']);
+    $mail->AltBody = "Имя: {$_POST['username']}\r\n Телефон: {$_POST['userphone']}\r\n Сообщение: {$_POST['body']}";
+
+    //$mail->SMTPDebug = 1;
+
+    if ($mail->send()) {
+        $answer = '1';
+    } else {
+        $answer = '0';
+        echo 'Письмо не может быть отправлено. ';
+        echo 'Ошибка: ' . $mail->ErrorInfo;
+    }
+    die($answer);
 }
-if (isset($userphone) ) {
-$userphone=stripslashes($userphone);
-$userphone=htmlspecialchars($userphone);
-}
 
-$message = "
-Имя: $username \r\n
-Телефон: $userphone
-";
-
-$message = wordwrap($message, 70);
-
-$headers = 'From: easewebcompany@gmail.com' . "\r\n" .
-    'Reply-To: easewebcompany@gmail.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-
-var_dump(mail('easewebcompany@gmail.com', 'Регистрация заявки - Easeweb', $message, $headers));
-echo "<div style='max-width:1024px; margin:0 auto; padding:0 20px; text-align: center;'>
-<p style='color:green;'>Уважаемый(ая) <b style='color:red; font-size:24px'>$username</b> Ваше письмо отправленно успешно. Спасибо. <br>Вам перезвонят в течении 2 часов на номер<b style='color:red;'><span style='letter-spacing: 2px;'> $userphone</span></b>.</p>
-</div>";
 ?>
