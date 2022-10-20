@@ -26,4 +26,4 @@ form(class=MainForm id=MainFormID name=MainFormName action=MainFormPHP method=ge
 				else
 					input(class='mainFormInput' type='text', placeholder='Имеющийся сайт', name='website', value='' )
 				div(class='wrapperButton')
-					include ../../blocks/formButton
+					button(class=ClassMainForm__button type=submit id='getCallMainForm')= 'Заказать звонок'

@@ -5,7 +5,7 @@ if mainPage
 			h2(class='h2-none')= 'заказать звонок, оставить заявку'
 			div(class=mainForm__Section__Wrapper)
 				include form
-else
+if !mainPage
 	section(class=mainForm__Section+' seoAdd', id='contacts')
 		.container
 			h2(class='h2-none')= 'заказать звонок, оставить заявку'
