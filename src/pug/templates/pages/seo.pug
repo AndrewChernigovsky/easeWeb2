@@ -7,11 +7,6 @@ block variables
 	- let seoPage= true
 block head
 	include ../../partials/head/head
-
-block title
-	each title in titles
-		if title == indexTitles
-			title= title.seo
 block content
 	div(class='overlay')
 	button(type=button class="btnclose", id='btnclose')

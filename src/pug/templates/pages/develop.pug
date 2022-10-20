@@ -8,10 +8,6 @@ block variables
 block head
 	include ../../partials/head/head
 
-block title
-	each title in titles
-		if title == indexTitles
-			title= title.develop
 block content
 	div(class='overlay')
 	button(type=button class="btnclose", id='btnclose')

@@ -6,13 +6,6 @@ block variables
 	- let mainPage = true
 block head
 	include ../partials/head/head
-
-block title
-	each title in titles
-		if title == indexTitles
-			title= title.index
-block styles
-	//- include ../partials/styles/style
 block content
 	div(class='overlay')
 	button(type=button class="btnclose", id='btnclose')
@@ -22,7 +15,7 @@ block content
 	main(class=main)
 		include ../sections/intro-section/intro-section
 		include ../sections/helpers-section/helpers-section
-		//- include ../sections/stepsWorking-section/stepsWorking-section
+		include ../sections/stepsWorking-section/stepsWorking-section
 		include ../sections/integration-section/integration-section
 		include ../sections/mainForm-section/mainForm-section
 		include ../sections/seo-section/seo-section
