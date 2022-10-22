@@ -1,101 +1,106 @@
 .helpers-section {
-    &__wrapper {
+	&__inner {
+	    display: grid;
+		grid-template-columns: 1fr;
+		gap: 10px;
 
-    }
-    
-    &__inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 5%;
+		@include media('>=phone-lg') {
+			justify-content: space-between;
+		}
+		@include media('>=tablet') {
+			grid-template-columns: 1fr 1fr;
+		}
+		@include media('>=desktop') {
+		}
+		@include media('>=widescreen-lg') {
+			gap: 20px;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
 
-        @include media(">=phone-lg") {
-            justify-content: space-between;
-        }
+	&__title {
+		font-family: $SyncopateBold;
 
-        @include media(">=tablet") {
-            gap: 2px;
-        }  
+		span:first-of-type {
+			text-transform: uppercase;
+		}
+	}
 
-        @include media(">=desktop") {
-            gap: 2%;
-        }  
-    }
+	&__h2-span {
+		font-family: $MazzardH;
 
-    &__title {
-        font-family: $SyncopateBold;
+		&:last-of-type {
+			transition: $base-transition;
+		}
+	}
 
-        span:first-of-type {
-            text-transform: uppercase;
-        }
-    }
+	&__image-wrapper {
+		position: relative;
+		height: 500px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-basis: 50%;
+	}
 
-    &__h2-span {
-        font-family: $MazzardH;
+	&__image {
+		background-color: $red;
+		object-fit: cover;
+		position: absolute;
+		top: -240px;
+		left: -100px;
+		width: 100%;
+		height: inherit;
+		z-index: -1;
+	}
 
-        &:last-of-type {
-            transition: $base-transition;
-        }
-    }
+	&__card-wrapper {
+		box-shadow: inset 2px 2px 19px rgba(0, 0, 0, 0.13);
+		border-radius: 30px;
+		padding: 10px;
 
-    &__image-wrapper {
-        position: relative;
-        height: 500px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-basis: 50%;
-    }
+		@include media('>=phone-lg') {
+			padding: 20px;
+		}
+	}
 
-    &__image {
-        background-color: $red;
-        object-fit: cover;
-        position: absolute;
-        top: -240px;
-        left: -100px;
-        width: 100%;
-        height: inherit;
-        z-index: -1;
-    }
+	&__card {
+		display: flex;
+		flex-basis: 100%;
+		height: 300px;
+		color: $black;
+		padding: 1rem;
+		align-items: flex-start;
+		justify-content: flex-end;
+		flex-direction: column;
+		white-space: nowrap;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: $white;
+		border-radius: 30px;
+		box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.03), 0px -1px 0px 1px rgba(0, 0, 0, 0.05);
 
-    &__card {
-        display: flex;
-        flex-basis: 100%;
-        height: 300px;
-        color: $black;
-        background-color: $red;
-        padding: 1rem;
-        align-items: flex-start;
-        justify-content: flex-end;
-        flex-direction: column;
-        margin-bottom: 2rem;
-        white-space: nowrap;
-        background-image: url('../../images/content/3.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+		@include media('>=phone-lg') {
+			height: 350px;
+		}
 
-        @include media(">=phone-lg") {
-          height: 350px;
-        }
+		@include media('>=tablet') {
+			height: 450px;
+			flex-basis: 30%;
+		}
 
-        @include media(">=tablet") {
-          height: 450px;
-          flex-basis: 30%;
-        }
+		@include media('>=desktop') {
+			height: 500px;
+			padding: 2rem;
+		}
 
-        @include media(">=desktop") {
-          height: 500px;
-          padding: 2rem;
-        }
+		@include media('>=widescreen') {
+			padding: 3rem;
+		}
 
-        @include media(">=widescreen") {
-          padding: 3rem;
-        }
-
-        .paragraph-base {
-            margin-bottom: 2.4rem;
-        }
-    }
+		.paragraph-base {
+			margin-bottom: 2.4rem;
+		}
+	}
 }

@@ -319,6 +319,20 @@
 		top: 45px;
 	}
   }
+
+  .title__h1 {
+	padding-bottom: 20px;
+
+	@include media('>=phone-lg') {
+		padding-bottom: 20px;
+	}
+	@include media('>=tablet') {
+		padding-bottom: 40px;
+	}
+	@include media('>=desktop') {
+		padding-bottom: 80px;
+	}
+  }
 }
 
 @keyframes anima {

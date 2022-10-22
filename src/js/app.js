@@ -297,3 +297,23 @@ if (SHAPE) {
 		SHAPE.unobserve();
 	}
 }
+
+const variant = document.querySelector('.variantSection-wrapper .stepsWorking-section__wrapper');
+const variant1 = document.querySelector('.variantSection-wrapper');
+const introSectionWrapper = document.querySelector('.intro-section__wrapper')
+if(variant) {
+	let el0 = variant.getBoundingClientRect();
+	let el1 = introSectionWrapper.getBoundingClientRect();
+	const screenWidth = window.screen.width
+
+	function foo() {
+		let el0 = variant.getBoundingClientRect();
+		let el1 = introSectionWrapper.getBoundingClientRect();
+		let x = el1.left + 10 + 'px';
+		// variant.style.transform = `translate(${x}, 0)`;
+		variant1.style.marginLeft = `${x}`;
+	}
+	window.addEventListener('resize' , ()=> {
+		foo();
+	})
+}
