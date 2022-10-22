@@ -47,6 +47,10 @@
 	align-content: end;
 	flex-basis: auto;
 	height: 150px;
+	border: none;
+
+	border-radius: 30px;
+	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.03), 0px -1px 0px 1px rgba(0, 0, 0, 0.05);
 
 	&:hover {
 		height: 250px;
@@ -62,7 +66,32 @@
 
 .variantSection-block .stepsWorking-section__step{
 	height: 400px;
+	// border-radius: 30px;
+
+	// box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.03), 0px -1px 0px 1px rgba(0, 0, 0, 0.05);
+
+	box-shadow: inset 2px 2px 19px rgba(0, 0, 0, 0.13);
+	border-radius: 30px;
+	padding: 10px;
+
+	@include media('>=phone-lg') {
+		padding: 20px;
+	}
+
 }
+
+
+.variantSection-block .stepsWorking-section__inner{
+	// box-shadow: inset 2px 2px 19px rgba(0, 0, 0, 0.13);
+	// border-radius: 30px;
+	// padding: 10px;
+
+	// @include media('>=phone-lg') {
+	// 	padding: 20px;
+	// }
+}
+
+
 
 .variantSection-wrapper .stepsWorking-section__step-block{
 	min-width: auto;

@@ -129,11 +129,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (e.classList.contains('active')) {
 				e.classList.remove('active');
 				e.firstElementChild.classList.remove('active');
-				// BODY.style.overflow = 'auto';
 			} else {
 				e.classList.add('active');
 				e.firstElementChild.classList.add('active');
-				// BODY.style.overflow = 'hidden';
 			}
 		});
 	});
@@ -143,12 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			BODY.classList.remove('stop-scroll');
 		}
 	})
-
-
-
-	// politeCheckbox.addEventListener('onchage', ()=> {
-	// 	getCall.removeAttribute('disabled')
-	// })
 
 	politeCheckbox.addEventListener('click', (e)=> {
 
@@ -195,7 +187,7 @@ let optionsOuter = {
 let optionsList = {
 	root: null,
 	rootMargin: '0px',
-	threshold: 0.4,
+	threshold: 0.8,
 };
 let optionsSHAPE = {
 	root: null,
@@ -224,6 +216,7 @@ let callbackOuter = function (entries, observer) {
 let callbackList = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
+			console.log('пересек')
 			BODY.classList.remove('stop-scroll');
 		}
 	});
@@ -301,6 +294,7 @@ if (SHAPE) {
 const variant = document.querySelector('.variantSection-wrapper .stepsWorking-section__wrapper');
 const variant1 = document.querySelector('.variantSection-wrapper');
 const introSectionWrapper = document.querySelector('.intro-section__wrapper')
+
 if(variant) {
 	let el0 = variant.getBoundingClientRect();
 	let el1 = introSectionWrapper.getBoundingClientRect();
@@ -309,10 +303,11 @@ if(variant) {
 	function foo() {
 		let el0 = variant.getBoundingClientRect();
 		let el1 = introSectionWrapper.getBoundingClientRect();
-		let x = el1.left + 10 + 'px';
-		// variant.style.transform = `translate(${x}, 0)`;
+		let x = el1.left + 'px';
 		variant1.style.marginLeft = `${x}`;
 	}
+
+	foo()
 	window.addEventListener('resize' , ()=> {
 		foo();
 	})
