@@ -146,9 +146,13 @@
 	}
 
 	&__circle-runString1 {
+		background-color: $white;
+		border: 1px solid $black;
+
 		bottom: 80px;
 		left: -43px;
 		width: 152%;
+
 
 		@include media('>=desktop') {
 			bottom: 145px;
@@ -176,6 +180,9 @@
 	}
 
 	&__circle-runString3 {
+		background-color: $white;
+		border: 1px solid $black;
+
 		bottom: 80px;
 		right: -30px;
 

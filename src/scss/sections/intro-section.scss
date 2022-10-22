@@ -16,7 +16,8 @@
 	}
 
     @include media('>=widescreen-lg') {
-		padding-bottom: 25rem;
+		// padding-bottom: 25rem;
+		padding-bottom: 10rem;
 	}
 
   &__wrapper {

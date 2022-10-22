@@ -3,43 +3,8 @@
     justify-content: flex-start;
     gap: 2rem;
     align-items: flex-start;
-    // margin-left: -3rem;
     position: relative;
     min-height: 760px;
-	// overflow: hidden;
-
-	.swiper-main {
-		position: absolute;
-		left: 180px;
-	}
-	.swiper-wrapper {
-		display: flex;
-	}
-
-    &__card {
-        min-height: 250px;
-        max-width: 560px;
-        padding: 1rem 1rem 5rem 5rem;
-        border: 2px solid $black;
-        background-color: $gray;
-        color: $black;
-        border-radius: 40px;
-        display: grid;
-        align-items: flex-end;
-
-        @include media('>=tablet') {
-            min-height: 650px;
-        }
-
-        .title__h2 {
-            word-break: break-all;
-			font-size: 5.2rem;
-        }
-    }
-
-	.swiper-main__slide.swiper-main-card1 {
-		flex-shrink: 2;
-	}
 }
 
 .variantSection-block .stepsWorking-section__block{
@@ -48,9 +13,9 @@
 	flex-basis: auto;
 	height: 150px;
 	border: none;
-
-	border-radius: 30px;
-	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.03), 0px -1px 0px 1px rgba(0, 0, 0, 0.05);
+	border-radius: 40px;
+	box-shadow: inset 9px 43px 13px -41px rgba(0,0,0,0.25),
+				inset 1px 4px 20px 2px rgba(0,0,0,0.25);
 
 	&:hover {
 		height: 250px;
@@ -65,33 +30,9 @@
 }
 
 .variantSection-block .stepsWorking-section__step{
-	height: 400px;
-	// border-radius: 30px;
-
-	// box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.03), 0px -1px 0px 1px rgba(0, 0, 0, 0.05);
-
-	box-shadow: inset 2px 2px 19px rgba(0, 0, 0, 0.13);
-	border-radius: 30px;
-	padding: 10px;
-
-	@include media('>=phone-lg') {
-		padding: 20px;
-	}
-
+	border-radius: 40px;
+	overflow: hidden;
 }
-
-
-.variantSection-block .stepsWorking-section__inner{
-	// box-shadow: inset 2px 2px 19px rgba(0, 0, 0, 0.13);
-	// border-radius: 30px;
-	// padding: 10px;
-
-	// @include media('>=phone-lg') {
-	// 	padding: 20px;
-	// }
-}
-
-
 
 .variantSection-wrapper .stepsWorking-section__step-block{
 	min-width: auto;
@@ -122,27 +63,21 @@
 	}
 }
 
-.stepsWorking-section__wrapper {
-	// position: absolute;
-	transform: translate(0, 0);
-}
-
 .variantSection-wrapper .stepsWorking-section__wrapper1 {
+	overflow-y: hidden;
 
 	@include media('>=tablet') {
 		height: 575px;
 	}
 	@include media('>=desktop') {
-		min-height: 650px;
+		min-height: 590px;
 	}
 }
 
 
 .variantSection-wrapper {
-	min-width: 280px;
-	padding: 0 1rem;
-}
-
-.variantsSitesSection {
 	overflow: hidden;
+	.title__h2 {
+		color: $black;
+	}
 }

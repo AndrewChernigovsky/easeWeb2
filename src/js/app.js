@@ -181,7 +181,7 @@ if (targetStepWorking) {
 
 let optionsOuter = {
 	root: null,
-	rootMargin: '0% 0px 0% 0px',
+	rootMargin: '-10% 0px 0% 0px',
 	threshold: 1,
 };
 let optionsList = {
@@ -216,7 +216,6 @@ let callbackOuter = function (entries, observer) {
 let callbackList = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
-			console.log('пересек')
 			BODY.classList.remove('stop-scroll');
 		}
 	});
