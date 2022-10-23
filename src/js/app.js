@@ -69,6 +69,9 @@ const BODY = document.querySelector('body');
 	});
 })(jQuery);
 
+let windowWidth = window.innerWidth;
+let windowWidthClient = window.clientWidth;
+
 const SHAPE = document.getElementById('mainFormShape');
 const active = 'active';
 const menuBtn = document.getElementById('menuBtn');
@@ -101,18 +104,22 @@ document.addEventListener('DOMContentLoaded', () => {
 				NAV.classList.remove(active);
 				BURGER.classList.remove(active);
 				BODY.style.overflow = 'auto';
+				BODY.style.width = `${windowWidth}` + 'px'
 			} else {
 				BURGER.classList.remove(active);
+				BODY.style.width = `${windowWidth}` + 'px'
 			}
 		});
 		if (popupCall.classList.contains(active)) {
 			popupCall.classList.remove(active);
 			BODY.style.overflow = 'auto';
 			overlay.classList.remove(active)
+
 		} else {
 			popupCall.classList.add(active);
 			BODY.style.overflow = 'hidden';
 			overlay.classList.add(active)
+			BODY.style.width = `${windowWidth}` + 'px'
 		}
 	});
 
@@ -205,11 +212,11 @@ let optionsContacts = {
 	threshold: 1,
 };
 
-
 let callbackOuter = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
 			BODY.classList.add('stop-scroll');
+			BODY.style.width = `${windowWidth}` + 'px'
 		}
 	});
 };
@@ -217,6 +224,7 @@ let callbackList = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
 			BODY.classList.remove('stop-scroll');
+			BODY.style.width = `${windowWidthClient}` + 'px'
 		}
 	});
 };

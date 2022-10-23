@@ -7,341 +7,381 @@
 		padding-bottom: 10rem;
 	}
 
-    @include media('>=desktop') {
+	@include media('>=desktop') {
 		padding-bottom: 15rem;
 	}
 
-    @include media('>=widescreen') {
+	@include media('>=widescreen') {
 		padding-bottom: 20rem;
 	}
 
-    @include media('>=widescreen-lg') {
+	@include media('>=widescreen-lg') {
 		// padding-bottom: 25rem;
 		padding-bottom: 10rem;
 	}
 
-  &__wrapper {
-    position: relative;
-    display: grid;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 300px;
+	&__wrapper {
+		position: relative;
+		display: grid;
+		justify-content: center;
+		margin: 0 auto;
+		margin-top: 300px;
 
-    @include media('>=phone') {
-      min-width: 390px;
-    }
+		@include media('>=phone') {
+			min-width: 390px;
+		}
 
-    @include media('>=tablet') {
-      margin: 0;
-      justify-content: left;
-    }
+		@include media('>=tablet') {
+			margin: 0;
+			justify-content: left;
+		}
 
-    @include media('<=tablet') {
-      max-width: 391px;
-    }
-  }
-
-  &__inner {
-    display: grid;
-    justify-content: space-between;
-    align-items: center;
-
-    @include media('>=desktop') {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-
-  &__text {
-    color: $black;
-  }
-
-  &__title {
-    font-family: $SyncopateBold;
-
-    span {
-      text-transform: uppercase;
-
-      &:first-of-type {
-        text-align: center;
-
-        @include media('>=tablet') {
-          text-align: left;
-        }
-      }
-    }
-  }
-
-  &__h1-span {
-    font-family: $MontserratBold;
-
-    &:last-of-type {
-      display: none;
-      transition: $base-transition;
-    }
-  }
-  &__h1-span2 {
-    font-family: $MontserratBold;
-  }
-
-  &__h1-span2.right {
-    text-align: right;
-    display: block;
-  }
-
-  &__form {
-    @include media('>=phone') {
-      max-width: 391px;
-      min-width: 390px;
-    }
-  }
-
-  &__form-wrapper {
-    display: grid;
-    align-items: left;
-    max-width: 391px;
-    gap: 2rem;
-
-    .introButton {
-      font-family: $MontserratBold;
-      font-size: 2rem;
-      border: 1px solid $black;
-      background-color: $black;
-      padding: 1rem;
-      height: 70px;
-      max-width: 320px;
-
-      @include media('>=phone') {
-        max-width: 391px;
-        padding: 1rem 2.8rem 1rem 2.1rem;
-      }
-
-      @include media('>=tablet') {
-        max-width: 391px;
-        padding: 2rem 3.5rem 2rem 5.1rem;
-        font-size: 2.4rem;
-      }
-
-      &:hover {
-        @extend %hoverButton;
-      }
-
-      &:focus {
-        @extend %hoverButton;
-      }
-    }
-  }
-
-  &__form-inner {
-    display: grid;
-    align-items: left;
-    gap: 2rem;
-    max-width: min-content;
-
-    @include media('>=phone') {
-      max-width: 391px;
-      min-width: 390px;
-    }
-
-    input {
-      font-size: 2.4rem;
-      font-family: $Montserrat;
-      border: 2px solid $black;
-      height: 70px;
-      position: relative;
-    }
-  }
-
-  &__image-wrapper {
-    position: absolute;
-    width: 300px;
-    height: 320px;
-    top: -328px;
-    z-index: -1;
-
-    @include media('>=phone') {
-      top: -365px;
-      transform: translate(-50%, 35px);
-    }
-
-    @include media('>=phone-lg') {
-		width: 460px;
-    }
-
-    @include media('>=tablet') {
-      top: 50px;
-      right: -220px;
-      width: 420px;
-    }
-
-    @include media('<=tablet') {
-      left: 50%;
-      transform: translate(-50%, 0px);
-    }
-
-    @include media('>=desktop') {
-	  top: 60px;
-      right: -265px;
-      width: 500px;
-      height: 400px;
-    }
-
-    @include media('>=widescreen') {
-      top: 25px;
-	  right: -300px;
-      width: 600px;
-      height: 500px;
-    }
-
-    @include media('>=widescreen-lg') {
-	  top: 130px;
-	  right: -360px;
-	  width: 680px;
-    }
-  }
-
-  &__image {
-    object-fit: cover;
-    position: absolute;
-    height: inherit;
-    z-index: -1;
-    width: 100%;
-  }
-
-  &__image.anima {
-	&:first-of-type {
-		z-index: -10;
+		@include media('<=tablet') {
+			max-width: 391px;
+		}
 	}
-  }
 
-  &__texts {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	font-size: 4.8rem;
-	font-family: $MontserratBold;
-	display: flex;
-	max-width: 700px;
-	min-width: 700px;
-    height: 200px;
-  }
+	&__inner {
+		display: grid;
+		justify-content: space-between;
+		align-items: center;
 
-  &__texts-inner {
-	position: relative;
-	height: 200px;
-	min-width: 100%;
-	display: grid;
-    align-items: end;
-	overflow: hidden;
-  }
+		@include media('>=desktop') {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
 
-  &__text {
-    position: absolute;
-	opacity: 0;
-  }
-  &__text.animaH2 {
-	font-size: 2.4rem;
-	font-family: $MontserratBold;
-	text-transform: none;
-	text-align: left;
-	top: -70px;
-    left: 0;
-	min-width: 280px;
-	white-space: nowrap;
+	&__text {
+		color: $black;
+	}
 
+	&__title {
+		font-family: $SyncopateBold;
 
-	@include media('>=phone') {
+		span {
+			text-transform: uppercase;
 
-	}
-	@include media('>=phone-lg') {
-		top: -40px;
-	}
-	@include media('>=tablet') {
-		right: -285px;
-		top: 9px;
-	}
-	@include media('>=desktop') {
-		top: 25px;
-		right: -325px;
-	}
-	@include media('>=widescreen') {
-		top: 25px;
-		right: -280px;
-	}
-	@include media('>=widescreen-lg') {
-		top: 50px;
-		right: -460px;
-		min-width: 400px;
-	}
-  }
-  &__text.animaH2.a1 {
-	@include media('>=phone-lg') {
-		top: -40px;
-	}
-	@include media('>=tablet') {
-		right: -285px;
-		top: 9px;
-	}
-	@include media('>=desktop') {
-		top: 25px;
-		right: -325px;
-	}
-	@include media('>=widescreen') {
-		top: 25px;
-		right: -280px;
-	}
-	@include media('>=widescreen-lg') {
-		top: 25px;
-		right: -460px;
-		left: 670px;
-		min-width: 400px;
-	}
-  }
-  &__text.animaH2.an1 {
-	@include media('>=phone-lg') {
-		top: -40px;
-	}
-	@include media('>=tablet') {
-		right: -285px;
-		top: 9px;
-	}
-	@include media('>=desktop') {
-		top: 25px;
-		right: -325px;
-	}
-	@include media('>=widescreen') {
-		top: 25px;
-		right: -280px;
-	}
-	@include media('>=widescreen-lg') {
-	    right: -420px;
-    	left: auto;
-		top: 45px;
-	}
-  }
+			&:first-of-type {
+				text-align: center;
 
-  .title__h1 {
-	padding-bottom: 20px;
+				@include media('>=tablet') {
+					text-align: left;
+				}
+			}
+		}
+	}
 
-	@include media('>=phone-lg') {
+	&__h1-span {
+		font-family: $MontserratBold;
+
+		&:last-of-type {
+			display: none;
+			transition: $base-transition;
+		}
+	}
+	&__h1-span2 {
+		font-family: $MontserratBold;
+	}
+
+	&__h1-span2.right {
+		text-align: right;
+		display: block;
+	}
+
+	&__form {
+		@include media('>=phone') {
+			max-width: 391px;
+			min-width: 390px;
+		}
+	}
+
+	&__form-wrapper {
+		display: grid;
+		align-items: left;
+		max-width: 391px;
+		gap: 2rem;
+
+		.introButton {
+			font-family: $MontserratBold;
+			font-size: 2rem;
+			border: 1px solid $black;
+			background-color: $black;
+			padding: 1rem;
+			height: 70px;
+			max-width: 320px;
+
+			@include media('>=phone') {
+				max-width: 391px;
+				padding: 1rem 2.8rem 1rem 2.1rem;
+			}
+
+			@include media('>=tablet') {
+				max-width: 391px;
+				padding: 2rem 3.5rem 2rem 5.1rem;
+				font-size: 2.4rem;
+			}
+
+			&:hover {
+				@extend %hoverButton;
+			}
+
+			&:focus {
+				@extend %hoverButton;
+			}
+		}
+	}
+
+	&__form-inner {
+		display: grid;
+		align-items: left;
+		gap: 2rem;
+		max-width: min-content;
+
+		@include media('>=phone') {
+			max-width: 391px;
+			min-width: 390px;
+		}
+
+		input {
+			font-size: 2.4rem;
+			font-family: $Montserrat;
+			border: 2px solid $black;
+			height: 70px;
+			position: relative;
+		}
+	}
+
+	&__image-wrapper {
+		position: absolute;
+		width: 300px;
+		height: 320px;
+		top: -328px;
+		z-index: -1;
+
+		@include media('>=phone') {
+			top: -365px;
+			transform: translate(-50%, 35px);
+		}
+
+		@include media('>=phone-lg') {
+			width: 460px;
+		}
+
+		@include media('>=tablet') {
+			top: 50px;
+			right: -220px;
+			width: 420px;
+		}
+
+		@include media('<=tablet') {
+			left: 50%;
+			transform: translate(-50%, 0px);
+		}
+
+		@include media('>=desktop') {
+			top: 60px;
+			right: -265px;
+			width: 500px;
+			height: 400px;
+		}
+
+		@include media('>=widescreen') {
+			top: 25px;
+			right: -300px;
+			width: 600px;
+			height: 500px;
+		}
+
+		@include media('>=widescreen-lg') {
+			top: 30px;
+			right: -520px;
+			width: 848px;
+		}
+	}
+
+	&__image-wrapper.seoSectionimage {
+		@include media('>=phone') {
+			top: -365px;
+			transform: translate(-50%, 35px);
+		}
+
+		@include media('>=phone-lg') {
+			width: 460px;
+		}
+
+		@include media('>=tablet') {
+			top: 50px;
+			right: -220px;
+			width: 420px;
+		}
+
+		@include media('<=tablet') {
+			left: 50%;
+			transform: translate(-50%, 0px);
+		}
+
+		@include media('>=desktop') {
+			top: 60px;
+			right: -265px;
+			width: 500px;
+			height: 400px;
+		}
+
+		@include media('>=widescreen') {
+			top: 25px;
+			right: -300px;
+			width: 600px;
+			height: max-content;
+		}
+
+		@include media('>=widescreen-lg') {
+			top: -30px;
+			right: -520px;
+			width: 848px;
+		}
+	}
+
+	&__image {
+		object-fit: cover;
+		position: absolute;
+		height: inherit;
+		z-index: -1;
+		width: 100%;
+	}
+
+	&__image.anima {
+		&:first-of-type {
+			z-index: -10;
+		}
+	}
+
+	&__texts {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		font-size: 4.8rem;
+		font-family: $MontserratBold;
+		display: flex;
+		max-width: 700px;
+		min-width: 700px;
+		height: 200px;
+	}
+
+	&__texts-inner {
+		position: relative;
+		height: 200px;
+		min-width: 100%;
+		display: grid;
+		align-items: end;
+		overflow: hidden;
+	}
+
+	&__text {
+		position: absolute;
+		opacity: 0;
+	}
+	&__text.animaH2 {
+		font-size: 2.4rem;
+		font-family: $MontserratBold;
+		text-transform: none;
+		text-align: left;
+		top: -70px;
+		left: 0;
+		min-width: 280px;
+		white-space: nowrap;
+
+		@include media('>=phone') {
+		}
+		@include media('>=phone-lg') {
+			top: -40px;
+		}
+		@include media('>=tablet') {
+			right: -285px;
+			top: 9px;
+		}
+		@include media('>=desktop') {
+			top: 25px;
+			right: -325px;
+		}
+		@include media('>=widescreen') {
+			top: 25px;
+			right: -280px;
+		}
+		@include media('>=widescreen-lg') {
+			top: 50px;
+			right: -460px;
+			min-width: 400px;
+		}
+	}
+	&__text.animaH2.a1 {
+		@include media('>=phone-lg') {
+			top: -40px;
+		}
+		@include media('>=tablet') {
+			right: -285px;
+			top: 9px;
+		}
+		@include media('>=desktop') {
+			top: 25px;
+			right: -325px;
+		}
+		@include media('>=widescreen') {
+			top: 25px;
+			right: -280px;
+		}
+		@include media('>=widescreen-lg') {
+			top: 25px;
+			right: -460px;
+			left: 670px;
+			min-width: 400px;
+		}
+	}
+	&__text.animaH2.an1 {
+		@include media('>=phone-lg') {
+			top: -40px;
+		}
+		@include media('>=tablet') {
+			right: -285px;
+			top: 9px;
+		}
+		@include media('>=desktop') {
+			top: 25px;
+			right: -325px;
+		}
+		@include media('>=widescreen') {
+			top: 25px;
+			right: -280px;
+		}
+		@include media('>=widescreen-lg') {
+			right: -420px;
+			left: auto;
+			top: 45px;
+		}
+	}
+
+	.title__h1 {
 		padding-bottom: 20px;
+
+		@include media('>=phone-lg') {
+			padding-bottom: 20px;
+		}
+		@include media('>=tablet') {
+			padding-bottom: 40px;
+		}
+		@include media('>=desktop') {
+			padding-bottom: 80px;
+		}
 	}
-	@include media('>=tablet') {
-		padding-bottom: 40px;
-	}
-	@include media('>=desktop') {
-		padding-bottom: 80px;
-	}
-  }
 }
 
 @keyframes anima {
 	0% {
-	  opacity: 0;
+		opacity: 0;
 	}
 	100% {
-	  opacity: 1;
+		opacity: 1;
 	}
 }
 
