@@ -68,7 +68,7 @@
 
 		@include media('>=widescreen') {
 			width: 600px;
-			height: 500px;
+			height: max-content;
 		}
 
 		@include media('>=widescreen-lg') {

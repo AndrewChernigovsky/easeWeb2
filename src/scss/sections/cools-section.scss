@@ -1,0 +1,73 @@
+.cool-section {
+	position: relative;
+	min-height: 600px;
+
+	&__wrapper {
+		display: flex;
+		padding-left: 30%;
+	}
+
+	&__inner {
+		ul {
+			color: $black;
+			font-family: $Montserrat;
+			font-size: 3.8rem;
+			position: relative;
+			list-style-type: disc;
+
+			@include media('>=desktop') {
+				font-size: 2.8rem;
+			}
+
+			@include media('>=widescreen-lg') {
+				font-size: 3.2rem;
+			}
+
+			@include media('>=widescreen-lg') {
+				font-size: 3.8rem;
+			}
+
+			&::before {
+				@extend %pseudo;
+				width: 420px;
+				height: 2px;
+				left: -235px;
+				bottom: 200px;
+				background-color: $black;
+				transform: rotate(-90deg);
+
+				@include media('>=desktop') {
+					width: 330px;
+					left: -185px;
+					bottom: 150px;
+				}
+
+				@include media('>=widescreen-lg') {
+					width: 420px;
+					left: -235px;
+					bottom: 200px;
+				}
+			}
+		}
+	}
+
+	&__image-wrapper {
+		position: absolute;
+		left: -10%;
+		top: -80px;
+
+		@include media('>=desktop') {
+			width: 400px;
+		}
+
+		@include media('>=widescreen') {
+			width: 500px;
+		}
+
+		@include media('>=widescreen-lg') {
+			left: -10%;
+			top: -80px;
+			width: 800px;
+		}
+	}
+}

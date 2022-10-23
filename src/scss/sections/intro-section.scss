@@ -202,37 +202,8 @@
 	}
 
 	&__image-wrapper.seoSectionimage {
-		@include media('>=phone') {
-			top: -365px;
-			transform: translate(-50%, 35px);
-		}
-
-		@include media('>=phone-lg') {
-			width: 460px;
-		}
-
-		@include media('>=tablet') {
-			top: 50px;
-			right: -220px;
-			width: 420px;
-		}
-
-		@include media('<=tablet') {
-			left: 50%;
-			transform: translate(-50%, 0px);
-		}
-
-		@include media('>=desktop') {
-			top: 60px;
-			right: -265px;
-			width: 500px;
-			height: 400px;
-		}
-
 		@include media('>=widescreen') {
-			top: 25px;
-			right: -300px;
-			width: 600px;
+
 			height: max-content;
 		}
 
@@ -240,6 +211,17 @@
 			top: -30px;
 			right: -520px;
 			width: 848px;
+		}
+	}
+	&__image-wrapper.addTasksImage {
+
+		@include media('>=widescreen') {
+			height: max-content;
+		}
+
+		@include media('>=widescreen-lg') {
+			top: -85px;
+    		right: -570px;
 		}
 	}
 

@@ -3,8 +3,28 @@
 
 	&__inner {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr;
 		gap: 2rem;
+
+
+		@include media('>=tablet') {
+			grid-template-columns: 1fr 1fr;
+		}
+
+
+		@include media('>=desktop') {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	&__card-wrapper {
+		box-shadow: inset 2px 2px 19px rgba(0, 0, 0, 0.13);
+		border-radius: 30px;
+		padding: 10px;
+
+		@include media('>=phone-lg') {
+			padding: 20px;
+		}
 	}
 
 	&__card {
@@ -14,23 +34,15 @@
 		align-content: end;
 		padding: 1rem;
 		overflow: hidden;
-		border: 2px solid $black;
+		border-radius: 30px;
+		box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.03), 0px -1px 0px 1px rgba(0, 0, 0, 0.05);
+
 
 		.title__h2 {
 			position: relative;
 			z-index: 2;
 			font-family: $MazzardHBold;
 			margin-bottom: 0;
-		}
-	}
-
-	&__card-image {
-		position: absolute;
-		max-height: 600px;
-
-		img {
-			min-height: 600px;
-			object-fit: cover;
 		}
 	}
 }
