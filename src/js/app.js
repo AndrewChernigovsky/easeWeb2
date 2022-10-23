@@ -194,7 +194,7 @@ let optionsOuter = {
 let optionsList = {
 	root: null,
 	rootMargin: '0px',
-	threshold: 0.8,
+	threshold: 0.2,
 };
 let optionsSHAPE = {
 	root: null,
@@ -224,7 +224,7 @@ let callbackList = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
 			BODY.classList.remove('stop-scroll');
-			BODY.style.width = `${windowWidthClient}` + 'px'
+			BODY.style.width = `${windowWidthClient}` + 'px';
 		}
 	});
 };
