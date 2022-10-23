@@ -1,29 +1,60 @@
-form(class=MainForm id=MainFormID name=MainFormName action=MainFormPHP method=get)
-	div(class=ClassMainForm__Wrapper)
-		if mainPage
-			p(class=ClassMainForm__title)
-				| Обсудить проект со специалистом
-		if addTasksPage
-			p(class=ClassMainForm__title)
-				| Заказать сайт
-		if !mainPage
-			p(class=ClassMainForm__title)
-				| Хотите увеличить поток клиентов?
-		div(class=ClassMainForm__Inner)
-			div(class='inputs')
-				input(type="text", placeholder='Name', name='name', value='' required)
-				input(type="tel", placeholder='Telephone', name='telephone', value='' required)
-			div(class="wrapperButtons")
-				if mainPage
-					div(class=ClassMainForm__selectBlock id=MainFormSelectID)
-						button(type='button', class='js-select-btn', aria-label='Выбрать вид услуги')
-						select(class='js-select-list')
-							option(class='js-select-option', value="value1") Консультация
-							option(class='js-select-option', value="value2") Разработка сайта
-							option(class='js-select-option', value="value3") Продвижение сайта
-							option(class='js-select-option', value="value4") Редизайн
-							option(class='js-select-option', value="value5") Другое
-				else
-					input(class='mainFormInput' type='text', placeholder='Имеющийся сайт', name='website', value='' )
-				div(class='wrapperButton')
-					button(class=ClassMainForm__button type=submit id='getCallMainForm')= 'Заказать звонок'
+if mainPage
+	form(class=MainForm id=MainFormID name=MainFormName action='php/form/form.php' method=get)
+		div(class=ClassMainForm__Wrapper)
+			if mainPage
+				p(class=ClassMainForm__title)
+					| Обсудить проект со специалистом
+			if addTasksPage
+				p(class=ClassMainForm__title)
+					| Заказать сайт
+			if !mainPage
+				p(class=ClassMainForm__title)
+					| Хотите увеличить поток клиентов?
+			div(class=ClassMainForm__Inner)
+				div(class='inputs')
+					input(type="text" placeholder='Name' name='username' value='' required)
+					input(type="tel" placeholder='Telephone' name='userphone' value='' required)
+				div(class="wrapperButtons")
+					if mainPage
+						div(class=ClassMainForm__selectBlock id=MainFormSelectID)
+							button(type='button' class='js-select-btn' aria-label='Выбрать вид услуги')
+							select(class='js-select-list')
+								option(class='js-select-option' value="value1") Консультация
+								option(class='js-select-option' value="value2") Разработка сайта
+								option(class='js-select-option' value="value3") Продвижение сайта
+								option(class='js-select-option' value="value4") Редизайн
+								option(class='js-select-option' value="value5") Другое
+					else
+						input(class='mainFormInput' type='text' placeholder='Имеющийся сайт' name='website' value='' )
+					div(class='wrapperButton')
+						button(class=ClassMainForm__button type=submit id='getCallMainForm')= 'Заказать звонок'
+if anotherPage
+	form(class=MainForm id=MainFormID name=MainFormName action='../php/form/form.php' method=get)
+		div(class=ClassMainForm__Wrapper)
+			if mainPage
+				p(class=ClassMainForm__title)
+					| Обсудить проект со специалистом
+			if addTasksPage
+				p(class=ClassMainForm__title + ' addTaskMainFormTitle')
+					| Заказать сайт
+			if !mainPage && !addTasksPage
+				p(class=ClassMainForm__title)
+					| Хотите увеличить поток клиентов?
+			div(class=ClassMainForm__Inner)
+				div(class='inputs')
+					input(type="text" placeholder='Name' name='username' value='' required)
+					input(type="tel" placeholder='Telephone' name='userphone' value='' required)
+				div(class="wrapperButtons")
+					if mainPage
+						div(class=ClassMainForm__selectBlock id=MainFormSelectID)
+							button(type='button' class='js-select-btn' aria-label='Выбрать вид услуги')
+							select(class='js-select-list')
+								option(class='js-select-option' value="value1") Консультация
+								option(class='js-select-option' value="value2") Разработка сайта
+								option(class='js-select-option' value="value3") Продвижение сайта
+								option(class='js-select-option' value="value4") Редизайн
+								option(class='js-select-option' value="value5") Другое
+					else
+						input(class='mainFormInput' type='text' placeholder='Имеющийся сайт' name='website' value='' )
+					div(class='wrapperButton')
+						button(class=ClassMainForm__button type=submit id='getCallMainForm')= 'Заказать звонок'

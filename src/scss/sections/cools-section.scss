@@ -1,6 +1,10 @@
 .cool-section {
 	position: relative;
-	min-height: 600px;
+	min-height: 350px;
+
+	@include media('>=tablet') {
+		min-height: 600px;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -11,9 +15,13 @@
 		ul {
 			color: $black;
 			font-family: $Montserrat;
-			font-size: 3.8rem;
+			font-size: 1.8rem;
 			position: relative;
 			list-style-type: disc;
+
+			@include media('>=tablet') {
+				font-size: 2.5rem;
+			}
 
 			@include media('>=desktop') {
 				font-size: 2.8rem;
@@ -29,12 +37,24 @@
 
 			&::before {
 				@extend %pseudo;
-				width: 420px;
+				width: 260px;
 				height: 2px;
-				left: -235px;
-				bottom: 200px;
+				left: -145px;
+				bottom: 130px;
 				background-color: $black;
 				transform: rotate(-90deg);
+
+				@include media('>=phone-lg') {
+					width: 265px;
+					left: -148px;
+					bottom: 134px;
+				}
+
+				@include media('>=tablet') {
+					width: 350px;
+					left: -194px;
+					bottom: 152px;
+				}
 
 				@include media('>=desktop') {
 					width: 330px;
@@ -53,8 +73,17 @@
 
 	&__image-wrapper {
 		position: absolute;
-		left: -10%;
-		top: -80px;
+		left: -20%;
+    	top: -200px;
+		width: 200px;
+
+		@include media('>=phone-lg') {
+			width: 300px;
+		}
+
+		@include media('>=tablet') {
+			width: 300px;
+		}
 
 		@include media('>=desktop') {
 			width: 400px;

@@ -147,6 +147,11 @@
         font-size: 5.6rem;
     }
 
+    &__title.addTaskMainFormTitle {
+        text-align: left;
+		margin: 3rem 0 -3rem 6rem
+    }
+
     &__select-block {
         position: relative;
         color: $white;
