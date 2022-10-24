@@ -24,9 +24,16 @@
     }
 
 	.formDevSec-Inner {
-		padding: 10rem;
+		padding: 2rem;
 		border-radius: 30px;
 		box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.03), 0px -1px 0px 1px rgba(0, 0, 0, 0.05);
+
+		@include media('>=phone-lg') {
+			padding: 5rem;
+		}
+		@include media('>=desktop') {
+			padding: 10rem;
+		}
 	}
 
     &__inner {

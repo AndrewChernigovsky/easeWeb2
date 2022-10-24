@@ -1,25 +1,42 @@
 .button-more {
-    height: 70px;
-    min-width: 220px;
+	height: 40px;
+    min-width: 180px;
     border-radius: 46.5px;
     font-family: $MontserratBold;
-    font-size: 2.4rem;
+	font-size: 1.8rem;
     box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2),  -6px -6px 15px 5px rgba(34, 60, 80, 0.2) inset;
     background: linear-gradient(to left, $orange1, $orange);
-    padding: 2rem;
+    padding: 1rem;
     padding-right: 3rem;
     position: relative;
     color: $black;
 
+    @include media('>=tablet') {
+		height: 70px;
+    	min-width: 220px;
+		font-size: 2.4rem;
+		padding: 2rem;
+    }
+
     &::after {
         @extend %pseudo;
         width: 28px;
-        height: 50px;
+        height: 30px;
         right: 15px;
-        top: 10px;
+        top: 6px;
         background-repeat: no-repeat;
         background-size: contain;
         background-image: url('../images/icons/arrowMoreDefault.svg');
+
+
+		@include media('>=tablet') {
+			height: 50px;
+			top: 10px;
+		}
+    }
+
+	&:visited {
+        color: $black;
     }
 
     &:hover,
@@ -27,10 +44,6 @@
         box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2),  7px 7px 7px 2px rgba(34, 60, 80, 0.2) inset;
         text-shadow: 1px 1px 1px $black;
         color: $white;
-    }
-
-    &:visited {
-        color: $black;
     }
 }
 

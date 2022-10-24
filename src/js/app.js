@@ -81,9 +81,7 @@ const tarifWrapper = document.querySelectorAll('.prices-section__tarif-wrapper')
 const NAV = document.querySelector('.js-burger');
 const BURGER = document.querySelector('.burger');
 const blockWrapperSteps = document.querySelector('.stepsWorking-section__wrapper1');
-const blocksStepsWorking = document.querySelectorAll('.stepsWorking-section__step-block');
 const blockContacts = document.querySelector('#contacts');
-let lastBlockInner = blocksStepsWorking[blocksStepsWorking.length - 1];
 const lastBlockInnerID = document.querySelector('#stepsWorkingLastBlock');
 const integrationBlock = document.querySelector('#integration');
 const integrationTitles = document.querySelectorAll('.integration-section__title');
@@ -180,15 +178,11 @@ if (targetStepWorking) {
 			BODY.classList.remove('stop-scroll');
 		}
 	});
-
-	(function Function__lastBlockInnerID() {
-		lastBlockInner.setAttribute('id', 'stepsWorkingLastBlock');
-	})();
 }
 
 let optionsOuter = {
 	root: null,
-	rootMargin: '-10% 0px 0% 0px',
+	rootMargin: '0% 0px 0% 0px',
 	threshold: 1,
 };
 let optionsList = {
@@ -196,6 +190,7 @@ let optionsList = {
 	rootMargin: '0px',
 	threshold: 0.2,
 };
+
 let optionsSHAPE = {
 	root: null,
 	rootMargin: '0px 0px -50% 0px',
@@ -203,7 +198,7 @@ let optionsSHAPE = {
 };
 let optionsIntegration = {
 	root: null,
-	rootMargin: '0% 0%',
+	rootMargin: '0px',
 	threshold: 1,
 };
 let optionsContacts = {
@@ -217,6 +212,22 @@ let callbackOuter = function (entries, observer) {
 		if (entry.isIntersecting) {
 			BODY.classList.add('stop-scroll');
 			BODY.style.width = `${windowWidth}` + 'px'
+
+			let windowWidth = window.innerWidth;
+
+			window.addEventListener('resize', ()=> {
+				BODY.style.width = `${windowWidth}` + 'px';
+				let windowWidth = window.innerWidth;
+
+				if(windowWidth <= 1024) {
+					observer.unobserve(entry.target)
+					return;
+				}
+			})
+			if(windowWidth <= 1024) {
+				observer.unobserve(entry.target)
+				return;
+			}
 		}
 	});
 };
@@ -225,9 +236,10 @@ let callbackList = function (entries, observer) {
 		if (entry.isIntersecting) {
 			BODY.classList.remove('stop-scroll');
 			BODY.style.width = `${windowWidthClient}` + 'px';
-		}
+		};
 	});
 };
+
 let callbackIntegration = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
@@ -281,11 +293,12 @@ let observerIntegration = new IntersectionObserver(callbackIntegration, optionsI
 let observerContacts = new IntersectionObserver(callbackContacts, optionsContacts);
 
 if (blockWrapperSteps) {
-	observerOuter.observe(blockWrapperSteps);
+	observerOuter.observe(blockWrapperSteps)
 }
 if (lastBlockInnerID) {
-	observerList.observe(lastBlockInnerID);
+	observerList.observe(lastBlockInnerID)
 }
+
 if (integrationBlock) {
 	observerIntegration.observe(integrationBlock)
 }

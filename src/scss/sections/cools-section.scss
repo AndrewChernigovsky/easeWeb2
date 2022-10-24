@@ -37,10 +37,10 @@
 
 			&::before {
 				@extend %pseudo;
-				width: 260px;
+				width: 320px;
 				height: 2px;
-				left: -145px;
-				bottom: 130px;
+				left: -175px;
+				bottom: 158px;
 				background-color: $black;
 				transform: rotate(-90deg);
 

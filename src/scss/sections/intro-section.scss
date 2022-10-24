@@ -110,7 +110,7 @@
 			background-color: $black;
 			padding: 1rem;
 			height: 70px;
-			max-width: 320px;
+			min-width: max-content;
 
 			@include media('>=phone') {
 				max-width: 391px;
@@ -182,21 +182,21 @@
 
 		@include media('>=desktop') {
 			top: 60px;
-			right: -265px;
+			right: -235px;
 			width: 500px;
 			height: 400px;
 		}
 
 		@include media('>=widescreen') {
 			top: 25px;
-			right: -300px;
+			right: -200px;
 			width: 600px;
 			height: 500px;
 		}
 
 		@include media('>=widescreen-lg') {
 			top: 30px;
-			right: -520px;
+			right: -320px;
 			width: 848px;
 		}
 	}
@@ -344,10 +344,10 @@
 	}
 
 	.title__h1 {
-		padding-bottom: 20px;
+		padding-bottom: 70px;
 
 		@include media('>=phone-lg') {
-			padding-bottom: 20px;
+			padding-bottom: 40px;
 		}
 		@include media('>=tablet') {
 			padding-bottom: 40px;
@@ -381,8 +381,13 @@
 
 	.intro-section__h1-span.animaH2.an1 {
 		position: absolute;
+		top: 30px;
 		left: 0;
-		top: 0;
 		white-space: nowrap;
+
+		@include media('>=tablet') {
+			top: 0;
+		}
+
 	}
 }
