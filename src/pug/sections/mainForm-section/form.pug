@@ -1,5 +1,5 @@
 if mainPage
-	form(class=MainForm id=MainFormID name=MainFormName action='php/form/form.php' method=get)
+	form(class=MainForm id=MainFormID name=MainFormName action='php/form/form3.php' method=post)
 		div(class=ClassMainForm__Wrapper)
 			if mainPage
 				p(class=ClassMainForm__title)
@@ -18,18 +18,18 @@ if mainPage
 					if mainPage
 						div(class=ClassMainForm__selectBlock id=MainFormSelectID)
 							button(type='button' class='js-select-btn' aria-label='Выбрать вид услуги')
-							select(class='js-select-list')
-								option(class='js-select-option' value="value1") Консультация
-								option(class='js-select-option' value="value2") Разработка сайта
-								option(class='js-select-option' value="value3") Продвижение сайта
-								option(class='js-select-option' value="value4") Редизайн
-								option(class='js-select-option' value="value5") Другое
+							select(class='js-select-list' name='service[]')
+								option(class='js-select-option' value="consultation" selected) Консультация
+								option(class='js-select-option' value="web-developer") Разработка сайта
+								option(class='js-select-option' value="marketing-web") Продвижение сайта
+								option(class='js-select-option' value="redesign") Редизайн
+								option(class='js-select-option' value="another") Другое
 					else
 						input(class='mainFormInput' type='text' placeholder='Имеющийся сайт' name='website' value='' )
 					div(class='wrapperButton')
 						button(class=ClassMainForm__button type=submit id='getCallMainForm')= 'Заказать звонок'
 if anotherPage
-	form(class=MainForm id=MainFormID name=MainFormName action='../php/form/form.php' method=get)
+	form(class=MainForm id=MainFormID name=MainFormName action='../php/form/form3.php' method=post)
 		div(class=ClassMainForm__Wrapper)
 			if mainPage
 				p(class=ClassMainForm__title)
@@ -48,12 +48,12 @@ if anotherPage
 					if mainPage
 						div(class=ClassMainForm__selectBlock id=MainFormSelectID)
 							button(type='button' class='js-select-btn' aria-label='Выбрать вид услуги')
-							select(class='js-select-list')
-								option(class='js-select-option' value="value1") Консультация
-								option(class='js-select-option' value="value2") Разработка сайта
-								option(class='js-select-option' value="value3") Продвижение сайта
-								option(class='js-select-option' value="value4") Редизайн
-								option(class='js-select-option' value="value5") Другое
+							select(class='js-select-list' name='service[]')
+								option(class='js-select-option' value="consultation" selected) Консультация
+								option(class='js-select-option' value="web-developer") Разработка сайта
+								option(class='js-select-option' value="marketing-web") Продвижение сайта
+								option(class='js-select-option' value="redesign") Редизайн
+								option(class='js-select-option' value="another") Другое
 					else
 						input(class='mainFormInput' type='text' placeholder='Имеющийся сайт' name='website' value='' )
 					div(class='wrapperButton')

@@ -8,7 +8,7 @@ import menuBurger from './components/burger-menu';
 import scrollSmooth from './components/scroll-smooth';
 import swiperMain from './components/sliders/swiperMain';
 // import shapeResize from './components/animations/shapeResize';
-// import initSelects from './components/select';
+import initSelects from './components/select';
 // import bntOFFER from './components/btnOffer';
 
 const overlay = document.querySelector('.overlay');
@@ -21,6 +21,7 @@ const BODY = document.querySelector('body');
 		scrollSmooth.init();
 		menuBurger.init();
 		swiperMain.init();
+		initSelects.init();
 
 		$('.intro-section__title .animaH2').each(function (i) {
 			for (let z = 0; z < 1000; z++) {
