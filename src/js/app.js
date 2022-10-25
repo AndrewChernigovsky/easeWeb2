@@ -6,7 +6,7 @@
 //import Accordion from './components/accordion';
 import menuBurger from './components/burger-menu';
 import scrollSmooth from './components/scroll-smooth';
-import swiperMain from './components/sliders/swiperMain';
+// import swiperMain from './components/sliders/swiperMain';
 // import shapeResize from './components/animations/shapeResize';
 // import initSelects from './components/select';
 // import bntOFFER from './components/btnOffer';
@@ -20,7 +20,7 @@ const BODY = document.querySelector('body');
 		//const accordions = new Accordion();
 		scrollSmooth.init();
 		menuBurger.init();
-		swiperMain.init();
+		// swiperMain.init();
 		// initSelects.init();
 
 		$('.intro-section__title .animaH2').each(function (i) {
@@ -336,6 +336,10 @@ if(variant) {
 
 let form = document.querySelector('.js-form');
 let phoneInput = document.querySelector(".js-form input[type='tel']");
+let jsformButton = document.querySelector(".js-form-submit");
+
+phoneInput.classList.remove('invalid');
+phoneInput.classList.remove('valid');
 
 form.addEventListener('submit', (e)=> {
 	let valuePhone = phoneInput.value;
@@ -344,14 +348,29 @@ form.addEventListener('submit', (e)=> {
 
 	if(!valuePhone.match(re) === true) {
 		e.preventDefault();
-		if(phoneInput.classList.contains('invalid')) {
-			phoneInput.classList.remove('invalid');
-		}
 		phoneInput.classList.add('invalid')
 		form.appendChild(p);
-		p.innerHTML = '<p>введите корректный номер</p>'
+		p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+		// jsformButton.setAttribute('disabled', 'disabled')
 	} else {
+		// jsformButton.removeAttribute('disabled', ' ')
+		phoneInput.classList.remove('invalid');
+		phoneInput.classList.add('valid')
+	}
+})
+phoneInput.addEventListener('change', ()=> {
+	let valuePhone = phoneInput.value;
+	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+	let p = document.createElement('p');
 
+	if(!valuePhone.match(re) === true) {
+		phoneInput.classList.add('invalid')
+		form.appendChild(p);
+		p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+		// jsformButton.setAttribute('disabled', 'disabled')
+	} else {
+		// jsformButton.removeAttribute('disabled', ' ')
+		phoneInput.classList.remove('invalid');
 		phoneInput.classList.add('valid')
 	}
 })
