@@ -29,10 +29,9 @@ if(!$mail->send()) {
     header('location: thank-you.html');
 }
 
-
 $arr = array(
 	'Имя пользователя: ' => $fio,
-	'Телефон: ' => '+'.$phone
+	'Телефон: ' => "+{$phone}"
 );
 
 foreach($arr as $key => $value) {

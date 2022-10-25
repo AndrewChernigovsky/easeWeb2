@@ -5,7 +5,8 @@ $mail->CharSet = 'utf-8';
 
 $fio = $_POST['username'];
 $phone = $_POST['userphone'];
-$website = $_POST['service'];
+$website = $_POST['website'];
+$selected = $_POST['service'];
 
 $fio = htmlspecialchars($fio);
 $phone = htmlspecialchars($phone);
@@ -24,6 +25,22 @@ $mail->Subject = 'Easeweb | Обратный звонок';
 $mail->Body    = '' . '<p style="color: #1662a8; font-size: 16px;"><strong>' . $fio . '</strong></p>' . "<p style='color: black; font-size: 24px;'>телефон<strong> \r\n" . '+'.$phone . '</strong></p>';
 $mail->AltBody = '';
 
+if (isset($_POST['submit'])){
+    if (!empty($selected)) {
+        echo $selected;
+    } else {
+        echo 'Please select the value.';
+    }
+}
+
+if (isset($_POST['submit'])){
+    if (!empty($website)) {
+        echo $website;
+    } else {
+        echo 'Please select the value.';
+    }
+}
+
 if(!$mail->send()) {
     echo 'Error';
 	echo 'Mailer Error: ' . $mail->ErrorInfo;
@@ -34,19 +51,19 @@ if(!$mail->send()) {
 $arr = array(
 	'Имя пользователя: ' => $fio,
 	'Телефон: ' => '+'.$phone,
-	'Веб-сайт: ' => $website
+	'Услуга: ' => $selected,
+	'Имеющийся сайт: ' => $website,
 );
 
 foreach($arr as $key => $value) {
-$txt .= "<b>".$key."</b> ".$value."%0A";
+	$txt .= "<b>".$key."</b> ".$value."%0A";
 };
 
 $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
 if ($sendToTelegram) {
-header('Location: thank-you.html');
+	header('Location: thank-you.html');
 } else {
-echo "Error";
+	echo "Error";
 }
-
 ?>

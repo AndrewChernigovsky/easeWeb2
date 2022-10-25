@@ -17,3 +17,4 @@ export function inputmask() {
     hourFormat: "12"
     }).mask('input[data-mask="date"]'); */
 }
+

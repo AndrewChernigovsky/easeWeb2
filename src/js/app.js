@@ -8,7 +8,7 @@ import menuBurger from './components/burger-menu';
 import scrollSmooth from './components/scroll-smooth';
 import swiperMain from './components/sliders/swiperMain';
 // import shapeResize from './components/animations/shapeResize';
-import initSelects from './components/select';
+// import initSelects from './components/select';
 // import bntOFFER from './components/btnOffer';
 
 const overlay = document.querySelector('.overlay');
@@ -21,7 +21,7 @@ const BODY = document.querySelector('body');
 		scrollSmooth.init();
 		menuBurger.init();
 		swiperMain.init();
-		initSelects.init();
+		// initSelects.init();
 
 		$('.intro-section__title .animaH2').each(function (i) {
 			for (let z = 0; z < 1000; z++) {
@@ -91,7 +91,7 @@ const integrationInner = document.querySelector('.integration-section__inner');
 
 const getCall = document.querySelector(".PopupCall button[type='submit']");
 const politeCheckbox = document.querySelector(".PopupCall input[type='checkbox']")
-
+let phone = document.querySelector("input[name='userphone']");
 
 document.addEventListener('DOMContentLoaded', () => {
 	menuBtn.addEventListener('click', () => {
@@ -333,3 +333,25 @@ if(variant) {
 		foo();
 	})
 }
+
+let form = document.querySelector('.js-form');
+let phoneInput = document.querySelector(".js-form input[type='tel']");
+
+form.addEventListener('submit', (e)=> {
+	let valuePhone = phoneInput.value;
+	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+	let p = document.createElement('p');
+
+	if(!valuePhone.match(re) === true) {
+		e.preventDefault();
+		if(phoneInput.classList.contains('invalid')) {
+			phoneInput.classList.remove('invalid');
+		}
+		phoneInput.classList.add('invalid')
+		form.appendChild(p);
+		p.innerHTML = '<p>введите корректный номер</p>'
+	} else {
+
+		phoneInput.classList.add('valid')
+	}
+})
