@@ -11,7 +11,7 @@ module.exports = {
     // './node_modules/choices.js/public/assets/scripts/choices.min.js',
 
     ///inputm mask
-    // './node_modules/inputmask/dist/inputmask.min.js',
+    './node_modules/inputmask/dist/inputmask.min.js',
   ],
   es6: [
     // './node_modules/your-plugin/es6/your-plugin.js',

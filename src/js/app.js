@@ -6,6 +6,7 @@
 //import Accordion from './components/accordion';
 import menuBurger from './components/burger-menu';
 import scrollSmooth from './components/scroll-smooth';
+import inputmask from './components/inputMask';
 // import swiperMain from './components/sliders/swiperMain';
 // import shapeResize from './components/animations/shapeResize';
 // import initSelects from './components/select';
@@ -13,6 +14,7 @@ import scrollSmooth from './components/scroll-smooth';
 
 const overlay = document.querySelector('.overlay');
 const BODY = document.querySelector('body');
+const phoneInput = document.querySelector(".js-form .js-input-phone");
 
 (($) => {
 	// When DOM is ready
@@ -20,6 +22,7 @@ const BODY = document.querySelector('body');
 		//const accordions = new Accordion();
 		scrollSmooth.init();
 		menuBurger.init();
+		inputmask();
 		// swiperMain.init();
 		// initSelects.init();
 
@@ -334,43 +337,60 @@ if(variant) {
 	})
 }
 
-let form = document.querySelector('.js-form');
-let phoneInput = document.querySelector(".js-form input[type='tel']");
+let jsForm = document.querySelector('.js-form');
 let jsformButton = document.querySelector(".js-form-submit");
 
-phoneInput.classList.remove('invalid');
-phoneInput.classList.remove('valid');
+// if (phoneInput){
+// 	if(phoneInput.classList.contains('invalid')){
+// 		phoneInput.classList.remove('invalid');
+// 	}
+// 	if(phoneInput.classList.contains('valid')){
+// 		phoneInput.classList.remove('valid');
+// 	}
 
-form.addEventListener('submit', (e)=> {
-	let valuePhone = phoneInput.value;
-	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-	let p = document.createElement('p');
+// 	// phoneInput.addEventListener('input', (e) => {
 
-	if(!valuePhone.match(re) === true) {
-		e.preventDefault();
-		phoneInput.classList.add('invalid')
-		form.appendChild(p);
-		p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
-		// jsformButton.setAttribute('disabled', 'disabled')
-	} else {
-		// jsformButton.removeAttribute('disabled', ' ')
-		phoneInput.classList.remove('invalid');
-		phoneInput.classList.add('valid')
-	}
-})
-phoneInput.addEventListener('change', ()=> {
-	let valuePhone = phoneInput.value;
-	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-	let p = document.createElement('p');
+// 	// })
 
-	if(!valuePhone.match(re) === true) {
-		phoneInput.classList.add('invalid')
-		form.appendChild(p);
-		p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
-		// jsformButton.setAttribute('disabled', 'disabled')
-	} else {
-		// jsformButton.removeAttribute('disabled', ' ')
-		phoneInput.classList.remove('invalid');
-		phoneInput.classList.add('valid')
-	}
-})
+// 	phoneInput.addEventListener('input', updateValue);
+// }
+
+
+
+// function updateValue(e) {
+
+// 	let valuePhone = e.target.value;
+// 	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+// 	let p = document.createElement('p');
+
+// 	if(!valuePhone.match(re) === true) {
+// 		e.target.classList.add('invalid')
+// 		jsForm.appendChild(p);
+// 		p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+// 		// jsformButton.setAttribute('disabled', 'disabled')
+// 	} else {
+// 		// jsformButton.removeAttribute('disabled', ' ')
+// 		e.target.classList.remove('invalid');
+// 		e.target.classList.add('valid')
+// 	}
+// }
+
+// if (jsForm) {
+// 	jsForm.addEventListener('submit', (e)=> {
+// 		let valuePhone = phoneInput.value;
+// 		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+// 		let p = document.createElement('p');
+
+// 		if(!valuePhone.match(re) === true) {
+// 			e.preventDefault();
+// 			phoneInput.classList.add('invalid')
+// 			jsForm.appendChild(p);
+// 			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+// 			// jsformButton.setAttribute('disabled', 'disabled')
+// 		} else {
+// 			// jsformButton.removeAttribute('disabled', ' ')
+// 			phoneInput.classList.remove('invalid');
+// 			phoneInput.classList.add('valid')
+// 		}
+// 	})
+// }

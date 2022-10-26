@@ -142,3 +142,11 @@ section {
 .valid {
 	border: 2px solid $green;
 }
+
+.js-input-phone.valid:focus {
+	border: 2px solid $green;
+}
+
+.js-input-phone.invalid:focus {
+	border: 2px solid $red;
+}

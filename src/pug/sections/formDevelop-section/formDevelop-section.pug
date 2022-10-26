@@ -14,13 +14,13 @@ section(class=formDevelop)
 					form(class=ClassformDevelop + ' js-form' id='formDevelopID' name=introFormName action='php/form/form.php' method=post)
 						div(class=ClassformDevelop__Wrapper)
 							div(class=ClassformDevelop__Inner)
-								input(class='js-input-phone' type="text" placeholder='Telephone' name='userphone' value='' maxlength="15" required)
+								input(class='js-input-phone' type="text" placeholder='Telephone' name='userphone' value='' maxlength="15" data-mask="tel" required)
 								include ../../blocks/button
 				if anotherPage
 					form(class=ClassformDevelop + ' js-form' id='formDevelopID' name=introFormName action='../php/form/form.php' method=post)
 						div(class=ClassformDevelop__Wrapper)
 							div(class=ClassformDevelop__Inner)
-								input(class='js-input-phone' type="text" placeholder='Telephone' name='userphone' value='' maxlength="15" required)
+								input(class='js-input-phone' type="text" placeholder='Telephone' name='userphone' value='' maxlength="15" data-mask="tel" required)
 								include ../../blocks/button
 
 
