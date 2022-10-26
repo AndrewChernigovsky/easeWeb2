@@ -333,16 +333,18 @@ let jsformButton = document.querySelector('.js-form button[type="submit"]');
 let jsForm1 = document.querySelector('.js-form1');
 let jsformButton1 = document.querySelector('.js-form1 button[type="submit"]');
 let jsForm2 = document.querySelector('.js-form2');
+let jsFormPopup = document.querySelector('.js-formPopup');
 let jsformButton2 = document.querySelector('.js-form2 button[type="submit"]');
 
 const phoneInput = document.querySelector('.js-form input[data-mask="tel"]');
 const phoneInput1 = document.querySelector('.js-form1 input[data-mask="tel"]');
 const phoneInput2 = document.querySelector('.js-form2 input[data-mask="tel"]');
+const phoneInput3 = document.querySelector('.js-formPopup input[data-mask="tel"]');
 
 const nameInput = document.querySelector('.js-form input[name="username"]');
 const nameInput1 = document.querySelector('.js-form1 input[name="username"]');
-
 const nameInput2 = document.querySelector('.js-form2 input[name="username"]');
+const nameInput3 = document.querySelector('.js-formPopup input[name="username"]');
 
 
 if (phoneInput){
@@ -561,22 +563,19 @@ if (jsForm) {
 }
 if (jsForm1) {
 	jsForm1.addEventListener('submit', (e)=> {
-		let valuePhone = phoneInput.value;
+		let valuePhone = phoneInput1.value;
 		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
 		let p = document.createElement('p');
 
 		if(!valuePhone.match(re) === true) {
 			e.preventDefault();
-			phoneInput.classList.add('invalid')
-			jsForm1.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+			phoneInput1.classList.add('invalid')
 		}
 		if(valuePhone === ''){
-			jsForm1.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите номер</p>"
+			phoneInput1.classList.add('invalid')
 		} else {
-			phoneInput.classList.remove('invalid');
-			phoneInput.classList.add('valid')
+			phoneInput1.classList.remove('invalid');
+			phoneInput1.classList.add('valid')
 		}
 	})
 }
@@ -598,6 +597,27 @@ if (jsForm2) {
 		} else {
 			phoneInput2.classList.remove('invalid');
 			phoneInput2.classList.add('valid')
+		}
+	})
+}
+if (jsFormPopup) {
+	jsFormPopup.addEventListener('submit', (e)=> {
+		let valuePhone = phoneInput3.value;
+		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+		let p = document.createElement('p');
+
+		if(!valuePhone.match(re) === true) {
+			e.preventDefault();
+			phoneInput3.classList.add('invalid')
+			jsFormPopup.appendChild(p);
+			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+		}
+		if(valuePhone === ''){
+			jsFormPopup.appendChild(p);
+			p.innerHTML = "<p class='base-text'>введите номер</p>"
+		} else {
+			phoneInput3.classList.remove('invalid');
+			phoneInput3.classList.add('valid')
 		}
 	})
 }

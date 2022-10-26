@@ -4,11 +4,11 @@ div(class=ClassPopupCall id=popupCall__mainID)
 			button(class=ClassCallButtonClose type=button id=popupCallButtonCLoseID)
 				span Закрыть
 		if mainPage
-			form(action='php/form/form.php' name=popupCallName method=post class=ClasspopupCallForm id=popupCallID)
+			form(class='js-formPopup' action='php/form/formPopup.php' name=popupCallName method=post class=ClasspopupCallForm id=popupCallID)
 				div(class=ClassPopupCall__wrapper)
 					div(class='inputs')
-						input(type="text", placeholder='Name', name='username', value='' required)
-						input(type="text", placeholder='Telephone', name='userphone', value='' data-mask="tel" required)
+						input(class='input' type="text", placeholder='Name', name='username', value='' required)
+						input(class='input' type="text", placeholder='Telephone', name='userphone', value='' data-mask="tel" required)
 					div(class='politeCheckboxWrapper')
 						input(type="checkbox", name='polite', id='politeCheckbox' required)
 						label(class='labelCallPopupCheckbox', for="politeCheckbox")
@@ -20,13 +20,13 @@ div(class=ClassPopupCall id=popupCall__mainID)
 						button(class=ClassMainForm__button type=submit disabled id='getCall')= 'Заказать звонок'
 
 		if anotherPage
-			form(action='../php/form/form.php' name=popupCallName method=post class=ClasspopupCallForm id=popupCallID)
+			form(class='js-formPopup' action='../php/form/formPopup.php' name=popupCallName method=post class=ClasspopupCallForm id=popupCallID)
 				div(class=ClassPopupCall__wrapper)
 					div(class='inputs')
-						input(type="text", placeholder='Name', name='username', value='' required)
-						input(type="text", placeholder='Telephone', name='userphone', value='' data-mask="tel" required)
+						input(class='input' type="text", placeholder='Name', name='username', value='' required)
+						input(class='input' type="text", placeholder='Telephone', name='userphone', value='' data-mask="tel" required)
 					div(class='politeCheckboxWrapper')
-						input(type="checkbox", name='polite', id='politeCheckbox' required)
+						input(class='input' type="checkbox", name='polite', id='politeCheckbox' required)
 						label(class='labelCallPopupCheckbox', for="politeCheckbox")
 						div(class='polite-p-wrapper')
 							p я прочитал и согласен с &nbsp;
