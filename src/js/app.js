@@ -1,30 +1,15 @@
-// You can write a call and import your functions in this file.
-//
-// This file will be compiled into app.js and will not be minified.
-// Feel free with using ES6 here.
-
-//import Accordion from './components/accordion';
 import menuBurger from './components/burger-menu';
 import scrollSmooth from './components/scroll-smooth';
 import inputmask from './components/inputMask';
-// import swiperMain from './components/sliders/swiperMain';
-// import shapeResize from './components/animations/shapeResize';
-// import initSelects from './components/select';
-// import bntOFFER from './components/btnOffer';
+import Inputmask from 'inputmask';
 
 const overlay = document.querySelector('.overlay');
 const BODY = document.querySelector('body');
-const phoneInput = document.querySelector(".js-form .js-input-phone");
 
 (($) => {
-	// When DOM is ready
 	$(() => {
-		//const accordions = new Accordion();
 		scrollSmooth.init();
 		menuBurger.init();
-		inputmask();
-		// swiperMain.init();
-		// initSelects.init();
 
 		$('.intro-section__title .animaH2').each(function (i) {
 			for (let z = 0; z < 1000; z++) {
@@ -33,7 +18,7 @@ const phoneInput = document.querySelector(".js-form .js-input-phone");
 					.fadeTo(1000, 1)
 					.fadeTo(1000, 0);
 			}
-		})
+		});
 		$('.intro-section__texts-inner .anima').each(function (i) {
 			for (let z = 0; z < 1000; z++) {
 				$(this)
@@ -41,35 +26,45 @@ const phoneInput = document.querySelector(".js-form .js-input-phone");
 					.fadeTo(1000, 1)
 					.fadeTo(1000, 0);
 			}
-		})
+		});
 		$('.intro-section__image-wrapper .anima').each(function (i) {
 			for (let z = 0; z < 1000; z++) {
 				$(this)
-				.delay(0).animate({
-					top: '50px'
-				}, 5000).animate({
-					top: '-50px'
-				}, 5000)
+					.delay(0)
+					.animate(
+						{
+							top: '50px',
+						},
+						5000
+					)
+					.animate(
+						{
+							top: '-50px',
+						},
+						5000
+					);
 			}
-		})
+		});
 		$('.circles-section__circle-text-wrapper .anima').each(function (i) {
 			for (let z = 0; z < 1000; z++) {
 				$(this)
-				.delay(i++ * 2000)
-				.fadeTo(0, 0)
-				.fadeTo(1000, 1)
-				.fadeTo(1000, 0);
+					.delay(i++ * 2000)
+					.fadeTo(0, 0)
+					.fadeTo(1000, 1)
+					.fadeTo(1000, 0);
 			}
-		})
+		});
 		$('.circles-section__circle-text-wrapper .anima1').each(function (i) {
 			for (let z = 0; z < 1000; z++) {
 				$(this)
-				.delay(i++ * 2000)
-				.fadeTo(0, 0)
-				.fadeTo(1000, 1)
-				.fadeTo(1000, 0);
+					.delay(i++ * 2000)
+					.fadeTo(0, 0)
+					.fadeTo(1000, 1)
+					.fadeTo(1000, 0);
 			}
-		})
+		});
+
+		inputmask();
 	});
 })(jQuery);
 
@@ -93,8 +88,8 @@ const contactsLink = document.querySelector('#contactsLink');
 const integrationInner = document.querySelector('.integration-section__inner');
 
 const getCall = document.querySelector(".PopupCall button[type='submit']");
-const politeCheckbox = document.querySelector(".PopupCall input[type='checkbox']")
-let phone = document.querySelector("input[name='userphone']");
+const politeCheckbox = document.querySelector(".PopupCall input[type='checkbox']");
+// let phone = document.querySelector("input[name='userphone']");
 
 document.addEventListener('DOMContentLoaded', () => {
 	menuBtn.addEventListener('click', () => {
@@ -106,22 +101,21 @@ document.addEventListener('DOMContentLoaded', () => {
 				NAV.classList.remove(active);
 				BURGER.classList.remove(active);
 				BODY.style.overflow = 'auto';
-				BODY.style.width = `${windowWidth}` + 'px'
+				BODY.style.width = `${windowWidth}` + 'px';
 			} else {
 				BURGER.classList.remove(active);
-				BODY.style.width = `${windowWidth}` + 'px'
+				BODY.style.width = `${windowWidth}` + 'px';
 			}
 		});
 		if (popupCall.classList.contains(active)) {
 			popupCall.classList.remove(active);
 			BODY.style.overflow = 'auto';
-			overlay.classList.remove(active)
-
+			overlay.classList.remove(active);
 		} else {
 			popupCall.classList.add(active);
 			BODY.style.overflow = 'hidden';
-			overlay.classList.add(active)
-			BODY.style.width = `${windowWidth}` + 'px'
+			overlay.classList.add(active);
+			BODY.style.width = `${windowWidth}` + 'px';
 		}
 	});
 
@@ -146,23 +140,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	contactsLink.addEventListener('click', () => {
-		if(BODY.classList.contains('stop-scroll')) {
+		if (BODY.classList.contains('stop-scroll')) {
 			BODY.classList.remove('stop-scroll');
 		}
-	})
+	});
 
-	politeCheckbox.addEventListener('click', (e)=> {
-
-		if(politeCheckbox.hasAttribute('checked', 'checked')) {
-			politeCheckbox.removeAttribute('checked')
-			getCall.setAttribute('disabled', 'disabled')
+	politeCheckbox.addEventListener('click', (e) => {
+		if (politeCheckbox.hasAttribute('checked', 'checked')) {
+			politeCheckbox.removeAttribute('checked');
+			getCall.setAttribute('disabled', 'disabled');
 		} else {
-			politeCheckbox.setAttribute('checked', 'checked')
-			getCall.removeAttribute('disabled')
+			politeCheckbox.setAttribute('checked', 'checked');
+			getCall.removeAttribute('disabled');
 		}
-	}
-
-	)
+	});
 });
 
 let targetStepWorking = document.getElementById('stepsWorkingSectionWrapper1');
@@ -215,21 +206,21 @@ let callbackOuter = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
 			BODY.classList.add('stop-scroll');
-			BODY.style.width = `${windowWidth}` + 'px'
+			BODY.style.width = `${windowWidth}` + 'px';
 
 			let windowWidth = window.innerWidth;
 
-			window.addEventListener('resize', ()=> {
+			window.addEventListener('resize', () => {
 				BODY.style.width = `${windowWidth}` + 'px';
 				let windowWidth = window.innerWidth;
 
-				if(windowWidth <= 1024) {
-					observer.unobserve(entry.target)
+				if (windowWidth <= 1024) {
+					observer.unobserve(entry.target);
 					return;
 				}
-			})
-			if(windowWidth <= 1024) {
-				observer.unobserve(entry.target)
+			});
+			if (windowWidth <= 1024) {
+				observer.unobserve(entry.target);
 				return;
 			}
 		}
@@ -240,7 +231,7 @@ let callbackList = function (entries, observer) {
 		if (entry.isIntersecting) {
 			BODY.classList.remove('stop-scroll');
 			BODY.style.width = `${windowWidthClient}` + 'px';
-		};
+		}
 	});
 };
 
@@ -252,7 +243,6 @@ let callbackIntegration = function (entries, observer) {
 					e.classList.remove(active);
 					integrationInner.classList.remove(active);
 					observerIntegration.unobserve(integrationBlock);
-
 				} else {
 					e.classList.add(active);
 					integrationInner.classList.add(active);
@@ -297,14 +287,14 @@ let observerIntegration = new IntersectionObserver(callbackIntegration, optionsI
 let observerContacts = new IntersectionObserver(callbackContacts, optionsContacts);
 
 if (blockWrapperSteps) {
-	observerOuter.observe(blockWrapperSteps)
+	observerOuter.observe(blockWrapperSteps);
 }
 if (lastBlockInnerID) {
-	observerList.observe(lastBlockInnerID)
+	observerList.observe(lastBlockInnerID);
 }
 
 if (integrationBlock) {
-	observerIntegration.observe(integrationBlock)
+	observerIntegration.observe(integrationBlock);
 }
 if (blockContacts) {
 	observerContacts.observe(blockContacts);
@@ -317,12 +307,12 @@ if (SHAPE) {
 
 const variant = document.querySelector('.variantSection-wrapper .stepsWorking-section__wrapper');
 const variant1 = document.querySelector('.variantSection-wrapper');
-const introSectionWrapper = document.querySelector('.intro-section__wrapper')
+const introSectionWrapper = document.querySelector('.intro-section__wrapper');
 
-if(variant) {
+if (variant) {
 	let el0 = variant.getBoundingClientRect();
 	let el1 = introSectionWrapper.getBoundingClientRect();
-	const screenWidth = window.screen.width
+	const screenWidth = window.screen.width;
 
 	function foo() {
 		let el0 = variant.getBoundingClientRect();
@@ -331,66 +321,283 @@ if(variant) {
 		variant1.style.marginLeft = `${x}`;
 	}
 
-	foo()
-	window.addEventListener('resize' , ()=> {
+	foo();
+	window.addEventListener('resize', () => {
 		foo();
-	})
+	});
 }
 
+
 let jsForm = document.querySelector('.js-form');
-let jsformButton = document.querySelector(".js-form-submit");
+let jsformButton = document.querySelector('.js-form button[type="submit"]');
+let jsForm1 = document.querySelector('.js-form1');
+let jsformButton1 = document.querySelector('.js-form1 button[type="submit"]');
+let jsForm2 = document.querySelector('.js-form2');
+let jsformButton2 = document.querySelector('.js-form2 button[type="submit"]');
 
-// if (phoneInput){
-// 	if(phoneInput.classList.contains('invalid')){
-// 		phoneInput.classList.remove('invalid');
-// 	}
-// 	if(phoneInput.classList.contains('valid')){
-// 		phoneInput.classList.remove('valid');
-// 	}
+const phoneInput = document.querySelector('.js-form input[data-mask="tel"]');
+const phoneInput1 = document.querySelector('.js-form1 input[data-mask="tel"]');
+const phoneInput2 = document.querySelector('.js-form2 input[data-mask="tel"]');
 
-// 	// phoneInput.addEventListener('input', (e) => {
+const nameInput = document.querySelector('.js-form input[name="username"]');
+const nameInput1 = document.querySelector('.js-form1 input[name="username"]');
 
-// 	// })
-
-// 	phoneInput.addEventListener('input', updateValue);
-// }
+const nameInput2 = document.querySelector('.js-form2 input[name="username"]');
 
 
+if (phoneInput){
+	phoneInput.addEventListener('input', updateValuePhone);
+	phoneInput.addEventListener('blur', updateValueblur);
+}
+if (phoneInput1){
+	phoneInput1.addEventListener('input', updateValuePhone1);
+	phoneInput1.addEventListener('blur', updateValueblur1);
+}
+if (phoneInput2){
+	phoneInput2.addEventListener('input', updateValuePhone2);
+	phoneInput2.addEventListener('blur', updateValueblur2);
+}
 
-// function updateValue(e) {
+if (nameInput){
+	nameInput.addEventListener('input', updateValueName);
+	nameInput.addEventListener('blur', updateValueblur);
+}
 
-// 	let valuePhone = e.target.value;
-// 	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-// 	let p = document.createElement('p');
+if (nameInput1){
+	nameInput1.addEventListener('input', updateValueName1);
+	nameInput1.addEventListener('blur', updateValueblur1);
+}
+if (nameInput2){
+	nameInput2.addEventListener('input', updateValueName2);
+	nameInput2.addEventListener('blur', updateValueblur2);
+}
 
-// 	if(!valuePhone.match(re) === true) {
-// 		e.target.classList.add('invalid')
-// 		jsForm.appendChild(p);
-// 		p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
-// 		// jsformButton.setAttribute('disabled', 'disabled')
-// 	} else {
-// 		// jsformButton.removeAttribute('disabled', ' ')
-// 		e.target.classList.remove('invalid');
-// 		e.target.classList.add('valid')
-// 	}
-// }
+function updateValuePhone1(e) {
 
-// if (jsForm) {
-// 	jsForm.addEventListener('submit', (e)=> {
-// 		let valuePhone = phoneInput.value;
-// 		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-// 		let p = document.createElement('p');
+	let valuePhone = e.target.value;
+	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+	let p = document.createElement('p');
 
-// 		if(!valuePhone.match(re) === true) {
-// 			e.preventDefault();
-// 			phoneInput.classList.add('invalid')
-// 			jsForm.appendChild(p);
-// 			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
-// 			// jsformButton.setAttribute('disabled', 'disabled')
-// 		} else {
-// 			// jsformButton.removeAttribute('disabled', ' ')
-// 			phoneInput.classList.remove('invalid');
-// 			phoneInput.classList.add('valid')
-// 		}
-// 	})
-// }
+	if(!valuePhone.match(re) === true) {
+		jsformButton1.setAttribute('disabled', 'disabled')
+
+		if(e.target.classList.contains('valid')){
+			e.target.classList.remove('valid');
+		}
+
+		if(e.target.classList.contains('invalid')){
+			e.target.classList.remove('invalid');
+		}
+	} else {
+		jsformButton1.removeAttribute('disabled', ' ')
+		e.target.classList.remove('invalid');
+		e.target.classList.add('valid');
+	}
+}
+function updateValuePhone2(e) {
+
+	let valuePhone = e.target.value;
+	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+	let p = document.createElement('p');
+
+	if(!valuePhone.match(re) === true) {
+		jsformButton2.setAttribute('disabled', 'disabled')
+
+		if(e.target.classList.contains('valid')){
+			e.target.classList.remove('valid');
+		}
+
+		if(e.target.classList.contains('invalid')){
+			e.target.classList.remove('invalid');
+		}
+	} else {
+		jsformButton2.removeAttribute('disabled', ' ')
+		e.target.classList.remove('invalid');
+		e.target.classList.add('valid');
+	}
+}
+function updateValuePhone(e) {
+
+	let valuePhone = e.target.value;
+	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+	let p = document.createElement('p');
+
+	if(!valuePhone.match(re) === true) {
+		jsformButton.setAttribute('disabled', 'disabled')
+
+		if(e.target.classList.contains('valid')){
+			e.target.classList.remove('valid');
+		}
+
+		if(e.target.classList.contains('invalid')){
+			e.target.classList.remove('invalid');
+		}
+	} else {
+		jsformButton.removeAttribute('disabled', ' ')
+		e.target.classList.remove('invalid');
+		e.target.classList.add('valid');
+	}
+}
+function updateValueName(e) {
+
+	let valueName = e.target.value;
+
+	if(!valueName === "") {
+		jsformButton.setAttribute('disabled', 'disabled')
+
+		if(e.target.classList.contains('valid')){
+			e.target.classList.remove('valid');
+		}
+
+		if(e.target.classList.contains('invalid')){
+			e.target.classList.remove('invalid');
+		}
+	} else {
+		jsformButton.removeAttribute('disabled', ' ')
+		e.target.classList.remove('invalid');
+		e.target.classList.add('valid');
+	}
+}
+function updateValueName1(e) {
+
+	let valueName = e.target.value;
+
+	if(!valueName === "") {
+		jsformButton1.setAttribute('disabled', 'disabled')
+
+		if(e.target.classList.contains('valid')){
+			e.target.classList.remove('valid');
+		}
+
+		if(e.target.classList.contains('invalid')){
+			e.target.classList.remove('invalid');
+		}
+	} else {
+		jsformButton1.removeAttribute('disabled', ' ')
+		e.target.classList.remove('invalid');
+		e.target.classList.add('valid');
+	}
+}
+function updateValueName2(e) {
+
+	let valueName = e.target.value;
+
+	if(!valueName === "") {
+		jsformButton2.setAttribute('disabled', 'disabled')
+
+		if(e.target.classList.contains('valid')){
+			e.target.classList.remove('valid');
+		}
+
+		if(e.target.classList.contains('invalid')){
+			e.target.classList.remove('invalid');
+		}
+	} else {
+		jsformButton2.removeAttribute('disabled', ' ')
+		e.target.classList.remove('invalid');
+		e.target.classList.add('valid');
+	}
+}
+function updateValueblur(e) {
+
+	if(e.target.classList.contains('valid')){
+		e.target.classList.remove('valid');
+	}
+
+	if(e.target.classList.contains('invalid')){
+		e.target.classList.remove('invalid');
+	}
+
+	jsformButton.removeAttribute('disabled', ' ')
+	e.target.classList.remove('invalid');
+}
+function updateValueblur2(e) {
+
+	if(e.target.classList.contains('valid')){
+		e.target.classList.remove('valid');
+	}
+
+	if(e.target.classList.contains('invalid')){
+		e.target.classList.remove('invalid');
+	}
+
+	jsformButton2.removeAttribute('disabled', ' ')
+	e.target.classList.remove('invalid');
+}
+function updateValueblur1(e) {
+
+	if(e.target.classList.contains('valid')){
+		e.target.classList.remove('valid');
+	}
+
+	if(e.target.classList.contains('invalid')){
+		e.target.classList.remove('invalid');
+	}
+
+	jsformButton.removeAttribute('disabled', ' ')
+	e.target.classList.remove('invalid');
+}
+
+if (jsForm) {
+	jsForm.addEventListener('submit', (e)=> {
+		let valuePhone = phoneInput.value;
+		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+		let p = document.createElement('p');
+
+		if(!valuePhone.match(re) === true) {
+			e.preventDefault();
+			phoneInput.classList.add('invalid')
+			jsForm.appendChild(p);
+			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+		}
+		if(valuePhone === ''){
+			jsForm.appendChild(p);
+			p.innerHTML = "<p class='base-text'>введите номер</p>"
+		} else {
+			phoneInput.classList.remove('invalid');
+			phoneInput.classList.add('valid')
+		}
+	})
+}
+if (jsForm1) {
+	jsForm1.addEventListener('submit', (e)=> {
+		let valuePhone = phoneInput.value;
+		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+		let p = document.createElement('p');
+
+		if(!valuePhone.match(re) === true) {
+			e.preventDefault();
+			phoneInput.classList.add('invalid')
+			jsForm1.appendChild(p);
+			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+		}
+		if(valuePhone === ''){
+			jsForm1.appendChild(p);
+			p.innerHTML = "<p class='base-text'>введите номер</p>"
+		} else {
+			phoneInput.classList.remove('invalid');
+			phoneInput.classList.add('valid')
+		}
+	})
+}
+if (jsForm2) {
+	jsForm2.addEventListener('submit', (e)=> {
+		let valuePhone = phoneInput2.value;
+		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+		let p = document.createElement('p');
+
+		if(!valuePhone.match(re) === true) {
+			e.preventDefault();
+			phoneInput2.classList.add('invalid')
+			jsForm2.appendChild(p);
+			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+		}
+		if(valuePhone === ''){
+			jsForm2.appendChild(p);
+			p.innerHTML = "<p class='base-text'>введите номер</p>"
+		} else {
+			phoneInput2.classList.remove('invalid');
+			phoneInput2.classList.add('valid')
+		}
+	})
+}

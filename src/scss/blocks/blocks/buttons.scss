@@ -45,6 +45,25 @@
         text-shadow: 1px 1px 1px $black;
         color: $white;
     }
+
+
+
+	&:disabled {
+		box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2),  7px 7px 7px 2px rgba(34, 60, 80, 0.2) inset;
+		text-shadow: none;
+		box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2),  -6px -6px 15px 5px rgba(34, 60, 80, 0.2) inset;
+		background: linear-gradient(to left, $crem1, $crem2);
+		color: $white;
+		cursor: auto;
+	}
+
+	&:disabled::after {
+		box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2),  7px 7px 7px 2px rgba(34, 60, 80, 0.2) inset;
+		text-shadow: none;
+		box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2),  -6px -6px 15px 5px rgba(34, 60, 80, 0.2) inset;
+		cursor: auto;
+		opacity: 0.2;
+	}
 }
 
 .button-more:hover::after {

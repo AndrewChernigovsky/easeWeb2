@@ -25,9 +25,9 @@ textarea {
     transition: $base-transition;
   }
 
-  &:focus {
-    border-color: $black;
-  }
+//   &:focus {
+//     // border-color: $black;
+//   }
 
   @include placeholder {
     color: $black;

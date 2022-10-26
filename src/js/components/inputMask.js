@@ -1,6 +1,8 @@
 import Inputmask from 'inputmask';
 
-export function inputmask() {
+const phoneInput = document.querySelector('.js-form input[data-mask="tel"]');
+
+export default function inputmask() {
 	Inputmask({
 		mask: '+7 (999) 999-99-99',
 	}).mask('input[data-mask="tel"]');
@@ -15,5 +17,5 @@ export function inputmask() {
 		placeholder: "mm/dd/yyyy hh:mm:ss xm",
 		separator: '.',
 		hourFormat: "12"
-	}).mask('input[data-mask="date"]')
+	}).mask('input[data-mask="date"]');
 }
