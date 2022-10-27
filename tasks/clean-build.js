@@ -12,7 +12,7 @@ module.exports = function (options) {
       `*.html`,
       `${options.src}/**/*`,
       // `!${options.src}/images/`,
-      // `!${options.src}/images/**`
+      `!${options.src}/images/**`
     ], { force: true });
 
     // log paths for deleted files & directories

@@ -124,6 +124,14 @@
   });
 
   /**
+   * Copy foldersPHP to the build folder
+   */
+  requireTask(`${gulpConfig.task.copyPHP}`, `./${gulpConfig.folder.tasks}/`, {
+    dest: gulpConfig.folder.build,
+    foldersToCopyPHP: gulpConfig.getPathesToCopyPHP(),
+  });
+
+  /**
    * Copy folders to the build folder
    */
   requireTask(`${gulpConfig.task.copyFolders}`, `./${gulpConfig.folder.tasks}/`, {
@@ -172,6 +180,7 @@
         fileIncludepug: gulpConfig.task.fileIncludepug,
         copyFolders: gulpConfig.task.copyFolders,
         svgSprite: gulpConfig.task.svgSprite,
+        copyPHP: gulpConfig.task.copyPHP,
         imageResize: gulpConfig.task.imageResize,
         developJS: gulpConfig.task.developJS,
       },

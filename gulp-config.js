@@ -41,6 +41,7 @@ module.exports = {
     cleanProd: 'clean-production',
     cleanBuild: 'clean-build',
     copyFolders: 'copy-folders',
+    copyPHP: 'copy-php',
     copyFoldersProduction: 'copy-folders-production',
     browserSync: 'browser-sync-server',
     watch: 'watch',
@@ -87,9 +88,14 @@ module.exports = {
       `!{${this.folder.src}/js,${this.folder.src}/js/**}`,
       `!{${this.folder.src}/pug,${this.folder.src}/pug/**}`,
       `!{${this.folder.src}/scss,${this.folder.src}/scss/**}`,
-      `${this.folder.src}/fonts/**}`,
-      `${this.folder.src}/php/**}`,
+      `!{${this.folder.src}/fonts/**}`,
+      `{${this.folder.src}/php/**}`,
       `!{${this.folder.src}/vendor_entries,${this.folder.src}/vendor_entries/**}`,
     ];
+  },
+  getPathesToCopyPHP: function () {
+    return [
+		`${this.folder.src}/php/**/*.php`,
+	]
   },
 };

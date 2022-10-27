@@ -3,11 +3,11 @@ if mainPage
 	section(class=mainForm__Section id='contacts')
 		.container
 			h2(class='h2-none')= 'заказать звонок, оставить заявку'
-			div(class=mainForm__Section__Wrapper)
+			div(class=mainForm__Section__Wrapper+ " lazy_content")
 				include form
 if !mainPage
-	section(class=mainForm__Section+' seoAdd', id='contacts')
+	section(class=mainForm__Section+' seoAdd' id='contacts')
 		.container
 			h2(class='h2-none')= 'заказать звонок, оставить заявку'
-			div(class=mainForm__Section__Wrapper)
+			div(class=mainForm__Section__Wrapper+ " lazy_content")
 				include form
