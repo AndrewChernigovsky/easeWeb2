@@ -625,35 +625,52 @@ if (jsFormPopup) {
 
 let sections = document.querySelectorAll('section');
 
-Array.from(sections).forEach(e=>{
-	e.style.minHeight = '300px'
-})
 
 
-document.addEventListener("DOMContentLoaded", function() {
+let optionsLazy = {
+	root: null,
+	rootMargin: '0px',
+	threshold: 1,
+};
 
-	let optionsLazy = {
-		root: null,
-		rootMargin: '0%',
-		threshold: 0.1,
-	};
-
-	const imageObserver = new IntersectionObserver((entries, optionsLazy) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				const lazyContent = entry.target
-				console.log("lazy loading ", lazyContent)
-				lazyContent.classList.add("block")
-				lazyContent.classList.remove("lazy_content");
-				imageObserver.unobserve(lazyContent);
-			}
-		})
+let callbackLazy = function (entries, observer) {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			const lazyContent = entry.target
+			console.log("lazy loading ", lazyContent)
+			lazyContent.classList.remove("lazy_content")
+			lazyContent.classList.add("block")
+			observerLazy.unobserve(lazyContent);
+		}
 	});
-	const arr = document.querySelectorAll('section .lazy_content')
-	arr.forEach((v) => {
-		imageObserver.observe(v);
-	})
+};
+
+let observerLazy = new IntersectionObserver(callbackLazy, optionsLazy);
+
+Array.from(sections).forEach(e=>{
+	e.style.minHeight = '300px';
+	observerLazy.observe(e);
 })
+
+// document.addEventListener("DOMContentLoaded", function() {
+
+
+// 	const imageObserver = new IntersectionObserver((entries, optionsLazy) => {
+// 		entries.forEach((entry) => {
+// 			if (entry.isIntersecting) {
+// 				const lazyContent = entry.target
+// 				console.log("lazy loading ", lazyContent)
+// 				lazyContent.classList.add("block")
+// 				lazyContent.classList.remove("lazy_content");
+// 				imageObserver.unobserve(lazyContent);
+// 			}
+// 		})
+// 	});
+// 	const arr = document.querySelectorAll('section .lazy_content')
+// 	arr.forEach((v) => {
+// 		imageObserver.observe(v);
+// 	})
+// })
 
 // document.addEventListener("DOMContentLoaded", function() {
 // 	const imageObserver = new IntersectionObserver((entries, imgObserver) => {
