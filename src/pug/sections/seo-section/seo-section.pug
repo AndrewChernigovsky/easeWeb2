@@ -7,7 +7,14 @@ section(class=seoSection)
 					br
 					| поиска и получи заявки
 				div(class=ClassseoSection__image__Wrapper)
-					img(class=ClassseoSection__Image src='../../images/content/money.png', alt='money-image')
+					//- img(class=ClassseoSection__Image src='../../images/content/money.png', alt='money-image')
+					+pictureClassNamePng(
+						ClassseoSection__Image,
+						'money-image',
+						webp,
+						'../../images/content/money',
+						'../../images/content/money'
+					)
 			div(class=ClassseoSection__Block__Wrapper)
 				div(class=ClassseoSection__Block)
 					span(class=ClassseoSection__Block__Span)= '7'

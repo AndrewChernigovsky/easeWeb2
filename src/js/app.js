@@ -635,11 +635,19 @@ let optionsLazy = {
 
 let callbackLazy = function (entries, observer) {
 	entries.forEach((entry) => {
+
+		const arr = document.querySelectorAll('.lazy_content')
+
 		if (entry.isIntersecting) {
 			const lazyContent = entry.target
 			console.log("lazy loading ", lazyContent)
-			lazyContent.classList.remove("lazy_content")
-			lazyContent.classList.add("block")
+
+
+			arr.forEach((el) => {
+				el.classList.remove("lazy_content")
+				el.classList.add("block")
+			})
+
 			observerLazy.unobserve(lazyContent);
 		}
 	});
