@@ -1,21 +1,52 @@
 nav(class=menuClasses[0])
-    div(class=menuClasses[1])
-        include logo
-    div(class=menuClasses[2])
-        each ul in menuClasses
-            if ul === navUlClasses
-                ul(class=ul)
-                    li(class=menuClasses[4])
-                        if mainPage
-                            a(class=menuClasses[5] href="#service")= 'Услуги'
-                        else
-                            a(class=menuClasses[5] href="../index.html#service")= 'Услуги'
-                    li(class=menuClasses[4])
-                        if mainPage
-                            a(class=menuClasses[5] href="#contacts" id='contactsLink')= 'Контакты'
-                        else
-                            a(class=menuClasses[5] href="../index.html#contacts" id='contactsLink')= 'Контакты'
-                    li(class=menuClasses[4])
-                        a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
+	div(class=menuClasses[1])
+		include logo
+	div(class=menuClasses[2])
+		each ul in menuClasses
+			if ul === navUlClasses
+				ul(class=ul)
+					li(class=menuClasses[4])
+						if mainPage
+							a(class=menuClasses[5] href="#service")= 'Услуги'
+						else
+							a(class=menuClasses[5] href="../index.html#service")= 'Услуги'
+					li(class=menuClasses[4])
+						if mainPage
+							a(class=menuClasses[5] href="#contacts" id='contactsLink')= 'Контакты'
+						else
+							a(class=menuClasses[5] href="../index.html#contacts" id='contactsLink')= 'Контакты'
+					li(class=menuClasses[4])
+						a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
 
-        button(class=menuButton, id=menubtn) Заказать звонок
+				ul(class='menu-mob')
+					li easeweb
+					ul РАЗРАБОТКА САЙТОВ
+						li виды сайтов
+						li варианты верстки
+						li тарифы
+					ul ПРОДВИЖЕНИЕ САЙТОВ
+						li подробнее
+						li тарифы
+					li ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ
+					li КОНТАКТЫ
+					li(class=' social-contacts')
+						a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
+							div(class='social-icons')
+								div(class='')
+									a(class='', href="#no__scroll")
+										+icon(
+											'0 0 25 25',
+											'25px',
+											'25px',
+											'images/sprite/sprite.svg#telegram'
+										)
+								div(class='')
+									a(class='' href="#no__scroll")
+										+icon(
+											'0 0 25 25',
+											'25px',
+											'25px',
+											'images/sprite/sprite.svg#vk'
+										)
+
+		button(class=menuButton id=menubtn) Заказать звонок

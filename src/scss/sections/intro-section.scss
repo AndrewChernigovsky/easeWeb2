@@ -1,6 +1,8 @@
 .intro-section {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
+    min-height: 300px;
+	overflow-x: hidden;
 
 	@include media('>=tablet') {
 		padding-top: 1rem;
@@ -23,21 +25,17 @@
 	&__wrapper {
 		position: relative;
 		display: grid;
-		justify-content: center;
+		justify-content: flex-start;
 		margin: 0 auto;
-		margin-top: 300px;
+		margin-top: 160px;
 
 		@include media('>=phone') {
 			min-width: 390px;
+			margin-top: 300px;
 		}
 
-		@include media('>=tablet') {
-			margin: 0;
-			justify-content: left;
-		}
-
-		@include media('<=tablet') {
-			max-width: 391px;
+		@include media('>=desktop') {
+			justify-content: center;
 		}
 	}
 
@@ -58,7 +56,8 @@
 	}
 
 	&__title {
-		font-family: $SyncopateBold;
+		font-family: $MazzardHBold;
+		font-size: 2.4rem;
 
 		span {
 			text-transform: uppercase;
@@ -74,7 +73,7 @@
 	}
 
 	&__h1-span {
-		font-family: $MontserratBold;
+		font-family: $MazzardHBold;
 
 		&:last-of-type {
 			display: none;
@@ -82,7 +81,7 @@
 		}
 	}
 	&__h1-span2 {
-		font-family: $MontserratBold;
+		font-family: $MazzardHBold;
 	}
 
 	&__h1-span2.right {
@@ -91,9 +90,12 @@
 	}
 
 	&__form {
-		@include media('>=phone') {
+		display: none;
+
+		@include media('>=desktop') {
 			max-width: 391px;
 			min-width: 390px;
+			display: block;
 		}
 	}
 
@@ -161,8 +163,9 @@
 		position: absolute;
 		width: 300px;
 		height: 320px;
-		top: -328px;
 		z-index: -1;
+		top: -190px;
+    	right: -50px;
 
 		@include media('>=phone') {
 			top: -365px;
@@ -177,11 +180,6 @@
 			top: 50px;
 			right: -220px;
 			width: 420px;
-		}
-
-		@include media('<=tablet') {
-			left: 50%;
-			transform: translate(-50%, 0px);
 		}
 
 		@include media('>=desktop') {
@@ -202,6 +200,10 @@
 			top: 30px;
 			right: -320px;
 			width: 848px;
+		}
+
+		video {
+			width: 270px;
 		}
 	}
 	&__image-wrapper.seoSectionimage {
@@ -341,7 +343,7 @@
 		}
 	}
 	.title__h1 {
-		padding-bottom: 70px;
+		padding-bottom: 0;
 
 		@include media('>=phone-lg') {
 			padding-bottom: 40px;
@@ -378,12 +380,12 @@
 
 	.intro-section__h1-span.animaH2.an1 {
 		position: absolute;
-		top: 30px;
+		top: 0;
 		left: 0;
 		white-space: nowrap;
 
 		@include media('>=tablet') {
-			top: 0;
+			top: 30px;
 		}
 
 	}
