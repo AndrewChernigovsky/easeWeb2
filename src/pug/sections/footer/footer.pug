@@ -7,7 +7,7 @@ footer(class=footer)
 					include ../../blocks/logo
 					p(class=ClassfooterBlock__company)= footerMain.p1_1
 				div(class=ClassfooterBlock)
-					a(class=ClassfooterBlock__telephone href="tel:+79998062321")= footerMain.tel
+					a(class=ClassfooterBlock__telephone href=`tel:${footerMain.tel}`)= footerMain.tel
 					a(class=ClassfooterBlock__polite href="../../pages/polite.html")= footerMain.polite
 			div(class=ClassfooterInner)
 				nav(class=ClassNavListFooter)

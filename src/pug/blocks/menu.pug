@@ -16,6 +16,6 @@ nav(class=menuClasses[0])
                         else
                             a(class=menuClasses[5] href="../index.html#contacts" id='contactsLink')= 'Контакты'
                     li(class=menuClasses[4])
-                        a(class=menuClasses[5] href="tel:89999999999")= '8(999)999-99-99'
+                        a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
 
         button(class=menuButton, id=menubtn) Заказать звонок
