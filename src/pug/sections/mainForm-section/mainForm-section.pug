@@ -1,12 +1,12 @@
 div(id=mainFormShape)
 if mainPage
-	section(class=mainForm__Section id='contacts')
+	section(class='lazy_contentSection ' +mainForm__Section id='contacts')
 		.container
 			h2(class='h2-none')= 'заказать звонок, оставить заявку'
 			div(class=mainForm__Section__Wrapper+ " lazy_content")
 				include form
 if !mainPage
-	section(class=mainForm__Section+' seoAdd' id='contacts')
+	section(class='lazy_contentSection ' +mainForm__Section+' seoAdd' id='contacts')
 		.container
 			h2(class='h2-none')= 'заказать звонок, оставить заявку'
 			div(class=mainForm__Section__Wrapper+ " lazy_content")

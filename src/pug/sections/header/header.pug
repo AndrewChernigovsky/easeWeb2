@@ -6,8 +6,10 @@ block header
 			div(class=container)
 				block headerWrapper
 					div(class=headerWrapper)
+						include ../../blocks/logo1
 						include ../../blocks/menu.pug
-			button(type=typeButton class=(burger + ' ' + jsBurgerOpen))
-				span(class=burgerSpan)
-				span(class=burgerSpan)
-				span(class=burgerSpan)
+			div(class='burger-wrapper')
+				button(type=typeButton class=(burger + ' ' + jsBurgerOpen))
+					span(class=burgerSpan)
+					span(class=burgerSpan)
+					span(class=burgerSpan)

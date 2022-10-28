@@ -42,6 +42,7 @@ module.exports = {
     cleanBuild: 'clean-build',
     copyFolders: 'copy-folders',
     copyPHP: 'copy-php',
+    delPHP: 'del-php',
     copyFoldersProduction: 'copy-folders-production',
     browserSync: 'browser-sync-server',
     watch: 'watch',
@@ -95,7 +96,7 @@ module.exports = {
   },
   getPathesToCopyPHP: function () {
     return [
-		`${this.folder.src}/php/**/*.php`,
+		`${this.folder.src}/php/**`,
 	]
   },
 };

@@ -115,6 +115,12 @@
   requireTask(`${gulpConfig.task.cleanBuild}`, `./${gulpConfig.folder.tasks}/`, {
     src: gulpConfig.folder.build,
   });
+  /**
+   * Clean php folder
+   */
+  requireTask(`${gulpConfig.task.delPHP}`, `./${gulpConfig.folder.tasks}/`, {
+    src: gulpConfig.folder.build,
+  });
 
   /**
    * Clean production folder
@@ -128,7 +134,7 @@
    */
   requireTask(`${gulpConfig.task.copyPHP}`, `./${gulpConfig.folder.tasks}/`, {
     dest: gulpConfig.folder.build,
-    foldersToCopyPHP: gulpConfig.getPathesToCopyPHP(),
+    src: gulpConfig.getPathesToCopyPHP(),
   });
 
   /**
@@ -240,6 +246,13 @@
     'sprite',
     gulp.series(
           gulpConfig.task.svgSprite
+        )
+    );
+  gulp.task(
+    'php',
+    gulp.series(
+
+          gulpConfig.task.copyPHP
         )
     );
 })();

@@ -623,9 +623,7 @@ if (jsFormPopup) {
 	})
 }
 
-let sections = document.querySelectorAll('section');
-
-
+let sections = document.querySelectorAll('.lazy_contentSection');
 
 let optionsLazy = {
 	root: null,
@@ -659,41 +657,3 @@ Array.from(sections).forEach(e=>{
 	e.style.minHeight = '300px';
 	observerLazy.observe(e);
 })
-
-// document.addEventListener("DOMContentLoaded", function() {
-
-
-// 	const imageObserver = new IntersectionObserver((entries, optionsLazy) => {
-// 		entries.forEach((entry) => {
-// 			if (entry.isIntersecting) {
-// 				const lazyContent = entry.target
-// 				console.log("lazy loading ", lazyContent)
-// 				lazyContent.classList.add("block")
-// 				lazyContent.classList.remove("lazy_content");
-// 				imageObserver.unobserve(lazyContent);
-// 			}
-// 		})
-// 	});
-// 	const arr = document.querySelectorAll('section .lazy_content')
-// 	arr.forEach((v) => {
-// 		imageObserver.observe(v);
-// 	})
-// })
-
-// document.addEventListener("DOMContentLoaded", function() {
-// 	const imageObserver = new IntersectionObserver((entries, imgObserver) => {
-// 		entries.forEach((entry) => {
-// 			if (entry.isIntersecting) {
-// 				const lazyImage = entry.target
-// 				console.log("lazy loading ", lazyImage)
-// 				lazyImage.src = lazyImage.dataset.src
-// 				lazyImage.classList.remove("lzy_img");
-// 				imgObserver.unobserve(lazyImage);
-// 			}
-// 		})
-// 	});
-// 	const arr = document.querySelectorAll('img.lzy_img')
-// 	arr.forEach((v) => {
-// 		imageObserver.observe(v);
-// 	})
-// })

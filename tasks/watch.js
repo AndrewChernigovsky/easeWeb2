@@ -19,7 +19,7 @@ module.exports = function (options) {
 
     gulp.watch(`./${options.src}/fonts/**/*.{eot,svg,ttf,woff,woff2}`, gulp.series(options.tasks.copyFolders));
 
-    gulp.watch(`./${options.src}/php/**/*`, gulp.series(options.tasks.copyPHP));
+    gulp.watch(`./${options.src}/php/**`, gulp.series(options.tasks.copyPHP));
 
     gulp.watch(`./${options.src}/icon-svg/*.svg`, gulp.series(options.tasks.svgSprite));
 

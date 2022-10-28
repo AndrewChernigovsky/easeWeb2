@@ -7,8 +7,9 @@
  const del = require('del');
 
  module.exports = function(options) {
-	return () => {
-		return gulp.src(`${options.src}/php`, { dot: true })
-		.pipe(gulp.dest(`./${options.dest}/`));
-	  };
- };
+
+   return async () => {
+	const deletedPaths = await del([
+		`${options.src}/php/**`,
+	  ], { force: true });
+ }};
