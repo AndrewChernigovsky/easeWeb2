@@ -184,8 +184,9 @@
         transform: scale(1);
     }
   }
+}
 
-  &__link.active {
+.a__link.active {
 	opacity: 0.4;
 	cursor: auto;
 
@@ -194,4 +195,3 @@
 
     }
   }
-}

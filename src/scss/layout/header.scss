@@ -36,8 +36,10 @@
 	transform: translateX(-110%);
 	background-size: cover;
 	background-color: $black;
+	overflow-y: scroll;
 
 	@include media('>=desktop') {
+		overflow-y: auto;
 		display: flex;
 		justify-content: space-between;
 		position: static;
@@ -353,14 +355,14 @@
 		margin-bottom: 2rem;
 	}
 
-	&__item-firstб
+	&__item-first,
 	&__item-last {
 		margin-bottom: 2rem;
 	}
 
 	&__item {
 		text-transform: none;
-		padding-left: 1rem;
+		padding-left: 2rem;
 		position: relative;
 
 		&::before {
@@ -369,8 +371,8 @@
 			height: 5px;
 			border-radius: 50%;
 			background-color: $white;
-			top: 5px;
-			left: 2px;
+			top: 10px;
+			left: 10px;
 		}
 	}
 
@@ -385,15 +387,13 @@
 			transition: $base-transition;
 		}
 	}
-
-
 }
 
 .social-contacts {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	min-width: 100px;
+	min-width: 250px;
 	max-width: 300px;
 
 	.menu__nav-link {
@@ -408,7 +408,7 @@
 		div {
 			flex-basis: 20%;
 			padding: 5px;
-			height: 25px;
+			height: 40px;
 		}
 	}
 }
