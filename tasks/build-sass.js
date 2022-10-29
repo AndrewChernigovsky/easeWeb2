@@ -18,7 +18,7 @@ module.exports = function (options) {
     return gulp
       .src(`./${options.src}/scss/${options.mainScss}`)
       .pipe(rename(options.mainScssMin))
-      .pipe(gulpif(!options.isProduction, sourcemaps.init({ loadMaps: true })))
+      .pipe(gulpif(options.isProduction, sourcemaps.init({ loadMaps: true })))
       .pipe(sass())
       .on(
         'error',

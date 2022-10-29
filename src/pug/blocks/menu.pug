@@ -19,34 +19,42 @@ nav(class=menuClasses[0])
 						a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
 
 				ul(class='menu-mob')
-					li easeweb
+					li(class='menu-mob__item-first')
+						a(href='#' class='menu-mob__link') easeweb
 					ul РАЗРАБОТКА САЙТОВ
-						li виды сайтов
-						li варианты верстки
-						li тарифы
+						li(class='menu-mob__item')
+							a(href='#' class='menu-mob__link') виды сайтов
+						li(class='menu-mob__item')
+							a(href='#' class='menu-mob__link') варианты верстки
+						li(class='menu-mob__item')
+							a(href='#' class='menu-mob__link') тарифы
 					ul ПРОДВИЖЕНИЕ САЙТОВ
-						li подробнее
-						li тарифы
-					li ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ
-					li КОНТАКТЫ
-					li(class=' social-contacts')
-						a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
-							div(class='social-icons')
-								div(class='')
-									a(class='', href="#no__scroll")
-										+icon(
-											'0 0 25 25',
-											'25px',
-											'25px',
-											'images/sprite/sprite.svg#telegram'
-										)
-								div(class='')
-									a(class='' href="#no__scroll")
-										+icon(
-											'0 0 25 25',
-											'25px',
-											'25px',
-											'images/sprite/sprite.svg#vk'
-										)
+						li(class='menu-mob__item')
+							a(href='#' class='menu-mob__link') подробнее
+						li(class='menu-mob__item')
+							a(href='#' class='menu-mob__link') тарифы
+					li(class='menu-mob__item-last')
+						a(href='#' class='menu-mob__link') ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ
+					li(class='')
+						a(href='#' class='menu-mob__link') КОНТАКТЫ
+				div(class=' social-contacts')
+					a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
+						div(class='social-icons')
+							div(class='')
+								a(class='', href="#no__scroll")
+									+icon(
+										'0 0 25 25',
+										'25px',
+										'25px',
+										'images/sprite/sprite.svg#telegram'
+									)
+							div(class='')
+								a(class='' href="#no__scroll")
+									+icon(
+										'0 0 25 25',
+										'25px',
+										'25px',
+										'images/sprite/sprite.svg#vk'
+									)
 
 		button(class=menuButton id=menubtn) Заказать звонок
