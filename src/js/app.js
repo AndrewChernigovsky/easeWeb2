@@ -263,7 +263,7 @@ let observerList = new IntersectionObserver(callbackList, optionsList);
 let observerSHAPE = new IntersectionObserver(callbackSHAPE, optionsSHAPE);
 let observerContacts = new IntersectionObserver(callbackContacts, optionsContacts);
 
-if (blockWrapperSteps) {
+if (blockWrapperSteps && windowWidth >= 1024) {
 	observerOuter.observe(blockWrapperSteps);
 }
 if (lastBlockInnerID) {

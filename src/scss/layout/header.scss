@@ -290,19 +290,21 @@
 	&::before,
 	&::after {
 		@extend %pseudo;
-		width: 30px;
-		height: 1px;
 		background-color: $black;
-		top: -15px;
 		transform: rotate(90deg);
+
+		width: 16px;
+		height: 1px;
+		background-color: #000000;
+		top: -9px;
 	}
 
 	&::before {
-		left: -15px;
+		left: -8px;
 	}
 
 	&::after {
-		right: -15px;
+		right: -8px;
 	}
 }
 
