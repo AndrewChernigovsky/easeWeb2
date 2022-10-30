@@ -14,13 +14,15 @@
   }
 
   &__inner {
-    display: grid;
+    display: flex;
     min-width: 100%;
     justify-content: space-between;
     margin-bottom: 2rem;
+    padding: 0 4rem;
 
     &:last-of-type {
       border-top: 1px solid $gray;
+	  padding: 0;
     }
 
     @include media(">=phone-lg") {
@@ -33,9 +35,10 @@
 
   &__block {
     display: grid;
+    align-content: center;
 
    &-company {
-      font-size: 2.4rem;
+      font-size: 1rem;
     }
 
 	&-polite,
@@ -46,9 +49,10 @@
 	}
 
    &-polite {
-		font-size: 1.8rem;
+		font-size: 1rem;
 		font-family: $MontserratItalic;
 		border-bottom: 1px solid $white;
+		white-space: nowrap;
 
 		@include media(">=phone-lg") {
 			font-size: 1.8rem;
@@ -66,7 +70,7 @@
     }
 
    &-telephone {
-      font-size: 3.8rem;
+      font-size: 1.2rem;
       font-family: $MontserratBold;
 
 	  &:hover {
@@ -114,6 +118,10 @@
       right: -15px;
     }
   }
+
+  .logo {
+	height: 40px;
+  }
 }
 
 .navFooter {
@@ -129,9 +137,10 @@
   }
 
   &__list {
-    display: grid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     min-width: 100%;
-    font-size: 1.6rem;
 
     @include media(">=phone-lg") {
 
@@ -156,7 +165,7 @@
   }
   &__link {
 	color: $white;
-    font-size: 2.4rem;
+	font-size: 0.9rem;
     border-width: 0;
     border-bottom: 1px solid transparent;
     position: relative;
