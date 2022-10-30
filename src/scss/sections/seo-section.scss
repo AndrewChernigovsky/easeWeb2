@@ -1,280 +1,289 @@
 .seo-section {
-    min-height: 500px;
-    width: 100%;
-    background-color: $black;
-    padding-bottom: 2rem;
+	min-height: 500px;
+	width: 100%;
+	background-color: $black;
+	padding-bottom: 2rem;
 
-    @include media(">=phone-lg") {
-        padding-bottom: 6rem;
-    }
+	@include media('>=phone-lg') {
+		padding-bottom: 6rem;
+	}
 
-    @include media(">=desktop") {
-        padding-bottom: 10rem;
-    }
+	@include media('>=desktop') {
+		padding-bottom: 10rem;
+	}
 
-    @include media(">=widescreen-lg") {
-        padding-bottom: 20rem;
-    }
+	@include media('>=widescreen-lg') {
+		padding-bottom: 20rem;
+	}
 
-    &__wrapper {
-        @include media(">=widescreen-lg") {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-    }
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
 
-   &__block-wrapper {
-        display: grid;
-        gap: 1rem;
+		@include media('>=widescreen-lg') {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+	}
 
-        @include media(">=tablet") {
-            grid-template-columns: 1fr 1fr;
-        }
+	&__block-wrapper {
+		display: grid;
+		gap: 1rem;
 
-        @include media(">=desktop") {
-            gap: 2rem;
-        }
+		@include media('>=tablet') {
+			grid-template-columns: 1fr 1fr;
+		}
 
-        @include media(">=widescreen-lg") {
-            gap: 6rem;
-        }
-    }
+		@include media('>=desktop') {
+			gap: 2rem;
+		}
 
+		@include media('>=widescreen-lg') {
+			gap: 6rem;
+		}
+	}
 
-    &__block {
-        position: relative;
-        min-height: 160px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        text-align: center;
+	&__block {
+		position: relative;
+		min-height: 160px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		justify-items: center;
+		align-items: center;
+		text-align: center;
+		padding-right: 20px;
 
-        @include media('>=phone-lg') {
-            min-height: 250px;
-        }
+		@include media('>=phone-lg') {
+			min-height: 250px;
+		}
 
-        @include media('>=tablet') {
-            min-height: 250px;
-            align-items: flex-start;
-            text-align: left;
-        }
+		@include media('>=tablet') {
+			min-height: 250px;
+			align-items: flex-start;
+			text-align: left;
+		}
 
-        @include media(">=widescreen-lg") {
-            min-height: 490px;
-            text-align: left;
-        }
+		@include media('>=widescreen-lg') {
+			min-height: 490px;
+			text-align: left;
+		}
 
-        &:last-of-type{
-            .seo-section__block-link{
-                margin-left: -60px;
+		&:last-of-type {
+			.seo-section__block-link {
+				margin-left: -60px;
 
-                @include media('>=phone-lg') {
-                    position: absolute;
-                    bottom: 0;
-                }
+				@include media('>=phone-lg') {
+					position: absolute;
+					bottom: 0;
+				}
 
-                @include media('>=tablet') {
-                    margin-left: 0;
-                    left: 0;
-                }
+				@include media('>=tablet') {
+					margin-left: 0;
+					left: 0;
+				}
 
-                @include media('>=widescreen-lg') {
-                    position: absolute;
-                    bottom: 0;
-                    margin-left: 0;
-                    left: 0;
-                }
-            }
-        }
-    }
+				@include media('>=widescreen-lg') {
+					position: absolute;
+					bottom: 0;
+					margin-left: 0;
+					left: 0;
+				}
+			}
+		}
+	}
 
-    &__image-block {
-        padding-bottom: 2rem;
+	&__image-block {
+		padding-bottom: 2rem;
 		max-height: 400px;
-    }
+		margin-top: 180px;
+	}
 
-    &__image-block-title {
-        margin-bottom: 2rem;
-        text-transform: uppercase;
-        font-family: $MontserratBold;
+	&__image-block-title {
+		margin-bottom: 2rem;
+		text-transform: uppercase;
+		font-family: $Montserrat;
 		position: relative;
 		z-index: 1;
-    }
+		font-size: 1rem;
+	}
 
-    &__image-wrapper {
-        min-width: 280px;
-        height: 400px;
-        position: relative;
+	&__image-wrapper {
+		position: relative;
+		min-width: 250px;
 
-        @include media('>=tablet') {
-            min-width: 390px;
+		@include media('>=tablet') {
+			min-width: 390px;
 			height: 500px;
-        }
+		}
 		@include media('>=widescreen-lg') {
 			height: 700px;
-        }
-    }
+		}
+	}
 
-    &__image {
-		width: 300px;
-		top: -90px;
-		left: -15px;
-        height: 100%;
-        object-fit: cover;
+	&__image {
+		width: 100%;
+		top: -240px;
+		left: -40px;
+		object-fit: cover;
 		position: absolute;
 		z-index: 0;
 		transform: rotate(-38deg);
 
-
-        @include media('>=phone-lg') {
-            width: 500px;
+		@include media('>=phone-lg') {
+			width: 500px;
 			top: -50px;
-    		left: -80px;
-        }
-        @include media('>=tablet') {
+			left: -80px;
+		}
+		@include media('>=tablet') {
 			width: 600px;
 			top: -50px;
-    		left: -80px;
-        }
-        @include media('>=widescreen-lg') {
+			left: -80px;
+		}
+		@include media('>=widescreen-lg') {
 			width: 800px;
 			top: -100px;
-    		left: -30px;
+			left: -30px;
 
 			top: -120px;
-    		left: 40px;
-        }
-    }
+			left: 40px;
+		}
+	}
 
-    &__block-span {
-        font-family: $MontserratThin;
-        font-size: 18rem;
+	&__block-span {
+		font-family: $MontserratThin;
+		font-size: 18rem;
+
+		@include media('>=phone') {
+			font-size: 25rem;
+		}
+
+		@include media('>=phone-lg') {
+			font-size: 28rem;
+		}
+
+		@include media('>=desktop') {
+			font-size: 30rem;
+		}
+
+		@include media('>=widescreen') {
+			font-size: 35rem;
+		}
+
+		@include media('>=widescreen-lg') {
+			font-size: 38rem;
+		}
+	}
+
+	&__block-link {
+		font-family: $MontserratBold;
+		position: relative;
+		border-width: 0;
+		border-bottom: 1px solid transparent;
+		transition: all 0.25s linear;
+		padding-bottom: 10px;
+
+		&::before {
+			@extend %pseudo;
+			width: 100%;
+			left: 0;
+			height: 1px;
+			background-color: $white;
+			transform-origin: left;
+			transform: scale(0);
+			transition: 0.25s linear;
+			bottom: 0;
+		}
+
+		&:visited {
+			color: $white;
+		}
+
+		&:hover {
+			color: $white;
+		}
+
+		&:hover::before,
+		&:active::before {
+			transform: scale(1);
+		}
+
+		&::after {
+			@extend %pseudo;
+			background-image: url('../../images/icons/arrowMoreSimple.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 20px;
+			width: 20px;
+			height: 15px;
+			right: -25px;
+			top: -2px;
 
 
-        @include media('>=phone') {
-            font-size: 25rem;
-        }
+			@include media('>=phone-lg') {
+				width: 100px;
+				height: 50px;
+				right: -90px;
+				top: -12px;
+				background-size: 40px;
+			}
 
-        @include media('>=phone-lg') {
-            font-size: 28rem;
-        }
+			@include media('>=tablet') {
+				width: 100px;
+				height: 50px;
+				right: -100px;
+				top: -10px;
+				background-size: 53px;
+			}
+		}
+	}
 
-        @include media(">=desktop") {
-            font-size: 30rem;
-        }
+	&__block-paragraph,
+	&__block-link {
+		font-size: 1rem;
 
-        @include media(">=widescreen") {
-            font-size: 35rem;
-        }
+		@include media('>=phone-lg') {
+			font-size: 2rem;
+		}
 
-        @include media(">=widescreen-lg") {
-           font-size: 38rem;
-        }
-    }
+		@include media('>=widescreen-lg') {
+			font-size: 2.4rem;
+		}
+	}
 
-    &__block-link {
-        font-family: $MontserratBold;
-        position: relative;
-        border-width: 0;
-        border-bottom: 1px solid transparent;
-        transition: all 0.25s linear;
-        padding-bottom: 10px;
+	&__block-link {
+		color: $white;
+	}
 
-        &::before {
-            @extend %pseudo;
-            width: 100%;
-            left: 0;
-            height: 1px;
-            background-color: $white;
-            transform-origin: left;
-            transform: scale(0);
-            transition: 0.25s linear;
-            bottom: 0;
-        }
+	&__block-paragraph {
+		@include media('>=phone') {
+			font-size: 2rem;
+		}
+	}
 
-        &:visited {
-          color: $white;
-        }
+	&__block-paragraph2 {
+		font-size: 1.6rem;
+		margin-bottom: 2rem;
+		text-align: left;
+		line-height: 3.4;
 
-        &:hover {
-            color: $white;
-        }
+		@include media('>=phone-lg') {
+			font-size: 3.6rem;
+		}
 
-        &:hover::before,
-        &:active::before {
-            transform: scale(1);
-        }
+		@include media('>=widescreen-lg') {
+			font-size: 5.6rem;
+			line-height: 2.5;
+		}
+	}
+}
 
-        &::after{
-            @extend %pseudo;
-            background-image: url('../../images/icons/arrowMoreSimple.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 40px;
-            width: 50px;
-            height: 27px;
-            right: -56px;
-            top: -4px;
+.seo-block-mb {
+	display: none;
 
-
-            @include media('>=phone-lg') {
-                width: 100px;
-                height: 50px;
-                right: -90px;
-                top: -12px;
-                background-size: 40px;
-            }
-
-            @include media('>=tablet') {
-                width: 100px;
-                height: 50px;
-                right: -100px;
-                top: -10px;
-                background-size: 53px;
-            }
-        }
-    }
-
-    &__block-paragraph,
-    &__block-link {
-        font-size: 1.6rem;
-
-        @include media('>=phone-lg') {
-            font-size: 2rem;
-        }
-
-        @include media(">=widescreen-lg") {
-            font-size: 2.4rem;
-        }
-    }
-
-    &__block-link {
-        color: $white;
-    }
-
-    &__block-paragraph {
-
-        @include media('>=phone') {
-            font-size: 2rem;
-        }
-    }
-
-    &__block-paragraph2 {
-        font-size: 2.6rem;
-        margin-bottom: 2rem;
-        text-align: left;
-        line-height: 1.4;
-
-        @include media('>=phone-lg') {
-            font-size: 3.6rem;
-        }
-
-        @include media(">=widescreen-lg") {
-            font-size: 5.6rem;
-            line-height: 2.5;
-        }
-    }
+	@include media('>=tablet') {
+		display: block;
+	}
 }

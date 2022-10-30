@@ -10,7 +10,7 @@ const BODY = document.querySelector('body');
 		scrollSmooth.init();
 		menuBurger.init();
 
-		$('.intro-section__title .animaH2').each(function (i) {
+		$('.titleIntro-anima .animaH2').each(function (i) {
 			for (let z = 0; z < 1000; z++) {
 				$(this)
 					.delay(i++ * 2000)
@@ -83,10 +83,7 @@ const BURGER = document.querySelector('.burger');
 const blockWrapperSteps = document.querySelector('.stepsWorking-section__wrapper1');
 const blockContacts = document.querySelector('#contacts');
 const lastBlockInnerID = document.querySelector('#stepsWorkingLastBlock');
-const integrationBlock = document.querySelector('#integration');
-const integrationTitles = document.querySelectorAll('.integration-section__title');
 const contactsLink = document.querySelector('#contactsLink');
-const integrationInner = document.querySelector('.integration-section__inner');
 
 const getCall = document.querySelector(".PopupCall button[type='submit']");
 const politeCheckbox = document.querySelector(".PopupCall input[type='checkbox']");
@@ -193,11 +190,7 @@ let optionsSHAPE = {
 	rootMargin: '0px 0px -50% 0px',
 	threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
 };
-let optionsIntegration = {
-	root: null,
-	rootMargin: '0px',
-	threshold: 1,
-};
+
 let optionsContacts = {
 	root: null,
 	rootMargin: '0%',
@@ -237,23 +230,6 @@ let callbackList = function (entries, observer) {
 	});
 };
 
-let callbackIntegration = function (entries, observer) {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			integrationTitles.forEach((e) => {
-				if (e.classList.contains(active)) {
-					e.classList.remove(active);
-					integrationInner.classList.remove(active);
-					observerIntegration.unobserve(integrationBlock);
-				} else {
-					e.classList.add(active);
-					integrationInner.classList.add(active);
-					observerIntegration.unobserve(integrationBlock);
-				}
-			});
-		}
-	});
-};
 let callbackContacts = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
@@ -285,7 +261,6 @@ let callbackSHAPE = function (entries, observer) {
 let observerOuter = new IntersectionObserver(callbackOuter, optionsOuter);
 let observerList = new IntersectionObserver(callbackList, optionsList);
 let observerSHAPE = new IntersectionObserver(callbackSHAPE, optionsSHAPE);
-let observerIntegration = new IntersectionObserver(callbackIntegration, optionsIntegration);
 let observerContacts = new IntersectionObserver(callbackContacts, optionsContacts);
 
 if (blockWrapperSteps) {
@@ -295,9 +270,6 @@ if (lastBlockInnerID) {
 	observerList.observe(lastBlockInnerID);
 }
 
-if (integrationBlock) {
-	observerIntegration.observe(integrationBlock);
-}
 if (blockContacts) {
 	observerContacts.observe(blockContacts);
 }

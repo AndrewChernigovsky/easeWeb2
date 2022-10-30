@@ -15,6 +15,13 @@
         overflow: hidden;
     }
 
+	&__inner {
+		marquee {
+			font-size: 4.6rem;
+			font-family: $MontserratBold;
+		}
+	}
+
     .title__h2 {
         font-size: 1.8rem;
         font-family: $MazzardHBold;
@@ -27,18 +34,6 @@
 			font-size: 3.2rem;
         }
     }
-
-	&__inner {
-		opacity: 0;
-	}
-
-	&__inner.active {
-		animation-name: integration;
-		animation-duration: 2s;
-		animation-delay: 0s;
-		opacity: 1;
-		animation-iteration-count: 1;
-	}
 
     &__title {
         font-size: 1.1rem;

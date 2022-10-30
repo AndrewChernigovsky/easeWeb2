@@ -1,6 +1,7 @@
 .cool-section {
 	position: relative;
 	min-height: 350px;
+	padding-bottom: 10rem;
 
 	@include media('>=tablet') {
 		min-height: 600px;
@@ -15,7 +16,7 @@
 		ul {
 			color: $black;
 			font-family: $Montserrat;
-			font-size: 1.8rem;
+			font-size: 1.4rem;
 			position: relative;
 			list-style-type: disc;
 
@@ -37,10 +38,10 @@
 
 			&::before {
 				@extend %pseudo;
-				width: 320px;
-				height: 2px;
-				left: -175px;
-				bottom: 158px;
+			    width: 248px;
+				height: 1px;
+				left: -137px;
+				bottom: 144px;
 				background-color: $black;
 				transform: rotate(-90deg);
 
@@ -68,13 +69,17 @@
 					bottom: 200px;
 				}
 			}
+
+			li {
+				margin-bottom: 1rem;
+			}
 		}
 	}
 
 	&__image-wrapper {
 		position: absolute;
 		left: -70%;
-    	top: -200px;
+    	top: -125px;
 		width: 200px;
 		opacity: 0.5;
 
@@ -101,6 +106,10 @@
 			left: -10%;
 			top: -80px;
 			width: 800px;
+		}
+
+		video {
+			width: 500px;
 		}
 	}
 }
