@@ -264,30 +264,6 @@
 			transform: scale(1);
 		}
 	}
-
-	.menuButton {
-		color: $white;
-		font-size: 2.4rem;
-		background-color: $black;
-		font-weight: 700;
-		transition: $base-transition;
-		border-radius: 200px;
-		min-height: 70px;
-		padding: 0.5rem 2.3rem;
-		border: 2px solid $black;
-
-		@include media('>=desktop') {
-			padding: 0.5rem 2.3rem;
-		}
-
-		&:hover {
-			@extend %hoverButton;
-		}
-
-		&:focus {
-			@extend %hoverButton;
-		}
-	}
 }
 
 .line-menu {
@@ -410,5 +386,30 @@
 			padding: 5px;
 			height: 40px;
 		}
+	}
+}
+
+.menuButton {
+	color: $white;
+	font-size: 2.4rem;
+	background-color: $black;
+	font-weight: 700;
+	transition: $base-transition;
+	border-radius: 200px;
+	min-height: 50px;
+	padding: 0.5rem 2.3rem;
+	border: 2px solid $black;
+
+	@include media('>=desktop') {
+		padding: 0.5rem 2.3rem;
+		min-height: 70px;
+	}
+
+	&:hover {
+		@extend %hoverButton;
+	}
+
+	&:focus {
+		@extend %hoverButton;
 	}
 }

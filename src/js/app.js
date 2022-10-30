@@ -1,7 +1,6 @@
 import menuBurger from './components/burger-menu';
 import scrollSmooth from './components/scroll-smooth';
 import inputmask from './components/inputMask';
-import Inputmask from 'inputmask';
 
 const overlay = document.querySelector('.overlay');
 const BODY = document.querySelector('body');
@@ -74,7 +73,8 @@ let windowWidthClient = window.clientWidth;
 
 const SHAPE = document.getElementById('mainFormShape');
 const active = 'active';
-const menuBtn = document.getElementById('menuBtn');
+const menuBtn = document.querySelectorAll('.menuButton');
+
 const popupCall = document.getElementById('popupCall__mainID');
 const btnClosePopupCall = document.getElementById('popupCallBtnCloseID');
 const tarifWrapper = document.querySelectorAll('.prices-section__tarif-wrapper');
@@ -90,71 +90,72 @@ const integrationInner = document.querySelector('.integration-section__inner');
 
 const getCall = document.querySelector(".PopupCall button[type='submit']");
 const politeCheckbox = document.querySelector(".PopupCall input[type='checkbox']");
-// let phone = document.querySelector("input[name='userphone']");
 
 document.addEventListener('DOMContentLoaded', () => {
-	menuBtn.addEventListener('click', () => {
-		btnClosePopupCall.addEventListener('click', () => {
+	menuBtn.forEach(e=>{
+		e.addEventListener('click', () => {
+			btnClosePopupCall.addEventListener('click', () => {
+				if (popupCall.classList.contains(active)) {
+					popupCall.classList.remove(active);
+					overlay.classList.remove(active);
+					NAV.classList.remove(active);
+					BURGER.classList.remove(active);
+					BODY.style.overflow = 'auto';
+					BODY.style.width = `${windowWidth}` + 'px';
+				} else {
+					BURGER.classList.remove(active);
+					BODY.style.overflow = 'auto';
+					BODY.style.width = `${windowWidth}` + 'px';
+				}
+			});
 			if (popupCall.classList.contains(active)) {
 				popupCall.classList.remove(active);
-				overlay.classList.remove(active);
-				popupCall.classList.remove(active);
-				NAV.classList.remove(active);
-				BURGER.classList.remove(active);
 				BODY.style.overflow = 'auto';
-				BODY.style.width = `${windowWidth}` + 'px';
+				overlay.classList.remove(active);
 			} else {
-				BURGER.classList.remove(active);
+				popupCall.classList.add(active);
+				BODY.style.overflow = 'hidden';
+				overlay.classList.add(active);
 				BODY.style.width = `${windowWidth}` + 'px';
 			}
+
+			overlay.addEventListener('click', () => {
+				if (overlay.classList.contains(active)) {
+					overlay.classList.remove(active);
+					popupCall.classList.remove(active);
+					BODY.style.overflow = 'auto';
+				}
+			});
+
+			tarifWrapper.forEach((e) => {
+				e.addEventListener('click', () => {
+					if (e.classList.contains('active')) {
+						e.classList.remove('active');
+						e.firstElementChild.classList.remove('active');
+					} else {
+						e.classList.add('active');
+						e.firstElementChild.classList.add('active');
+					}
+				});
+			});
+
+			contactsLink.addEventListener('click', () => {
+				if (BODY.classList.contains('stop-scroll')) {
+					BODY.classList.remove('stop-scroll');
+				}
+			});
+
+			politeCheckbox.addEventListener('click', (e) => {
+				if (politeCheckbox.hasAttribute('checked', 'checked')) {
+					politeCheckbox.removeAttribute('checked');
+					getCall.setAttribute('disabled', 'disabled');
+				} else {
+					politeCheckbox.setAttribute('checked', 'checked');
+					getCall.removeAttribute('disabled');
+				}
+			});
 		});
-		if (popupCall.classList.contains(active)) {
-			popupCall.classList.remove(active);
-			BODY.style.overflow = 'auto';
-			overlay.classList.remove(active);
-		} else {
-			popupCall.classList.add(active);
-			BODY.style.overflow = 'hidden';
-			overlay.classList.add(active);
-			BODY.style.width = `${windowWidth}` + 'px';
-		}
-	});
-
-	overlay.addEventListener('click', () => {
-		if (overlay.classList.contains(active)) {
-			overlay.classList.remove(active);
-			popupCall.classList.remove(active);
-			BODY.style.overflow = 'auto';
-		}
-	});
-
-	tarifWrapper.forEach((e) => {
-		e.addEventListener('click', () => {
-			if (e.classList.contains('active')) {
-				e.classList.remove('active');
-				e.firstElementChild.classList.remove('active');
-			} else {
-				e.classList.add('active');
-				e.firstElementChild.classList.add('active');
-			}
-		});
-	});
-
-	contactsLink.addEventListener('click', () => {
-		if (BODY.classList.contains('stop-scroll')) {
-			BODY.classList.remove('stop-scroll');
-		}
-	});
-
-	politeCheckbox.addEventListener('click', (e) => {
-		if (politeCheckbox.hasAttribute('checked', 'checked')) {
-			politeCheckbox.removeAttribute('checked');
-			getCall.setAttribute('disabled', 'disabled');
-		} else {
-			politeCheckbox.setAttribute('checked', 'checked');
-			getCall.removeAttribute('disabled');
-		}
-	});
+	})
 });
 
 let targetStepWorking = document.getElementById('stepsWorkingSectionWrapper1');

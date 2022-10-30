@@ -1,26 +1,21 @@
 .intro-section {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
-    min-height: 300px;
+	min-height: 300px;
 
 	@include media('>=tablet') {
 		padding-top: 1rem;
 		padding-bottom: 10rem;
 	}
-
 	@include media('>=desktop') {
 		padding-bottom: 15rem;
 	}
-
 	@include media('>=widescreen') {
 		padding-bottom: 20rem;
 	}
-
 	@include media('>=widescreen-lg') {
-		// padding-bottom: 25rem;
 		padding-bottom: 10rem;
 	}
-
 	&__wrapper {
 		position: relative;
 		display: grid;
@@ -37,7 +32,6 @@
 			justify-content: center;
 		}
 	}
-
 	&__inner {
 		display: grid;
 		justify-content: space-between;
@@ -49,30 +43,31 @@
 			align-items: center;
 		}
 	}
-
 	&__text {
 		color: $black;
 	}
-
 	&__title {
 		font-family: $MazzardHBold;
 		font-size: 2.4rem;
+	}
+	span.intro-section__h1-span {
+		text-transform: uppercase;
+		color: $black;
+		font-family: $MazzardHBold;
+		font-size: 2.4rem;
 
-		span {
-			text-transform: uppercase;
+		&:first-of-type {
+			text-align: center;
 
-			&:first-of-type {
-				text-align: center;
-
-				@include media('>=tablet') {
-					text-align: left;
-				}
+			@include media('>=tablet') {
+				text-align: left;
 			}
 		}
 	}
 
 	&__h1-span {
 		font-family: $MazzardHBold;
+		text-transform: uppercase;
 
 		&:last-of-type {
 			display: none;
@@ -82,12 +77,10 @@
 	&__h1-span2 {
 		font-family: $MazzardHBold;
 	}
-
 	&__h1-span2.right {
 		text-align: right;
 		display: block;
 	}
-
 	&__form {
 		display: none;
 
@@ -97,7 +90,6 @@
 			display: block;
 		}
 	}
-
 	&__form-wrapper {
 		display: grid;
 		align-items: left;
@@ -138,7 +130,6 @@
 			}
 		}
 	}
-
 	&__form-inner {
 		display: grid;
 		align-items: left;
@@ -164,7 +155,7 @@
 		height: 320px;
 		z-index: -1;
 		top: -190px;
-    	right: -50px;
+		right: -50px;
 
 		@include media('>=phone') {
 			top: -365px;
@@ -207,7 +198,6 @@
 	}
 	&__image-wrapper.seoSectionimage {
 		@include media('>=widescreen') {
-
 			height: max-content;
 		}
 
@@ -218,14 +208,13 @@
 		}
 	}
 	&__image-wrapper.addTasksImage {
-
 		@include media('>=widescreen') {
 			height: max-content;
 		}
 
 		@include media('>=widescreen-lg') {
 			top: -85px;
-    		right: -570px;
+			right: -570px;
 		}
 	}
 	&__image {
@@ -343,6 +332,8 @@
 	}
 	.title__h1 {
 		padding-bottom: 0;
+		text-transform: uppercase;
+		margin-bottom: 0.5rem;
 
 		@include media('>=phone-lg') {
 			padding-bottom: 40px;
@@ -372,6 +363,7 @@
 .titleIntro-anima {
 	position: relative;
 	min-height: 20px;
+    margin-bottom: 30px;
 
 	@include media('>=tablet') {
 		min-height: 200px;
@@ -386,6 +378,5 @@
 		@include media('>=tablet') {
 			top: 30px;
 		}
-
 	}
 }
