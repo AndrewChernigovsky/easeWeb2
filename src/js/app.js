@@ -10,14 +10,6 @@ const BODY = document.querySelector('body');
 		scrollSmooth.init();
 		menuBurger.init();
 
-		$('.titleIntro-anima .animaH2').each(function (i) {
-			for (let z = 0; z < 1000; z++) {
-				$(this)
-					.delay(i++ * 2000)
-					.fadeTo(1000, 1)
-					.fadeTo(1000, 0);
-			}
-		});
 		$('.intro-section__texts-inner .anima').each(function (i) {
 			for (let z = 0; z < 1000; z++) {
 				$(this)
@@ -88,6 +80,8 @@ const contactsLink = document.querySelector('#contactsLink');
 const getCall = document.querySelector(".PopupCall button[type='submit']");
 const politeCheckbox = document.querySelector(".PopupCall input[type='checkbox']");
 
+const titlesAnima = document.querySelectorAll('.titleIntro-anima .animaH2');
+
 document.addEventListener('DOMContentLoaded', () => {
 	menuBtn.forEach(e=>{
 		e.addEventListener('click', () => {
@@ -153,6 +147,22 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	})
+	let arrAnima = [];
+
+	titlesAnima.forEach(e=>{
+		arrAnima = e;
+	})
+
+
+
+	.each(function (i) {
+		for (let z = 0; z < 1000; z++) {
+			$(this)
+				.delay(i++ * 2000)
+				.fadeTo(1000, 1)
+				.fadeTo(1000, 0);
+		}
+	});
 });
 
 let targetStepWorking = document.getElementById('stepsWorkingSectionWrapper1');
@@ -637,6 +647,5 @@ let callbackLazy = function (entries, observer) {
 let observerLazy = new IntersectionObserver(callbackLazy, optionsLazy);
 
 Array.from(sections).forEach(e=>{
-	e.style.minHeight = '300px';
 	observerLazy.observe(e);
 })

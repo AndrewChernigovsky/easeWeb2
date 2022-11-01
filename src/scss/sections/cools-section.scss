@@ -9,15 +9,49 @@
 
 	&__wrapper {
 		display: flex;
-		padding-left: 30%;
+		margin-left: 30%;
+		position: relative;
+		padding-left: 8px;
+
+		&::before {
+			@extend %pseudo;
+			background-color: $black;
+			width: 1px;
+			height: 185px;
+			left: 0;
+			bottom: 5px;
+
+			@include media('>=phone-lg') {
+				width: 265px;
+				left: -148px;
+				bottom: 134px;
+			}
+
+			@include media('>=tablet') {
+				width: 350px;
+				left: -194px;
+				bottom: 152px;
+			}
+
+			@include media('>=desktop') {
+				width: 330px;
+				left: -185px;
+				bottom: 150px;
+			}
+
+			@include media('>=widescreen-lg') {
+				width: 420px;
+				left: -235px;
+				bottom: 200px;
+			}
+		}
 	}
 
 	&__inner {
 		ul {
 			color: $black;
 			font-family: $Montserrat;
-			font-size: 1.4rem;
-			position: relative;
+			font-size: 1rem;
 			list-style-type: disc;
 
 			@include media('>=tablet') {
@@ -36,40 +70,6 @@
 				font-size: 3.8rem;
 			}
 
-			&::before {
-				@extend %pseudo;
-			    width: 248px;
-				height: 1px;
-				left: -137px;
-				bottom: 144px;
-				background-color: $black;
-				transform: rotate(-90deg);
-
-				@include media('>=phone-lg') {
-					width: 265px;
-					left: -148px;
-					bottom: 134px;
-				}
-
-				@include media('>=tablet') {
-					width: 350px;
-					left: -194px;
-					bottom: 152px;
-				}
-
-				@include media('>=desktop') {
-					width: 330px;
-					left: -185px;
-					bottom: 150px;
-				}
-
-				@include media('>=widescreen-lg') {
-					width: 420px;
-					left: -235px;
-					bottom: 200px;
-				}
-			}
-
 			li {
 				margin-bottom: 1rem;
 			}
@@ -78,9 +78,9 @@
 
 	&__image-wrapper {
 		position: absolute;
-		left: -70%;
+		left: -120%;
     	top: -125px;
-		width: 200px;
+		width: 434px;
 		opacity: 0.5;
 
 		@include media('>=phone-lg') {
@@ -109,7 +109,7 @@
 		}
 
 		video {
-			width: 500px;
+			width: 434px;
 		}
 	}
 }

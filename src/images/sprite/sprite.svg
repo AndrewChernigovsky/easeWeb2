@@ -36,7 +36,7 @@
 <path d="M3 3C10.4449 10.2205 25.2671 24.7292 24.9963 25C24.7256 25.2708 10.2193 39.7795 3 47" stroke="#FF8208" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 
-</g></symbol><symbol id="arrowMoreSimple" viewBox="0 0 53 24"><g fill="none">
+</g></symbol><symbol id="arrowMoreSimple" viewBox="0 0 53 24"><g fill="#FEB701">
 <path d="M52.0544 13.0607C52.6402 12.4749 52.6402 11.5251 52.0544 10.9393L42.5085 1.3934C41.9227 0.807611 40.973 0.807611 40.3872 1.3934C39.8014 1.97919 39.8014 2.92893 40.3872 3.51472L48.8725 12L40.3872 20.4853C39.8014 21.0711 39.8014 22.0208 40.3872 22.6066C40.973 23.1924 41.9227 23.1924 42.5085 22.6066L52.0544 13.0607ZM0.993774 13.5H50.9938V10.5H0.993774V13.5Z" fill="#FF710B"/>
 </g></symbol><symbol id="close copy" viewBox="0 0 24 24"><g fill="none">
 <path d="M4.34313 19.6569L12 12M19.6568 4.34314L12 12M12 12L4.34313 4.34315M12 12L19.6568 19.6569" stroke="#2288DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

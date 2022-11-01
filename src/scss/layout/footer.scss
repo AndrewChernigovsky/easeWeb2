@@ -1,5 +1,5 @@
 .footer {
-  padding: 2rem 0 2rem 0;
+  padding: 1rem 0 2rem 0;
   background-color: $black;
   color: $white;
   font-family: $Montserrat;
@@ -17,8 +17,8 @@
     display: flex;
     min-width: 100%;
     justify-content: space-between;
-    margin-bottom: 2rem;
-    padding: 0 4rem;
+    margin-bottom: -1rem;
+    padding: 0 3rem;
 
     &:last-of-type {
       border-top: 1px solid $gray;
@@ -35,10 +35,14 @@
 
   &__block {
     display: grid;
-    align-content: center;
+    align-content: flex-start;
+
+	&:last-of-type {
+		padding-top: 1rem;
+	}
 
    &-company {
-      font-size: 1rem;
+      font-size: 0.4rem;
     }
 
 	&-polite,
@@ -49,10 +53,11 @@
 	}
 
    &-polite {
-		font-size: 1rem;
+		font-size: 0.4rem;
 		font-family: $MontserratItalic;
 		border-bottom: 1px solid $white;
 		white-space: nowrap;
+
 
 		@include media(">=phone-lg") {
 			font-size: 1.8rem;
@@ -70,8 +75,9 @@
     }
 
    &-telephone {
-      font-size: 1.2rem;
+      font-size: 0.8rem;
       font-family: $MontserratBold;
+	  margin-bottom: 4px;
 
 	  &:hover {
 			transition: $base-transition;
@@ -97,36 +103,38 @@
   }
 
   &__line {
-    border-color: $white;
     position: relative;
+	background-color: $white;
+	height: 1px;
     max-width: calc(100% - 60px);
 
     &::before, &::after {
       @extend %pseudo;
-      width: 30px;
+      width: 10px;
       height: 1px;
       background-color: $white;
-      top: 15px;
+      top: 5px;
       transform: rotate(90deg);
     }
 
     &::before{
-      left: -15px;
+      left: -5px;
     }
 
     &::after {
-      right: -15px;
+      right: -5px;
     }
   }
 
   .logo {
-	height: 40px;
+	height: 25px;
+	margin-left: -2px;
   }
 }
 
 .navFooter {
   min-width: 100%;
-  padding-top: 2rem;
+  padding-top: 1rem;
 
   @include media(">=phone-lg") {
     padding: 2rem 2.5rem 1rem 2.5rem;
@@ -165,7 +173,8 @@
   }
   &__link {
 	color: $white;
-	font-size: 0.9rem;
+	font-family: $Montserrat;
+	font-size: 0.8rem;
     border-width: 0;
     border-bottom: 1px solid transparent;
     position: relative;

@@ -1,12 +1,12 @@
 .button-more {
-	height: 40px;
-	min-width: 180px;
+	height: 20px;
+	min-width: 73px;
 	border-radius: 46.5px;
 	font-family: $MontserratBold;
-	font-size: 1.8rem;
-	box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2), -6px -6px 15px 5px rgba(34, 60, 80, 0.2) inset;
+	font-size: 0.8rem;
+	box-shadow: 3px 0px 5px 1px rgba(34, 60, 80, 0.2), -1px -2px 1px 0px rgba(34, 60, 80, 0.2) inset;
 	background: linear-gradient(to left, $orange1, $orange);
-	padding: 1rem 3rem 1rem 2rem;
+	padding: 0.5rem 0.3rem 0.2rem 1rem;
 	position: relative;
 	color: $black;
 
@@ -14,15 +14,15 @@
 		height: 70px;
 		min-width: 220px;
 		font-size: 2.4rem;
-		padding: 2rem;
+		padding: 1rem 3rem 1rem 2rem;
 	}
 
 	&::after {
 		@extend %pseudo;
-		width: 28px;
-		height: 30px;
-		right: 15px;
-		top: 6px;
+		height: 20px;
+		right: 4px;
+		top: 3px;
+		width: 8px;
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-image: url('../images/icons/arrowMoreDefault.svg');
@@ -39,23 +39,22 @@
 
 	&:hover,
 	&:active {
-		box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2), 7px 7px 7px 2px rgba(34, 60, 80, 0.2) inset;
-		text-shadow: 1px 1px 1px $black;
-		color: $white;
+		box-shadow: 2px 2px 5px 0px rgba(34,60, 80, 0.2), 1px 2px 2px 1px rgba(34, 60, 80, 0.2) inset;
+
+		&::after {
+			background-image: url('../images/icons/arrowMoreActive.svg');
+		}
 	}
 
 	&:disabled {
 		box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2), 7px 7px 7px 2px rgba(34, 60, 80, 0.2) inset;
-		text-shadow: none;
 		box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2), -6px -6px 15px 5px rgba(34, 60, 80, 0.2) inset;
 		background: linear-gradient(to left, $crem1, $crem2);
-		color: $white;
 		cursor: auto;
 	}
 
 	&:disabled::after {
 		box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2), 7px 7px 7px 2px rgba(34, 60, 80, 0.2) inset;
-		text-shadow: none;
 		box-shadow: 7px 5px 15px 5px rgba(34, 60, 80, 0.2), -6px -6px 15px 5px rgba(34, 60, 80, 0.2) inset;
 		cursor: auto;
 		opacity: 0.2;

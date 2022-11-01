@@ -2,6 +2,10 @@
     color: $black;
     font-family: $MazzardHBold;
 
+	.title__h2 {
+        font-size: 1.2rem;
+    }
+
     &__wrapper1 {
         display: flex;
         justify-content: flex-start;
@@ -35,13 +39,9 @@
 		}
     }
 
-    .title__h2 {
-        font-size: 3.8rem;
-    }
-
     &__text,
     &__text1 {
-		font-size: 1.2rem;
+		font-size: 0.8rem;
         font-family: $Montserrat;
 
 		@include media('>=phone-lg'){
@@ -61,12 +61,12 @@
         padding-bottom: 5rem;
 		position: absolute;
 		top: 60px;
-		right: 5px;
+		right: 0;
 
         div {
-            padding: 0.5rem 1.7rem 0.5rem 0.5rem;
-            border-bottom: 2px solid $orange1;
-            border-left: 2px solid $orange1;
+            padding: 0.5rem 2rem 0.5rem 0.5rem;
+            border-bottom: 1px solid $orange1;
+            border-left: 1px solid $orange1;
 			margin-right: 10px;
 
 			@include media('>=phone-lg'){
@@ -76,8 +76,8 @@
 
 			&::before {
 				@extend %pseudo;
-				width: 20px;
-				height: 2px;
+				width: 7px;
+				height: 1px;
 				background-color: $orange1;
 				top: 0;
 				left: 0;
@@ -140,9 +140,9 @@
             position: absolute;
             color: $white;
             font-family: $MontserratBold;
-			top: 1px;
+			top: 2px;
 			left: 5px;
-			font-size: 1.2rem;
+			font-size: 1rem;
 
 			@include media('>=phone-lg'){
 				top: 5px;
@@ -174,7 +174,7 @@
         position: relative;
         display: flex;
         align-items: flex-end;
-        border: 2px solid $black;
+        border: 1px solid $black;
 		min-height: 180px;
 		padding: 1rem;
 		margin-right: 20px;
@@ -201,11 +201,11 @@
     }
 
     &__title {
-        font-size: 2.6rem;
+        font-size: 3.2rem;
         font-family: $MontserratBold;
         position: absolute;
-		left: -35px;
-		bottom: 110px;
+		left: -30px;
+		bottom: 50px;
 
 		@include media(">=phone-lg") {
 			font-size: 4.2rem;

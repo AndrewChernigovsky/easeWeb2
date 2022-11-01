@@ -1,8 +1,12 @@
 .header {
 	background-color: $white;
 	width: 100%;
-	border-bottom: 2px solid $white;
-	margin-bottom: 1.8rem;
+	border-bottom: none;
+	margin-bottom: -0.6rem;
+
+	@include media('>=tablet') {
+		border-bottom: 2px solid $white;
+	}
 
 	@include media('>=desktop') {
 		margin-bottom: 4.8rem;
@@ -267,17 +271,19 @@
 }
 
 .line-menu {
-	border-color: $black;
+	background-color: $black;
 	position: relative;
 	display: block;
 	max-width: calc(100% - 35px);
 	margin-top: -2.8rem;
 	margin-bottom: 1.8rem;
+	min-width: 50%;
+    margin: 0 auto;
+	height: 1px;
 
 	@include media('>=tablet') {
 		max-width: calc(100% - 60px);
 	}
-
 	@include media('>=desktop') {
 		margin-top: -4.8rem;
 		margin-bottom: 4.8rem;
@@ -292,19 +298,18 @@
 		@extend %pseudo;
 		background-color: $black;
 		transform: rotate(90deg);
-
-		width: 16px;
+		width: 15px;
 		height: 1px;
 		background-color: #000000;
-		top: -9px;
+		top: -8px;
 	}
 
 	&::before {
-		left: -8px;
+		left: -7px;
 	}
 
 	&::after {
-		right: -8px;
+		right: -7px;
 	}
 }
 
@@ -393,14 +398,20 @@
 
 .menuButton {
 	color: $white;
-	font-size: 2.4rem;
+	font-size: 1.4rem;
 	background-color: $black;
 	font-weight: 700;
 	transition: $base-transition;
 	border-radius: 200px;
-	min-height: 50px;
-	padding: 0.5rem 2.3rem;
 	border: 2px solid $black;
+	min-height: 20px;
+    padding: 0.5rem 1.3rem;
+
+	@include media('>=tablet') {
+		font-size: 2.4rem;
+		min-height: 50px;
+		padding: 0.5rem 2.3rem;
+	}
 
 	@include media('>=desktop') {
 		padding: 0.5rem 2.3rem;
