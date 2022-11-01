@@ -58,15 +58,9 @@
 		border-bottom: 1px solid $white;
 		white-space: nowrap;
 
-
-		@include media(">=phone-lg") {
-			font-size: 1.8rem;
-		}
-
-		  @include media(">=widescreen-lg") {
+		@include media(">=widescreen-lg") {
 			font-size: 2.4rem;
 		}
-
 
 	  	&:hover {
 			transition: $base-transition;

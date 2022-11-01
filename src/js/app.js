@@ -279,11 +279,11 @@ window.addEventListener('resize', ()=> {
 
 if (blockWrapperSteps && window.innerWidth >= 1024) {
 	observerOuter.observe(blockWrapperSteps);
-	alert('yes');
+	// alert('yes');
 }
 
 if (window.innerWidth <= 1024) {
-	alert('small');
+	// alert('small');
 }
 
 if (lastBlockInnerID) {

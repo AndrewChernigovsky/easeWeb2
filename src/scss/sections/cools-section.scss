@@ -1,11 +1,6 @@
 .cool-section {
 	position: relative;
-	min-height: 350px;
 	padding-bottom: 10rem;
-
-	@include media('>=tablet') {
-		min-height: 600px;
-	}
 
 	&__wrapper {
 		display: flex;
@@ -20,30 +15,6 @@
 			height: 185px;
 			left: 0;
 			bottom: 5px;
-
-			@include media('>=phone-lg') {
-				width: 265px;
-				left: -148px;
-				bottom: 134px;
-			}
-
-			@include media('>=tablet') {
-				width: 350px;
-				left: -194px;
-				bottom: 152px;
-			}
-
-			@include media('>=desktop') {
-				width: 330px;
-				left: -185px;
-				bottom: 150px;
-			}
-
-			@include media('>=widescreen-lg') {
-				width: 420px;
-				left: -235px;
-				bottom: 200px;
-			}
 		}
 	}
 
@@ -53,10 +24,6 @@
 			font-family: $Montserrat;
 			font-size: 1rem;
 			list-style-type: disc;
-
-			@include media('>=tablet') {
-				font-size: 2.5rem;
-			}
 
 			@include media('>=desktop') {
 				font-size: 2.8rem;
@@ -90,7 +57,7 @@
 
 		@include media('>=tablet') {
 			width: 300px;
-			left: -20%;
+			left: -70%;
 		}
 
 		@include media('>=desktop') {

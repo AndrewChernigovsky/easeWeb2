@@ -23,9 +23,8 @@
 		margin: 0 auto;
 		margin-top: 160px;
 
-		@include media('>=phone') {
-			min-width: 390px;
-			margin-top: 300px;
+		@include media('>=phone-lg') {
+			margin-top: 120px;
 		}
 
 		@include media('>=desktop') {
@@ -55,10 +54,6 @@
 		color: $black;
 		font-family: $MazzardHBold;
 		font-size: 1.8rem;
-
-		@include media('>=tablet') {
-			font-size: 2.4rem;
-		}
 
 		&:first-of-type {
 			text-align: center;
@@ -161,18 +156,9 @@
 		top: -190px;
 		right: -50px;
 
-		@include media('>=phone') {
-			top: -365px;
-			transform: translate(-50%, 35px);
-		}
-
-		@include media('>=phone-lg') {
-			width: 460px;
-		}
-
 		@include media('>=tablet') {
-			top: 50px;
-			right: -220px;
+			top: -160px;
+			right: -80px;
 			width: 420px;
 		}
 
@@ -198,6 +184,14 @@
 
 		video {
 			width: 270px;
+
+			@include media('>=phone-lg') {
+				width: 320px;
+			}
+
+			@include media('>=tablet') {
+				width: 430px;
+			}
 		}
 	}
 	&__image-wrapper.seoSectionimage {
@@ -339,12 +333,6 @@
 		text-transform: uppercase;
 		margin-bottom: 0.5rem;
 
-		@include media('>=phone-lg') {
-			padding-bottom: 40px;
-		}
-		@include media('>=tablet') {
-			padding-bottom: 40px;
-		}
 		@include media('>=desktop') {
 			padding-bottom: 80px;
 		}
@@ -370,7 +358,8 @@
     margin-bottom: 30px;
 
 	@include media('>=tablet') {
-		min-height: 200px;
+		min-height: 40px;
+		margin-top: -25px;
 	}
 
 	.intro-section__h1-span.animaH2.an1 {

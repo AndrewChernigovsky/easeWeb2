@@ -10,13 +10,6 @@
 	position: relative;
 	color: $black;
 
-	@include media('>=tablet') {
-		height: 70px;
-		min-width: 220px;
-		font-size: 2.4rem;
-		padding: 1rem 3rem 1rem 2rem;
-	}
-
 	&::after {
 		@extend %pseudo;
 		height: 20px;
@@ -26,11 +19,6 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-image: url('../images/icons/arrowMoreDefault.svg');
-
-		@include media('>=tablet') {
-			height: 50px;
-			top: 10px;
-		}
 	}
 
 	&:visited {

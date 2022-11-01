@@ -12,14 +12,6 @@
         align-items: flex-start;
         overflow-x: scroll;
 		min-height: 200px;
-
-		@include media('>=phone-lg'){
-			min-height: 600px;
-		}
-
-		@include media('>=tablet'){
-			min-height: 700px;
-		}
     }
 
     &__inner {
@@ -125,9 +117,9 @@
         border-radius: 50%;
 
 		@include media('>=phone-lg'){
-			top: -20px;
-			width: 50px;
-			height: 50px;
+			top: -7px;
+			width: 15px;
+			height: 15px;
 		}
 
         div {
@@ -145,9 +137,9 @@
 			font-size: 1rem;
 
 			@include media('>=phone-lg'){
-				top: 5px;
-				left: 17px;
-				font-size: 3.6rem;
+				top: 2px;
+				left: 5px;
+				font-size: 1rem;
 			}
         }
     }
@@ -181,12 +173,14 @@
 		margin-bottom: 2rem;
 		margin-left: 30px;
 
+		@include media('>=phone-lg'){
+			min-height: 300px;
+		}
+
 		@include media('>=tablet'){
 			padding: 2rem;
-			flex-basis: 50%;
 			margin-left: 20px;
 			margin-bottom: 0;
-			min-height: 500px;
 		}
 
 		@include media('>=widescreen-lg'){
@@ -209,14 +203,10 @@
 
 		@include media(">=phone-lg") {
 			font-size: 4.2rem;
-			bottom: 110px;
 			bottom: 150px;
         }
 
 		@include media('>=tablet'){
-			bottom: 200px;
-			left: -135px;
-			font-size: 4.6rem;
 		}
 
 		@include media('>=widescreen-lg'){
