@@ -2,11 +2,19 @@
 	position: relative;
 	padding-bottom: 10rem;
 
+	@include media('>=desktop') {
+		padding-bottom: 15rem;
+	}
+
 	&__wrapper {
 		display: flex;
 		margin-left: 30%;
 		position: relative;
 		padding-left: 8px;
+
+		@include media('>=desktop') {
+			margin-left: 39%;
+		}
 
 		&::before {
 			@extend %pseudo;
@@ -15,6 +23,13 @@
 			height: 185px;
 			left: 0;
 			bottom: 5px;
+
+			@include media('>=desktop') {
+				width: 3px;
+				height: 850px;
+				left: -18px;
+				bottom: -15px;
+			}
 		}
 	}
 
@@ -39,6 +54,10 @@
 
 			li {
 				margin-bottom: 1rem;
+
+				@include media('>=desktop') {
+					margin-bottom: 5.2rem;
+				}
 			}
 		}
 	}
@@ -63,20 +82,16 @@
 		@include media('>=desktop') {
 			width: 400px;
 			opacity: 1;
-		}
-
-		@include media('>=widescreen') {
-			width: 500px;
-		}
-
-		@include media('>=widescreen-lg') {
-			left: -10%;
-			top: -80px;
-			width: 800px;
+			left: -125%;
+			top: -190px;
 		}
 
 		video {
 			width: 434px;
+
+			@include media('>=desktop') {
+				width: 1160px;
+			}
 		}
 	}
 }

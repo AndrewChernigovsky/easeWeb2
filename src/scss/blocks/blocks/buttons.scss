@@ -10,6 +10,13 @@
 	position: relative;
 	color: $black;
 
+	@include media('>=desktop') {
+		font-size: 2.1rem;
+		min-width: 230px;
+		padding: 2.1rem 0.3rem 1.2rem 3rem;
+		height: 70px;
+	}
+
 	&::after {
 		@extend %pseudo;
 		height: 20px;
@@ -19,6 +26,12 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-image: url('../images/icons/arrowMoreDefault.svg');
+
+		@include media('>=desktop') {
+			height: 49px;
+			top: 10px;
+			width: 40px;
+		}
 	}
 
 	&:visited {

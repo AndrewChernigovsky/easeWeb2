@@ -190,6 +190,12 @@
 .menu {
 	&__wrapper {
 		width: 100px;
+
+		@include media('>=desktop') {
+			width: 140px;
+			height: 135px;
+			margin-top: -30px;
+		}
 	}
 
 	&__inner {
@@ -234,7 +240,7 @@
 			margin-left: 0;
 
 			@include media('>=desktop') {
-				margin-left: 10.9rem;
+				margin-left: 14.9rem;
 			}
 		}
 	}
@@ -278,7 +284,7 @@
 	margin-top: -2.8rem;
 	margin-bottom: 1.8rem;
 	min-width: 50%;
-    margin: 0 auto;
+	margin: 0 auto;
 	height: 1px;
 
 	@include media('>=tablet') {
@@ -287,9 +293,10 @@
 	@include media('>=desktop') {
 		margin-top: -4.8rem;
 		margin-bottom: 4.8rem;
+		max-width: calc(1600px + 80px);
 	}
 	@include media('>=widescreen-lg') {
-		margin-top: -11.8rem;
+		margin-top: -8.8rem;
 		margin-bottom: 7.8rem;
 	}
 
@@ -300,16 +307,31 @@
 		transform: rotate(90deg);
 		width: 15px;
 		height: 1px;
-		background-color: #000000;
+		background-color: $black;
 		top: -8px;
+
+		@include media('>=desktop') {
+			width: 30px;
+			height: 1px;
+			background-color: $black;
+			top: -15px;
+		}
 	}
 
 	&::before {
 		left: -7px;
+
+		@include media('>=desktop') {
+			left: -14px;
+		}
 	}
 
 	&::after {
 		right: -7px;
+
+		@include media('>=desktop') {
+			right: -14px;
+		}
 	}
 }
 
@@ -370,6 +392,10 @@
 			transition: $base-transition;
 		}
 	}
+
+	@include media('>=desktop') {
+		display: none;
+	}
 }
 
 .social-contacts {
@@ -394,6 +420,10 @@
 			height: 40px;
 		}
 	}
+
+	@include media('>=desktop') {
+		display: none;
+	}
 }
 
 .menuButton {
@@ -405,7 +435,7 @@
 	border-radius: 200px;
 	border: 2px solid $black;
 	min-height: 20px;
-    padding: 0.5rem 1.3rem;
+	padding: 0.5rem 1.3rem;
 
 	@include media('>=tablet') {
 		font-size: 2.4rem;
@@ -424,5 +454,11 @@
 
 	&:focus {
 		@extend %hoverButton;
+	}
+}
+
+.mob-btnMenu {
+	@include media('>=desktop') {
+		display: none;
 	}
 }

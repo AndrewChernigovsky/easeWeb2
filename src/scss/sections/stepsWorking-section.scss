@@ -4,6 +4,11 @@
 
 	.title__h2 {
         font-size: 1.2rem;
+		font-family: $MazzardHBold;
+
+		@include media(">=desktop") {
+			font-size: 3.8rem;
+		}
     }
 
     &__wrapper1 {
@@ -17,6 +22,10 @@
     &__inner {
         padding-top: 2.5rem;
 		position: relative;
+
+		@include media('>=desktop') {
+			padding-top: 4.5rem;
+		}
     }
 
     &__step-block {
@@ -55,6 +64,14 @@
 		top: 60px;
 		right: 0;
 
+		@include media('>=desktop'){
+			right: auto;
+			top: auto;
+			left: 100px;
+			bottom: -21px;
+		}
+
+
         div {
             padding: 0.5rem 2rem 0.5rem 0.5rem;
             border-bottom: 1px solid $orange1;
@@ -73,6 +90,10 @@
 				background-color: $orange1;
 				top: 0;
 				left: 0;
+
+				@include media('>=desktop'){
+					width: 20px;
+				}
 			}
         }
 
@@ -93,12 +114,20 @@
     &__line,
     &__line-active {
         height: 2px;
+
+		@include media(">=desktop") {
+			height: 4px;
+		}
     }
 
     &__line {
         width: 100%;
         background-color: $gray;
         margin-bottom: 2.4rem;
+
+		@include media('>=desktop'){
+			margin-bottom: 6.4rem;
+		}
     }
 
     &__line-active {
@@ -116,10 +145,11 @@
         background-color: $black;
         border-radius: 50%;
 
-		@include media('>=phone-lg'){
-			top: -7px;
-			width: 15px;
-			height: 15px;
+		@include media('>=desktop'){
+			top: -26px;
+			width: 52px;
+			height: 52px;
+			right: -6px;
 		}
 
         div {
@@ -136,10 +166,9 @@
 			left: 5px;
 			font-size: 1rem;
 
-			@include media('>=phone-lg'){
-				top: 2px;
-				left: 5px;
-				font-size: 1rem;
+			@include media('>=desktop'){
+				font-size: 3.6rem;
+				left: 19px;
 			}
         }
     }
@@ -151,6 +180,10 @@
 
 		@include media('>=tablet'){
 			flex-direction: row;
+		}
+
+		@include media('>=desktop'){
+			justify-content: flex-end;
 		}
     }
 
@@ -209,9 +242,10 @@
 		@include media('>=tablet'){
 		}
 
-		@include media('>=widescreen-lg'){
+		@include media('>=desktop'){
 			bottom: 150px;
 			font-size: 9.6rem;
+			left: -140px;
 		}
     }
 }

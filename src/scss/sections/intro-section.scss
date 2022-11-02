@@ -8,13 +8,7 @@
 		padding-bottom: 10rem;
 	}
 	@include media('>=desktop') {
-		padding-bottom: 15rem;
-	}
-	@include media('>=widescreen') {
-		padding-bottom: 20rem;
-	}
-	@include media('>=widescreen-lg') {
-		padding-bottom: 10rem;
+		padding-bottom: 24rem;
 	}
 	&__wrapper {
 		position: relative;
@@ -29,6 +23,8 @@
 
 		@include media('>=desktop') {
 			justify-content: center;
+			margin-top: 0;
+			display: block;
 		}
 	}
 	&__inner {
@@ -48,12 +44,20 @@
 	&__title {
 		font-family: $MazzardHBold;
 		font-size: 2.4rem;
+
+		@include media('>=desktop') {
+			font-size: 9.6rem;
+		}
 	}
 	span.intro-section__h1-span {
 		text-transform: uppercase;
 		color: $black;
 		font-family: $MazzardHBold;
 		font-size: 1.8rem;
+
+		@include media('>=desktop') {
+			font-size: 9.6rem;
+		}
 
 		&:first-of-type {
 			text-align: center;
@@ -94,6 +98,10 @@
 		align-items: left;
 		max-width: 391px;
 		gap: 2rem;
+
+		@include media('>=desktop') {
+			margin-top: 174px;
+		}
 
 		.introButton {
 			font-family: $MontserratBold;
@@ -163,23 +171,10 @@
 		}
 
 		@include media('>=desktop') {
-			top: 60px;
-			right: -235px;
+			top: -40px;
+			right: 210px;
 			width: 500px;
 			height: 400px;
-		}
-
-		@include media('>=widescreen') {
-			top: 25px;
-			right: -200px;
-			width: 600px;
-			height: 500px;
-		}
-
-		@include media('>=widescreen-lg') {
-			top: 30px;
-			right: -320px;
-			width: 848px;
 		}
 
 		video {
@@ -191,6 +186,10 @@
 
 			@include media('>=tablet') {
 				width: 430px;
+			}
+
+			@include media('>=desktop') {
+				width: 895px;
 			}
 		}
 	}
@@ -334,7 +333,7 @@
 		margin-bottom: 0.5rem;
 
 		@include media('>=desktop') {
-			padding-bottom: 80px;
+			margin-bottom: -4.5rem;
 		}
 	}
 }

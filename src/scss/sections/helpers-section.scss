@@ -1,6 +1,10 @@
 .helpers-section {
 	padding-bottom: 10rem;
 
+	@include media('>=desktop') {
+		padding-bottom: 23rem;
+	}
+
 	&__inner {
 	    display: flex;
 		justify-content: flex-start;
@@ -11,6 +15,10 @@
 
 	&__title {
 		font-family: $MazzardHBold;
+
+		@include media('>=desktop') {
+			font-size: 3.6rem;
+		}
 
 		span:first-of-type {
 			text-transform: uppercase;
@@ -52,6 +60,11 @@
 		padding: 10px;
 		margin-left: 1rem;
 
+		@include media('>=desktop') {
+			padding: 20px;
+			flex-basis: 35%;
+		}
+
 		&:first-of-type {
 			margin-left: 0;
 		}
@@ -83,20 +96,27 @@
 
 		@include media('>=desktop') {
 			padding: 2rem;
-		}
-
-		@include media('>=widescreen') {
-			padding: 3rem;
+			min-height: 638px;
 		}
 
 		.paragraph-base {
 			margin-bottom: 1rem;
 			font-size: 0.8rem;
+
+			@include media('>=desktop') {
+				font-size: 2.1rem;
+				margin-bottom: 3rem;
+			}
 		}
 
 		.title__h2 {
 			font-size: 1.5rem;
 			margin-bottom: 0.5rem;
+
+			@include media('>=desktop') {
+				font-size: 5.6rem;
+				margin-bottom: 2.5rem;
+			}
 		}
 	}
 }
