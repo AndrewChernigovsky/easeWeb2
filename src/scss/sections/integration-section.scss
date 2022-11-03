@@ -9,6 +9,7 @@
 
 	@include media(">=desktop") {
 		min-height: 400px;
+		padding-bottom: 14rem;
 	}
 
     &__wrapper {
@@ -19,6 +20,11 @@
 		marquee {
 			font-size: 3.2rem;
 			font-family: $MontserratBold;
+			height: 100%;
+
+			@include media(">=desktop") {
+				font-size: 6.4rem;
+			}
 		}
 	}
 
@@ -32,6 +38,10 @@
 
 		@include media(">=tablet") {
 			font-size: 3.2rem;
+        }
+		@include media(">=desktop") {
+			font-size: 3.8rem;
+			margin-bottom: 6rem;
         }
     }
 

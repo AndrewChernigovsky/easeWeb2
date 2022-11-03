@@ -2,6 +2,10 @@
     color: $black;
     font-family: $MazzardHBold;
 
+	@include media(">=desktop") {
+		padding-bottom: 18rem;
+	}
+
 	.title__h2 {
         font-size: 1.2rem;
 		font-family: $MazzardHBold;

@@ -43,7 +43,7 @@
 	overflow-y: scroll;
 
 	@include media('>=desktop') {
-		overflow-y: auto;
+		overflow-y: hidden;
 		display: flex;
 		justify-content: space-between;
 		position: static;

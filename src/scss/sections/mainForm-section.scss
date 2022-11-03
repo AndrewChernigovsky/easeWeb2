@@ -11,6 +11,20 @@
     background-color: $black;
     padding-top: 0;
 	padding-bottom: 5rem;
+
+	@include media('>=desktop') {
+		padding-bottom: 15rem;
+	}
+
+	@include media('>=widescreen-lg') {
+		padding-bottom: 14rem;
+	}
+
+	&__wrapper {
+		@include media('>=desktop') {
+			padding-top: 11rem;
+		}
+	}
 }
 
 .mainForm {
@@ -28,6 +42,10 @@
         padding: 2rem;
         min-width: 100%;
         text-align: center;
+
+		@include media('>=desktop') {
+			padding: 11rem 9rem 10rem 9rem;
+		}
 
         p {
             font-size: 1.5rem;
@@ -64,18 +82,19 @@
         }
 
         @include media('>=desktop') {
-            padding: 5rem 0 0 0;
-        }
-
-        @include media('>=widescreen') {
-            padding: 7rem 0 0 0;
+            padding: 6rem 0 0 0;
+			gap: 4.5rem;
         }
 
         .inputs,
         .wrapperButtons {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 2rem;
+
+			@include media('>=desktop') {
+				gap: 3.3rem;
+			}
         }
 
         .wrapperButton {
@@ -92,6 +111,18 @@
             height: 20px;
 			padding: 0 0 0 1rem;
 
+			@include media('>=desktop') {
+				height: 70px;
+				font-size: 2.4rem;
+
+				&:nth-last-of-type(1) {
+					order: 2;
+				}
+				&:nth-last-of-type(2) {
+					order: 3;
+				}
+			}
+
             &::placeholder {
                 color: $white;
             }
@@ -99,6 +130,7 @@
             &:focus {
                 // border: 1px solid $white;
             }
+
         }
     }
 
@@ -118,11 +150,19 @@
 			padding: 2rem;
 			font-size: 2rem;
         }
+
+        @include media('>=desktop') {
+			&::after {
+				height: 35px;
+				top: 18px;
+			}
+        }
     }
 
     &__title {
         font-family: $MazzardHBold;
         font-size: 5.6rem;
+		text-align: left;
     }
 
     &__title.addTaskMainFormTitle {
@@ -140,6 +180,11 @@
         display: flex;
         height: 20px;
 
+		@include media('>=desktop') {
+			height: 70px;
+			font-size: 2.4rem;
+		}
+
         select {
             color: $white;
             background-color: transparent;
@@ -153,6 +198,11 @@
             @include media('>=tablet') {
                 padding: 10px 20px 10px 10px;
             }
+
+			@include media('>=desktop') {
+				height: 70px;
+				font-size: 2.4rem;
+			}
 
             option {
                 background-color: $black;
