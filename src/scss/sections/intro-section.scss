@@ -31,6 +31,18 @@
 			display: block;
 		}
 	}
+	&__wrapper.seoPage-sectionWrapper {
+		margin-top: 80px;
+		padding-left: 15px;
+
+		.title__h1 {
+			margin-bottom: 2.8rem;
+		}
+
+		.menuButton {
+			font-size: 1rem;
+		}
+	}
 	&__inner {
 		display: grid;
 		justify-content: space-between;
@@ -209,6 +221,8 @@
 		}
 	}
 	&__image-wrapper.seoSectionimage {
+		margin-top: 30px;
+
 		@include media('>=widescreen') {
 			height: max-content;
 		}
@@ -386,4 +400,8 @@
 			top: 30px;
 		}
 	}
+}
+
+.intro-section.seoPage-introSection {
+	min-height: 240px;
 }
