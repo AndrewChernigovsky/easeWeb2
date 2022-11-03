@@ -8,8 +8,12 @@
 		padding-bottom: 10rem;
 	}
 	@include media('>=desktop') {
+		padding-bottom: 15rem;
+	}
+	@include media('>=widescreen-lg') {
 		padding-bottom: 24rem;
 	}
+
 	&__wrapper {
 		position: relative;
 		display: grid;
@@ -56,6 +60,10 @@
 		font-size: 1.8rem;
 
 		@include media('>=desktop') {
+			font-size: 7.6rem;
+		}
+
+		@include media('>=widescreen-lg') {
 			font-size: 9.6rem;
 		}
 
@@ -67,7 +75,6 @@
 			}
 		}
 	}
-
 	&__h1-span {
 		font-family: $MazzardHBold;
 		text-transform: uppercase;
@@ -172,9 +179,13 @@
 
 		@include media('>=desktop') {
 			top: -40px;
-			right: 210px;
+			right: 150px;
 			width: 500px;
 			height: 400px;
+		}
+
+		@include media('>=widescreen-lg') {
+			right: 210px;
 		}
 
 		video {
@@ -189,6 +200,10 @@
 			}
 
 			@include media('>=desktop') {
+				width: 733px;
+			}
+
+			@include media('>=widescreen-lg') {
 				width: 895px;
 			}
 		}

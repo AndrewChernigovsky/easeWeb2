@@ -3,6 +3,10 @@
     font-family: $MazzardHBold;
 
 	@include media(">=desktop") {
+		padding-bottom: 5rem;
+	}
+
+	@include media(">=widescreen-lg") {
 		padding-bottom: 18rem;
 	}
 
@@ -69,12 +73,19 @@
 		right: 0;
 
 		@include media('>=desktop'){
+			right: 20px;
+			top: 140px;
+			left: auto;
+			bottom: auto;
+			padding-bottom: 0;
+		}
+
+		@include media('>=widescreen-lg'){
 			right: auto;
 			top: auto;
 			left: 100px;
 			bottom: -21px;
 		}
-
 
         div {
             padding: 0.5rem 2rem 0.5rem 0.5rem;
@@ -172,7 +183,8 @@
 
 			@include media('>=desktop'){
 				font-size: 3.6rem;
-				left: 19px;
+				left: 17px;
+				top: 4px;
 			}
         }
     }
@@ -243,10 +255,13 @@
 			bottom: 150px;
         }
 
-		@include media('>=tablet'){
+		@include media('>=desktop'){
+			bottom: 90px;
+    		font-size: 7.6rem;
+			left: -40px;
 		}
 
-		@include media('>=desktop'){
+		@include media('>=widescreen-lg'){
 			bottom: 150px;
 			font-size: 9.6rem;
 			left: -140px;

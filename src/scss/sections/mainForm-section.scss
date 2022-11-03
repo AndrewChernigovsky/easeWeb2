@@ -145,13 +145,17 @@
         text-align: center;
         position: relative;
 
-        @include media('>=tablet') {
-            height: 70px;
+        @include media('>=desktop') {
+			height: 70px;
 			padding: 2rem;
 			font-size: 2rem;
-        }
+			box-shadow: rgba(255, 255, 255, 0.5) 2px 2px 11px 2px inset,
+						rgba(34,60,80,0.2) -19px -20px 6px -10px inset;
 
-        @include media('>=desktop') {
+			&:hover {
+				box-shadow: rgba(255, 255, 255, 0.5) -12px -13px 8px -7px inset,
+							rgba(34,60,80,0.2) 6px 6px 8px 1px inset;
+			}
 			&::after {
 				height: 35px;
 				top: 18px;
@@ -195,11 +199,8 @@
             height: 20px;
             font-size: 0.8rem;
 
-            @include media('>=tablet') {
-                padding: 10px 20px 10px 10px;
-            }
-
 			@include media('>=desktop') {
+				padding: 10px 20px 10px 10px;
 				height: 70px;
 				font-size: 2.4rem;
 			}
@@ -239,7 +240,7 @@
 			border: 5px solid transparent;
 			border-top: 5px solid $white;
 
-			@include media('>=tablet') {
+			@include media('>=desktop') {
 				right: 10px;
 				top: 30px;
 				border: 10px solid transparent;

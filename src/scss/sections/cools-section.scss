@@ -26,9 +26,15 @@
 
 			@include media('>=desktop') {
 				width: 3px;
-				height: 850px;
+				height: 440px;
 				left: -18px;
 				bottom: -15px;
+			}
+
+			@include media('>=widescreen-lg') {
+				height: 850px;
+				left: -15px;
+				bottom: 30px;
 			}
 		}
 	}
@@ -45,10 +51,6 @@
 			}
 
 			@include media('>=widescreen-lg') {
-				font-size: 3.2rem;
-			}
-
-			@include media('>=widescreen-lg') {
 				font-size: 3.8rem;
 			}
 
@@ -56,6 +58,10 @@
 				margin-bottom: 1rem;
 
 				@include media('>=desktop') {
+					margin-bottom: 2.2rem;
+				}
+
+				@include media('>=widescreen-lg') {
 					margin-bottom: 5.2rem;
 				}
 			}
@@ -82,14 +88,22 @@
 		@include media('>=desktop') {
 			width: 400px;
 			opacity: 1;
-			left: -125%;
+			left: -90%;
 			top: -190px;
+		}
+
+		@include media('>=widescreen-lg') {
+			left: -125%;
 		}
 
 		video {
 			width: 434px;
 
 			@include media('>=desktop') {
+				width: 500px;
+			}
+
+			@include media('>=widescreen-lg') {
 				width: 1160px;
 			}
 		}
