@@ -1,4 +1,17 @@
 .trust-section {
+	.title__h2 {
+		color: $black;
+		font-size: 1.2rem;
+
+		@include media('>=tablet') {
+			font-size: 1.8rem;
+		}
+	}
+
+	.trustH2 {
+		margin-left: 16px;
+	}
+
 	&__wrapper {
 		.title__h2 {
 			margin-bottom: 2rem;
@@ -13,9 +26,11 @@
 
 		&:nth-of-type(1) {
 			border-top: 1px solid $orange1;
-			width: 215px;
+			width: 220px;
+			margin-bottom: -20px;
 
 			@include media('>=desktop') {
+				margin-bottom: 0;
 				border-top: 2px solid $orange1;
 			}
 
@@ -25,6 +40,7 @@
 			border-bottom: 1px solid $orange1;
 			position: relative;
 			text-align: right;
+			width: 300px;
 
 			@include media('>=desktop') {
 				border-top: 2px solid $orange1;
@@ -39,37 +55,65 @@
 				}
 			}
 
-			&::after {
+			&::after,
+			&::before {
 				@extend %pseudo;
 				background-color: $orange1;
 			}
 
 			&::after {
-				width: 70px;
-				height: 2px;
-				transform: rotate(90deg);
-				bottom: 33px;
-    			right: -35px;
+				width: 1px;
+				height: 9px;
+				bottom: 37px;
+				right: 141px;
 
-				@include media('>=phone-lg') {
-					bottom: -36px;
+				@include media('>=desktop') {
+					width: 70px;
+					height: 2px;
+					transform: rotate(90deg);
+					bottom: 33px;
+					right: -35px;
 				}
+			}
 
+			&::before {
+				width: 19px;
+				height: 1px;
+				bottom: 45px;
+				right: 142px;
+
+				@include media('>=desktop') {
+					display: none;
+				}
 			}
 		}
 
 		&:nth-of-type(3) {
-			border-left: 2px solid $orange1;
-			border-bottom: 2px solid $orange1;
-			border-right: 2px solid transparent;
-			border-top: 2px solid transparent;
 			position: relative;
+			transform: rotate(90deg);
+			margin-right: -71px;
+			margin-top: -52px;
+			width: 243px;
+			justify-self: flex-end;
 
 			@include media('>=desktop') {
-				border-left: 1px solid $orange1;
-				border-bottom: 1px solid $orange1;
-				border-right: 1px solid transparent;
-				border-top: 1px solid transparent;
+				border-left: 2px solid $orange1;
+				border-bottom: 2px solid $orange1;
+				border-right: 2px solid transparent;
+				border-top: 2px solid transparent;
+				margin-top: 0;
+				margin-right: 0;
+				transform: rotate(0deg);
+				justify-self: auto;
+				width: auto;
+			}
+
+			.title__h2 {
+				margin-bottom: 0;
+			}
+
+			.trust-section__text {
+				margin-left: 0px;
 			}
 
 			p {
@@ -77,6 +121,11 @@
 
 				&:nth-of-type(2) {
 					text-align: right;
+					margin-right: 60px;
+
+					@include media('>=desktop') {
+						text-align: right;
+					}
 				}
 			}
 
@@ -87,29 +136,50 @@
 			}
 
 			&::before {
-				width: 50px;
-				height: 2px;
-				top: 0;
-				left: 40px;
+				width: 148px;
+				height: 1px;
+				top: 52px;
+				left: 15px;
+
+				@include media('>=desktop') {
+					width: 50px;
+					height: 2px;
+					top: 0;
+					left: 40px;
+				}
 			}
 
 			&::after {
-				width: 70px;
-				height: 2px;
-				transform: rotate(90deg);
-				bottom: -36px;
-    			right: -35px;
+				display: none;
 
-				@include media('>=phone-lg') {
-					bottom: 33px;
+				@include media('>=desktop') {
+					width: 70px;
+					height: 2px;
+					transform: rotate(90deg);
+					bottom: -36px;
+					right: -35px;
 				}
-
 			}
 		}
 
 		&:nth-of-type(4) {
+			width: 217px;
+			margin-top: -33px;
+			padding-left: 15px;
+
+			@include media('>=desktop') {
+				width: auto;
+				margin-top: auto;
+				padding-left: auto;
+
+			}
+
 			p {
-				text-align: right;
+				text-align: left;
+
+				@include media('>=desktop') {
+					text-align: right;
+				}
 			}
 		}
 	}
@@ -169,15 +239,6 @@
 		}
 		@include media('>=tablet') {
 			font-size: 2.4rem;
-		}
-	}
-
-	.title__h2 {
-		color: $black;
-		font-size: 1.2rem;
-
-		@include media('>=tablet') {
-			font-size: 1.8rem;
 		}
 	}
 }
