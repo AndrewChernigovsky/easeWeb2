@@ -1,6 +1,8 @@
 .trust-section {
 	&__wrapper {
-
+		.title__h2 {
+			margin-bottom: 2rem;
+		}
 	}
 	&__argument {
 		padding: 1rem;
@@ -10,16 +12,31 @@
 		}
 
 		&:nth-of-type(1) {
-			border-top: 2px solid $orange1;
+			border-top: 1px solid $orange1;
+			width: 215px;
+
+			@include media('>=desktop') {
+				border-top: 2px solid $orange1;
+			}
 
 		}
 
 		&:nth-of-type(2) {
-			border-bottom: 2px solid $orange1;
+			border-bottom: 1px solid $orange1;
 			position: relative;
+			text-align: right;
+
+			@include media('>=desktop') {
+				border-top: 2px solid $orange1;
+				text-align: left;
+			}
 
 			p {
-				text-align: left;
+				text-align: right;
+
+				@include media('>=desktop') {
+					text-align: left;
+				}
 			}
 
 			&::after {
@@ -48,6 +65,12 @@
 			border-top: 2px solid transparent;
 			position: relative;
 
+			@include media('>=desktop') {
+				border-left: 1px solid $orange1;
+				border-bottom: 1px solid $orange1;
+				border-right: 1px solid transparent;
+				border-top: 1px solid transparent;
+			}
 
 			p {
 				text-align: left;
@@ -91,6 +114,21 @@
 		}
 	}
 
+	&__argument-inner {
+		.title__h2 {
+			color: $black;
+			font-size: 1.5rem;
+
+			@include media('>=desktop') {
+				font-size: 3.8rem;
+			}
+
+			@include media('>=widescreen-lg') {
+				font-size: 5.6rem;
+			}
+		}
+	}
+
 	&__inner {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -107,6 +145,8 @@
 			grid-template-columns: 1fr 1fr;
 			gap: 5rem;
 		}
+
+
 	}
 
 	&__border {
@@ -121,7 +161,7 @@
 
 	&__text {
 		color: $black;
-		font-size: 1.4rem;
+		font-size: 0.8rem;
 		font-family: $Montserrat;
 
 		@include media('>=phone-lg') {
@@ -134,5 +174,10 @@
 
 	.title__h2 {
 		color: $black;
+		font-size: 1.2rem;
+
+		@include media('>=tablet') {
+			font-size: 1.8rem;
+		}
 	}
 }
