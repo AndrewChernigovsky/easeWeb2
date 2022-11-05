@@ -1,4 +1,12 @@
 .trust-section {
+	padding-bottom: 3.5rem;
+
+	@include media('>=desktop') {
+		padding-bottom: 15rem;
+	}
+	@include media('>=widescreen-lg') {
+		padding-bottom: 25rem;
+	}
 	.title__h2 {
 		color: $black;
 		font-size: 1.2rem;
@@ -7,9 +15,6 @@
 			font-size: 1.8rem;
 		}
 	}
-
-
-
 	&__wrapper {
 		.title__h2 {
 			margin-bottom: 2rem;
@@ -41,10 +46,17 @@
 		}
 
 		&:nth-of-type(2) {
-			border-top: 2px solid $orange1;
 			position: relative;
 			text-align: right;
-			width: 300px;
+			width: 220px;
+
+			@include media('>=340px') {
+				width: 260px;
+			}
+
+			@include media('>=380px') {
+				width: 280px;
+			}
 
 			@include media('>=phone-lg') {
 				border-top: none;
@@ -262,7 +274,6 @@
 			}
 		}
 	}
-
 	&__argument-inner {
 		.title__h2 {
 			color: $black;
@@ -286,7 +297,6 @@
 			}
 		}
 	}
-
 	&__inner {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -306,7 +316,6 @@
 
 
 	}
-
 	&__border {
 		position: absolute;
 		width: 40px;
@@ -316,7 +325,6 @@
 		border-top: 10px solid $white;
 		border-bottom: 10px solid $white;
 	}
-
 	&__text {
 		color: $black;
 		font-size: 0.8rem;
@@ -336,8 +344,6 @@
 		}
 
 	}
-
-
 	.trustH2 {
 		margin-left: 16px;
 

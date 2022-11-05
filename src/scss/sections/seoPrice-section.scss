@@ -12,19 +12,34 @@
 
 	&__inner {
 		display: grid;
-		margin-bottom: 2rem;
-		gap: 2rem;
+		grid-template-columns: 1fr 1fr 1fr;
+		margin-bottom: 1rem;
+		gap: 1rem;
 
-		@include media(">=widescreen") {
+		@include media(">=tablet") {
 			display: flex;
 			justify-content: space-between;
+			margin-bottom: 2rem;
 		}
+
+		// @include media(">=widescreen") {
+		// 	display: flex;
+		// 	justify-content: space-between;
+		// }
 	}
 
 	&__card {
 		border: 2px solid $black;
-		padding: 2rem 2rem 2rem 4rem;
+		padding: 0.5rem 0.5rem 0.5rem 1rem;
 		position: relative;
+
+		@include media('>=tablet') {
+			padding: 1rem 1rem 1rem 2rem;
+		}
+
+		@include media('>=desktop') {
+			padding: 2rem 2rem 2rem 4rem;
+		}
 
 		p:not(.seoPrice-section__price) {
 			font-size: 1.6rem;
@@ -36,20 +51,45 @@
 		}
 
 		p:first-of-type {
-			padding-bottom: 5rem;
+			padding-bottom: 1rem;
+			font-size: 0.8rem;
+
+			@include media('>=tablet') {
+				font-size: 1.6rem;
+			}
+
+			@include media('>=desktop') {
+				font-size: 2.4rem;
+			}
 		}
 
 		ul {
 			list-style-type: disc;
-			min-height: 300px;
-			padding-bottom: 20rem;
+			min-height: 210px;
+			padding-bottom: 2rem;
+			list-style-position: outside;
+			padding-left: 0.6rem;
+
+			@include media('>=340px') {
+				padding-left: 1.2rem;
+			}
+
+			@include media('>=tablet') {
+				min-height: 300px;
+				padding-bottom: 20rem;
+				padding-left: 1.8rem;
+			}
 		}
 
 		li {
-			font-size: 1.4rem;
+			font-size: 0.6rem;
 			font-family: $Montserrat;
 
 			@include media('>=tablet') {
+				font-size: 1.2rem;
+			}
+
+			@include media('>=desktop') {
 				font-size: 2.4rem;
 			}
 		}
@@ -59,6 +99,38 @@
 		position: absolute;
 		bottom: 0;
 		padding-bottom: 2rem;
+
+
+		p:not(.seoPrice-section__price) {
+			font-size: 0.6rem;
+			font-family: $Montserrat;
+
+			@include media('>=tablet') {
+				font-size: 1.2rem;
+			}
+
+			@include media('>=desktop') {
+				font-size: 2.1rem;
+			}
+		}
+
+		p.seoPrice-section__price {
+			font-size: 1.5rem;
+			font-family: $MontserratBold;
+
+			@include media('>=tablet') {
+				font-size: 2.2rem;
+			}
+
+			@include media('>=desktop') {
+				font-size: 3.1rem;
+			}
+
+			@include media('>=widescreen-lg') {
+				font-size: 5.6rem;
+			}
+		}
+
 	}
 
 	&__price {
@@ -71,11 +143,14 @@
 	}
 
 	&__cost {
-		font-size: 1.4rem;
+		font-size: 0.6rem;
 		font-family: $Montserrat;
 		opacity: 1;
 
 		@include media('>=tablet') {
+			font-size: 1.4rem;
+		}
+		@include media('>=desktop') {
 			font-size: 2.1rem;
 		}
 		@include media('>=widescreen') {
@@ -84,17 +159,30 @@
 	}
 
 	&__pro {
-		font-family: $SyncopateBold;
-		font-size: 1.4rem;
+		font-family: $MontserratBold;
+		font-size: 0.8rem;
 		color: $gray;
 		text-transform: uppercase;
 
 		@include media('>=tablet') {
+			font-size: 1.4rem;
+		}
+		@include media('>=desktop') {
 			font-size: 2.1rem;
 		}
 	}
 
 	.title__h2 {
 		color: $black;
+		font-size: 1.2rem;
+		font-family: $MazzardHBold;
+
+		@include media('>=tablet') {
+			font-size: 1.8rem;
+		}
+
+		@include media('>=desktop') {
+			font-size: 3.8rem;
+		}
 	}
 }
