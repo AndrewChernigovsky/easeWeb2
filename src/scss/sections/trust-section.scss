@@ -8,9 +8,7 @@
 		}
 	}
 
-	.trustH2 {
-		margin-left: 16px;
-	}
+
 
 	&__wrapper {
 		.title__h2 {
@@ -24,33 +22,41 @@
 			padding: 2rem;
 		}
 
+
+		@include media('>=desktop') {
+			padding: 3rem;
+		}
+
 		&:nth-of-type(1) {
 			border-top: 1px solid $orange1;
 			width: 220px;
 			margin-bottom: -20px;
 
-			@include media('>=desktop') {
+			@include media('>=phone-lg') {
 				margin-bottom: 0;
+				width: auto;
 				border-top: 2px solid $orange1;
 			}
 
 		}
 
 		&:nth-of-type(2) {
-			border-bottom: 1px solid $orange1;
+			border-top: 2px solid $orange1;
 			position: relative;
 			text-align: right;
 			width: 300px;
 
-			@include media('>=desktop') {
-				border-top: 2px solid $orange1;
+			@include media('>=phone-lg') {
+				border-top: none;
+				border-bottom: 2px solid $orange1;
 				text-align: left;
+				width: auto;
 			}
 
 			p {
 				text-align: right;
 
-				@include media('>=desktop') {
+				@include media('>=phone-lg') {
 					text-align: left;
 				}
 			}
@@ -67,12 +73,12 @@
 				bottom: 37px;
 				right: 141px;
 
-				@include media('>=desktop') {
-					width: 70px;
-					height: 2px;
+				@include media('>=phone-lg') {
 					transform: rotate(90deg);
-					bottom: 33px;
-					right: -35px;
+					width: 25px;
+					height: 2px;
+					bottom: -14px;
+					right: -12px;
 				}
 			}
 
@@ -82,7 +88,7 @@
 				bottom: 45px;
 				right: 142px;
 
-				@include media('>=desktop') {
+				@include media('>=phone-lg') {
 					display: none;
 				}
 			}
@@ -96,7 +102,7 @@
 			width: 243px;
 			justify-self: flex-end;
 
-			@include media('>=desktop') {
+			@include media('>=phone-lg') {
 				border-left: 2px solid $orange1;
 				border-bottom: 2px solid $orange1;
 				border-right: 2px solid transparent;
@@ -110,6 +116,10 @@
 
 			.title__h2 {
 				margin-bottom: 0;
+
+				@include media('>=desktop') {
+					margin-bottom: 2rem;
+				}
 			}
 
 			.trust-section__text {
@@ -123,8 +133,12 @@
 					text-align: right;
 					margin-right: 60px;
 
-					@include media('>=desktop') {
+					@include media('>=phone-lg') {
 						text-align: right;
+					}
+
+					@include media('>=desktop') {
+						margin-right: 115px;
 					}
 				}
 			}
@@ -141,7 +155,7 @@
 				top: 52px;
 				left: 15px;
 
-				@include media('>=desktop') {
+				@include media('>=phone-lg') {
 					width: 50px;
 					height: 2px;
 					top: 0;
@@ -152,7 +166,7 @@
 			&::after {
 				display: none;
 
-				@include media('>=desktop') {
+				@include media('>=phone-lg') {
 					width: 70px;
 					height: 2px;
 					transform: rotate(90deg);
@@ -166,19 +180,84 @@
 			width: 217px;
 			margin-top: -33px;
 			padding-left: 15px;
+			position: relative;
 
-			@include media('>=desktop') {
+			@include media('>=phone-lg') {
 				width: auto;
 				margin-top: auto;
 				padding-left: auto;
 
 			}
 
-			p {
+			&:before,
+			&:after {
+				@extend %pseudo;
+				background-color: $orange1;
+
+				@include media('>=phone-lg') {
+					display: none;
+				}
+			}
+
+			&:before {
+			    width: 1px;
+				height: 50px;
+				bottom: 10px;
+				right: 210px;
+			}
+
+			&:after {
+			    width: 126px;
+				height: 1px;
+				bottom: 10px;
+				right: 80px;
+			}
+
+			p.trust-section__text {
 				text-align: left;
+				width: 115px;
+
+				@include media('>=phone-lg') {
+					width: auto;
+				}
+
+				&:first-of-type {
+					position: relative;
+
+					&:after {
+						@extend %pseudo;
+						background-color: $orange1;
+						width: 10px;
+						height: 1px;
+						bottom: 23px;
+						right: 109px;
+
+						@include media('>=phone-lg') {
+							display: none;
+						}
+					}
+				}
+
+				&:last-of-type {
+					text-align: right;
+					width: 100%;
+
+					@include media('>=desktop') {
+						margin-right: 15px;
+						width: auto;
+					}
+				}
+			}
+
+			.title__h2 {
+				margin-bottom: 0;
+
+				@include media('>=phone-lg') {
+					margin-bottom: auto;
+				}
 
 				@include media('>=desktop') {
-					text-align: right;
+					margin-bottom: 2rem;
 				}
 			}
 		}
@@ -188,6 +267,15 @@
 		.title__h2 {
 			color: $black;
 			font-size: 1.5rem;
+			white-space: nowrap;
+
+			@include media('>=phone-lg') {
+				font-size: 1.9rem;
+			}
+
+			@include media('>=tablet') {
+				font-size: 2.9rem;
+			}
 
 			@include media('>=desktop') {
 				font-size: 3.8rem;
@@ -235,10 +323,28 @@
 		font-family: $Montserrat;
 
 		@include media('>=phone-lg') {
-			font-size: 1.8rem;
+			font-size: 1rem;
 		}
+
 		@include media('>=tablet') {
+			font-size: 1.4rem;
+		}
+
+		@include media('>=desktop') {
 			font-size: 2.4rem;
+			margin-bottom: 2rem;
+		}
+
+	}
+
+
+	.trustH2 {
+		margin-left: 16px;
+
+		@include media('>=desktop') {
+			margin-left: 30px;
+			font-size: 3.8rem;
+			margin-bottom: 9rem;
 		}
 	}
 }
