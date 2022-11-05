@@ -37,21 +37,21 @@
 		position: relative;
 		min-width: 100%;
 		display: flex;
-		justify-content: center;
-
-		@include media(">=tablet") {
-			justify-content: flex-end;
-		}
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-content: flex-end;
 
 		.title__h2 {
-			position: absolute;
-			z-index: 12;
-			right: 40px;
-			top: 270px;
+			font-size: 1.5rem;
+			margin-right: -30px;
+			margin-top: 60px;
 
 			@include media(">=tablet") {
-				right: 260px;
-				top: 190px;
+			}
+
+			@include media(">=desktop") {
+				font-size: 5.6rem;
+				margin-right: 130px;
 			}
 
 		}
@@ -59,16 +59,36 @@
 
 	&__image-wrapper {
 		width: 300px;
-		height: 320px;
+		height: 10px;
+		position: relative;
+		align-self: flex-end;
+
+		video {
+			width: 50%;
+			position: absolute;
+			right: 0;
+    		top: -130px;
+
+			@include media('>=460px') {
+				width: 80%;
+				right: -80px;
+				top: -185px;
+			}
+
+			@include media('>=tablet') {
+				right: 0;
+				top: -185px;
+			}
+		}
 
 		@include media('>=desktop') {
 			width: 500px;
-			height: 400px;
+			height: 160px;
 		}
 
 		@include media('>=widescreen') {
 			width: 600px;
-			height: max-content;
+			height: 270px;
 		}
 
 		@include media('>=widescreen-lg') {

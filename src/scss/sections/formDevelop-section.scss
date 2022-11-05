@@ -4,7 +4,7 @@
         min-width: 100%;
 		max-width: 100%;
 		box-shadow: inset 2px 2px 19px rgba(0, 0, 0, 0.13);
-		border-radius: 30px;
+		border-radius: 20px;
 		padding: 1rem;
 
 		@include media('>=phone-lg') {
@@ -15,23 +15,26 @@
             border-radius: 0;
             min-width: 120px;
             height: 20px;
-            padding-right: 6rem;
-			flex-basis: 50%;
+            padding-right: 3rem;
+			flex-basis: 20%;
+			padding-left: 0;
 			margin-left: 1rem;
 			padding-top: 0.2rem;
 
-			@include media('>=tablet') {
+			@include media('>=desktop') {
 				height: 70px;
 				min-width: 260px;
 				margin-left: 2rem;
+				padding-left: 1rem;
 				padding-top: 1.5rem;
+				padding-right: 6rem;
 			}
 
 			&::after {
 				height: 10px;
 				top: 5px;
 
-				@include media('>=tablet') {
+				@include media('>=desktop') {
 					height: 40px;
 					top: 15px;
 				}
@@ -41,7 +44,7 @@
 
 	.formDevSec-Inner {
 		padding: 2rem;
-		border-radius: 30px;
+		border-radius: 20px;
 		box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.03), 0px -1px 0px 1px rgba(0, 0, 0, 0.05);
 
 		@include media('>=phone-lg') {
@@ -66,12 +69,8 @@
 
     &__inner {
         display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 		max-width: inherit;
-
-		@include media('>=desktop') {
-			display: flex;
-		}
 
         input{
             height: 20px;
@@ -80,6 +79,7 @@
             font-family: $Montserrat;
 			flex-basis: 50%;
 			padding: 0.5rem;
+			border: 1px solid $black;
 
 			@include media('>=desktop') {
 				height: 70px;

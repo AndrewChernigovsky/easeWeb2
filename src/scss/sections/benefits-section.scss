@@ -1,6 +1,6 @@
 .benefits-section {
-	padding-top: 15rem;
-	padding-bottom: 15rem;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 	color: $black;
 
 	&__wrapper {
@@ -9,19 +9,30 @@
 	}
 	&__inner1 {
 		display: grid;
-		gap: 5rem;
+		gap: 0;
 		margin: 0 auto;
 		position: relative;
+
+		@include media('>=desktop') {
+			gap: 5rem;
+		}
 
 		&:first-of-type {
 			&:before {
 				@extend %pseudo;
-				left: -215px;
-				top: 130px;
-				width: 380px;
-				height: 2px;
 				background-color: $black;
 				transform: rotate(90deg);
+				left: -94px;
+				top: 75px;
+				width: 160px;
+				height: 1px;
+
+				@include media('>=desktop') {
+					left: -215px;
+					top: 130px;
+					width: 380px;
+					height: 2px;
+				}
 			}
 
 			.benefits-section__inner {
@@ -34,15 +45,18 @@
 		&:last-of-type() {
 			&:before {
 				@extend %pseudo;
-				left: 88px;
-				top: 130px;
-				width: 380px;
-				height: 2px;
+				left: 57px;
+				top: 75px;
+				width: 160px;
+				height: 1px;
 				background-color: $black;
 				transform: rotate(90deg);
 
 				@include media('>=desktop') {
-					left: 150px;
+					top: 130px;
+					width: 380px;
+					height: 2px;
+					left: 212px;
 				}
 			}
 		}
@@ -57,66 +71,105 @@
 
 		.title__h3 {
 			margin-bottom: 0;
+			font-size: 0.8rem;
+
+			@include media('>=desktop') {
+				font-size: 2.4rem;
+			}
+
 			&:before {
 				@extend %pseudo;
-				width: 20px;
-				height: 20px;
+				width: 5px;
+				height: 5px;
 				border-radius: 50%;
 				background-color: $black;
+
+				@include media('>=desktop') {
+					width: 20px;
+					height: 20px;
+				}
+
 			}
 		}
 	}
 	&__inner.h3 {
 		.title__h3 {
 			&:before {
-				top: 15px;
-				left: -35px;
+				    top: 21px;
+    				left: -16px;
+
+				@include media('>=desktop') {
+					top: 15px;
+					left: -35px;
+				}
 			}
 		}
 	}
 	&__inner.h3-2 {
 		.title__h3 {
 			&:before {
-				top: 15px;
-				left: -35px;
+				    top: 21px;
+    				left: -16px;
+
+				@include media('>=desktop') {
+					top: 15px;
+					left: -35px;
+				}
 			}
 		}
 	}
 	&__inner.h3-3 {
 		.title__h3 {
 			&:before {
-				top: 15px;
-				left: -35px;
+				    top: 21px;
+    				left: -16px;
+
+				@include media('>=desktop') {
+					top: 15px;
+					left: -35px;
+				}
 			}
 		}
 	}
 	&__inner.h3-4 {
 		.title__h3 {
 			&:before {
-				top: 15px;
-				left: -35px;
+				top: 18px;
 				left: auto;
-    			right: -40px;
+				right: -16px;
+
+				@include media('>=desktop') {
+					left: auto;
+    				right: -40px;
+				}
 			}
 		}
 	}
 	&__inner.h3-5 {
 		.title__h3 {
 			&:before {
-				top: 15px;
-				left: -35px;
+				top: 18px;
 				left: auto;
-    			right: -40px;
+				right: -16px;
+
+				@include media('>=desktop') {
+					left: auto;
+    				right: -40px;
+				}
 			}
 		}
 	}
 	&__inner.h3-6 {
 		.title__h3 {
 			&:before {
-				top: 15px;
-				left: -35px;
+				top: 18px;
 				left: auto;
-    			right: -40px;
+				right: -16px;
+
+				@include media('>=desktop') {
+					left: auto;
+    				right: -40px;
+				}
 			}
 		}
 	}
