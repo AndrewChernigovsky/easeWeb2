@@ -1,16 +1,94 @@
-section(class=introSection + ' seoPage-introSection')
-	.container
-		div(class=introSectionWrapper + ' seoPage-sectionWrapper')
-			h1(class=titleDefault__H1+ ' ' + ClassintroSection__H1+ ' ' +colorTextBlack + ' title-company-introSection')= 'easeweb'
-			if mainPage
-				span(class='titleIntro-anima')
-					span(class=ClassintroSection__h1__span3 + ' animaH2' + ' an1')= 'разработка сайтов'
-					span(class=ClassintroSection__h1__span3 + ' animaH2' + ' an1')= 'продвижение сайтов'
-			if seoPage
-				span(class=ClassIntroSectionText + ' animaH2' + ' an1')
-					|	Настройка рекламы
-				span(class=ClassIntroSectionText + ' animaH2' + ' an1')
-					|	Защита от скликивания
+if mainPage
+	section(class=introSection)
+		.container
+			div(class=introSectionWrapper)
+				h1(class=titleDefault__H1+ ' ' + ClassintroSection__H1+ ' ' +colorTextBlack + ' title-company-introSection')= 'easeweb'
+				if mainPage
+					span(class='titleIntro-anima')
+						span(class=ClassintroSection__h1__span3 + ' animaH2' + ' an1')= 'разработка сайтов'
+						span(class=ClassintroSection__h1__span3 + ' animaH2' + ' an1')= 'продвижение сайтов'
+				if seoPage
+					span(class=ClassIntroSectionText + ' animaH2' + ' an1')
+						|	Настройка рекламы
+					span(class=ClassIntroSectionText + ' animaH2' + ' an1')
+						|	Защита от скликивания
+						if developPage
+							span(class=ClassIntroSectionText + ' animaH2 ' + 'a1')
+								|   Создание сайта
+								br
+								|   «под—ключ»
+							span(class=ClassIntroSectionText + ' animaH2 ' + 'a1')
+								|	Редизайн
+							span(class=ClassIntroSectionText + ' animaH2 ' + 'a1')
+								|   Поддержка
+								br
+								|   готового сайт
+					if developPage
+						span(class=ClassintroSection__h1__span3)= 'Разработка сайтов'
+					if seoPage
+						span(class=ClassintroSection__h1__span4)= 'Продвижение сайтов'
+					if addTasksPage
+						span(class=ClassintroSection__h1__span4+' right')
+							| дополнительные
+							br
+							| задачи
+					span(class=ClassintroSectionInner)
+				button(class=menuButton+' mob-btnMenu') Заказать звонок
+				include form
+				include image
+if seoPage
+	section(class=introSection + ' seoPage-introSection')
+		.container
+			div(class=introSectionWrapper + ' seoPage-sectionWrapper')
+				h1(class=titleDefault__H1+ ' ' + ClassintroSection__H1+ ' ' +colorTextBlack + ' title-company-introSection')= 'easeweb'
+				if mainPage
+					span(class='titleIntro-anima')
+						span(class=ClassintroSection__h1__span3 + ' animaH2' + ' an1')= 'разработка сайтов'
+						span(class=ClassintroSection__h1__span3 + ' animaH2' + ' an1')= 'продвижение сайтов'
+				if seoPage
+					span(class=ClassIntroSectionText + ' animaH2' + ' an1')
+						|	Настройка рекламы
+					span(class=ClassIntroSectionText + ' animaH2' + ' an1')
+						|	Защита от скликивания
+						if developPage
+							span(class=ClassIntroSectionText + ' animaH2 ' + 'a1')
+								|   Создание сайта
+								br
+								|   «под—ключ»
+							span(class=ClassIntroSectionText + ' animaH2 ' + 'a1')
+								|	Редизайн
+							span(class=ClassIntroSectionText + ' animaH2 ' + 'a1')
+								|   Поддержка
+								br
+								|   готового сайт
+					if developPage
+						span(class=ClassintroSection__h1__span3)= 'Разработка сайтов'
+					if seoPage
+						span(class=ClassintroSection__h1__span4)= 'Продвижение сайтов'
+					if addTasksPage
+						span(class=ClassintroSection__h1__span4+' right')
+							| дополнительные
+							br
+							| задачи
+					span(class=ClassintroSectionInner)
+				button(class=menuButton+' mob-btnMenu') Заказать звонок
+				include form
+				include image
+if developPage
+	section(class=introSection + ' developPage-introSection')
+		.container
+			div(class=introSectionWrapper + ' developPage-sectionWrapper')
+				div(class='intro-section__title-wrapper')
+					h1(class=titleDefault__H1+ ' ' + ClassintroSection__H1+ ' ' +colorTextBlack + ' title-company-introSection')= 'easeweb'
+					if mainPage
+						span(class='titleIntro-anima')
+							span(class=ClassintroSection__h1__span3 + ' animaH2' + ' an1')= 'разработка сайтов'
+							span(class=ClassintroSection__h1__span3 + ' animaH2' + ' an1')= 'продвижение сайтов'
+					if seoPage
+						span(class=ClassIntroSectionText + ' animaH2' + ' an1')
+							|	Настройка рекламы
+						span(class=ClassIntroSectionText + ' animaH2' + ' an1')
+							|	Защита от скликивания
 					if developPage
 						span(class=ClassIntroSectionText + ' animaH2 ' + 'a1')
 							|   Создание сайта
@@ -22,16 +100,54 @@ section(class=introSection + ' seoPage-introSection')
 							|   Поддержка
 							br
 							|   готового сайт
-				if developPage
-					span(class=ClassintroSection__h1__span3)= 'Разработка сайтов'
+						if developPage
+							span(class=ClassintroSection__h1__span3)= 'Разработка сайтов'
+						if seoPage
+							span(class=ClassintroSection__h1__span4)= 'Продвижение сайтов'
+						if addTasksPage
+							span(class=ClassintroSection__h1__span4+' right')
+								| дополнительные
+								br
+								| задачи
+					span(class=ClassintroSectionInner)
+				button(class=menuButton+' mob-btnMenu') Заказать звонок
+				include form
+				include image
+if addTasksPage
+	section(class=introSection + ' addTasksPage-introSection')
+		.container
+			div(class=introSectionWrapper + ' addTasksPage-sectionWrapper')
+				h1(class=titleDefault__H1+ ' ' + ClassintroSection__H1+ ' ' +colorTextBlack + ' title-company-introSection')= 'easeweb'
+				if mainPage
+					span(class='titleIntro-anima')
+						span(class=ClassintroSection__h1__span3 + ' animaH2' + ' an1')= 'разработка сайтов'
+						span(class=ClassintroSection__h1__span3 + ' animaH2' + ' an1')= 'продвижение сайтов'
 				if seoPage
-					span(class=ClassintroSection__h1__span4)= 'Продвижение сайтов'
-				if addTasksPage
-					span(class=ClassintroSection__h1__span4+' right')
-						| дополнительные
-						br
-						| задачи
-				span(class=ClassintroSectionInner)
-			button(class=menuButton+' mob-btnMenu') Заказать звонок
-			include form
-			include image
+					span(class=ClassIntroSectionText + ' animaH2' + ' an1')
+						|	Настройка рекламы
+					span(class=ClassIntroSectionText + ' animaH2' + ' an1')
+						|	Защита от скликивания
+						if developPage
+							span(class=ClassIntroSectionText + ' animaH2 ' + 'a1')
+								|   Создание сайта
+								br
+								|   «под—ключ»
+							span(class=ClassIntroSectionText + ' animaH2 ' + 'a1')
+								|	Редизайн
+							span(class=ClassIntroSectionText + ' animaH2 ' + 'a1')
+								|   Поддержка
+								br
+								|   готового сайт
+					if developPage
+						span(class=ClassintroSection__h1__span3)= 'Разработка сайтов'
+					if seoPage
+						span(class=ClassintroSection__h1__span4)= 'Продвижение сайтов'
+					if addTasksPage
+						span(class=ClassintroSection__h1__span4+' right')
+							| дополнительные
+							br
+							| задачи
+					span(class=ClassintroSectionInner)
+				button(class=menuButton+' mob-btnMenu') Заказать звонок
+				include form
+				include image

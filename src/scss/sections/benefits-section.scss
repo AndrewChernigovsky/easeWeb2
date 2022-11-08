@@ -3,6 +3,16 @@
 	padding-bottom: 5rem;
 	color: $black;
 
+	@include media('>=tablet') {
+		padding-bottom: 15rem;
+		padding-top: 15rem;
+	}
+
+	@include media('>=desktop') {
+		padding-bottom: 25rem;
+		padding-top: 25rem;
+	}
+
 	&__wrapper {
 		display: flex;
 		flex-wrap: wrap;

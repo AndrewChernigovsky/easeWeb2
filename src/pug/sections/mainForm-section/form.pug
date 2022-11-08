@@ -28,8 +28,8 @@ if mainPage
 							button(class=ClassMainForm__button+ ' js-form-submit' + ' button-more' type=submit id='getCallMainForm')= 'Отправить заявку'
 					else
 						input(class='mainFormInput' type='text' placeholder='Имеющийся сайт' name='website' value='' )
-					div(class='wrapperButton')
-						button(class=ClassMainForm__button+ ' js-form-submit' type=submit id='getCallMainForm')= 'Заказать звонок'
+						div(class='wrapperButton')
+							button(class=ClassMainForm__button+ ' js-form-submit' type=submit id='getCallMainForm')= 'Заказать звонок'
 if anotherPage
 	form(class=MainForm+ ' js-form1' id=MainFormID name=MainFormName action='../php/form/form3.php' method=post)
 		div(class=ClassMainForm__Wrapper)

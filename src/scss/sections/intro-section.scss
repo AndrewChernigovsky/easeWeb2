@@ -4,14 +4,16 @@
 	min-height: 300px;
 
 	@include media('>=tablet') {
-		padding-top: 1rem;
+		padding-top: 3rem;
 		padding-bottom: 10rem;
 	}
 	@include media('>=desktop') {
 		padding-bottom: 15rem;
+		padding-top: 5rem;
 	}
 	@include media('>=widescreen-lg') {
 		padding-bottom: 24rem;
+		padding-top: 7.8rem;
 	}
 
 	&__wrapper {
@@ -38,9 +40,25 @@
 		.title__h1 {
 			margin-bottom: 2.8rem;
 		}
+	}
+	&__wrapper.developPage-sectionWrapper {
+		.intro-section__title-wrapper {
+			position: relative;
+		}
 
-		.menuButton {
-			font-size: 1rem;
+		.intro-section__text.animaH2 {
+			opacity: 1;
+			font-size: 0.8rem;
+			position: absolute;
+			top: 5px;
+			left: 0;
+			display: flex;
+			justify-content: flex-end;
+			min-width: 190px;
+
+			@include media('>=tablet') {
+				
+			}
 		}
 	}
 	&__inner {
@@ -61,7 +79,15 @@
 		font-family: $MazzardHBold;
 		font-size: 2.4rem;
 
+		@include media('>=tablet') {
+			font-size: 3.6rem;
+		}
+
 		@include media('>=desktop') {
+			font-size: 5.6rem;
+		}
+
+		@include media('>=widescreen-lg') {
 			font-size: 9.6rem;
 		}
 	}
@@ -71,8 +97,12 @@
 		font-family: $MazzardHBold;
 		font-size: 1.8rem;
 
+		@include media('>=tablet') {
+			font-size: 3.6rem;
+		}
+
 		@include media('>=desktop') {
-			font-size: 7.6rem;
+			font-size: 4.6rem;
 		}
 
 		@include media('>=widescreen-lg') {
@@ -232,8 +262,10 @@
 		}
 
 		@include media('>=desktop') {
+			right: 250px;
+
 			video {
-				width: 620px;
+				width: 720px;
 			}
 		}
 
@@ -243,8 +275,57 @@
 
 		@include media('>=widescreen-lg') {
 			top: -30px;
-			right: -520px;
+			right: 100px;
 			width: 848px;
+
+			video {
+				width: 1000px;
+			}
+		}
+	}
+	&__image-wrapper.developSectionimage {
+		margin-top: 30px;
+		width: 220px;
+		top: -220px;
+
+		@include media('>=390px') {
+			right: -8px;
+			width: 230px;
+			top: -225px;
+		}
+
+		@include media('>=460px') {
+			right: -8px;
+			width: 300px;
+			top: -225px;
+		}
+
+		@include media('>=phone-lg') {
+			right: -30px;
+			width: 350px;
+		}
+
+		@include media('>=tablet') {
+			width: 500px;
+			top: -245px;
+		}
+
+		@include media('>=desktop') {
+			right: 250px;
+		}
+
+		@include media('>=widescreen') {
+			height: max-content;
+		}
+
+		@include media('>=widescreen-lg') {
+			top: -30px;
+			right: -100px;
+			width: 848px;
+
+			video {
+				width: 1000px;
+			}
 		}
 	}
 	&__image-wrapper.addTasksImage {
@@ -418,4 +499,15 @@
 
 .intro-section.seoPage-introSection {
 	min-height: 251px;
+}
+.intro-section.developPage-introSection{
+	padding-bottom: 10rem;
+
+	@include media('>=tablet') {
+		padding-bottom: 15rem;
+	}
+
+	@include media('>=desktop') {
+		padding-bottom: 25rem;
+	}
 }
