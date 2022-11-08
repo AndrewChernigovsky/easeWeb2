@@ -5,6 +5,10 @@
     align-items: flex-start;
     position: relative;
     min-height: 760px;
+
+	&__title {
+		
+	}
 }
 
 .variantSection-block .stepsWorking-section__block{
@@ -79,5 +83,13 @@
 	overflow: hidden;
 	.title__h2 {
 		color: $black;
+		font-size: 1.2rem;
+
+		@include media('>=tablet') {
+			font-size: 1.2rem;
+		}
+		@include media('>=desktop') {
+			font-size: 1.2rem;
+		}
 	}
 }

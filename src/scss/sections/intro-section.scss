@@ -57,7 +57,33 @@
 			min-width: 190px;
 
 			@include media('>=tablet') {
-				
+				top: 10px;
+				left: 60px;
+				max-width: min-content;
+			}
+
+			@include media('>=desktop') {
+				top: 10px;
+				left: 250px;
+				font-size: 1.8rem;
+			}
+
+			@include media('>=widescreen-lg') {
+				top: 28px;
+				left: 480px;
+				font-size: 2.4rem;
+			}
+		}
+
+		.title__h1 {
+			@include media('>=desktop') {
+				margin-bottom: 0;
+			}
+		}
+
+		.intro-section__form-wrapper {
+			@include media('>=desktop') {
+				margin-top: 35px;
 			}
 		}
 	}
@@ -306,12 +332,14 @@
 		}
 
 		@include media('>=tablet') {
-			width: 500px;
+			width: 400px;
 			top: -245px;
 		}
 
 		@include media('>=desktop') {
-			right: 250px;
+			right: 0px;
+			width: 525px;
+			top: 0;
 		}
 
 		@include media('>=widescreen') {
@@ -505,9 +533,11 @@
 
 	@include media('>=tablet') {
 		padding-bottom: 15rem;
+		padding-top: 10rem;
 	}
 
 	@include media('>=desktop') {
+		padding-top: 6rem;
 		padding-bottom: 25rem;
 	}
 }
