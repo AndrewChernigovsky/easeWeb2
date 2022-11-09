@@ -37,11 +37,7 @@
 
 		&:first-of-type {
 			justify-self: flex-start;
-			// margin-left: 20px;
 
-			@include media('>=phone-lg') {
-				// margin-left: 80px;
-			}
 			@include media('>=tablet') {
 				font-size: 1.8rem;
 			}
@@ -55,15 +51,13 @@
 			margin-left: 40px;
 			margin-top: 70px;
 
-			@include media('>=phone-lg') {
-				// margin-right: 80px;
-			}
 			@include media('>=tablet') {
 				font-size: 1.8rem;
 			}
-			@include media('>=tablet') {
-				font-size: 1.8rem;
+			@include media('>=widescreen-lg') {
+				margin-top: 0;
 			}
+
 		}
 
 		span.circles-section__circle-text,
@@ -79,6 +73,10 @@
 
 			@include media('>=desktop') {
 				font-size: 2.4rem;
+			}
+
+			@include media('>=widescreen-lg') {
+				font-size: 3.8rem;
 			}
 
 			&::before {
@@ -127,6 +125,11 @@
 			height: 400px;
 		}
 
+		@include media('>=widescreen-lg') {
+			width: 480px;
+			height: 480px;
+		}
+
 		span {
 			border: 1px solid $black;
 			white-space: nowrap;
@@ -149,7 +152,7 @@
 
 		@include media('>=widescreen-lg') {
 			top: 200px;
-			right: -130px
+			right: -185px
 		}
 
 		&::before {
@@ -158,6 +161,10 @@
 
 			@include media('>=desktop') {
 				left: -27px;
+			}
+
+			@include media('>=widescreen-lg') {
+				top: 10px;
 			}
 		}
 	}
@@ -185,7 +192,6 @@
 
 	&__circle-text1.t {
 		text-transform: none;
-
 		top: 63px;
 		left: -37px;
 
@@ -193,9 +199,29 @@
 			left: -33px;
 		}
 
+		@include media('>=desktop') {
+			top: 145px;
+			left: -74px;
+		}
+
+		@include media('>=widescreen-lg') {
+			top: 171px;
+			left: -99px;
+		}
+
 		&:before {
 			left: 35px;
 			top: 2px;
+
+			@include media('>=desktop') {
+				left: 65px;
+				top: 4px;
+			}
+
+			@include media('>=widescreen-lg') {
+				left: 95px;
+				top: 13px;
+			}
 		}
 	}
 	&__circle-text1.w {
@@ -208,18 +234,28 @@
 		}
 
 		@include media('>=desktop') {
-			top: 200px;
-    		left: -143px;
+			top: 146px;
+    		left: -182px;
 		}
 
 		@include media('>=widescreen-lg') {
-			left: -180px;
+			left: -273px;
+			top: 173px;
 		}
 
 		&::before {
 			left: auto;
 			top: 1px;
 			right: -15px;
+
+			@include media('>=desktop') {
+				top: 3px;
+				right: -30px;
+			}
+
+			@include media('>=widescreen-lg') {
+				top: 11px;
+			}
 		}
 	}
 
@@ -240,10 +276,11 @@
 		@include media('>=desktop') {
 			bottom: 145px;
 			left: -100px;
-			font-size: 1rem;
+			font-size: 2rem;
 		}
-
-
+		@include media('>=widescreen-lg') {
+			font-size: 3.8rem;
+		}
 	}
 
 	&__circle-runString2 {
@@ -264,9 +301,13 @@
 		}
 
 		@include media('>=desktop') {
-			bottom: 145px;
-			right: -10px;
-			font-size: 1rem;
+			bottom: 91px;
+			right: -37px;
+			width: 100%;
+			font-size: 2rem;
+		}
+		@include media('>=widescreen-lg') {
+			font-size: 3.8rem;
 		}
 	}
 
@@ -286,9 +327,14 @@
 		}
 
 		@include media('>=desktop') {
-			bottom: 193px;
-			right: -13px;
-			font-size: 1rem;
+		    bottom: 147px;
+    		right: -48px;
+			font-size: 2rem;
+			transform: rotate(39deg);
+		}
+		@include media('>=widescreen-lg') {
+			font-size: 3.8rem;
+			left: -54px;
 		}
 	}
 
@@ -306,8 +352,13 @@
 			font-size: 1.2rem;
 		}
 		@include media('>=desktop') {
-			bottom: 145px;
-			font-size: 1rem;
+			right: -120px;
+			bottom: 120px;
+    		width: 126%;
+			font-size: 2rem;
+		}
+		@include media('>=widescreen-lg') {
+			font-size: 3.8rem;
 		}
 	}
 

@@ -118,51 +118,36 @@ document.addEventListener('DOMContentLoaded', () => {
 				}
 			});
 
-			tarifWrapper.forEach((e) => {
-				e.addEventListener('click', () => {
-					if (e.classList.contains('active')) {
-						e.classList.remove('active');
-						e.firstElementChild.classList.remove('active');
-					} else {
-						e.classList.add('active');
-						e.firstElementChild.classList.add('active');
-					}
-				});
-			});
-
 			contactsLink.addEventListener('click', () => {
 				if (BODY.classList.contains('stop-scroll')) {
 					BODY.classList.remove('stop-scroll');
 				}
 			});
-
-			politeCheckbox.addEventListener('click', (e) => {
-				if (politeCheckbox.hasAttribute('checked', 'checked')) {
-					politeCheckbox.removeAttribute('checked');
-					getCall.setAttribute('disabled', 'disabled');
-				} else {
-					politeCheckbox.setAttribute('checked', 'checked');
-					getCall.removeAttribute('disabled');
-				}
-			});
 		});
 	})
-	let arrAnima = [];
 
-	titlesAnima.forEach(e=>{
-		arrAnima = e;
-	})
-
-
-
-	.each(function (i) {
-		for (let z = 0; z < 1000; z++) {
-			$(this)
-				.delay(i++ * 2000)
-				.fadeTo(1000, 1)
-				.fadeTo(1000, 0);
+	politeCheckbox.addEventListener('click', (e) => {
+		if (politeCheckbox.hasAttribute('checked', 'checked')) {
+			politeCheckbox.removeAttribute('checked');
+			getCall.setAttribute('disabled', 'disabled');
+		} else {
+			politeCheckbox.setAttribute('checked', 'checked');
+			getCall.removeAttribute('disabled');
 		}
 	});
+
+	tarifWrapper.forEach((e) => {
+		e.addEventListener('click', () => {
+			if (e.classList.contains('active')) {
+				e.classList.remove('active');
+				e.firstElementChild.classList.remove('active');
+			} else {
+				e.classList.add('active');
+				e.firstElementChild.classList.add('active');
+			}
+		});
+	});
+
 });
 
 let targetStepWorking = document.getElementById('stepsWorkingSectionWrapper1');
@@ -191,8 +176,8 @@ let optionsOuter = {
 };
 let optionsList = {
 	root: null,
-	rootMargin: '0px',
-	threshold: 0.2,
+	rootMargin: '50px',
+	threshold: 0.5,
 };
 
 let optionsSHAPE = {
