@@ -36,24 +36,24 @@ const BODY = document.querySelector('body');
 					);
 			}
 		});
-		$('.circles-section__circle-text-wrapper .anima').each(function (i) {
-			for (let z = 0; z < 1000; z++) {
-				$(this)
-					.delay(i++ * 2000)
-					.fadeTo(0, 0)
-					.fadeTo(1000, 1)
-					.fadeTo(1000, 0);
-			}
-		});
-		$('.circles-section__circle-text-wrapper .anima1').each(function (i) {
-			for (let z = 0; z < 1000; z++) {
-				$(this)
-					.delay(i++ * 2000)
-					.fadeTo(0, 0)
-					.fadeTo(1000, 1)
-					.fadeTo(1000, 0);
-			}
-		});
+		// $('.circles-section__circle-text-wrapper .anima').each(function (i) {
+		// 	for (let z = 0; z < 1000; z++) {
+		// 		$(this)
+		// 			.delay(i++ * 2000)
+		// 			.fadeTo(0, 0)
+		// 			.fadeTo(1000, 1)
+		// 			.fadeTo(1000, 0);
+		// 	}
+		// });
+		// $('.circles-section__circle-text-wrapper .anima1').each(function (i) {
+		// 	for (let z = 0; z < 1000; z++) {
+		// 		$(this)
+		// 			.delay(i++ * 2000)
+		// 			.fadeTo(0, 0)
+		// 			.fadeTo(1000, 1)
+		// 			.fadeTo(1000, 0);
+		// 	}
+		// });
 
 		inputmask();
 
@@ -616,13 +616,13 @@ if (jsFormPopup) {
 	})
 }
 
-let sections = document.querySelectorAll('.lazy_contentSection');
+// let sections = document.querySelectorAll('.lazy_contentSection');
 
-let optionsLazy = {
-	root: null,
-	rootMargin: '0px',
-	threshold: 1,
-};
+// let optionsLazy = {
+// 	root: null,
+// 	rootMargin: '0px',
+// 	threshold: 1,
+// };
 
 let callbackLazy = function (entries, observer) {
 	entries.forEach((entry) => {
@@ -644,8 +644,8 @@ let callbackLazy = function (entries, observer) {
 	});
 };
 
-let observerLazy = new IntersectionObserver(callbackLazy, optionsLazy);
+// let observerLazy = new IntersectionObserver(callbackLazy, optionsLazy);
 
-Array.from(sections).forEach(e=>{
-	observerLazy.observe(e);
-})
+// Array.from(sections).forEach(e=>{
+// 	observerLazy.observe(e);
+// })
