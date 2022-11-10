@@ -1,22 +1,32 @@
-section(class='lazy_contentSection ' +ClassTarifsHelpSection)
-	.container
-		div(class=ClassTarifsHelpSectionWrapper+ " lazy_content")
-			div(class=ClassTarifsHelpSectionInner)
-				if developPage
-					h2(class=titleDefault__H2)
-						|   Реализуем любую идею или
+if developPage
+	section(class='lazy_contentSection ' +ClassTarifsHelpSection)
+		.container
+			div(class=ClassTarifsHelpSectionWrapper+ " lazy_content")
+				div(class=ClassTarifsHelpSectionInner)
+					h2(class=titleDefault__H2+' developPageTarifHelp-h2')
+						|   Реализуем любую идею
 						br
-						|   техническое задание
+						|   или техническое задание
 					include image
-				if seoPage
-					h2(class=titleDefault__H2)
+
+if seoPage
+	section(class='lazy_contentSection ' +ClassTarifsHelpSection)
+		.container
+			div(class=ClassTarifsHelpSectionWrapper+ " lazy_content")
+				div(class=ClassTarifsHelpSectionInner)
+					h2(class=titleDefault__H2+' developPageTarifHelp-h2')
 						|   Продвижение сайтов —
 						br
 						|   с оплатой за результат
 					include image
-				if addTasksPage
+
+if addTasksPage
+	section(class='lazy_contentSection ' +ClassTarifsHelpSection)
+		.container
+			div(class=ClassTarifsHelpSectionWrapper+ " lazy_content")
+				div(class=ClassTarifsHelpSectionInner)
 					div(class=ClassTarifsHelpSection__titleWrapper)
-						h2(class=ClassTarifsHelpSection__title)
+						h2(class=ClassTarifsHelpSection__title+' developPageTarifHelp-h2')
 							|   Доверьте работу команде
 							br
 							|   профессионалов
@@ -26,4 +36,4 @@ section(class='lazy_contentSection ' +ClassTarifsHelpSection)
 							p Тратите меньше времени
 							br
 							p Надежнее, чем несколько разноплановых фрилансеров
-					include image
+						include image
