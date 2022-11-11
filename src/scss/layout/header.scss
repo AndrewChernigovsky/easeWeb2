@@ -144,6 +144,10 @@
     top: 17px;
     left: 12px;
 
+	@include media('>=tablet') {
+		left: 0;
+	}
+
 	@include media('>=desktop') {
 		display: none;
 	}

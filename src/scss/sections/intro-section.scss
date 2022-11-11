@@ -90,14 +90,52 @@
 	&__wrapper.addTasksPage-sectionWrapper {
 		margin-top: 118px;
 
+		@include media('>=phone') {
+			margin-top: 240px;
+		}
+
+		@include media('>=tablet') {
+			margin-top: 300x;
+		}
+
+		@include media('>=desktop') {
+			display: grid;
+    		justify-content: flex-start;
+
+			.intro-section__form {
+				margin-top: -230px;
+			}
+
+			.intro-section__form-inner {
+				min-width: 200px;
+				max-width: 250px;
+			}
+		}
+
 		.title__h1 {
 			margin-bottom: 0;
+
+			@include media('>=desktop') {
+				font-size: 5.6rem;
+			}
 		}
 
 		span.intro-section__h1-span2 {
 			color: $black;
-			font-size: 2.4rem;
+			font-size: 2rem;
 			text-transform: uppercase;
+
+			@include media('>=390px') {
+				font-size: 2.4rem;
+			}
+
+			@include media('>=tablet') {
+				font-size: 3.6rem;
+			}
+
+			@include media('>=desktop') {
+				font-size: 5.6rem;
+			}
 		}
 
 		.menuButton {
@@ -105,6 +143,13 @@
 			padding: 0.5rem 1rem;
 			margin-top: -25px;
 			height: 25px;
+
+			@include media('>=tablet') {
+				max-width: 180px;
+				margin-top: -35px;
+				height: 35px;
+    			font-size: 1.4rem;
+			}
 		}
 	}
 
@@ -382,6 +427,23 @@
 		height: 192px;
 		top: -125px;
 		right: -47px;
+
+		@include media('>=phone') {
+			width: 330px;
+			top: -245px;
+		}
+		@include media('>=phone-lg') {
+			right: 40px;
+		}
+		@include media('>=tablet') {
+			width: 390px;
+			right: 20px;
+		}
+
+		@include media('>=desktop') {
+			width: 460px;
+			right: 0;
+		}
 
 		@include media('>=widescreen') {
 			height: max-content;
