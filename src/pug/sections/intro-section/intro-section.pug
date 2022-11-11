@@ -138,16 +138,15 @@ if addTasksPage
 								|   Поддержка
 								br
 								|   готового сайт
-					if developPage
-						span(class=ClassintroSection__h1__span3)= 'Разработка сайтов'
-					if seoPage
-						span(class=ClassintroSection__h1__span4)= 'Продвижение сайтов'
-					if addTasksPage
-						span(class=ClassintroSection__h1__span4+' right')
-							| дополнительные
-							br
-							| задачи
-					span(class=ClassintroSectionInner)
+				if developPage
+					span(class=ClassintroSection__h1__span3)= 'Разработка сайтов'
+				if seoPage
+					span(class=ClassintroSection__h1__span4)= 'Продвижение сайтов'
+				span(class=ClassintroSection__h1__span4+' right')
+					| дополнительные
+					br
+					| задачи
+				//- span(class=ClassintroSectionInner)
 				button(class=menuButton+' mob-btnMenu') Заказать звонок
 				include form
 				include image

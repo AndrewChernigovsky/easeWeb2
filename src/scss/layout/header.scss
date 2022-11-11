@@ -134,15 +134,15 @@
 }
 
 .burger {
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 15px;
 	position: relative;
 	z-index: 120;
 	@extend %d-flex-column;
 	justify-content: center;
 	align-items: center;
-	top: 20px;
-	left: 0;
+    top: 17px;
+    left: 12px;
 
 	@include media('>=desktop') {
 		display: none;
@@ -172,7 +172,7 @@
 
 	span {
 		width: 80%;
-		height: 2px;
+		height: 1px;
 		border-radius: 1px;
 		background-color: $black;
 		transition: $base-transition;
@@ -280,11 +280,12 @@
 	background-color: $black;
 	position: relative;
 	display: block;
-	max-width: calc(100% - 35px);
+	max-width: calc(100% - 41px);
 	margin-top: -2.8rem;
 	margin-bottom: 1.8rem;
 	min-width: 50%;
 	margin: 0 auto;
+	margin-top: -21px;
 	height: 1px;
 
 	@include media('>=tablet') {
@@ -347,6 +348,15 @@
 
 	@include media('>=desktop') {
 		display: none;
+	}
+
+	a {
+		height: 50px;
+
+		svg {
+			width: 35px;
+			height: 35px;
+		}
 	}
 }
 
