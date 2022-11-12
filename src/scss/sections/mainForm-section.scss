@@ -1,4 +1,4 @@
-#mainFormShape {
+.mainFormShape {
     background-color: $black;
     height: 10rem;
     padding-bottom: 10rem;
@@ -177,7 +177,7 @@
 
     &__title.addTaskMainFormTitle {
         text-align: left;
-		margin: 3rem 0 -3rem 6rem
+		margin: 0 0 0 0;
     }
 
     &__select-block {
@@ -287,4 +287,9 @@ input.mainFormInput {
 
 .h2-none {
 	display: none;
+}
+
+.shape {
+	height: 4rem;
+	padding-bottom: 4rem;
 }

@@ -95,12 +95,13 @@
 		}
 
 		@include media('>=tablet') {
-			margin-top: 300x;
+			margin-top: 300px;
 		}
 
 		@include media('>=desktop') {
 			display: grid;
     		justify-content: flex-start;
+			margin-top: 20px;
 
 			.intro-section__form {
 				margin-top: -230px;
@@ -108,7 +109,24 @@
 
 			.intro-section__form-inner {
 				min-width: 200px;
-				max-width: 250px;
+				max-width: 360px;
+			}
+
+			.intro-section__form-wrapper .introButton {
+				max-width: 360px;
+				padding: 2rem 1.5rem 2rem 2.1rem;
+			}
+		}
+
+		@include media('>=widescreen-lg') {
+			.intro-section__form-inner {
+				min-width: 200px;
+				max-width: 391px;
+			}
+
+			.intro-section__form-wrapper .introButton {
+				max-width: 391px;
+				padding: 2rem 3.5rem 2rem 3.1rem;
 			}
 		}
 
@@ -116,7 +134,11 @@
 			margin-bottom: 0;
 
 			@include media('>=desktop') {
-				font-size: 5.6rem;
+				font-size: 6.6rem;
+			}
+
+			@include media('>=widescreen-lg') {
+				font-size: 9.6rem;
 			}
 		}
 
@@ -134,7 +156,12 @@
 			}
 
 			@include media('>=desktop') {
-				font-size: 5.6rem;
+				font-size: 6.6rem;
+			}
+
+			@include media('>=widescreen-lg') {
+				font-size: 9.6rem;
+				line-height: 1;
 			}
 		}
 
@@ -442,16 +469,20 @@
 
 		@include media('>=desktop') {
 			width: 460px;
-			right: 0;
+			right: -80px;
+			top: 200px;
 		}
 
 		@include media('>=widescreen') {
-			height: max-content;
+			width: 583px;
+			right: -34px;
+			top: 93px;
 		}
 
 		@include media('>=widescreen-lg') {
-			top: -85px;
-			right: -570px;
+			top: 155px;
+			right: -61px;
+			width: 650px;
 		}
 	}
 	&__image {
@@ -627,5 +658,11 @@
 	@include media('>=desktop') {
 		padding-top: 6rem;
 		padding-bottom: 25rem;
+	}
+}
+.intro-section.addTasksPage-introSection {
+
+	@include media('>=widescreen-lg') {
+		padding-bottom: 47rem;
 	}
 }

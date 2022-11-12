@@ -1,13 +1,19 @@
-div(id=mainFormShape)
 if mainPage
-	section(class='lazy_contentSection ' +mainForm__Section id='contacts')
+	div(class='mainFormShape' id=mainFormShape)
+	section(class=mainForm__Section id='contacts')
 		.container
 			h2(class='h2-none')= 'заказать звонок, оставить заявку'
-			div(class=mainForm__Section__Wrapper+ " lazy_content")
+			div(class=mainForm__Section__Wrapper)
 				include form
 if !mainPage
-	section(class='lazy_contentSection ' +mainForm__Section+' seoAdd' id='contacts')
+	if addTasksPage
+		div(class='shape mainFormShape' id=mainFormShape)
+	else
+		div(class='mainFormShape' id=mainFormShape)
+	section(class=mainForm__Section+' seoAdd' id='contacts')
 		.container
 			h2(class='h2-none')= 'заказать звонок, оставить заявку'
-			div(class=mainForm__Section__Wrapper+ " lazy_content")
+			div(class=mainForm__Section__Wrapper)
 				include form
+
+

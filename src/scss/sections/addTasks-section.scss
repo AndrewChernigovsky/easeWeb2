@@ -6,13 +6,21 @@
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 0.5rem;
 
+		@include media('>=phone-lg'){
+			gap: 1rem;
+		}
+
 		@include media('>=tablet') {
-			grid-template-columns: 1fr 1fr;
+			gap: 1.5rem;
 		}
 
 		@include media('>=desktop') {
-			grid-template-columns: 1fr 1fr 1fr;
 			gap: 2rem;
+			grid-template-columns: 33% 33% 33%;
+		}
+
+		@include media('>=widescreen-lg') {
+			row-gap: 9rem;
 		}
 	}
 
@@ -21,13 +29,13 @@
 		border-radius: 24px;
 		padding: 5px;
 
-		@include media('>=phone-lg') {
-			padding: 20px;
+		@include media('>=phone-lg'){
+			padding: 10px;
 		}
 
 		@include media('>=desktop') {
 			border-radius: 30px;
-			padding: 10px;
+			padding: 20px;
 		}
 	}
 
@@ -41,12 +49,26 @@
 		box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.03), 0px -1px 0px 1px rgba(0, 0, 0, 0.05);
 		border-radius: 24px;
 
+		@include media('>=395px') {
+			min-height: 150px;
+		}
+
+		@include media('>=phone-lg') {
+			min-height: 250px;
+		}
+
+		@include media('>=tablet') {
+			min-height: 300px;
+		}
+
 		@include media('>=desktop') {
+			min-height: 500px;
 			border-radius: 30px;
 		}
 
 		@include media('>=widescreen-lg') {
-			min-height: 600px;
+			min-height: 710px;
+			padding: 2rem;
 		}
 
 		.title__h2 {
@@ -63,6 +85,16 @@
 			@include media('>=phone') {
 				font-size: 1.5rem;
 			}
+			@include media('>=widescreen-lg') {
+				font-size: 5.6rem;
+			}
 		}
+	}
+}
+
+.addTasks-cardTitle-span {
+
+	@include media('>=600px') {
+		display: none;
 	}
 }

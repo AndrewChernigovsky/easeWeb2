@@ -1,6 +1,8 @@
 .tarifsHelp-section {
 	color: $black;
 
+	min-height: 300px;
+
 	@include media('>=desktop') {
 		margin-bottom: -430px;
 	}
@@ -18,15 +20,27 @@
 
 	&__title-inner{
 		p {
-			font-size: 2.4rem;
+			font-size: 0.8rem;
 			font-family: $Montserrat;
+
+			@include media('>=phone-lg') {
+				font-size: 1.8rem;
+			}
+
+			@include media('>=tablet') {
+				font-size: 2.4rem;
+			}
 		}
 	}
 
 	&__title {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
 		margin-bottom: 1.5rem;
 		font-family: $MontserratBold;
+
+		@include media('>=phone-lg') {
+			font-size: 1.8rem;
+		}
 
 		@include media('>=tablet') {
 			font-size: 2.2rem;
@@ -150,9 +164,50 @@
 		}
 	}
 
+	&__image-wrapper.addTasksTarifHelp__imageWrapper {
+		video {
+			width: 130px;
+			height: 130px;
+			top: 33px;
+			right: 0;
+
+			@include media('>=460px') {
+				width: 250px;
+				height: 250px;
+			}
+
+			@include media('>=phone-lg') {
+				width: 350px;
+				height: 350px;
+			}
+
+			@include media('>=tablet') {
+				width: 450px;
+			}
+
+			@include media('>=desktop') {
+				width: 450px;
+				height: 450px;
+				top: -390px;
+				right: -80px;
+			}
+
+			@include media('>=widescreen-lg') {
+				width: 610px;
+				height: 610px;
+				top: -420px;
+				right: -105px;
+			}
+		}
+	}
+
 	&__image {
 		object-fit: cover;
 		height: inherit;
 		width: 100%;
 	}
+}
+
+.addTasksTitleWrapper {
+	position: static;
 }
