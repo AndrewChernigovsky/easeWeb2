@@ -292,26 +292,70 @@ input.mainFormInput {
 .shape {
 	height: 4rem;
 	padding-bottom: 4rem;
+
+	@include media('>=tablet') {
+		height: 6rem;
+		padding-bottom: 6rem;
+
+	}
+
+	@include media('>=desktop') {
+		height: 8rem;
+		padding-bottom: 8rem;
+
+	}
+
+	@include media('>=widescreen-lg') {
+		height: 10rem;
+		padding-bottom: 18rem;
+	}
 }
 
 .addTaskPageMainForm {
 	padding-top: 3rem;
 
+	@include media('>=widescreen-lg') {
+		padding-bottom: 28rem;
+	}
+
+	.mainForm-section__wrapper {
+		max-width: 1280px;
+	}
+
+	.mainForm__inner {
+		@include media('>=widescreen-lg') {
+			padding: 7rem 0 0 0;
+		}
+	}
+
 	.mainForm__wrapper {
 		padding: 2rem 3rem;
+
+		@include media('>=widescreen-lg') {
+			padding: 9rem 8rem 10rem 8rem;
+		}
 	}
 
 	.mainForm-section__wrapper{
 		padding: 0 1rem;
 	}
-	
+
 	.inputs,
 	.wrapperButtons {
 		gap: 1rem;
+
+		@include media('>=widescreen-lg') {
+			gap: 4rem;
+		}
 	}
 
 	.mainForm__button  {
 		text-align: left;
 		padding-left: 1.2rem;
+
+		@include media('>=widescreen-lg') {
+			text-align: center;
+			font-size: 2.4rem;
+		}
 	}
 }

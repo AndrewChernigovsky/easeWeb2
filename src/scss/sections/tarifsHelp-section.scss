@@ -38,9 +38,34 @@
 			width: 250px;
 		}
 
+		@include media('>=tablet') {
+			width: 320px;
+		}
+
+		@include media('>=desktop') {
+			width: 350px;
+		}
+
+		@include media('>=widescreen-lg') {
+			width: 770px;
+			line-height: 0.9;
+		}
+
 		p {
 			@include media('>=500px') {
 				font-size: 1.5rem;
+			}
+
+			@include media('>=tablet') {
+				font-size: 2rem;
+			}
+
+			@include media('>=desktop') {
+				font-size: 2.2rem;
+			}
+
+			@include media('>=widescreen-lg') {
+				font-size: 2.4rem;
 			}
 		}
 	}
@@ -48,7 +73,7 @@
 	&__title {
 		font-size: 1.5rem;
 		margin-bottom: 1.5rem;
-		font-family: $MontserratBold;
+		font-family: $MazzardHBold;
 
 		@include media('>=phone-lg') {
 			font-size: 1.8rem;
@@ -197,27 +222,25 @@
 				top: -90px;
 			}
 
-			@include media('>=phone-lg') {
-				width: 350px;
-				height: 350px;
-			}
-
 			@include media('>=tablet') {
-				width: 450px;
+				width: 300px;
+				height: 300px;
+				right: -66%;
+    			top: -150px;
 			}
 
 			@include media('>=desktop') {
 				width: 450px;
 				height: 450px;
-				top: -390px;
-				right: -80px;
+				top: -210px;
+				right: -197px;
 			}
 
 			@include media('>=widescreen-lg') {
 				width: 610px;
 				height: 610px;
-				top: -420px;
-				right: -105px;
+				top: -312px;
+    			right: -624px;
 			}
 		}
 	}
@@ -244,9 +267,33 @@
 		width: 285px;
 	}
 
+	@include media('>=tablet') {
+		width: 360px;
+	}
+
+	@include media('>=desktop') {
+		width: 540px;
+		right: 24%;
+	}
+
+	@include media('>=widescreen-lg') {
+		width: 815px;
+		right: 24%;
+		top: 300px;
+	}
+
 	.tarifsHelp-section__title {
 		@include media('>=500px') {
 			font-size: 2rem;
+		}
+		@include media('>=tablet') {
+			font-size: 2.5rem;
+		}
+		@include media('>=desktop') {
+			font-size: 3.5rem;
+		}
+		@include media('>=widescreen-lg') {
+			font-size: 5.6rem;
 		}
 	}
 }
@@ -260,5 +307,17 @@
 
 	@include media('>=500px') {
 		min-height: 375px;
+	}
+
+	@include media('>=tablet') {
+		min-height: 460px;
+	}
+
+	@include media('>=desktop') {
+		min-height: 1000px;
+	}
+
+	@include media('>=widescreen-lg') {
+		min-height: 1317px;
 	}
 }
