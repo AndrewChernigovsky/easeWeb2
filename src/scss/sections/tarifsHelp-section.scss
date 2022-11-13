@@ -1,8 +1,6 @@
 .tarifsHelp-section {
 	color: $black;
 
-	min-height: 300px;
-
 	@include media('>=desktop') {
 		margin-bottom: -430px;
 	}
@@ -29,6 +27,20 @@
 
 			@include media('>=tablet') {
 				font-size: 2.4rem;
+			}
+		}
+	}
+
+	&__title-inner.addTasksPageTarifHelp-TitleInner {
+		width: 150px;
+
+		@include media('>=500px') {
+			width: 250px;
+		}
+
+		p {
+			@include media('>=500px') {
+				font-size: 1.5rem;
 			}
 		}
 	}
@@ -168,12 +180,21 @@
 		video {
 			width: 130px;
 			height: 130px;
-			top: 33px;
-			right: 0;
+			top: -60px;
+			right: 80px;
 
-			@include media('>=460px') {
-				width: 250px;
-				height: 250px;
+			@include media('>=395px') {
+				right: 12%;
+   				top: -80px;
+				width: 180px;
+				height: 180px;
+			}
+
+			@include media('>=500px') {
+				width: 200px;
+				height: 200px;
+				right: -24%;
+				top: -90px;
 			}
 
 			@include media('>=phone-lg') {
@@ -209,5 +230,35 @@
 }
 
 .addTasksTitleWrapper {
-	position: static;
+    right: 10%;
+    top: 20px;
+    width: 220px;
+
+	@include media('>=395px') {
+		right: 14%;
+    	top: 38px;
+	}
+
+	@include media('>=500px') {
+		right: 30%;
+		width: 285px;
+	}
+
+	.tarifsHelp-section__title {
+		@include media('>=500px') {
+			font-size: 2rem;
+		}
+	}
+}
+
+.tarifsHelp-section.addTaksPageSectionTarifHelp {
+	min-height: 240px;
+
+	@include media('>=395px') {
+		min-height: 283px;
+	}
+
+	@include media('>=500px') {
+		min-height: 375px;
+	}
 }

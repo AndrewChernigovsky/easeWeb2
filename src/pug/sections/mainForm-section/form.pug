@@ -25,21 +25,21 @@ if mainPage
 								option(class='js-select-option' value="redesign") Редизайн
 								option(class='js-select-option' value="another") Другое
 						div(class='wrapperButton')
-							button(class=ClassMainForm__button+ ' js-form-submit' + ' button-more' type=submit id='getCallMainForm')= 'Отправить заявку'
+							button(class=ClassMainForm__button+ ' js-form-submit button-more' + ' button-more' type=submit id='getCallMainForm')= 'Отправить заявку'
 					else
 						input(class='mainFormInput' type='text' placeholder='Имеющийся сайт' name='website' value='' )
 						div(class='wrapperButton')
-							button(class=ClassMainForm__button+ ' js-form-submit' type=submit id='getCallMainForm')= 'Заказать звонок'
+							button(class=ClassMainForm__button+ ' js-form-submit button-more' type=submit id='getCallMainForm')= 'Заказать звонок'
 if anotherPage
 	form(class=MainForm+ ' js-form1' id=MainFormID name=MainFormName action='../php/form/form3.php' method=post)
 		div(class=ClassMainForm__Wrapper)
 			if mainPage
 				p(class=ClassMainForm__title)
 					| Обсудить проект со специалистом
-			if addTasksPage
-				p(class=ClassMainForm__title + ' addTaskMainFormTitle')
-					| Заказать сайт
-			if !mainPage && !addTasksPage
+			//- if addTasksPage
+			//- 	p(class=ClassMainForm__title + ' addTaskMainFormTitle')
+			//- 		| Заказать сайт
+			if !mainPage
 				p(class=ClassMainForm__title)
 					| Хотите увеличить поток клиентов?
 			div(class=ClassMainForm__Inner)
@@ -59,4 +59,4 @@ if anotherPage
 					else
 						input(class='mainFormInput' type='text' placeholder='Имеющийся сайт' name='website' value='' )
 					div(class='wrapperButton')
-						button(class=ClassMainForm__button+ ' js-form-submit' type=submit id='getCallMainForm')= 'Заказать звонок'
+						button(class=ClassMainForm__button+ ' js-form-submit button-more' type=submit id='getCallMainForm')= 'Отправить заявку'

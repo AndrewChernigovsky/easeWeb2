@@ -662,6 +662,10 @@
 }
 .intro-section.addTasksPage-introSection {
 
+	@include media('>=desktop') {
+		padding-bottom: 25rem;
+	}
+
 	@include media('>=widescreen-lg') {
 		padding-bottom: 47rem;
 	}
