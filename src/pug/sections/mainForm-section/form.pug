@@ -26,7 +26,14 @@ if mainPage
 								option(class='js-select-option' value="another") Другое
 						div(class='wrapperButton')
 							button(class=ClassMainForm__button+ ' js-form-submit button-more' + ' button-more' type=submit id='getCallMainForm')= 'Отправить заявку'
-					else
+				div(class='politeCheckboxWrapper')
+					input(class='input' type="checkbox", name='polite', id='politeCheckbox' required)
+					label(class='labelCallPopupCheckbox', for="politeCheckbox")
+					div(class='polite-p-wrapper')
+						p я прочитал и согласен с &nbsp;
+						=" "
+						a(href='../pages/polite.html') политикой конфиденциальности
+					if anotherPage
 						input(class='mainFormInput' type='text' placeholder='Имеющийся сайт' name='website' value='' )
 						div(class='wrapperButton')
 							button(class=ClassMainForm__button+ ' js-form-submit button-more' type=submit id='getCallMainForm')= 'Заказать звонок'
