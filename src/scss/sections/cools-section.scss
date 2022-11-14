@@ -40,15 +40,15 @@
 
 			@include media('>=desktop') {
 				width: 3px;
-				height: 440px;
+				height: 474px;
 				left: -18px;
-				bottom: -15px;
+				bottom: 26px;
 			}
 
 			@include media('>=widescreen-lg') {
 				height: 850px;
 				left: -15px;
-				bottom: 30px;
+				bottom: -14px;
 			}
 		}
 	}

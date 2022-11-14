@@ -38,6 +38,10 @@
 		@include media('>=desktop') {
 			padding-top: 4.5rem;
 		}
+
+		@include media('>=widescreen-lg') {
+			padding-top: 7.5rem;
+		}
     }
 
     &__step-block {
@@ -71,6 +75,10 @@
 			padding-left: 8px;
 			margin-bottom: 6px;
 	   }
+		@include media('>=desktop') {
+			margin-bottom: -14px;
+			margin-left: -10px;
+	   }
 	}
 
     &__text1 {
@@ -99,7 +107,7 @@
 			right: auto;
 			top: auto;
 			left: 100px;
-			bottom: -21px;
+			bottom: 20px;
 		}
 
         div {

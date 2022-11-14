@@ -37,8 +37,16 @@
 		margin-top: 119px;
 		padding-left: 0;
 
+		@include media('>=desktop') {
+			margin-top: 7px;
+		}
+
 		.title__h1 {
 			margin-bottom: 0;
+
+			@include media('>=desktop') {
+				margin-bottom: -2.5rem;
+			}
 		}
 	}
 	&__wrapper.seoPage-sectionWrapper {
@@ -385,7 +393,8 @@
 		}
 
 		@include media('>=desktop') {
-		
+		    top: -27px;
+    		right: 230px;
 		}
 
 		@include media('>=widescreen') {
