@@ -3,6 +3,10 @@
     color: $black;
 	min-height: 150px;
 
+	@include media(">=390px") {
+		min-height: 172px;
+	}
+
 	@include media(">=tablet") {
 		min-height: 270px;
 	}

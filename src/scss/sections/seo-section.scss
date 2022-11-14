@@ -310,3 +310,32 @@
 		display: block;
 	}
 }
+
+.seo-section.mainPage {
+	.seo-section__image-wrapper {
+		min-width: 195px;
+	}
+
+	.seo-section__image {
+		top: -205px;
+		left: -30px;
+		transform: rotate(-28deg);
+	}
+
+	.seo-section__block-paragraph2 {
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+		margin-top: -17px;
+		text-align: left;
+		line-height: 3.2;
+	}
+
+	.seo-section__image-block-title {
+		margin-left: 28px;
+		margin-top: -44px;
+	}
+
+	.seo-section__block:last-of-type .seo-section__block-link {
+		align-self: baseline;
+	}
+}

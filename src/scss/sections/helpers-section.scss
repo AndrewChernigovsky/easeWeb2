@@ -57,8 +57,13 @@
 	&__card-wrapper {
 		box-shadow: inset 2px 2px 19px rgba(0, 0, 0, 0.13);
 		border-radius: 30px;
-		padding: 10px;
-		margin-left: 1rem;
+		padding: 5px;
+		margin-left: 0.5rem;
+
+		@include media('>=phone-lg') {
+			padding: 10px;
+			margin-left: 1rem;
+		}
 
 		@include media('>=desktop') {
 			padding: 20px;
@@ -118,5 +123,22 @@
 				margin-bottom: 2.5rem;
 			}
 		}
+	}
+}
+
+.helpers-section.mainPageHelpersSection {
+
+	.title__h2 {
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+
+		@include media('>=desktop') {
+			font-size: 5.6rem;
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	.helpers-section__title {
+		font-size: 1.2rem;
 	}
 }
