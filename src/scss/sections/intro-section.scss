@@ -676,6 +676,10 @@
 
 	.titleIntro-anima {
 		margin-bottom: 18px;
+
+		@include media('>=tablet') {
+			margin-bottom: 40px;
+		}
 	}	
 }
 

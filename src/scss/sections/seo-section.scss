@@ -79,8 +79,6 @@
 				margin-left: -82px;
 
 				@include media('>=phone-lg') {
-					position: absolute;
-					bottom: 0;
 				}
 
 				@include media('>=tablet') {
@@ -270,9 +268,6 @@
 	}
 
 	&__block-paragraph {
-		// @include media('>=phone') {
-		// 	font-size: 2rem;
-		// }
 
 		@include media('>=widescreen-lg') {
 			font-size: 2.4rem;
@@ -319,7 +314,19 @@
 	.seo-section__image {
 		top: -198px;
 		left: -30px;
+		width: 200px;
 		transform: rotate(-28deg);
+
+		@include media('>=phone-lg') {
+			top: -275px;
+			width: 350px;
+		}
+
+		@include media('>=tablet') {
+			top: -235px;
+			width: 350px;
+		}
+	
 	}
 
 	.seo-section__block-paragraph2 {
@@ -333,6 +340,17 @@
 	.seo-section__image-block-title {
 		margin-left: 28px;
 		margin-top: -36px;
+
+		@include media('>=phone-lg') {
+			margin-top: -79px;
+		}
+		@include media('>=tablet') {
+			margin-top: 175px;
+		}
+
+		@include media('>=widescreen-lg') {
+			display: block;
+		}
 	}
 
 	.seo-section__block:last-of-type .seo-section__block-link {
