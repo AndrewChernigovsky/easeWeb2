@@ -1,45 +1,67 @@
-section(class='lazy_contentSection ' +seoPriceSection id='price')
-	.container
-		div(class=seoPriceSectionWrapper+ " lazy_content")
-			h2(class=titleDefault__H2)
-				|	Стоимость work
-			div(class=seoPriceSectionInner)
-				div(class=seoPriceSection__Card)
-					p Тариф 1
-					ul
-						li Рекламная кампания на поиске Google или Яндекс
-						li До 200 ключевых запросов
-						li Бесплатное ведение кампании 7 дней.
-					div(class=seoPriceSection__CardFooter)
-						p Срок настройки: 2 дня
-						p(class=seoPriceSection__price) 3500 руб.
-				div(class=seoPriceSection__Card)
-					p Тариф 2
-					ul
-						li Настройка поисковой кампании Google или Яндекс
-						li Настройка рекламной кампании РСЯ или КМC
-						li До 2000 ключевых запросов
-						li UTM метки
-						li Настройка целей
-						li Бесплатное ведение кампании 14 дней
-						li Настройка систем аналитики
-					div(class=seoPriceSection__CardFooter)
-						p Срок настройки: 3 - 5 дня
-						p(class=seoPriceSection__price) 6500 руб.
-				div(class=seoPriceSection__Card)
-					p Тариф 3 &nbsp;
-						span(class=seoPriceSection__pro) pro
-					ul
-						li Настройка поисковой кампании Google или Яндекс
-						li Настройка рекламной кампании РСЯ или КМC
-						li Настройка рекламной кампании Ретаргетинг/Ремаркетинг
-						li Сбор всех возможных ключевых запросов
-						li UTM метки
-						li Настройка целей
-						li Защита от скликивания конкурентами
-						li Бесплатное ведение кампании 14 дней
-						li Настройка систем аналитики
-					div(class=seoPriceSection__CardFooter)
-						p Срок настройки: 5-7 дня
-						p(class=seoPriceSection__price) 9500 руб.
-			p(class=seoPriceSection__cost) — цена указана за разовую настройку, дальнейшее ведение проекта — 5000 руб. в месяц
+if mainPage
+	section(class=seoPriceSection id='price')
+if seoPage 
+	section(class=seoPriceSection+ ' seoPage' id='price')
+		.container
+			div(class=seoPriceSectionWrapper)
+				h2(class=titleDefault__H2)
+					|	Стоимость work
+				div(class=seoPriceSectionInner)
+					div(class=seoPriceSection__Card)
+						p(class='seoPrice__tarif') Тариф 1
+						ul(class='seoPrice-section__list')
+							li
+								span Рекламная кампания на поиске Google или Яндекс
+							li
+								span До 200 ключевых запросов
+							li
+								span Бесплатное ведение кампании 7 дней.
+						div(class=seoPriceSection__CardFooter)
+							p Срок настройки: 2 дня
+							p(class=seoPriceSection__price) 3500 руб.
+					div(class=seoPriceSection__Card)
+						p(class='seoPrice__tarif') Тариф 2
+						ul(class='seoPrice-section__list')
+							li
+								span Настройка поисковой кампании Google или Яндекс
+							li
+								span Настройка рекламной кампании РСЯ или КМC
+							li
+								span До 2000 ключевых запросов
+							li
+								span UTM метки
+							li
+								span Настройка целей
+							li
+								span Бесплатное ведение кампании 14 дней
+							li
+								span Настройка систем аналитики
+						div(class=seoPriceSection__CardFooter)
+							p Срок настройки: 3 - 5 дня
+							p(class=seoPriceSection__price) 6500 руб.
+					div(class=seoPriceSection__Card)
+						p(class='seoPrice__tarif') Тариф 3 &nbsp;
+							span(class=seoPriceSection__pro) pro
+						ul(class='seoPrice-section__list')
+							li
+								span Настройка поисковой кампании Google или Яндекс
+							li
+								span Настройка рекламной кампании РСЯ или КМC
+							li
+								span Настройка рекламной кампании Ретаргетинг/Ремаркетинг
+							li
+								span Сбор всех возможных ключевых запросов
+							li
+								span UTM метки
+							li
+								span Настройка целей
+							li
+								span Защита от скликивания конкурентами
+							li
+								span Бесплатное ведение кампании 14 дней
+							li
+								span Настройка систем аналитики
+						div(class=seoPriceSection__CardFooter)
+							p Срок настройки: 5-7 дня
+							p(class=seoPriceSection__price) 9500 руб.
+				p(class=seoPriceSection__cost) — цена указана за разовую настройку, дальнейшее ведение проекта — 5000 руб. в месяц

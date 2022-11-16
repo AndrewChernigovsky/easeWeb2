@@ -186,3 +186,45 @@
 		}
 	}
 }
+
+.seoPrice-section.seoPage {
+	.title__h2 {
+		margin-bottom: 1rem;
+	}
+
+	.seoPrice-section__inner {
+		grid-template-columns: 32.5% 32.5% 32.5%;
+		gap: 0.5rem;
+	}
+
+	.seoPrice-section__card {
+		padding: 0.5rem 0.5rem 0.5rem 0.3rem;
+
+		.seoPrice-section__list {
+
+			span {
+				text-align: left;
+				display: flex;
+				margin-left: -3px;
+			}
+		}
+
+		.seoPrice-section__card-footer {
+			padding-bottom: 0.8rem;
+			padding-left: 0.9rem;
+		}
+	}
+	.seoPrice-section__card li {
+		margin-bottom: 7px;
+		list-style-position: outside;
+
+		&::marker {
+			font-size: 0.4rem;
+			margin-right: -10px;
+		}
+	}
+
+	.seoPrice__tarif {
+		padding: 1.2rem 0 1rem 0.8rem;
+	}
+}
