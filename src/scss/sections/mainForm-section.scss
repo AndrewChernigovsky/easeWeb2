@@ -50,7 +50,7 @@
 			padding: 11rem 9rem 10rem 9rem;
 		}
 
-        p {
+        .mainForm__title {
             font-size: 1.5rem;
 
             @include media('>=phone-lg') {
@@ -415,9 +415,9 @@ input.mainFormInput {
 	.mainForm__title{
 		font-family: $MazzardHBold;
 	}
-	.mainForm__inner{
-		margin: 0;
-	}
+	// .mainForm__inner{
+	// 	margin: 0;
+	// }
 
 	.mainForm__wrapper{
 		padding: 2rem 2rem 1rem 2rem;
@@ -427,10 +427,10 @@ input.mainFormInput {
 		}
 
 		@include media('>=widescreen-lg') {
-			padding: 10rem 2rem 10rem 9rem;
+			padding: 10rem 9rem 10rem 9rem;
 		}
 
-		p {
+		.mainForm__title {
 			font-size: 1.2rem;
 
 			@include media('>=phone-lg') {
@@ -491,5 +491,52 @@ input.mainFormInput {
 			}
 		}
 	
+	}
+}
+
+.mainForm-polite {
+	margin-top: 1rem;
+	font-size: 0.8rem;
+	max-width: 1080px;
+	text-align: center;
+	min-width: 100%;
+
+	.mainForm-polite-link {
+		font-size: 0.8rem;
+		color: $white;
+		text-decoration: underline;
+
+		&:hover {
+			opacity: 0.7;
+			transition: $base-transition;
+		}
+		&:visited {
+			color: $white;
+		}
+	}
+
+	@include media('>=phone-lg') {
+		margin-top: 2rem;
+		font-size: 1.4rem;
+
+		.mainForm-polite-link {
+			font-size: 1.4rem;
+		}
+	}
+	@include media('>=tablet') {
+		margin-top: 3rem;
+		font-size: 1.6rem;
+
+		.mainForm-polite-link {
+			font-size: 1.6rem;
+		}
+	}
+	@include media('>=desktop') {
+		margin-top: 5rem;
+		font-size: 2rem;
+
+		.mainForm-polite-link {
+			font-size: 2rem;
+		}
 	}
 }
