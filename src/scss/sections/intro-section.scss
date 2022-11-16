@@ -712,7 +712,7 @@
 	padding-bottom: 5rem;
 
 	@include media('>=phone-lg') {
-		padding-bottom: 25rem;
+		padding-bottom: 10rem;
 	}
 
 	@include media('>=desktop') {

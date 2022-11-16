@@ -10,6 +10,7 @@
 	.title__h2 {
 		color: $black;
 		font-size: 1.2rem;
+		font-family: $MazzardHBold;
 
 		@include media('>=tablet') {
 			font-size: 1.8rem;
@@ -42,7 +43,6 @@
 				width: auto;
 				border-top: 2px solid $orange1;
 			}
-
 		}
 
 		&:nth-of-type(2) {
@@ -314,7 +314,9 @@
 			gap: 5rem;
 		}
 
-
+		.title__h2 {
+			font-family: $MontserratBold;
+		}
 	}
 	&__border {
 		position: absolute;
@@ -342,7 +344,6 @@
 			font-size: 2.4rem;
 			margin-bottom: 2rem;
 		}
-
 	}
 	.trustH2 {
 		margin-left: 16px;
@@ -358,12 +359,31 @@
 .trust-section.seoPage {
 	padding-bottom: 4rem;
 
+	@include media('>=desktop') {
+		padding-bottom: 5rem;
+	}
+
+	@include media('>=widescreen-lg') {
+		padding-bottom: 23rem;
+	}
+
+	.trust-section__argument {
+		@include media('>=phone-lg') {
+			padding: 1rem;
+		}
+	}
+
 	.trust-section__argument:nth-of-type(1) {
 		width: 213px;
 
 		@include media('>=phone-lg') {
 			min-width: 213px;
 			width: auto;
+		}
+		@include media('>=widescreen-lg') {
+			min-width: 751px;
+			width: auto;
+			padding-top: 50px;
 		}
 	}
 	.trust-section__argument:nth-of-type(2) {
@@ -382,6 +402,19 @@
 				bottom: -14px;
 				right: -12px;
 			}
+
+			@include media('>=widescreen-lg') {
+				bottom: -28px;
+				right: -24px;
+				width: 50px;
+			}
+		}
+
+		@include media('>=widescreen-lg') {
+			margin-top: 42px;
+			margin-left: -10px;
+			padding-bottom: 25px;
+			padding-left: 0;
 		}
 	}
 	.trust-section__argument:nth-of-type(3) {
@@ -396,11 +429,20 @@
 				top: 0px;
 				left: 20px;
 			}
+
+			@include media('>=widescreen-lg') {
+				top: 0px;
+    			left: 38px;
+			}
 		}
 
 		p:nth-of-type(2) {
 			margin-right: 66px;
 			margin-bottom: -2px;
+
+			@include media('>=widescreen-lg') {
+				margin-right: 56px;
+			}
 		}
 
 		@include media('>=phone'){
@@ -432,8 +474,22 @@
 					height: 30px;
 					transform: rotate(0);
 				}
+
+				@include media('>=widescreen-lg') {
+					height: 65px;
+				}
 			}
 		}
+
+		@include media('>=widescreen-lg') {
+			padding-top: 51px;
+    		margin-top: -51px;
+			padding-left: 13px;
+			margin-left: -11px;
+			max-width: 674px;
+			padding-bottom: 42px;
+		}
+	
 	}
 	.trust-section__argument:nth-of-type(4) {
 		margin-top: -37px;
@@ -442,13 +498,23 @@
 
 		p.trust-section__text:last-of-type {
 			margin-left: -3px;
+
+			@include media('>=widescreen-lg') {
+				margin-right: 38px;
+			}
 		}
+
+		line-height: 1;
 
 		@include media('>=phone-lg') {
 			width: auto;
 			margin-top: auto;
 			padding-left: auto;
+		}
 
+		@include media('>=widescreen-lg') {
+			margin-left: -22px;
+			margin-top: -7px;
 		}
 
 		&:before,
@@ -460,11 +526,19 @@
 		}
 	}
 
-
 	.trust-section__border {
 
 		@include media('>=phone-lg') {
 			width: 20px;
+		}
+		@include media('>=desktop') {
+			width: 37px;
+		}
+	}
+
+	.trustH2 {
+		@include media('>=desktop') {
+			margin-left: 0;
 		}
 	}
 }
