@@ -357,22 +357,19 @@
 }
 
 .trust-section.seoPage {
-	padding-bottom: 4rem;
+	padding-bottom: 4.3rem;
 
 	@include media('>=desktop') {
 		padding-bottom: 5rem;
 	}
-
 	@include media('>=widescreen-lg') {
 		padding-bottom: 23rem;
 	}
-
 	.trust-section__argument {
 		@include media('>=phone-lg') {
 			padding: 1rem;
 		}
 	}
-
 	.trust-section__argument:nth-of-type(1) {
 		width: 213px;
 
@@ -492,9 +489,17 @@
 	
 	}
 	.trust-section__argument:nth-of-type(4) {
-		margin-top: -37px;
-		padding-left: 14px;
+		margin-top: -33px;
+		padding-left: 17px;
 		margin-left: -5px;
+
+		p.trust-section__text:first-of-type {
+
+			&::after {
+				bottom: 25px;
+				right: 110px;
+			}
+		}
 
 		p.trust-section__text:last-of-type {
 			margin-left: -3px;
@@ -524,6 +529,11 @@
 				display: none;
 			}
 		}
+
+		&:after {
+			bottom: 8px;
+    		right: 79px;
+		}
 	}
 
 	.trust-section__border {
@@ -535,10 +545,19 @@
 			width: 37px;
 		}
 	}
-
 	.trustH2 {
-		@include media('>=desktop') {
+
+		@include media(">=phone-lg") {
 			margin-left: 0;
+			font-size: 2.2rem;
+		}
+
+		@include media(">=tablet") {
+			font-size: 3rem;
+		}
+
+		@include media('>=desktop') {
+			font-size: 3.8rem;
 		}
 	}
 }

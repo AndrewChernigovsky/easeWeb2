@@ -784,6 +784,8 @@
 	}
 	.mob-btnMenu {
 		margin-top: 11px;
+		max-width: 111px;
+		padding: 0.5rem 1rem;
 
 		@include media('>=tablet') {
 			max-width: 170px;

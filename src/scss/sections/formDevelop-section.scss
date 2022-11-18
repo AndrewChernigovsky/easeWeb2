@@ -129,3 +129,25 @@
 		}
 	}
 }
+
+.formDevelop.seoPage {
+
+	.formDevSec-Inner .title__h2 {
+		margin-bottom: 0.5rem;
+	}
+	.formDevSec-Inner  {
+
+		input {
+			flex-basis: auto;
+			min-width: 47%;
+		}
+
+		.button-more {
+			flex-basis: auto;
+			text-align: left;
+			min-width: 49%;
+			padding-left: 1rem;
+		}
+	}
+
+}
