@@ -190,6 +190,10 @@
 .seoPrice-section.seoPage {
 	padding-bottom: 4rem;
 
+	@include media(">=desktop") {
+		padding-bottom: 23rem;
+	}
+
 	.title__h2 {
 		margin-bottom: 1rem;
 

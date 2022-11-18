@@ -131,15 +131,41 @@
 }
 
 .formDevelop.seoPage {
-
 	.formDevSec-Inner .title__h2 {
 		margin-bottom: 0.5rem;
+		font-family: $MazzardHBold;
+
+		@include media(">=phone-lg") {
+			font-size: 2.2rem;
+			margin-bottom: 1.5rem;
+		}
+
+		@include media(">=tablet") {
+			font-size: 3.2rem;
+			margin-bottom: 2.5rem;
+		}
+		@include media(">=desktop") {
+			font-size: 4.6rem;
+			margin-bottom: 4.5rem;
+		}
+		@include media(">=widescreen-lg") {
+			font-size: 5.6rem;
+		}
 	}
 	.formDevSec-Inner  {
 
 		input {
 			flex-basis: auto;
 			min-width: 47%;
+
+			@include media(">=desktop") {
+				font-size: 2.4rem;
+				height: 70px;
+			}
+
+			@include media(">=widescreen-lg") {
+				min-width: 51%;
+			}
 		}
 
 		.button-more {
@@ -147,7 +173,71 @@
 			text-align: left;
 			min-width: 49%;
 			padding-left: 1rem;
+
+			@include media(">=phone-lg") {
+				font-size: 1.6rem;
+				height: 30px;
+	
+				&::after {
+					height: 30px;
+					top: 8px;
+				}
+			}
+	
+			@include media(">=tablet") {
+				min-width: 30%;
+			}
+
+			@include media(">=desktop") {
+				font-size: 2.4rem;
+				height: 70px;
+
+				&::after {
+					top: 22px;
+				}
+			}
+
+			@include media(">=widescreen-lg") {
+				min-width: 28%;
+				margin-left: 3rem;
+				padding-left: 2rem;
+
+				&::after {
+					right: -6px;
+					top: 19px;
+					height: 36px;
+				}
+			}
 		}
 	}
+	.formDevelop__wrapper {
+		padding: 1rem;
+	}
+	.formDevelop__text {
+		@include media(">=phone-lg") {
+			span {
+				font-size: 1.6rem;
+			}
+		}
+		@include media(">=tablet") {
+			span {
+				font-size: 1.8rem;
+			}
+		}
+		@include media(">=desktop") {
+			span {
+				font-size: 2.4rem;
+			}
+		}
+	}
+	.js-input-phone {
+		@include media(">=phone-lg") {
+			font-size: 1.6rem;
+			height: 30px;
+		}
 
+		@include media(">=widescreen-lg") {
+			padding-left: 2rem;
+		}
+	}
 }
