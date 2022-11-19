@@ -149,6 +149,10 @@
 			max-width: calc(100% - 60px);
 		}
 
+		@include media('>=full-hd') {
+			max-width: calc(100% - 210px);
+		}
+
 		&::before,
 		&::after {
 			@extend %pseudo;
