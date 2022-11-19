@@ -459,9 +459,9 @@
 		top: -220px;
 
 		@include media('>=390px') {
-			right: -8px;
-			width: 230px;
-			top: -225px;
+			right: -28px;
+			width: 220px;
+			top: -180px;
 		}
 
 		@include media('>=460px') {
@@ -668,11 +668,9 @@
 		opacity: 1;
 	}
 }
-
 .title-company-introSection {
 	position: relative;
 }
-
 .titleIntro-anima {
 	position: relative;
 	min-height: 20px;
@@ -694,7 +692,6 @@
 		}
 	}
 }
-
 .introSectionMainPage {
 	min-height: 290px;
 
@@ -706,7 +703,6 @@
 		}
 	}	
 }
-
 .intro-section.seoPage-introSection {
 	min-height: 251px;
 	padding-bottom: 5rem;
@@ -806,7 +802,8 @@
 	}
 }
 .intro-section.developPage-introSection{
-	padding-bottom: 10rem;
+	padding-bottom: 5rem;
+	min-height: 250px;
 
 	@include media('>=tablet') {
 		padding-bottom: 15rem;
@@ -816,6 +813,10 @@
 	@include media('>=desktop') {
 		padding-top: 6rem;
 		padding-bottom: 25rem;
+	}
+
+	.intro-section__wrapper {
+		margin-top: 115px;
 	}
 }
 .intro-section.addTasksPage-introSection {
@@ -828,5 +829,3 @@
 		padding-bottom: 47rem;
 	}
 }
-
-
