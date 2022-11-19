@@ -104,6 +104,7 @@
 			font-size: 1.5rem;
 			margin-right: -30px;
 			margin-top: 60px;
+			font-family: $MazzardHBold;
 
 			@include media(">=tablet") {
 			}
@@ -117,6 +118,34 @@
 		.title__h2.developPageTarifHelp-h2 {
 			@include media(">=desktop") {
 				margin-top: 230px;
+			}
+		}
+		.title__h2.seoPageTarifHelp-h2 {
+			margin-top: 51px;
+			margin-left: 13px;
+
+			@include media('>=395px') {
+				margin-top: 51px;
+				margin-left: 13px;
+			}
+			@include media('>=phone-lg') {
+				font-size: 2.4rem;
+				margin-right: 150px;
+			}
+			@include media('>=tablet') {
+				font-size: 3.4rem;
+				margin-right: 210px;
+			}
+
+			@include media('>=desktop') {
+				font-size: 4.6rem;
+				margin-right: 260px;
+			}
+
+			@include media('>=widescreen-lg') {
+				font-size: 5.6rem;
+				margin-right: 350px;
+				margin-top: 295px;
 			}
 		}
 	}
@@ -319,5 +348,52 @@
 
 	@include media('>=widescreen-lg') {
 		min-height: 1317px;
+	}
+}
+
+.seoTarifHelp__imageWrapper {
+	width: 286px;
+
+	@include media('>=phone-lg') {
+		width: 400px;
+	}
+	@include media('>=tablet') {
+		width: 500px;
+	}
+	@include media('>=desktop') {
+		width: 700px;
+	}
+	@include media('>=widescreen-lg') {
+		width: 900px;
+	}
+}
+.seoTarifHelp__imageWrapper .tarifHelp-plane-img {
+	position: absolute;
+    top: -66px;
+    right: -18px;
+    width: 180px;
+
+	@include media('>=395px') {
+		top: -66px;
+		right: -18px;
+	}
+	@include media('>=phone-lg') {
+		top: -115px;
+		right: -38px;
+		width: 300px;
+	}
+	@include media('>=tablet') {
+	    top: -136px;
+		right: -23px;
+		width: 400px;
+	}
+	@include media('>=desktop') {
+		top: -173px;
+		right: -23px;
+	}
+	@include media('>=widescreen-lg') {
+	    top: -280px;
+		right: -75px;
+		width: 789px;
 	}
 }
