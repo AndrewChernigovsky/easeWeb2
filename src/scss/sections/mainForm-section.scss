@@ -1,10 +1,17 @@
 .mainFormShape {
     background-color: $black;
-    height: 10rem;
-    padding-bottom: 10rem;
+    height: 6rem;
+    padding-bottom: 6rem;
 	margin-bottom: -10px;
     border-radius: 100% 100% 0% 0%;
 	border-bottom: 1px solid $black;
+
+	@include media('>=tablet') {
+	}
+	@include media('>=desktop') {
+	}
+	@include media('>=widescreen-lg') {
+	}
 }
 
 .mainForm-section {
@@ -23,6 +30,7 @@
 	&__wrapper {
 		max-width: 1220px;
     	margin: 0 auto;
+		padding: 0 1rem;
 
 		@include media('>=desktop') {
 			padding-top: 11rem;
@@ -34,7 +42,7 @@
     border: 1px solid $white;
     min-width: 280px;
     max-width: 1260px;
-    min-height: 150px;
+    min-height: 140px;
     margin: 0 auto;
 
     @include media('>=widescreen-lg') {
@@ -45,6 +53,7 @@
         padding: 2rem;
         min-width: 100%;
         text-align: center;
+		padding-top: 2.5rem;
 
 		@include media('>=desktop') {
 			padding: 11rem 9rem 10rem 9rem;
@@ -54,7 +63,7 @@
             font-size: 1.5rem;
 
             @include media('>=phone-lg') {
-                font-size: 2.7rem;
+                font-size: 2.4rem;
             }
             @include media('>=tablet') {
                 font-size: 3.3rem;
@@ -93,7 +102,7 @@
         .wrapperButtons {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 1rem;
 
 			@include media('>=desktop') {
 				gap: 3.3rem;
@@ -103,6 +112,18 @@
         .wrapperButton {
             max-width: 520px;
             min-width: 100%;
+
+			.button-more {
+				&::after {
+
+					@include media('>=phone-lg') {
+						height: 30px;
+						right: 8px;
+						top: 10px;
+						width: 15px;
+					}
+				}
+			}
         }
 
         .input {
@@ -149,8 +170,9 @@
         font-family: $MontserratBold;
         font-size: 0.8rem;
         padding: 0.2rem;
+		padding-left: 12px;
 		border-radius: 0;
-        text-align: center;
+        text-align: left;
         position: relative;
 		background: linear-gradient(to left, $orange1, $orange);
 
@@ -160,6 +182,7 @@
 		}
 	
         @include media('>=desktop') {
+			text-align: center;
 			height: 70px;
 			padding: 2rem;
 			font-size: 2rem;
@@ -300,6 +323,10 @@ input.mainFormInput {
 	height: 20px;
 	padding: 0.5rem 0 0.5rem 1rem;
 
+	@include media('>=phone-lg') {
+		font-size: 2.4rem;
+		height: 50px;
+	}
 	@include media('>=desktop') {
 		font-size: 2.4rem;
 		height: 70px;
@@ -311,7 +338,7 @@ input.mainFormInput {
 }
 
 .seoAdd {
-	padding-bottom: 2rem;
+	padding-bottom: 7.5rem;
 
 	@include media('>=desktop') {
 		padding-bottom: 20rem;
@@ -393,106 +420,107 @@ input.mainFormInput {
 	}
 }
 
-.mainFormShape.mainPage {
-	height: 7rem;
-    padding-bottom: 7rem;
+// .mainFormShape.mainPage {
+// 	height: 7rem;
+//     padding-bottom: 7rem;
 
-	@include media('>=widescreen-lg') {
-		height: 10rem; 
-		padding-bottom: 20rem;
-	}
-}
-.mainForm-section.mainPage {
-	.mainForm-section__wrapper {
-		padding: 0 8px;
-		max-width: 1275px;
-	}
+// 	@include media('>=widescreen-lg') {
+// 		height: 10rem; 
+// 		padding-bottom: 20rem;
+// 	}
+// }
 
-	.mainForm {
-		min-height: 138px;
-	}
+// .mainForm-section.mainPage {
+// 	.mainForm-section__wrapper {
+// 		padding: 0 8px;
+// 		max-width: 1275px;
+// 	}
 
-	.mainForm__title{
-		font-family: $MazzardHBold;
-	}
-	// .mainForm__inner{
-	// 	margin: 0;
-	// }
+// 	.mainForm {
+// 		min-height: 138px;
+// 	}
 
-	.mainForm__wrapper{
-		padding: 2rem 2rem 1rem 2rem;
+// 	.mainForm__title{
+// 		font-family: $MazzardHBold;
+// 	}
+// 	// .mainForm__inner{
+// 	// 	margin: 0;
+// 	// }
 
-		@include media('>=phone-lg') {
-			padding: 4rem 2rem 8rem 2rem;
-		}
+// 	.mainForm__wrapper{
+// 		padding: 2rem 2rem 1rem 2rem;
 
-		@include media('>=widescreen-lg') {
-			padding: 10rem 9rem 10rem 9rem;
-		}
+// 		@include media('>=phone-lg') {
+// 			padding: 4rem 2rem 8rem 2rem;
+// 		}
 
-		.mainForm__title {
-			font-size: 1.2rem;
+// 		@include media('>=widescreen-lg') {
+// 			padding: 10rem 9rem 10rem 9rem;
+// 		}
 
-			@include media('>=phone-lg') {
-                font-size: 2.7rem;
-            }
-            @include media('>=tablet') {
-                font-size: 3.3rem;
-            }
-            @include media('>=desktop') {
-                font-size: 4.3rem;
-            }
-            @include media('>=widescreen-lg') {
-                font-size: 5.6rem;
-            }
-		}
-	}
+// 		.mainForm__title {
+// 			font-size: 1.2rem;
 
-	.mainForm__inner .input:nth-last-of-type(1) {
-		order: 3;
-	}
+// 			@include media('>=phone-lg') {
+//                 font-size: 2.7rem;
+//             }
+//             @include media('>=tablet') {
+//                 font-size: 3.3rem;
+//             }
+//             @include media('>=desktop') {
+//                 font-size: 4.3rem;
+//             }
+//             @include media('>=widescreen-lg') {
+//                 font-size: 5.6rem;
+//             }
+// 		}
+// 	}
 
-	.inputs, 
-	.wrapperButtons {
-		gap: 1rem;
+// 	.mainForm__inner .input:nth-last-of-type(1) {
+// 		order: 3;
+// 	}
 
-		@include media('>=widescreen-lg') {
-			gap: 4rem;
-		}
-	}
+// 	.inputs, 
+// 	.wrapperButtons {
+// 		gap: 1rem;
 
-	.mainForm__button {
-		text-align: left;
-		padding-left: 1.2rem;
+// 		@include media('>=widescreen-lg') {
+// 			gap: 4rem;
+// 		}
+// 	}
 
-		@include media('>=widescreen-lg') {
-			text-align: center;
-			font-size: 2.4rem;
-		}
+// 	.mainForm__button {
+// 		text-align: left;
+// 		padding-left: 1.2rem;
 
-		&::after {
+// 		@include media('>=widescreen-lg') {
+// 			text-align: center;
+// 			font-size: 2.4rem;
+// 		}
+
+// 		&::after {
 		
-			@include media('>=phone-lg') {
-				height: 40px;
-				right: 9px;
-				top: 10px;
-				width: 18px;	
-			}
+// 			@include media('>=phone-lg') {
+// 				height: 40px;
+// 				right: 9px;
+// 				top: 10px;
+// 				width: 18px;	
+// 			}
 
-			@include media('>=desktop') {
-				top: 16px;
-			}
+// 			@include media('>=desktop') {
+// 				top: 16px;
+// 			}
 
-			@include media('>=widescreen-lg') {
-				height: 40px;
-				right: 19px;
-				top: 19px;
-				width: 21px;
-			}
-		}
+// 			@include media('>=widescreen-lg') {
+// 				height: 40px;
+// 				right: 19px;
+// 				top: 19px;
+// 				width: 21px;
+// 			}
+// 		}
 	
-	}
-}
+// 	}
+// }
 
 .mainForm-polite {
 	margin-top: 1rem;
