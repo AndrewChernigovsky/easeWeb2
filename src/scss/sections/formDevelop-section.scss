@@ -241,3 +241,25 @@
 		}
 	}
 }
+
+.formDevelop.developPage {
+	padding-bottom: 3.5rem;
+
+	.formDevSec-Inner .title__h2 {
+		margin-bottom: 1rem;
+	}
+
+	.formDevelop__wrapper {
+		.button-more {
+			flex-basis: 50%;
+			text-align: left;
+			padding-left: 1rem;
+
+			&:after {
+				height: 13px;
+    			top: 2px;
+				right: 9px;
+			}
+		}
+	}
+}

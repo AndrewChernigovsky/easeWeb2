@@ -1,5 +1,6 @@
 .circles-section {
 	color: $black;
+	padding-bottom: 4rem;
 
 	&__wrapper {
 		.title__h2 {
@@ -193,8 +194,8 @@
 
 	&__circle-text1.t {
 		text-transform: none;
-		top: 63px;
-		left: -37px;
+		top: 70px;
+		left: -39px;
 
 		@include media('>=tablet') {
 			left: -33px;
@@ -226,8 +227,8 @@
 		}
 	}
 	&__circle-text1.w {
-		top: 64px;
-    	left: -93px;
+		top: 69px;
+		left: -73px;
 		text-transform: none;
 
 		@include media('>=tablet') {
@@ -246,8 +247,8 @@
 
 		&::before {
 			left: auto;
-			top: 1px;
-			right: -15px;
+			top: 6px;
+			right: -9px;
 
 			@include media('>=desktop') {
 				top: 3px;
