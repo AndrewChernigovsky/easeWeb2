@@ -105,8 +105,8 @@
 			}
 
 			@include media('>=widescreen-lg') {
-				top: 28px;
-				left: 480px;
+				top: 34px;
+				left: 507px;
 				font-size: 2.4rem;
 			}
 		}
@@ -523,9 +523,9 @@
 		}
 
 		@include media('>=widescreen-lg') {
-			top: -30px;
-			right: -100px;
-			width: 848px;
+			top: -4px;
+			right: -135px;
+			width: 791px;
 
 			video {
 				width: 1000px;
@@ -838,13 +838,18 @@
 	min-height: 250px;
 
 	@include media('>=tablet') {
-		padding-bottom: 15rem;
+		padding-bottom: 25rem;
 		padding-top: 10rem;
 	}
 
 	@include media('>=desktop') {
 		padding-top: 6rem;
 		padding-bottom: 25rem;
+	}
+
+	@include media('>=widescreen-lg') {
+		padding-top: 12rem;
+		padding-bottom: 23rem;
 	}
 }
 .intro-section.addTasksPage-introSection {
