@@ -5,7 +5,11 @@
     align-items: flex-start;
     position: relative;
     min-height: 160px;
-	padding-bottom: 6rem;
+	padding-bottom: 2.7rem;
+}
+
+.variantsSitesSection.developPage .stepsWorking-section__inner {
+	padding-top: 0;
 }
 
 .variantSection-block .stepsWorking-section__block{
@@ -56,13 +60,14 @@
 
 .variantSection-wrapper .stepsWorking-section__step-block{
 	min-width: auto;
+	padding-bottom: 0;
 }
 
 .variantSection-block .stepsWorking-section__title{
 	position: static;
 	color: $black;
 	font-family: $MontserratBold;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 	display: flex;
 	white-space: nowrap;
 
@@ -95,7 +100,7 @@
 	justify-content: flex-start;
 	align-items: flex-start;
 	overflow-x: scroll;
-	min-height: 200px;
+	min-height: 130px;
 
 	@include media('>=tablet') {
 		min-height: 275px;
@@ -115,6 +120,7 @@
 	.title__h2 {
 		color: $black;
 		font-size: 1.2rem;
+		margin-bottom: 1rem;
 
 		@include media('>=tablet') {
 			font-size: 1.2rem;

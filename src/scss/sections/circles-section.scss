@@ -23,6 +23,7 @@
 		display: flex;
 		justify-items: center;
 		justify-content: space-between;
+		padding: 0 1rem;
 
 		@include media('>=desktop') {
 			display: grid;
@@ -138,8 +139,8 @@
 	}
 
 	&__circle-text {
-	    top: 55px;
-    	right: -70px;
+	    top: 61px;
+    	right: -65px;
 
 		@include media('>=tablet') {
 			right: -76px;
@@ -156,8 +157,8 @@
 		}
 
 		&::before {
-			left: -20px;
-			top: 2px;
+			left: -13px;
+			top: 5px;
 
 			@include media('>=desktop') {
 				left: -27px;
@@ -227,7 +228,7 @@
 	&__circle-text1.w {
 		top: 64px;
     	left: -93px;
-		text-transform: uppercase;
+		text-transform: none;
 
 		@include media('>=tablet') {
 			left: -116px;
@@ -262,12 +263,12 @@
 	&__circle-runString1 {
 		background-color: $white;
 		border: 1px solid $black;
-		transform: rotate(25deg);
 		position: absolute;
-		bottom: 35px;
 		left: -43px;
 		width: 152%;
 		font-size: 1rem;
+		transform: rotate(40deg);
+   		bottom: 48px;
 
 		@include media('>=tablet') {
 			font-size: 1.2rem;
@@ -289,11 +290,11 @@
 		bottom: 92px;
 		right: -36px;
 		font-size: 1rem;
-		bottom: 35px;
 		right: -21px;
-		transform: rotate(341deg);
 		white-space: nowrap;
 		border: 1px solid $black;
+		bottom: 45px;
+    	transform: rotate(358deg);
 
 		@include media('>=tablet') {
 			font-size: 1.2rem;
@@ -312,14 +313,14 @@
 	}
 
 	&__circle-runString3 {
-		transform: rotate(29deg);
+		transform: rotate(31deg);
 		position: absolute;
 		z-index: 1;
 		background-color: $white;
 		border: 1px solid $black;
 		bottom: 80px;
 		font-size: 1rem;
-		bottom: 60px;
+		bottom: 57px;
 		left: -20px;
 
 		@include media('>=tablet') {
@@ -339,14 +340,14 @@
 	}
 
 	&__circle-runString4 {
-		bottom: 45px;
-		transform: rotate(320deg);
 		position: absolute;
-		right: -33px;
 		z-index: -1;
 		white-space: nowrap;
 		border: 1px solid $black;
 		font-size: 1rem;
+		bottom: 33px;
+		transform: rotate(340deg);
+		right: -21px;
 
 		@include media('>=tablet') {
 			font-size: 1.2rem;
