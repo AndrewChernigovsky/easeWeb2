@@ -104,12 +104,13 @@
 			font-size: 1.5rem;
 			margin-right: -30px;
 			margin-top: 60px;
-			font-family: $MazzardHBold;
+			font-family: $MontserratBold;
 
 			@include media(">=tablet") {
 			}
 
 			@include media(">=desktop") {
+				font-family: $MazzardHBold;
 				font-size: 5.6rem;
 				margin-right: 280px;
 			}
@@ -396,4 +397,8 @@
 		right: -75px;
 		width: 789px;
 	}
+}
+
+.tarifsHelp-section.developPage {
+	padding-bottom: 6.5rem;
 }

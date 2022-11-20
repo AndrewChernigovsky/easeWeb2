@@ -1,9 +1,14 @@
 .prices-section {
     background: $white;
     color: $black;
+	padding-bottom: 5rem;
 
     &__wrapper{
         display: grid;
+
+		.title__h2 {
+			font-size: 1.2rem;
+		}
     }
 
     &__inner {
@@ -108,6 +113,11 @@
         max-width: 100px;
         min-width: 100px;
         border-bottom: 2px solid transparent;
+
+		@include media('>=395px') {
+			min-width: 115px;
+			max-width: 120px;
+		}
 
 		@include media('>=phone') {
 			min-width: 150px;

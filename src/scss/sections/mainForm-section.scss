@@ -65,8 +65,8 @@
 
         .mainForm__title {
             font-size: 1.5rem;
-			font-family: $MazzardHBold;
-
+			font-family: $MontserratBold;
+			
             @include media('>=phone-lg') {
                 font-size: 2.4rem;
             }
@@ -75,6 +75,7 @@
             }
             @include media('>=desktop') {
                 font-size: 4.3rem;
+				font-family: $MazzardHBold;
             }
             @include media('>=widescreen-lg') {
                 font-size: 5.6rem;
