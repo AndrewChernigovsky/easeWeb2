@@ -66,6 +66,12 @@
 		}
 	}
 	&__wrapper.developPage-sectionWrapper {
+		margin-top: 115px;
+
+		@include media('>=tablet') {
+			margin-top: -35px;
+		}
+
 		.intro-section__title-wrapper {
 			position: relative;
 		}
@@ -79,6 +85,12 @@
 			display: flex;
 			justify-content: flex-end;
 			min-width: 190px;
+
+			@include media('>=phone-lg') {
+						font-size: 1.2rem;
+						top: 5px;
+						left: 55px;
+			}
 
 			@include media('>=tablet') {
 				top: 10px;
@@ -100,14 +112,32 @@
 		}
 
 		.title__h1 {
+			@include media('>=phone-lg') {
+				font-size: 2.8rem;
+			}
+			@include media('>=tablet') {
+				font-size: 3rem;
+			}
 			@include media('>=desktop') {
 				margin-bottom: 0;
+				font-size: 4.8rem;
+			}
+			@include media('>=widescreen-lg') {
+				margin-bottom: 0;
+				font-size: 9.6rem;
 			}
 		}
 
 		.intro-section__form-wrapper {
 			@include media('>=desktop') {
 				margin-top: 35px;
+			}
+		}
+
+		.mob-btnMenu {
+			@include media('>=phone-lg') {
+				max-width: 165px;
+				font-size: 1.2rem;
 			}
 		}
 	}
@@ -455,8 +485,9 @@
 	}
 	&__image-wrapper.developSectionimage {
 		margin-top: 30px;
-		width: 220px;
-		top: -220px;
+		width: 186px;
+		top: -173px;
+		right: -23px;
 
 		@include media('>=390px') {
 			right: -28px;
@@ -465,19 +496,20 @@
 		}
 
 		@include media('>=460px') {
-			right: -8px;
-			width: 300px;
-			top: -225px;
+			right: -22px;
+			width: 254px;
+			top: -198px;
 		}
 
 		@include media('>=phone-lg') {
-			right: -30px;
-			width: 350px;
+			right: -37px;
+			width: 335px;
+			top: -200px;
 		}
 
 		@include media('>=tablet') {
 			width: 400px;
-			top: -245px;
+			top: -60px;
 		}
 
 		@include media('>=desktop') {
@@ -813,10 +845,6 @@
 	@include media('>=desktop') {
 		padding-top: 6rem;
 		padding-bottom: 25rem;
-	}
-
-	.intro-section__wrapper {
-		margin-top: 115px;
 	}
 }
 .intro-section.addTasksPage-introSection {

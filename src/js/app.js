@@ -24,15 +24,15 @@ const BODY = document.querySelector('body');
 					.delay(0)
 					.animate(
 						{
-							top: '50px',
+							top: '10px',
 						},
-						5000
+						1000
 					)
 					.animate(
 						{
-							top: '-50px',
+							top: '-10px',
 						},
-						5000
+						1000
 					);
 			}
 		});
