@@ -239,7 +239,15 @@
 }
 
 .formDevelop.developPage {
-	padding-bottom: 3.5rem;
+	padding-bottom: 5.5rem;
+
+	@include media('>=395px') {
+		padding-bottom: 3.5rem;
+	}
+	
+	@include media('>=widescreen-lg') {
+		padding-bottom: 23.5rem;
+	}
 
 	.formDevSec-Inner .title__h2 {
 		margin-bottom: 1rem;

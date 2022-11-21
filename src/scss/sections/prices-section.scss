@@ -3,11 +3,31 @@
     color: $black;
 	padding-bottom: 5rem;
 
+	@include media('>=460px') {
+		padding-bottom: 10rem;
+	}
+	@include media('>=desktop') {
+		padding-bottom: 16rem;
+	}
+
     &__wrapper{
         display: grid;
 
 		.title__h2 {
 			font-size: 1.2rem;
+				
+			@include media('>=phone-lg') {
+				font-size: 1.8rem;
+			}
+			@include media('>=tablet') {
+				font-size: 3.2rem;
+			}
+			@include media('>=desktop') {
+				font-size: 3.6rem;
+			}
+			@include media('>=widescreen-lg') {
+				margin-bottom: 5rem;
+			}
 		}
     }
 
@@ -34,6 +54,9 @@
 
 		@include media('>=phone-lg') {
 			font-size: 1.2rem;
+		}
+		@include media('>=tablet') {
+			font-size: 1.6rem;
 		}
 		@include media('>=desktop') {
 			font-size: 1.8rem;
@@ -69,6 +92,9 @@
 
 			@include media('>=phone-lg') {
 				font-size: 1.2rem;
+			}
+			@include media('>=tablet') {
+				font-size: 1.6rem;
 			}
 			@include media('>=desktop') {
 				font-size: 1.8rem;
@@ -110,12 +136,12 @@
 	}
 
     &__tarif-wrapper {
-        max-width: 100px;
-        min-width: 100px;
+        max-width: 98px;
+        min-width: 98px;
         border-bottom: 2px solid transparent;
 
 		@include media('>=395px') {
-			min-width: 115px;
+			min-width: 120px;
 			max-width: 120px;
 		}
 
@@ -125,8 +151,8 @@
 		}
 
 		@include media('>=phone-lg') {
-			min-width: 180px;
-			max-width: 180px;
+			min-width: 176px;
+			max-width: 176px;
 		}
 
 		@include media('>=tablet') {
@@ -135,13 +161,21 @@
 		}
 
 		@include media('>=desktop') {
-			min-width: 280px;
-			max-width: 280px;
+			min-width: 320px;
+			max-width: 320px;
+		}
+
+		@include media('>=widescreen') {
+			min-width: 380px;
+			max-width: 380px;
 		}
 
 		@include media('>=widescreen-lg') {
-			min-width: 480px;
+			min-width: 460px;
 			max-width: 480px;
+		}
+		@include media('>=1500px') {
+			min-width: 480px;
 		}
 
 
@@ -189,6 +223,10 @@
 			@include media('>=phone-lg') {
 				font-size: 1.2rem;
 				padding-bottom: 7rem;
+			}
+			@include media('>=tablet') {
+				font-size: 1.4rem;
+				margin-left: 2rem;
 			}
 			@include media('>=desktop') {
 				font-size: 1.8rem;

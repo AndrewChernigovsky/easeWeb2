@@ -30,31 +30,32 @@ if mainPage
 				a(class='mainForm-polite-link' href='../pages/polite.html') политикой конфиденциальности
 if anotherPage
 	form(class=MainForm+ ' js-form1' id=MainFormID name=MainFormName action='../php/form/form3.php' method=post)
-		div(class=ClassMainForm__Wrapper)
-			if mainPage
-				p(class=ClassMainForm__title)
-					| Обсудить проект со специалистом
-			//- if addTasksPage
-			//- 	p(class=ClassMainForm__title + ' addTaskMainFormTitle')
-			//- 		| Заказать сайт
-			if !mainPage
-				p(class=ClassMainForm__title)
-					| Хотите увеличить поток клиентов?
-			div(class=ClassMainForm__Inner)
-				div(class='inputs')
-					input(class='input' type="text" placeholder='Name' name='username' value='' maxlength='20' minlenght='3' required)
-					input(class='input' type="text" placeholder='Telephone' name='userphone' value='' data-mask="tel" required)
-				div(class="wrapperButtons")
-					if mainPage
-						div(class=ClassMainForm__selectBlock id=MainFormSelectID)
-							button(type='button' class='js-select-btn' aria-label='Выбрать вид услуги')
-							select(class='js-select-list' + ' js-select' name='service')
-								option(class='js-select-option' value="consultation" selected) Консультация
-								option(class='js-select-option' value="web-developer") Разработка сайта
-								option(class='js-select-option' value="marketing-web") Продвижение сайта
-								option(class='js-select-option' value="redesign") Редизайн
-								option(class='js-select-option' value="another") Другое
-					else
-						input(class='mainFormInput' type='text' placeholder='Имеющийся сайт' name='website' value='' )
-					div(class='wrapperButton')
-						button(class=ClassMainForm__button+ ' js-form-submit button-more' type=submit id='getCallMainForm')= 'Отправить заявку'
+		if developPage
+			div(class=ClassMainForm__Wrapper+ ' developPage')
+				if mainPage
+					p(class=ClassMainForm__title)
+						| Обсудить проект со специалистом
+				//- if addTasksPage
+				//- 	p(class=ClassMainForm__title + ' addTaskMainFormTitle')
+				//- 		| Заказать сайт
+				if !mainPage
+					p(class=ClassMainForm__title)
+						| Хотите увеличить поток клиентов?
+				div(class=ClassMainForm__Inner)
+					div(class='inputs')
+						input(class='input' type="text" placeholder='Name' name='username' value='' maxlength='20' minlenght='3' required)
+						input(class='input' type="text" placeholder='Telephone' name='userphone' value='' data-mask="tel" required)
+					div(class="wrapperButtons")
+						if mainPage
+							div(class=ClassMainForm__selectBlock id=MainFormSelectID)
+								button(type='button' class='js-select-btn' aria-label='Выбрать вид услуги')
+								select(class='js-select-list' + ' js-select' name='service')
+									option(class='js-select-option' value="consultation" selected) Консультация
+									option(class='js-select-option' value="web-developer") Разработка сайта
+									option(class='js-select-option' value="marketing-web") Продвижение сайта
+									option(class='js-select-option' value="redesign") Редизайн
+									option(class='js-select-option' value="another") Другое
+						else
+							input(class='mainFormInput' type='text' placeholder='Имеющийся сайт' name='website' value='' )
+						div(class='wrapperButton')
+							button(class=ClassMainForm__button+ ' js-form-submit button-more' type=submit id='getCallMainForm')= 'Отправить заявку'

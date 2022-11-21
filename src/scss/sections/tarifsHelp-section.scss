@@ -194,7 +194,7 @@
 
 		@include media('>=desktop') {
 			width: 610px;
-			height: 610px;
+			height: 335px;
 		}
 
 		video {
@@ -208,11 +208,12 @@
 
 			@include media('>=phone-lg') {
 				width: 350px;
-				height: 350px;
+				height: 250px;
 			}
 
 			@include media('>=tablet') {
-				width: 450px;
+				width: 350px;
+				height: 300px;
 			}
 
 			@include media('>=desktop') {
@@ -401,4 +402,36 @@
 
 .tarifsHelp-section.developPage {
 	padding-bottom: 6.5rem;
+
+	@include media('>=phone-lg') {
+		padding-bottom: 16.5rem;
+	}
+
+	@include media('>=tablet') {
+		padding-bottom: 16.5rem;
+
+		.tarifsHelp-section__inner .title__h2 {
+			margin-right: 222px;
+			font-size: 2rem;
+		}
+	}
+
+	@include media('>=desktop') {
+		padding-bottom: 16.5rem;
+
+		.tarifsHelp-section__inner .title__h2 {
+			margin-right: 222px;
+			font-size: 3rem;
+		}
+	}
+
+	@include media('>=widescreen-lg') {
+		padding-bottom: 16.5rem;
+
+		.tarifsHelp-section__inner .title__h2 {
+			font-size: 5.6rem;
+			margin-right: 338px;
+			margin-top: 272px;
+		}
+	}
 }
