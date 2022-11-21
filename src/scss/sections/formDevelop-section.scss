@@ -253,10 +253,15 @@
 		@include media('>=widescreen-lg') {
 			font-size: 5.6rem;
 			font-family: $MazzardHBold;
-			margin-bottom: 5rem;
+			margin-bottom: 4rem;
 		}
 	}
 	.formDevSec-Inner {
+
+		@include media('>=widescreen-lg') {
+			padding-bottom: 3rem;
+		}
+
 		input {
 			@include media('>=phone-lg') {
 				flex-basis: 45%;
@@ -268,12 +273,22 @@
 				font-size: 1.8rem;
 				height: 50px;
 			}
+
+			@include media('>=widescreen-lg') {
+				font-size: 2.4rem;
+				height: 70px;
+				flex-basis: 62%;
+				padding-left: 2rem;
+			}
 		}
 	}
 
 	.formDevelop__text span {
 		@include media('>=phone-lg') {
 			font-size: 1.6rem;
+		}
+		@include media('>=desktop') {
+			font-size: 2.4rem;
 		}
 	}
 
@@ -295,6 +310,8 @@
 			@include media('>=widescreen-lg') {
 				font-size: 2.4rem;
 				height: 70px;
+				margin-left: 4rem;
+				padding-left: 2rem;
 			}
 			&:after {
 				height: 13px;
@@ -309,7 +326,25 @@
 					height: 30px;
 					top: 10px;
 				}
+				@include media('>=widescreen-lg') {
+					height: 40px;
+					top: 18px;
+					right: -3px;
+				}
 			}
+		}
+	}
+	.formDevelop__inner {
+		@include media('>=widescreen-lg') {
+			min-width: 784px;
+		}
+	}
+
+	.formDevelop__imageWrapper video {
+		
+		@include media('>=widescreen-lg') {
+			width: 320px;
+			margin-top: -30px;
 		}
 	}
 }
