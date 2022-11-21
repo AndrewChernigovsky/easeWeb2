@@ -6,6 +6,23 @@
     position: relative;
     min-height: 160px;
 	padding-bottom: 2.7rem;
+
+	@include media('>=phone-lg') {
+		padding-bottom: 5.5rem;
+	}
+
+	@include media('>=tablet') {
+		padding-bottom: 8.5rem;
+	}
+
+	@include media('>=desktop') {
+		padding-bottom: 10.5rem;
+	}
+
+	@include media('>=widescreen-lg') {
+		padding-bottom: 13.5rem;
+	}
+
 }
 
 .variantsSitesSection.developPage .stepsWorking-section__inner {
@@ -21,12 +38,17 @@
 	border-radius: 40px;
 	box-shadow: inset 9px 43px 13px -41px rgba(0,0,0,0.25),
 				inset 1px 4px 20px 2px rgba(0,0,0,0.25);
+	box-shadow: inset -1px -1px 3px 0px rgba(0,0,0,0.25), inset 2px 2px 9px 0px rgba(0,0,0,0.25);
 	min-width: max-content;
 	overflow: hidden;
 
 	@include media('>=phone-lg') {
 		min-width: 200px;
 		min-height: 245px;
+	}
+	@include media('>=tablet') {
+		min-width: 325px;
+    	min-height: 300px;
 	}
 
 	@include media('>=desktop') {
@@ -35,6 +57,7 @@
 
 	@include media('>=widescreen-lg') {
 		min-height: 645px;
+		min-width: 471px;
 	}
 
 	&:hover,
@@ -46,6 +69,13 @@
 			transition-duration: 2s;
 			opacity: 1;
 
+			@include media('>=phone-lg') {
+				height: 100px;
+			}
+
+			@include media('>=tablet') {
+				height: 150px;
+			}
 			@include media('>=desktop') {
 				height: 100px;
 			}
@@ -71,6 +101,14 @@
 	display: flex;
 	white-space: nowrap;
 
+	@include media('>=phone-lg') {
+		font-size: 1.6rem;
+	}
+
+	@include media('>=tablet') {
+		font-size: 2.6rem;
+	}
+
 	@include media('>=desktop') {
 		font-size: 5.6rem;
 	}
@@ -80,14 +118,20 @@
 	opacity: 0;
 	position: static;
 	color: $black;
-	font-family: $MontserratBold;
+	font-family: $Montserrat;
 	list-style-type: disc;
 	padding-left: 2rem;
 
-	@include media('>=phone-lg') {
-		font-size: 1rem;
+	li:first-of-type {
+		margin-bottom: 1rem;
 	}
 
+	@include media('>=phone-lg') {
+		font-size: 1.4rem;
+	}
+	@include media('>=tablet') {
+		font-size: 2.4rem;
+	}
 	@include media('>=desktop') {
 		font-size: 2.2rem;
 		padding-left: auto;
@@ -103,7 +147,7 @@
 	min-height: 130px;
 
 	@include media('>=tablet') {
-		min-height: 275px;
+		min-height: 320px;
 	}
 	@include media('>=desktop') {
 		min-height: 600px;
@@ -122,11 +166,17 @@
 		font-size: 1.2rem;
 		margin-bottom: 1rem;
 
+		@include media('>=phone-lg') {
+			font-size: 1.8rem;
+		}
 		@include media('>=tablet') {
-			font-size: 1.2rem;
+			font-size: 3.2rem;
 		}
 		@include media('>=desktop') {
 			font-size: 3.8rem;
+		}
+		@include media('>=widescreen-lg') {
+			margin-bottom: 5rem;
 		}
 	}
 
