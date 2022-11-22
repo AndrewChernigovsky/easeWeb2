@@ -124,6 +124,13 @@
 			width: 300px;
 		}
 	}
+
+	.mainForm-polite-link {
+
+		&:visited {
+			color: $black;
+		}
+	}
 }
 
 .formDevelop.seoPage {
@@ -280,12 +287,13 @@
 			@include media('>=desktop') {
 				font-size: 1.8rem;
 				height: 50px;
+				flex-basis: 62%;
 			}
 
 			@include media('>=widescreen-lg') {
 				font-size: 2.4rem;
 				height: 70px;
-				flex-basis: 62%;
+				flex-basis: 52%;
 				padding-left: 2rem;
 			}
 		}
@@ -320,6 +328,8 @@
 				height: 70px;
 				margin-left: 4rem;
 				padding-left: 2rem;
+				padding-right: 2.7rem;
+				flex-basis: 29%;
 			}
 			&:after {
 				height: 13px;

@@ -121,7 +121,7 @@
 	&__wrapper.addTasksPage {
 		.mainForm__title {
 			display: block;
-			
+
 			@include media('>=desktop') {
 				display: none;
 			}
@@ -179,6 +179,12 @@
 						right: 8px;
 						top: 10px;
 						width: 15px;
+					}
+					@include media('>=desktop') {
+						right: 8px;
+						top: 12px;
+						width: 27px;
+						height: 45px;
 					}
 					@include media('>=widescreen-lg') {
 						height: 46px;
@@ -255,8 +261,10 @@
 			}
 
 			&::after {
-				height: 35px;
-				top: 18px;
+				height: 43px;
+				right: 8px;
+				top: 12px;
+				width: 27px;
 			}
         }
         @include media('>=widescreen-lg') {
@@ -485,108 +493,6 @@ input.mainFormInput {
 		}
 	}
 }
-
-// .mainFormShape.mainPage {
-// 	height: 7rem;
-//     padding-bottom: 7rem;
-
-// 	@include media('>=widescreen-lg') {
-// 		height: 10rem; 
-// 		padding-bottom: 20rem;
-// 	}
-// }
-
-// .mainForm-section.mainPage {
-// 	.mainForm-section__wrapper {
-// 		padding: 0 8px;
-// 		max-width: 1275px;
-// 	}
-
-// 	.mainForm {
-// 		min-height: 138px;
-// 	}
-
-// 	.mainForm__title{
-// 		font-family: $MazzardHBold;
-// 	}
-// 	// .mainForm__inner{
-// 	// 	margin: 0;
-// 	// }
-
-// 	.mainForm__wrapper{
-// 		padding: 2rem 2rem 1rem 2rem;
-
-// 		@include media('>=phone-lg') {
-// 			padding: 4rem 2rem 8rem 2rem;
-// 		}
-
-// 		@include media('>=widescreen-lg') {
-// 			padding: 10rem 9rem 10rem 9rem;
-// 		}
-
-// 		.mainForm__title {
-// 			font-size: 1.2rem;
-
-// 			@include media('>=phone-lg') {
-//                 font-size: 2.7rem;
-//             }
-//             @include media('>=tablet') {
-//                 font-size: 3.3rem;
-//             }
-//             @include media('>=desktop') {
-//                 font-size: 4.3rem;
-//             }
-//             @include media('>=widescreen-lg') {
-//                 font-size: 5.6rem;
-//             }
-// 		}
-// 	}
-
-// 	.mainForm__inner .input:nth-last-of-type(1) {
-// 		order: 3;
-// 	}
-
-// 	.inputs, 
-// 	.wrapperButtons {
-// 		gap: 1rem;
-
-// 		@include media('>=widescreen-lg') {
-// 			gap: 4rem;
-// 		}
-// 	}
-
-// 	.mainForm__button {
-// 		text-align: left;
-// 		padding-left: 1.2rem;
-
-// 		@include media('>=widescreen-lg') {
-// 			text-align: center;
-// 			font-size: 2.4rem;
-// 		}
-
-// 		&::after {
-		
-// 			@include media('>=phone-lg') {
-// 				height: 40px;
-// 				right: 9px;
-// 				top: 10px;
-// 				width: 18px;	
-// 			}
-
-// 			@include media('>=desktop') {
-// 				top: 16px;
-// 			}
-
-// 			@include media('>=widescreen-lg') {
-// 				height: 40px;
-// 				right: 19px;
-// 				top: 19px;
-// 				width: 21px;
-// 			}
-// 		}
-	
-// 	}
-// }
 
 .mainForm-polite {
 	margin-top: 1rem;

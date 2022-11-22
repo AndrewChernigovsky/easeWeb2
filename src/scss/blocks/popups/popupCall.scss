@@ -30,6 +30,32 @@
 		@include media('>=tablet') {
 			padding: 4rem 2rem;
 		}
+
+        .mainForm-polite {
+            color: $white;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+
+            @include media('>=tablet') {
+                font-size: 1.8rem;
+            }
+            @include media('>=desktop') {
+                font-size: 2.8rem;
+            }
+
+            a {
+                font-size: 1.2rem;
+
+                @include media('>=tablet') {
+                    font-size: 1.8rem;
+                }
+                @include media('>=desktop') {
+                    font-size: 2.8rem;
+                }
+    
+            }
+        }
     }
 
     .PopupCallBtnClose {
@@ -81,17 +107,26 @@
     }
 
     .mainForm__button {
-        min-width: 50%;
-        max-width: 80%;
-
 		min-width: 100%;
+        font-size: 1.4rem;
+        height: 50px;
+        text-align: center;
+
+        @include media('>=tablet') {
+            min-width: 50%;
+            font-size: 1.8rem;
+        }
+        @include media('>=desktop') {
+            min-width: 50%;
+            font-size: 2.8rem;
+            height: 70px;
+        }
     }
 
     .inputs {
 		display: grid;
         justify-content: center;
         gap: 2rem;
-
 
 		@include media('>=tablet') {
 			display: flex;

@@ -225,7 +225,7 @@
 
 			@include media('>=widescreen-lg') {
 				width: 610px;
-				height: 610px;
+				height: 530px;
 				top: -420px;
 				right: -105px;
 			}
@@ -404,11 +404,11 @@
 	padding-bottom: 6.5rem;
 
 	@include media('>=phone-lg') {
-		padding-bottom: 16.5rem;
+		padding-bottom: 20.5rem;
 	}
 
 	@include media('>=tablet') {
-		padding-bottom: 16.5rem;
+		padding-bottom: 25.5rem;
 
 		.tarifsHelp-section__inner .title__h2 {
 			margin-right: 222px;
@@ -417,7 +417,7 @@
 	}
 
 	@include media('>=desktop') {
-		padding-bottom: 16.5rem;
+		padding-bottom: 35.5rem;
 
 		.tarifsHelp-section__inner .title__h2 {
 			margin-right: 222px;

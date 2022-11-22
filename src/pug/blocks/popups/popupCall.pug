@@ -9,15 +9,10 @@ div(class=ClassPopupCall id=popupCall__mainID)
 					div(class='inputs')
 						input(class='input' type="text", placeholder='Name', name='username', value='' required)
 						input(class='input' type="text", placeholder='Telephone', name='userphone', value='' data-mask="tel" required)
-					div(class='politeCheckboxWrapper')
-						input(type="checkbox", name='polite', id='politeCheckbox' required)
-						label(class='labelCallPopupCheckbox', for="politeCheckbox")
-						div(class='polite-p-wrapper')
-							p я прочитал и согласен с &nbsp;
-							=" "
-							a(href='../pages/polite.html') политикой конфиденциальности
+					p(class='mainForm-polite') нажимая кнопку отправить, вы соглашаетесь с нашей 
+						a(class='mainForm-polite-link' href='../pages/polite.html') политикой конфиденциальности
 					div(class='wrapperButton')
-						button(class=ClassMainForm__button type=submit disabled id='getCall')= 'Заказать звонок'
+						button(class=ClassMainForm__button type=submit id='getCall')= 'Заказать звонок'
 
 		if anotherPage
 			form(class='js-formPopup' action='../php/form/formPopup.php' name=popupCallName method=post class=ClasspopupCallForm id=popupCallID)
@@ -25,12 +20,7 @@ div(class=ClassPopupCall id=popupCall__mainID)
 					div(class='inputs')
 						input(class='input' type="text", placeholder='Name', name='username', value='' required)
 						input(class='input' type="text", placeholder='Telephone', name='userphone', value='' data-mask="tel" required)
-					div(class='politeCheckboxWrapper')
-						input(class='input' type="checkbox", name='polite', id='politeCheckbox' required)
-						label(class='labelCallPopupCheckbox', for="politeCheckbox")
-						div(class='polite-p-wrapper')
-							p я прочитал и согласен с &nbsp;
-							=" "
-							a(href='../pages/polite.html') политикой конфиденциальности
 					div(class='wrapperButton')
-						button(class=ClassMainForm__button type=submit disabled id='getCall')= 'Заказать звонок'
+						button(class=ClassMainForm__button type=submit id='getCall')= 'Заказать звонок'
+					p(class='mainForm-polite') нажимая кнопку отправить, вы соглашаетесь с нашей 
+						a(class='mainForm-polite-link' href='../pages/polite.html') политикой конфиденциальности
