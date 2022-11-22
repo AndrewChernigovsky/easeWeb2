@@ -55,6 +55,20 @@
 	}
 }
 
+.mainForm-section.addTasksPage {
+	padding-top: 2.5rem;
+
+	@include media('>=widescreen-lg') {
+			padding-top: 0;
+	}
+
+	.mainForm-section__wrapper {
+		@include media('>=widescreen-lg') {
+			padding-top: 3rem;
+		}
+	}
+}
+
 .mainForm {
     border: 1px solid $white;
     min-width: 280px;
@@ -77,9 +91,12 @@
 		}
 
         .mainForm__title {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
 			font-family: $MontserratBold;
 			
+            @include media('>=395px') {
+                font-size: 1.5rem;
+            }
             @include media('>=phone-lg') {
                 font-size: 2.4rem;
             }
@@ -98,6 +115,23 @@
 	&__wrapper.developPage {
 		@include media('>=widescreen-lg') {
 			padding: 10rem 6rem 10rem 10rem;
+		}
+	}
+
+	&__wrapper.addTasksPage {
+		.mainForm__title {
+			display: block;
+			
+			@include media('>=desktop') {
+				display: none;
+			}
+		}
+		.mainForm__title.ds {
+			display: none;
+
+			@include media('>=desktop') {
+				display: block;
+			}
 		}
 	}
 
@@ -185,11 +219,6 @@
             &::placeholder {
                 color: $white;
             }
-
-            &:focus {
-                // border: 1px solid $white;
-            }
-
         }
     }
 

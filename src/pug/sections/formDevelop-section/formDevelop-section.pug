@@ -6,6 +6,10 @@ if seoPage
 	section(class=formDevelop+' seoPage')
 if developPage
 	section(class=formDevelop+' developPage')
+if mainPage
+	section(class=formDevelop+' mainPage')
+if addTasksPage
+	section(class=formDevelop+' addTasksPage')
 		.container
 			div(class=formDevelopSectionWrapper)
 				div(class='formDevSec-Inner')
@@ -23,12 +27,16 @@ if developPage
 									div(class=ClassformDevelop__Inner)
 										input(class='js-input-phone' type="text" placeholder='Telephone' name='userphone' value='' data-mask="tel" required)
 										include ../../blocks/button
+				p(class='mainForm-polite') нажимая кнопку отправить, вы соглашаетесь с нашей 
+					a(class='mainForm-polite-link' href='../pages/polite.html') политикой конфиденциальности
 						if anotherPage
 							form(class=ClassformDevelop + ' js-form2' id='formDevelopID' name=introFormName action='../php/form/form.php' method=post)
 								div(class=ClassformDevelop__Wrapper)
 									div(class=ClassformDevelop__Inner)
 										input(class='js-input-phone' type="text" placeholder='Telephone' name='userphone' value=''  data-mask="tel" required)
 										include ../../blocks/button
+				p(class='mainForm-polite') нажимая кнопку отправить, вы соглашаетесь с нашей 
+					a(class='mainForm-polite-link' href='../pages/polite.html') политикой конфиденциальности
 					if developPage
 						div(class='formDevelop__imageWrapper')
 							video(autoplay loop muted)

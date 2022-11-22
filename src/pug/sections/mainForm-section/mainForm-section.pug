@@ -11,15 +11,19 @@ if !mainPage
 	else
 		div(class='mainFormShape' id=mainFormShape)
 
-	if addTasksPage
-		section(class=mainForm__Section+' seoAdd'+ ' addTaskPageMainForm' id='contacts')
 	if developPage
 		section(class=mainForm__Section+' seoAdd'+ ' developPage' id='contacts')
 			.container
 				h2(class='h2-none')= 'заказать звонок, оставить заявку'
 				div(class=mainForm__Section__Wrapper)
 					include form
-	else
+	if addTasksPage
+		section(class=mainForm__Section+' seoAdd'+ ' addTasksPage'  id='contacts')
+			.container
+				h2(class='h2-none')= 'заказать звонок, оставить заявку'
+				div(class=mainForm__Section__Wrapper)
+					include form
+	if seoPage
 		section(class=mainForm__Section+' seoAdd' id='contacts')
 			.container
 				h2(class='h2-none')= 'заказать звонок, оставить заявку'

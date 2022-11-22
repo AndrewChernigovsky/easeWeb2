@@ -149,8 +149,8 @@
 			max-width: calc(100% - 60px);
 		}
 
-		@include media('>=full-hd') {
-			max-width: calc(100% - 210px);
+		@include media('>=1880px') {
+			max-width: calc(100% - 310px);
 		}
 
 		&::before,
@@ -241,13 +241,16 @@
 	&__link {
 		color: $white;
 		font-family: $Montserrat;
-		font-size: 0.8rem;
+		font-size: 0.7rem;
 		border-width: 0;
 		border-bottom: 1px solid transparent;
 		position: relative;
 		transition: all 0.25s linear;
 		padding-bottom: 10px;
 
+		@include media('>=395px') {
+			font-size: 0.8rem;
+		}
 		@include media('>=phone-lg') {
 			font-size: 1.2rem;
 		}
