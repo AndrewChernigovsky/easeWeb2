@@ -165,3 +165,42 @@ input.invalid:focus {
 	opacity: 1;
 	transition: $base-transition;
 }
+
+.mainPolitePage {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include media('>=phone-lg') {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  @include media('>=tablet') {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  @include media('>=desktop') {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+  }
+
+  @include media('>=widescreen-lg') {
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+  }
+
+  h1 {
+    padding-bottom: 2rem;
+    font-size: 5.6rem;
+  }
+
+  ul {
+    font-size: 3rem;
+  }
+
+  li, p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
