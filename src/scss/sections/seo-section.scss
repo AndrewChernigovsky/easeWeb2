@@ -36,10 +36,6 @@
 			grid-template-columns: 1fr;
 		}
 
-		// @include media('>=desktop') {
-		// 	gap: 2rem;
-		// }
-
 		@include media('>=widescreen-lg') {
 			gap: 6rem;
 		    grid-template-columns: 39% 1fr;
@@ -117,10 +113,13 @@
 		font-family: $MontserratBold;
 		position: relative;
 		z-index: 1;
-		font-size: 0.8rem;
+		font-size: 0.6rem;
 
+		@include media('>=390px') {
+			font-size: 0.8rem;
+		}
 		@include media('>=desktop') {
-			font-size: 2.4rem;
+			font-size: 2.3rem;
 		}
 
 		@include media('>=widescreen-lg') {
@@ -334,7 +333,7 @@
 
 		@include media('>=phone-lg') {
 			top: -275px;
-			width: 350px;
+			width: 280px;
 		}
 
 		@include media('>=tablet') {
@@ -345,6 +344,10 @@
 		@include media('>=desktop') {
 			top: -120px;
 			left: 7px;
+			height: 460px;
+		}
+		@include media('>=widescreen-lg') {
+			height: 548px;
 		}
 	}
 

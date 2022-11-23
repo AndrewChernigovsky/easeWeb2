@@ -14,7 +14,6 @@
 		display: flex;
 		margin-left: 30%;
 		position: relative;
-		padding-left: 8px;
 
 		@include media('>=390px') {
 			margin-left: 33%;
@@ -25,32 +24,7 @@
 			margin-left: 39%;
 		}
 
-		&::before {
-			@extend %pseudo;
-			background-color: $black;
-			width: 1px;
-			height: 185px;
-			left: 0;
-			bottom: 5px;
-
-			@include media('>=390px') {
-				height: 210px;
-				bottom: -15px;
-			}
-
-			@include media('>=desktop') {
-				width: 3px;
-				height: 474px;
-				left: -18px;
-				bottom: 26px;
-			}
-
-			@include media('>=widescreen-lg') {
-				height: 850px;
-				left: -15px;
-				bottom: -14px;
-			}
-		}
+		
 	}
 
 	&__inner {
@@ -58,7 +32,7 @@
 			color: $black;
 			font-family: $Montserrat;
 			font-size: 1rem;
-			list-style-type: disc;
+			position: relative;
 
 			@include media('>=desktop') {
 				font-size: 2.8rem;
@@ -70,13 +44,82 @@
 
 			li {
 				margin-bottom: 1rem;
-
+				position: relative;
+		
 				@include media('>=desktop') {
 					margin-bottom: 2.2rem;
 				}
 
 				@include media('>=widescreen-lg') {
 					margin-bottom: 5.2rem;
+				}
+
+				&::before {
+					@extend %pseudo;
+					background-color: $black;
+					width: 5px;
+					height: 5px;
+					left: -14px;
+					bottom: 5px;
+					border-radius: 50%;
+
+					@include media('>=desktop') {
+						width: 20px;
+						height: 20px;
+						left: -30px;
+					}
+
+					@include media('>=widescreen-lg') {
+						left: -35px;
+						bottom: 10px;
+
+						
+					}
+				}
+
+				&:last-of-type::before {
+					bottom: 15px;
+
+					@include media('>=desktop') {
+						bottom: 35px;
+					}
+					@include media('>=widescreen-lg') {
+						bottom: 55px;
+					}
+				}
+			}
+
+			&::before {
+				@extend %pseudo;
+				background-color: $black;
+				width: 1px;
+				height: 210px;
+				left: -12px;
+				bottom: -15px;
+	
+				// @include media('>=390px') {
+				// 	left: -12px;
+				// }
+	
+				// @include media('>=phone-lg') {
+				// 	left: -12px;
+				// }
+	
+				// @include media('>=tablet') {
+				// 	left: -12px;
+				// }
+				
+				@include media('>=desktop') {
+					width: 3px;
+					height: 552px;
+					left: -22px;
+					bottom: -55px;
+				}
+	
+				@include media('>=widescreen-lg') {
+					height: 850px;
+					left: -26px;
+					bottom: -14px;
 				}
 			}
 		}
@@ -88,6 +131,7 @@
     	top: -125px;
 		width: 434px;
 		opacity: 0.5;
+		z-index: -1;
 
 		@include media('>=390px') {
 			left: -119%;

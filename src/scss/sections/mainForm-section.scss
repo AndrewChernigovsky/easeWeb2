@@ -240,6 +240,13 @@
         text-align: left;
         position: relative;
 		background: linear-gradient(to left, $orange1, $orange);
+		box-shadow: rgba(255, 255, 255, 0.5) -10px -13px 7px -7px inset,
+		rgba(0, 0, 0, 0.5) 2px 4px 5px 1px inset;
+
+		&:active {
+			box-shadow: rgba(255, 255, 255, 0.5) 5px 4px 8px 1px inset,
+			rgba(0, 0, 0, 0.5) -19px -20px 6px -12px inset;
+		}
 
 		@include media('>=phone-lg') {
 			font-size: 2rem;
@@ -251,13 +258,11 @@
 			height: 70px;
 			padding: 2rem;
 			font-size: 2rem;
-			box-shadow: rgba(255, 255, 255, 0.5) 2px 2px 11px 2px inset,
-						rgba(34,60,80,0.2) -19px -20px 6px -10px inset;
+		
 
-			&:hover,
-			&:active {
-				box-shadow: rgba(255, 255, 255, 0.5) -12px -13px 8px -7px inset,
-							rgba(34,60,80,0.2) 6px 6px 8px 1px inset;
+			&:hover {
+				box-shadow: rgba(255, 255, 255, 0.5) 5px 4px 8px 1px inset,
+			rgba(0, 0, 0, 0.5) -19px -20px 6px -12px inset;
 			}
 
 			&::after {

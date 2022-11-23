@@ -126,15 +126,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	})
 
-	politeCheckbox.addEventListener('click', (e) => {
-		if (politeCheckbox.hasAttribute('checked', 'checked')) {
-			politeCheckbox.removeAttribute('checked');
-			getCall.setAttribute('disabled', 'disabled');
-		} else {
-			politeCheckbox.setAttribute('checked', 'checked');
-			getCall.removeAttribute('disabled');
-		}
-	});
+	// politeCheckbox.addEventListener('click', (e) => {
+	// 	if (politeCheckbox.hasAttribute('checked', 'checked')) {
+	// 		politeCheckbox.removeAttribute('checked');
+	// 		getCall.setAttribute('disabled', 'disabled');
+	// 	} else {
+	// 		politeCheckbox.setAttribute('checked', 'checked');
+	// 		getCall.removeAttribute('disabled');
+	// 	}
+	// });
 
 	tarifWrapper.forEach((e) => {
 		e.addEventListener('click', () => {
@@ -150,35 +150,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-let targetStepWorking = document.getElementById('stepsWorkingSectionWrapper1');
+// let targetStepWorking = document.getElementById('stepsWorkingSectionWrapper1');
 
-if (targetStepWorking) {
-	targetStepWorking.addEventListener('wheel', (event) => {
-		const toLeft = event.deltaY < 0 && targetStepWorking.scrollLeft > 0;
-		const toRight = event.deltaY > 0 && targetStepWorking.scrollLeft < targetStepWorking.scrollWidth - targetStepWorking.clientWidth;
-		let diff = targetStepWorking.scrollWidth / 2 + 20;
+// if (targetStepWorking) {
+// 	targetStepWorking.addEventListener('wheel', (event) => {
+// 		const toLeft = event.deltaY < 0 && targetStepWorking.scrollLeft > 0;
+// 		const toRight = event.deltaY > 0 && targetStepWorking.scrollLeft < targetStepWorking.scrollWidth - targetStepWorking.clientWidth;
+// 		let diff = targetStepWorking.scrollWidth / 2 + 20;
 
-		if (toLeft || toRight) {
-			event.preventDefault();
-			targetStepWorking.scrollLeft += event.deltaY;
-		}
+// 		if (toLeft || toRight) {
+// 			event.preventDefault();
+// 			targetStepWorking.scrollLeft += event.deltaY;
+// 		}
 
-		if (targetStepWorking.scrollLeft >= diff || (targetStepWorking.scrollLeft <= diff - diff && event.deltaY < 0)) {
-			BODY.classList.remove('stop-scroll');
-		}
-	});
-}
+// 		if (targetStepWorking.scrollLeft >= diff || (targetStepWorking.scrollLeft <= diff - diff && event.deltaY < 0)) {
+// 			BODY.classList.remove('stop-scroll');
+// 		}
+// 	});
+// }
 
-let optionsOuter = {
-	root: null,
-	rootMargin: '0% 0px 0% 0px',
-	threshold: 1,
-};
-let optionsList = {
-	root: null,
-	rootMargin: '50px',
-	threshold: 0.5,
-};
+// let optionsOuter = {
+// 	root: null,
+// 	rootMargin: '0% 0px 0% 0px',
+// 	threshold: 1,
+// };
+// let optionsList = {
+// 	root: null,
+// 	rootMargin: '50px',
+// 	threshold: 0.5,
+// };
 
 let optionsSHAPE = {
 	root: null,
@@ -192,38 +192,38 @@ let optionsContacts = {
 	threshold: 1,
 };
 
-let callbackOuter = function (entries, observer) {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			BODY.classList.add('stop-scroll');
-			BODY.style.width = `${windowWidth}` + 'px';
+// let callbackOuter = function (entries, observer) {
+// 	entries.forEach((entry) => {
+// 		if (entry.isIntersecting) {
+// 			BODY.classList.add('stop-scroll');
+// 			BODY.style.width = `${windowWidth}` + 'px';
 
-			let windowWidth = window.innerWidth;
+// 			let windowWidth = window.innerWidth;
 
-			window.addEventListener('resize', () => {
-				BODY.style.width = `${windowWidth}` + 'px';
-				let windowWidth = window.innerWidth;
+// 			window.addEventListener('resize', () => {
+// 				BODY.style.width = `${windowWidth}` + 'px';
+// 				let windowWidth = window.innerWidth;
 
-				if (windowWidth <= 1024) {
-					observer.unobserve(entry.target);
-					return;
-				}
-			});
-			if (windowWidth <= 1024) {
-				observer.unobserve(entry.target);
-				return;
-			}
-		}
-	});
-};
-let callbackList = function (entries, observer) {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			BODY.classList.remove('stop-scroll');
-			BODY.style.width = `${windowWidthClient}` + 'px';
-		}
-	});
-};
+// 				if (windowWidth <= 1024) {
+// 					observer.unobserve(entry.target);
+// 					return;
+// 				}
+// 			});
+// 			if (windowWidth <= 1024) {
+// 				observer.unobserve(entry.target);
+// 				return;
+// 			}
+// 		}
+// 	});
+// };
+// let callbackList = function (entries, observer) {
+// 	entries.forEach((entry) => {
+// 		if (entry.isIntersecting) {
+// 			BODY.classList.remove('stop-scroll');
+// 			BODY.style.width = `${windowWidthClient}` + 'px';
+// 		}
+// 	});
+// };
 
 let callbackContacts = function (entries, observer) {
 	entries.forEach((entry) => {
@@ -609,25 +609,25 @@ if (jsFormPopup) {
 // 	threshold: 1,
 // };
 
-let callbackLazy = function (entries, observer) {
-	entries.forEach((entry) => {
+// let callbackLazy = function (entries, observer) {
+// 	entries.forEach((entry) => {
 
-		const arr = document.querySelectorAll('.lazy_content')
+// 		const arr = document.querySelectorAll('.lazy_content')
 
-		if (entry.isIntersecting) {
-			const lazyContent = entry.target
-			console.log("lazy loading ", lazyContent)
+// 		if (entry.isIntersecting) {
+// 			const lazyContent = entry.target
+// 			console.log("lazy loading ", lazyContent)
 
 
-			arr.forEach((el) => {
-				el.classList.remove("lazy_content")
-				el.classList.add("block")
-			})
+// 			arr.forEach((el) => {
+// 				el.classList.remove("lazy_content")
+// 				el.classList.add("block")
+// 			})
 
-			observerLazy.unobserve(lazyContent);
-		}
-	});
-};
+// 			observerLazy.unobserve(lazyContent);
+// 		}
+// 	});
+// };
 
 // let observerLazy = new IntersectionObserver(callbackLazy, optionsLazy);
 

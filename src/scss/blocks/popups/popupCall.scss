@@ -121,6 +121,10 @@
             font-size: 2.8rem;
             height: 70px;
         }
+
+        &::after {
+            right: 25px;
+        }
     }
 
     .inputs {
