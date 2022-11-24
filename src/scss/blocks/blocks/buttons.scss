@@ -1,9 +1,9 @@
 .button-more {
-	height: 20px;
-	min-width: 73px;
+	height: 25px;
+    min-width: 105px;
 	border-radius: 46.5px;
 	font-family: $MontserratBold;
-	font-size: 0.8rem;
+	font-size: 1.2rem;
 	box-shadow: inset 0px 1px 2px 1px rgba(34, 60, 80, 0.2), 2px 2px 4px 0px  rgba(0, 0, 0, 0.35);
 	background: linear-gradient(to left, $orange1, $orange);
 	padding: 0.5rem 0.3rem 0.2rem 1rem;
@@ -21,8 +21,8 @@
 	&::after {
 		@extend %pseudo;
 		height: 20px;
-		right: 4px;
-		top: 3px;
+	    right: 6px;
+   		top: 5px;
 		width: 8px;
 		background-repeat: no-repeat;
 		background-size: contain;

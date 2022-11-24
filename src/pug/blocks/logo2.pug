@@ -1,7 +1,18 @@
 div(class=logoClasses[0])
 	a(class=logoClasses[1] href="#no__scroll")
-		svg(viewBox="0 0 30 30" width="30px" height="30px")
-			if mainPage
-				use(xlink:href="images/sprite/sprite.svg#logoWhite")
-			if !mainPage
-				use(xlink:href="../images/sprite/sprite.svg#logoWhite")
+		if mainPage
+			+pictureClassNamePng(
+				'',
+				'logo-image',
+				webp,
+				'../../images/content/png/logoGifPng',
+				'../../images/content/png/logoGifPng'
+				)
+		if !mainPage
+			+pictureClassNamePng(
+				'',
+				'logo-image',
+				webp,
+				'../../images/content/png/logoGifPng',
+				'../../images/content/png/logoGifPng'
+			)

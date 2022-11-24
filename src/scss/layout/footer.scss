@@ -29,7 +29,7 @@
 		position: relative;
 
 		&:last-of-type{
-			padding: 0 1rem;
+			padding: 0;
 		
 			&:before {
 				@extend %pseudo;
@@ -55,10 +55,10 @@
 		align-content: flex-start;
 
 		&-company {
-			font-size: 0.4rem;
+			font-size: 0.8rem;
 
 			@include media('>=phone-lg') {
-				font-size: 0.8rem;
+				font-size: 1.2rem;
 			}
 	
 			@include media('>=desktop') {
@@ -74,7 +74,7 @@
 		}
 
 		&-polite {
-			font-size: 0.4rem;
+			font-size: 0.8rem;
 			font-family: $MontserratItalic;
 			border-bottom: 1px solid $white;
 			white-space: nowrap;
@@ -94,12 +94,12 @@
 		}
 
 		&-telephone {
-			font-size: 0.8rem;
+			font-size: 1.4rem;
 			font-family: $MontserratBold;
 			margin-bottom: 2px;
 
 			@include media('>=phone-lg') {
-				font-size: 1.2rem;
+				font-size: 1.6rem;
 			}
 
 			@include media('>=desktop') {
@@ -190,8 +190,14 @@
 	}
 
 	.logo {
-		height: 25px;
+		height: 30px;
 		margin-left: -2px;
+		opacity: 50%;
+
+		svg {
+			width: 50px;
+			height: 40px;
+		}
 
 		@include media('>=desktop') {
 			width: 150px;
@@ -217,8 +223,10 @@
 	}
 	&__list {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
+		text-align: center;
+		flex-wrap: wrap;
 		min-width: 100%;
 
 		@include media('>=phone-lg') {
@@ -235,13 +243,16 @@
 		}
 	}
 	&__item {
+		margin: 0 auto;
+		padding: 0 0.5rem;
+
 		@include media('>=desktop') {
 		}
 	}
 	&__link {
 		color: $white;
 		font-family: $Montserrat;
-		font-size: 0.7rem;
+		font-size: 0.6rem;
 		border-width: 0;
 		border-bottom: 1px solid transparent;
 		position: relative;
@@ -252,7 +263,10 @@
 			font-size: 0.8rem;
 		}
 		@include media('>=phone-lg') {
-			font-size: 1.2rem;
+			font-size: 1rem;
+		}
+		@include media('>=tablet') {
+			font-size: 1.4rem;
 		}
 
 		@include media('>=desktop') {
@@ -293,5 +307,13 @@
 	&:hover::before,
 	&:focus::before {
 		transform: scale(0);
+	}
+}
+
+.footer.politeFooter {
+	padding-top: 4rem;
+
+	@include media('>=desktop') {
+		padding-top: 10rem;
 	}
 }

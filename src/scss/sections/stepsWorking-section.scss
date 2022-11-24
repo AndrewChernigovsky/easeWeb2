@@ -11,11 +11,15 @@
 	}
 
 	.title__h2 {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
 		font-family: $MazzardHBold;
 
 		@include media('>=390px') {
 			margin-bottom: -0.5rem;
+		}
+
+		@include media('>=phone-lg') {
+			 font-size: 2.4rem;
 		}
 
 		@include media(">=desktop") {
@@ -58,7 +62,7 @@
 
     &__text,
     &__text1 {
-		font-size: 0.8rem;
+		font-size: 1.2rem;
         font-family: $Montserrat;
 
 		@include media('>=phone-lg'){
@@ -147,10 +151,10 @@
         }
 
         p {
-            font-size: 0.8rem;
+            font-size: 1.2rem;
 
 			@include media('>=390px'){
-				font-size: 0.8rem;
+				font-size: 1.2rem;
 			}
 
 			@include media('>=phone-lg'){
@@ -304,16 +308,16 @@
     }
 
     &__title {
-        font-size: 3.2rem;
         font-family: $MontserratBold;
         position: absolute;
 		left: -30px;
-		bottom: 50px;
+		font-size: 2.2rem;
+		bottom: 85px;
 
 		@include media(">=390px") {
 			font-size: 3.4rem;
 			left: -35px;
-			bottom: 60px;
+			bottom: 80px;
         }
 
 		@include media(">=phone-lg") {

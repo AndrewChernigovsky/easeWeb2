@@ -80,7 +80,7 @@
 		flex-basis: 100%;
 		min-height: 175px;
 		color: $black;
-		padding: 1rem;
+		padding: 1.5rem;
 		align-items: flex-start;
 		justify-content: flex-end;
 		flex-direction: column;
@@ -93,6 +93,7 @@
 		box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.03), 0px -1px 0px 1px rgba(0, 0, 0, 0.05);
 
 		@include media('>=phone-lg') {
+			padding: 2rem;
 		}
 
 		@include media('>=tablet') {
@@ -100,13 +101,12 @@
 		}
 
 		@include media('>=desktop') {
-			padding: 2rem;
 			min-height: 638px;
 		}
 
 		.paragraph-base {
 			margin-bottom: 1rem;
-			font-size: 0.8rem;
+			font-size: 1.2rem;
 
 			@include media('>=desktop') {
 				font-size: 2.1rem;
@@ -142,7 +142,7 @@
 	}
 
 	.helpers-section__title {
-		font-size: 1.2rem;
+		font-size: 1.8rem;
 
 		@include media('>=phone-lg') {
 			font-size: 2.4rem;

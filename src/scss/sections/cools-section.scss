@@ -31,7 +31,7 @@
 		ul {
 			color: $black;
 			font-family: $Montserrat;
-			font-size: 1rem;
+			font-size: 1.4rem;
 			position: relative;
 
 			@include media('>=desktop') {
@@ -93,9 +93,9 @@
 				@extend %pseudo;
 				background-color: $black;
 				width: 1px;
-				height: 210px;
 				left: -12px;
-				bottom: -15px;
+				height: 238px;
+				bottom: -10px;
 	
 				// @include media('>=390px') {
 				// 	left: -12px;

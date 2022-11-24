@@ -134,14 +134,14 @@
 }
 
 .burger {
-	width: 25px;
-	height: 15px;
+	width: 30px;
+	height: 25px;
 	position: relative;
 	z-index: 120;
 	@extend %d-flex-column;
 	justify-content: center;
 	align-items: center;
-    top: 17px;
+    top: 30px;
     left: 12px;
 
 	@include media('>=tablet') {
@@ -355,11 +355,11 @@
 	}
 
 	a {
-		height: 50px;
+		height: 80px;
 
 		svg {
-			width: 35px;
-			height: 35px;
+			width: 70px;
+			height: 70px;
 		}
 	}
 }
@@ -487,6 +487,9 @@
 	max-width: 120px;
 	font-size: 1rem;
 	min-height: 20px;
+	
+    max-width: 150px;
+    font-size: 1.4rem;
 
 	@include media('>=desktop') {
 		display: none;

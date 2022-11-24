@@ -10,12 +10,16 @@
         .button-more {
             border-radius: 0;
             min-width: 120px;
-            height: 20px;
+            height: 30px;
             padding-right: 3rem;
-			flex-basis: 20%;
+			flex-basis: 50%;
 			padding-left: 0;
 			margin-left: 1rem;
 			padding-top: 0.2rem;
+
+			@include media('>=phone-lg') {
+				padding-right: 3rem;
+			}
 
 			@include media('>=desktop') {
 				height: 70px;
@@ -74,9 +78,9 @@
 		max-width: inherit;
 
         input{
-            height: 20px;
-			max-width: inherit;
-            font-size: 0.8rem;
+            height: 30px;
+			max-width: 50%;
+            font-size: 1rem;
             font-family: $Montserrat;
 			flex-basis: 50%;
 			padding: 0.5rem;
@@ -278,6 +282,7 @@
 		}
 
 		input {
+
 			@include media('>=phone-lg') {
 				flex-basis: 45%;
 				font-size: 1.4rem;
@@ -313,6 +318,8 @@
 			flex-basis: 50%;
 			text-align: left;
 			padding-left: 1rem;
+			font-size: 1rem;
+			padding-right: 2rem;
 
 			@include media('>=phone-lg') {
 				flex-basis: 35%;
@@ -332,9 +339,10 @@
 				flex-basis: 29%;
 			}
 			&:after {
-				height: 13px;
-    			top: 3px;
-				right: 9px;
+				height: 18px;
+				top: 6px;
+				right: 7px;
+				width: 11px;
 
 				@include media('>=phone-lg') {
 					top: 7px;

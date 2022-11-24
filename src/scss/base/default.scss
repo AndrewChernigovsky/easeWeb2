@@ -191,16 +191,81 @@ input.invalid:focus {
   }
 
   h1 {
-    padding-bottom: 2rem;
-    font-size: 5.6rem;
+    padding-bottom: 1rem;
+    font-size: 2.6rem;
+
+    @include media('>=phone-lg') {
+    	font-size: 3.6rem;
+    }
+  
+    @include media('>=tablet') {
+		padding-bottom: 2rem;
+    	font-size: 4.6rem;
+    }
+  
+    @include media('>=desktop') {
+      padding-bottom: 3rem;
+      font-size: 5.6rem;
+    }
   }
 
   ul {
-    font-size: 3rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+
+    @include media('>=phone-lg') {
+    	font-size: 2rem;
+    }
+  
+    @include media('>=tablet') {
+		margin-bottom: 2rem;
+    	font-size: 2.8rem;
+    }
+  
+    @include media('>=desktop') {
+    	font-size: 3.8rem;
+    }
   }
 
   li, p {
-    font-size: 2rem;
+	font-size: 1.5rem;
     margin-bottom: 1rem;
+
+    @include media('>=phone-lg') {
+    	font-size: 1.8rem;
+    }
+  
+    @include media('>=tablet') {
+		margin-bottom: 2rem;
+    	font-size: 2.5rem;
+    }
+  
+    @include media('>=desktop') {
+    	font-size: 3rem;
+    }
+  }
+
+  li {
+    padding-left: 1rem;
+
+	@include media('>=tablet') {
+		padding-left: 2rem;
+    }
+
+    &:first-of-type {
+      margin-top: 1rem;
+
+	  @include media('>=tablet') {
+		margin-bottom: 2rem;
+    }
+    }
+	
+	p {
+		padding-left: 1rem;
+
+		@include media('>=tablet') {
+			padding-left: 2rem;
+		}
+	}
   }
 }

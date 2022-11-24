@@ -74,7 +74,7 @@ const NAV = document.querySelector('.js-burger');
 const BURGER = document.querySelector('.burger');
 const blockWrapperSteps = document.querySelector('.stepsWorking-section__wrapper1');
 const blockContacts = document.querySelector('#contacts');
-const lastBlockInnerID = document.querySelector('#stepsWorkingLastBlock');
+// const lastBlockInnerID = document.querySelector('#stepsWorkingLastBlock');
 const contactsLink = document.querySelector('#contactsLink');
 
 const getCall = document.querySelector(".PopupCall button[type='submit']");
@@ -126,25 +126,21 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	})
 
-	// politeCheckbox.addEventListener('click', (e) => {
-	// 	if (politeCheckbox.hasAttribute('checked', 'checked')) {
-	// 		politeCheckbox.removeAttribute('checked');
-	// 		getCall.setAttribute('disabled', 'disabled');
-	// 	} else {
-	// 		politeCheckbox.setAttribute('checked', 'checked');
-	// 		getCall.removeAttribute('disabled');
-	// 	}
-	// });
-
 	tarifWrapper.forEach((e) => {
 		e.addEventListener('click', () => {
 			if (e.classList.contains('active')) {
 				e.classList.remove('active');
+				e.classList.remove('addActive');
 				e.firstElementChild.classList.remove('active');
 			} else {
 				e.classList.add('active');
 				e.firstElementChild.classList.add('active');
 			}
+
+			// if  (!e.classList.contains('active')){
+			// 	e.classList.add('addActive');
+			// 	e.firstElementChild.classList.add('addActive');
+			// } 
 		});
 	});
 
@@ -253,8 +249,8 @@ let callbackSHAPE = function (entries, observer) {
 	});
 };
 
-let observerOuter = new IntersectionObserver(callbackOuter, optionsOuter);
-let observerList = new IntersectionObserver(callbackList, optionsList);
+// let observerOuter = new IntersectionObserver(callbackOuter, optionsOuter);
+// let observerList = new IntersectionObserver(callbackList, optionsList);
 let observerSHAPE = new IntersectionObserver(callbackSHAPE, optionsSHAPE);
 let observerContacts = new IntersectionObserver(callbackContacts, optionsContacts);
 
@@ -271,9 +267,9 @@ if (window.innerWidth <= 1024) {
 	// alert('small');
 }
 
-if (lastBlockInnerID) {
-	observerList.observe(lastBlockInnerID);
-}
+// if (lastBlockInnerID) {
+// 	observerList.observe(lastBlockInnerID);
+// }
 
 if (blockContacts) {
 	observerContacts.observe(blockContacts);

@@ -1,43 +1,134 @@
-footer(class=footer)
-	div(class=classmenuLine+ClassfooterLine)
-	.container
-		div(class=ClassfooterWrapper)
-			div(class=ClassfooterInner)
-				div(class=ClassfooterBlock)
-					include ../../blocks/logo2
-					p(class=ClassfooterBlock__company)= footerMain.p1_1
-				div(class=ClassfooterBlock)
-					a(class=ClassfooterBlock__telephone href=`tel:${footerMain.tel}`)= footerMain.tel
-					a(class=ClassfooterBlock__polite href="../../pages/polite.html")= footerMain.polite
-			div(class=ClassfooterInner)
-				nav(class=ClassNavListFooter)
-					ul(class=ClassListFooter)
-						li(class=ClassItemFooter)
-							if mainPage
-								a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__1
-							else if anotherPage
-								a(class=ClassLinkFooter + ' a__link'  href="../index.html")= footerMain.link__1
-							else
-								a(class=ClassLinkFooter + ' a__link'  href="../index.html")= footerMain.link__1
-						li(class=ClassItemFooter)
-							if seoPage
-								a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__2
-							else if anotherPage
-								a(class=ClassLinkFooter + ' a__link'  href="seo.html")= footerMain.link__2
-							else
-								a(class=ClassLinkFooter + ' a__link'  href="pages/seo.html")= footerMain.link__2
-						li(class=ClassItemFooter)
-							if developPage
-								a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__3
-							else if anotherPage
-								a(class=ClassLinkFooter + ' a__link'  href="develop.html")= footerMain.link__3
-							else
-								a(class=ClassLinkFooter + ' a__link'  href="pages/develop.html")= footerMain.link__3
+if mainPage
+	footer(class=footer)
+		div(class=classmenuLine+ClassfooterLine)
+		.container
+			div(class=ClassfooterWrapper)
+				div(class=ClassfooterInner)
+					div(class=ClassfooterBlock)
+						include ../../blocks/logo2
+						p(class=ClassfooterBlock__company)= footerMain.p1_1
+					div(class=ClassfooterBlock)
+						a(class=ClassfooterBlock__telephone href=`tel:${footerMain.tel}`)= footerMain.tel
+						a(class=ClassfooterBlock__polite href="../../pages/polite.html")= footerMain.polite
+				div(class=ClassfooterInner)
+					nav(class=ClassNavListFooter)
+						ul(class=ClassListFooter)
+							li(class=ClassItemFooter)
+								if mainPage
+									a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__1
+								else if anotherPage
+									a(class=ClassLinkFooter + ' a__link'  href="../index.html")= footerMain.link__1
+								else
+									a(class=ClassLinkFooter + ' a__link'  href="../index.html")= footerMain.link__1
+							li(class=ClassItemFooter)
+								if seoPage
+									a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__2
+								else if anotherPage
+									a(class=ClassLinkFooter + ' a__link'  href="seo.html")= footerMain.link__2
+								else
+									a(class=ClassLinkFooter + ' a__link'  href="pages/seo.html")= footerMain.link__2
+							li(class=ClassItemFooter)
+								if developPage
+									a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__3
+								else if anotherPage
+									a(class=ClassLinkFooter + ' a__link'  href="develop.html")= footerMain.link__3
+								else
+									a(class=ClassLinkFooter + ' a__link'  href="pages/develop.html")= footerMain.link__3
 
-						li(class=ClassItemFooter)
-							if addTasksPage
-								a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__4
-							else if anotherPage
-								a(class=ClassLinkFooter + ' a__link'  href="addtasks.html")= footerMain.link__4
-							else
-								a(class=ClassLinkFooter + ' a__link'  href="pages/addtasks.html")= footerMain.link__4
+							li(class=ClassItemFooter)
+								if addTasksPage
+									a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__4
+								else if anotherPage
+									a(class=ClassLinkFooter + ' a__link'  href="addtasks.html")= footerMain.link__4
+								else
+									a(class=ClassLinkFooter + ' a__link'  href="pages/addtasks.html")= footerMain.link__4
+
+if anotherPage
+	footer(class=footer)
+		div(class=classmenuLine+ClassfooterLine)
+		.container
+			div(class=ClassfooterWrapper)
+				div(class=ClassfooterInner)
+					div(class=ClassfooterBlock)
+						include ../../blocks/logo2
+						p(class=ClassfooterBlock__company)= footerMain.p1_1
+					div(class=ClassfooterBlock)
+						a(class=ClassfooterBlock__telephone href=`tel:${footerMain.tel}`)= footerMain.tel
+						a(class=ClassfooterBlock__polite href="../../pages/polite.html")= footerMain.polite
+				div(class=ClassfooterInner)
+					nav(class=ClassNavListFooter)
+						ul(class=ClassListFooter)
+							li(class=ClassItemFooter)
+								if mainPage
+									a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__1
+								else if anotherPage
+									a(class=ClassLinkFooter + ' a__link'  href="../index.html")= footerMain.link__1
+								else
+									a(class=ClassLinkFooter + ' a__link'  href="../index.html")= footerMain.link__1
+							li(class=ClassItemFooter)
+								if seoPage
+									a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__2
+								else if anotherPage
+									a(class=ClassLinkFooter + ' a__link'  href="seo.html")= footerMain.link__2
+								else
+									a(class=ClassLinkFooter + ' a__link'  href="pages/seo.html")= footerMain.link__2
+							li(class=ClassItemFooter)
+								if developPage
+									a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__3
+								else if anotherPage
+									a(class=ClassLinkFooter + ' a__link'  href="develop.html")= footerMain.link__3
+								else
+									a(class=ClassLinkFooter + ' a__link'  href="pages/develop.html")= footerMain.link__3
+
+							li(class=ClassItemFooter)
+								if addTasksPage
+									a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__4
+								else if anotherPage
+									a(class=ClassLinkFooter + ' a__link'  href="addtasks.html")= footerMain.link__4
+								else
+									a(class=ClassLinkFooter + ' a__link'  href="pages/addtasks.html")= footerMain.link__4
+
+if politePage
+	footer(class=footer + ' politeFooter')
+		div(class=classmenuLine+ClassfooterLine)
+		.container
+			div(class=ClassfooterWrapper)
+				div(class=ClassfooterInner)
+					div(class=ClassfooterBlock)
+						include ../../blocks/logo2
+						p(class=ClassfooterBlock__company)= footerMain.p1_1
+					div(class=ClassfooterBlock)
+						a(class=ClassfooterBlock__telephone href=`tel:${footerMain.tel}`)= footerMain.tel
+						a(class=ClassfooterBlock__polite href="../../pages/polite.html")= footerMain.polite
+				div(class=ClassfooterInner)
+					nav(class=ClassNavListFooter)
+						ul(class=ClassListFooter)
+							li(class=ClassItemFooter)
+								if mainPage
+									a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__1
+								else if anotherPage
+									a(class=ClassLinkFooter + ' a__link'  href="../index.html")= footerMain.link__1
+								else
+									a(class=ClassLinkFooter + ' a__link'  href="../index.html")= footerMain.link__1
+							li(class=ClassItemFooter)
+								if seoPage
+									a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__2
+								else if anotherPage
+									a(class=ClassLinkFooter + ' a__link'  href="seo.html")= footerMain.link__2
+								else
+									a(class=ClassLinkFooter + ' a__link'  href="pages/seo.html")= footerMain.link__2
+							li(class=ClassItemFooter)
+								if developPage
+									a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__3
+								else if anotherPage
+									a(class=ClassLinkFooter + ' a__link'  href="develop.html")= footerMain.link__3
+								else
+									a(class=ClassLinkFooter + ' a__link'  href="pages/develop.html")= footerMain.link__3
+
+							li(class=ClassItemFooter)
+								if addTasksPage
+									a(class=ClassLinkFooter + ' a__link' + ' active' href="#")= footerMain.link__4
+								else if anotherPage
+									a(class=ClassLinkFooter + ' a__link'  href="addtasks.html")= footerMain.link__4
+								else
+									a(class=ClassLinkFooter + ' a__link'  href="pages/addtasks.html")= footerMain.link__4
