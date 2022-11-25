@@ -67,6 +67,8 @@
 
 		.menu__inner {
 			padding-left: 0;
+			align-items: flex-end;
+			padding-right: 10%;
 		}
 
 		.menu__nav-link {
@@ -376,7 +378,7 @@
 	text-transform: uppercase;
 	font-size: 2rem;
 	font-family: $Montserrat;
-	min-width: 100%;
+	// min-width: 100%;
 
 	ul {
 		list-style-type: none;
