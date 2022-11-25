@@ -21,11 +21,6 @@
 			justify-content: space-between;
 			margin-bottom: 2rem;
 		}
-
-		// @include media(">=widescreen") {
-		// 	display: flex;
-		// 	justify-content: space-between;
-		// }
 	}
 
 	&__card {
@@ -196,9 +191,10 @@
 
 	.title__h2 {
 		margin-bottom: 1rem;
+		font-size: 2.2rem;
 
 		@include media(">=phone-lg") {
-			font-size: 2.2rem;
+			font-size: 2.4rem;
 		}
 		@include media(">=tablet") {
 			font-size: 3rem;
@@ -212,9 +208,13 @@
 	}
 
 	.seoPrice-section__inner {
-		grid-template-columns: 32.5% 32.5% 32.5%;
+		grid-template-columns: 70%;
+		justify-content: center;
 		gap: 0.5rem;
 
+		@include media(">=phone") {
+			grid-template-columns: 32.5% 32.5% 32.5%;
+		}
 		@include media(">=phone-lg") {
 			gap: 1rem;
 		}
@@ -242,6 +242,15 @@
 				text-align: left;
 				display: flex;
 				margin-left: -3px;
+				font-size: 1.2rem;
+
+				@include media(">=phone-lg") {
+					font-size: 1.4rem;
+				}
+
+				@include media(">=tablet") {
+					font-size: 1.8rem;
+				}
 			}
 		}
 	}
@@ -259,8 +268,7 @@
 		}
 
 		&::marker {
-			font-size: 0.4rem;
-			margin-right: -10px;
+			font-size: 0.8rem;
 
 			@include media(">=phone-lg") {
 				font-size: 1rem;
@@ -274,6 +282,7 @@
 
 	.seoPrice__tarif {
 		padding: 0 0 1rem 0.4rem;
+		font-size: 1.6rem;
 
 		@include media(">=phone-lg") {
 			font-size: 2.2rem;
@@ -293,14 +302,22 @@
 	}
 
 	.seoPrice-section__pro {
+		font-size: 1.6rem;
+
+		@include media(">=phone-md") {
+			font-size: 1.2rem;
+		}
+
 		@include media(">=phone-lg") {
 			font-size: 2.2rem;
 		}
 	}
 
 	.seoPrice-section__price {
+		font-size: 2.4rem;
+
 		@include media(">=phone-lg") {
-			font-size: 2.2rem;
+			font-size: 2.6rem;
 		}
 
 		@include media('>=desktop') {
@@ -309,7 +326,12 @@
 	}
 
 	.seoPrice-section__card ul {
-		padding-bottom: 3.4rem;
+		padding-bottom: 5rem;
+		padding-left: 1.6rem;
+
+		@include media(">=phone") {
+			padding-bottom: 5.4rem;
+		}
 
 		@include media(">=phone-lg") {
 			padding-bottom: 5.4rem;
@@ -331,6 +353,7 @@
 
 	.seoPrice__date {
 		padding-bottom: 0;
+		font-size: 1.2rem;
 
 		@include media(">=phone-lg") {
 			font-size: 1.2rem;
@@ -347,19 +370,18 @@
 	}
 
 	.seoPrice-section__cost {
+		font-size: 1.2rem;
+
 		@include media(">=phone") {
-			font-size: 1rem;
-		}
-		@include media(">=phone-lg") {
 			font-size: 1.2rem;
 		}
-		@include media(">=tablet") {
-			font-size: 1.4rem;
+		@include media(">=phone-lg") {
+			font-size: 1.6rem;
 		}
-		@include media(">=desktop") {
+		@include media(">=tablet") {
 			font-size: 1.8rem;
 		}
-		@include media(">=widescreen-lg") {
+		@include media(">=desktop") {
 			font-size: 2.1rem;
 		}
 	}

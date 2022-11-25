@@ -147,7 +147,6 @@
 
         @include media('>=390px') {
             padding: 3rem 0 2rem 0;
-			grid-template-columns: 1fr 1fr;
         }
 		
         @include media('>=phone-lg') {
@@ -156,6 +155,7 @@
 
         @include media('>=tablet') {
             padding: 4rem 0 0 0;
+			grid-template-columns: 1fr 1fr;
         }
 
         @include media('>=desktop') {
@@ -401,9 +401,9 @@ input.mainFormInput {
 	background-color: transparent;
 	color: $white;
 	border: 1px solid $white;
-	font-size: 0.8rem;
+	font-size: 1.2rem;
 	min-width: 100%;
-	height: 20px;
+	height: 30px;
 	padding: 0.5rem 0 0.5rem 1rem;
 
 	@include media('>=phone-lg') {

@@ -132,26 +132,127 @@
 		@include media('>=desktop') {
 			margin-left: 0;
 		}
+		.prices-section__tarif-wrapper {
+			max-width: min-content;
+			min-width: 10%;
+			border-bottom: 1px solid transparent;
+	
+			.prices-section__tarif-content {
+				display: none;
+			}
+	
+			&:hover {
+				opacity: 0.6;
+				cursor: pointer;
+			}
+	
+			max-width: 98px;
+			min-width: 98px;
+			border-bottom: 1px solid transparent;
+	
+			@include media('>=395px') {
+				min-width: 120px;
+				max-width: 120px;
+			}
+	
+			@include media('>=phone') {
+				min-width: 150px;
+				max-width: 150px;
+			}
+	
+			@include media('>=phone-lg') {
+				min-width: 176px;
+				max-width: 176px;
+			}
+	
+			@include media('>=tablet') {
+				min-width: 220px;
+				max-width: 220px;
+			}
+	
+			@include media('>=desktop') {
+				min-width: 320px;
+				max-width: 320px;
+			}
+	
+			@include media('>=widescreen') {
+				min-width: 380px;
+				max-width: 380px;
+			}
+	
+			@include media('>=widescreen-lg') {
+				min-width: 460px;
+				max-width: 480px;
+			}
+			@include media('>=1500px') {
+				min-width: 480px;
+			}
+		}
 
+
+		.prices-section__tarif-wrapper.addActive {
+			max-width: 98px;
+			min-width: 98px;
+			border-bottom: 2px solid transparent;
+
+			@include media('>=395px') {
+				min-width: 120px;
+				max-width: 120px;
+			}
+
+			@include media('>=phone') {
+				min-width: 150px;
+				max-width: 150px;
+			}
+
+			@include media('>=phone-lg') {
+				min-width: 176px;
+				max-width: 176px;
+			}
+
+			@include media('>=tablet') {
+				min-width: 220px;
+				max-width: 220px;
+			}
+
+			@include media('>=desktop') {
+				min-width: 320px;
+				max-width: 320px;
+			}
+
+			@include media('>=widescreen') {
+				min-width: 380px;
+				max-width: 380px;
+			}
+
+			@include media('>=widescreen-lg') {
+				min-width: 460px;
+				max-width: 480px;
+			}
+			@include media('>=1500px') {
+				min-width: 480px;
+			}
+		}
 	}
 
-    &__tarif-wrapper {
-        max-width: min-content;
-        min-width: 10%;
-        border-bottom: 2px solid transparent;
-
-        .prices-section__tarif-content {
-            display: none;
-        }
-
-		&:hover {
-			opacity: 0.6;
-			cursor: pointer;
+	&__tarif.active {
+		.prices-section__tarif-wrapper {
+			border: 2px solid $black;
+			min-width: 100%;
+			max-width: 100%;
+	
+			.prices-section__tarif-content {
+				display: block;
+			}
+	
+			&:hover {
+				opacity: 1;
+			}
 		}
-    }
+	}
 
     &__tarif-wrapper.active {
-        border: 2px solid $black;
+        border: 1px solid $black;
 		min-width: 100%;
 		max-width: 100%;
 
@@ -164,54 +265,49 @@
 		}
     }
 
-    &__tarif-wrapper.addActive {
-		max-width: 98px;
-        min-width: 98px;
-        border-bottom: 2px solid transparent;
+    // &__tarif-wrapper.addActive {
+	// 	max-width: 98px;
+    //     min-width: 98px;
+    //     border-bottom: 2px solid transparent;
 
-		@include media('>=395px') {
-			min-width: 120px;
-			max-width: 120px;
-		}
+	// 	@include media('>=395px') {
+	// 		min-width: 120px;
+	// 		max-width: 120px;
+	// 	}
 
-		@include media('>=phone') {
-			min-width: 150px;
-			max-width: 150px;
-		}
+	// 	@include media('>=phone') {
+	// 		min-width: 150px;
+	// 		max-width: 150px;
+	// 	}
 
-		@include media('>=phone-lg') {
-			min-width: 176px;
-			max-width: 176px;
-		}
+	// 	@include media('>=phone-lg') {
+	// 		min-width: 176px;
+	// 		max-width: 176px;
+	// 	}
 
-		@include media('>=tablet') {
-			min-width: 220px;
-			max-width: 220px;
-		}
+	// 	@include media('>=tablet') {
+	// 		min-width: 220px;
+	// 		max-width: 220px;
+	// 	}
 
-		@include media('>=desktop') {
-			min-width: 320px;
-			max-width: 320px;
-		}
+	// 	@include media('>=desktop') {
+	// 		min-width: 320px;
+	// 		max-width: 320px;
+	// 	}
 
-		@include media('>=widescreen') {
-			min-width: 380px;
-			max-width: 380px;
-		}
+	// 	@include media('>=widescreen') {
+	// 		min-width: 380px;
+	// 		max-width: 380px;
+	// 	}
 
-		@include media('>=widescreen-lg') {
-			min-width: 460px;
-			max-width: 480px;
-		}
-		@include media('>=1500px') {
-			min-width: 480px;
-		}
-    }
-
-	&__tarif-wrapper.removeActive {
-		max-width: 10%;
-		min-width: 10%;
-    }
+	// 	@include media('>=widescreen-lg') {
+	// 		min-width: 460px;
+	// 		max-width: 480px;
+	// 	}
+	// 	@include media('>=1500px') {
+	// 		min-width: 480px;
+	// 	}
+    // }
 
     &__tarif-content {
         position: relative;

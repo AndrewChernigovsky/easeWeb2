@@ -43,7 +43,7 @@
     }
 
 	.formDevSec-Inner {
-		padding: 2rem;
+		padding: 1rem;
 		border-radius: 15px;
 		box-shadow: 1px 2px 2px 1px  rgba(0, 0, 0, 0.07), 0px 0px 0px 1px rgba(0, 0, 0, 0.07);
 
@@ -80,7 +80,7 @@
         input{
             height: 30px;
 			max-width: 50%;
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-family: $Montserrat;
 			flex-basis: 50%;
 			padding: 0.5rem;
@@ -103,7 +103,7 @@
 		}
 
         span {
-            font-size: 0.8rem;
+            font-size: 1.2rem;
             font-family: $Montserrat;
 
 			@include media('>=desktop') {
@@ -180,10 +180,16 @@
 			text-align: left;
 			min-width: 49%;
 			padding-left: 1rem;
+			padding-right: 1rem;
+
+			&::after {
+				top: 10px;
+			}
 
 			@include media(">=phone-lg") {
 				font-size: 1.6rem;
 				height: 30px;
+				padding-right: 3rem;
 	
 				&::after {
 					height: 30px;

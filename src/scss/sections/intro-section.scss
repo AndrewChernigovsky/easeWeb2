@@ -51,7 +51,6 @@
 	}
 	&__wrapper.seoPage-sectionWrapper {
 		margin-top: 98px;
-		padding-left: 15px;
 
 		@include media('>=phone-lg') {
 			margin-top: 190px;
@@ -224,6 +223,7 @@
 			padding: 0.5rem 1rem;
 			margin-top: -25px;
 			height: 25px;
+			font-size: 1rem;
 
 			@include media('>=tablet') {
 				max-width: 180px;
@@ -434,14 +434,6 @@
 		    top: -27px;
     		right: 230px;
 		}
-
-		@include media('>=widescreen') {
-
-		}
-
-		@include media('>=widescreen-lg') {
-	
-		}
 	}
 	&__image-wrapper.seoSectionimage {
 		margin-top: 39px;
@@ -613,8 +605,6 @@
 		min-width: 280px;
 		white-space: nowrap;
 
-		@include media('>=phone') {
-		}
 		@include media('>=phone-lg') {
 			top: -40px;
 		}
@@ -761,10 +751,10 @@
 	}
 	.intro-section__text {
 		opacity: 1;
-		font-size: 0.8rem;
+		font-size: 1rem;
 
 		@include media('>=phone-lg') {
-			font-size: 1rem;
+			font-size: 1.2rem;
 		}
 		@include media('>=tablet') {
 			font-size: 1.4rem;
@@ -775,8 +765,8 @@
 		}
 	}
 	.intro-section__text.animaH2 {
-		top: 14px;
-		left: 135px;
+	    top: 13px;
+   		 left: 121px;
 
 		@include media('>=phone-lg') {
 			top: 11px;
@@ -797,9 +787,12 @@
 	}
 	.intro-section__h1-span2 {
 		color: $black;
-		font-size: 2.4rem;
+		font-size: 2.2rem;
 		text-transform: uppercase;
 
+		@include media('>=340px') {
+			font-size: 2.4rem;
+		}
 		@include media('>=tablet') {
 			font-size: 3.2rem;
 		}
@@ -812,7 +805,7 @@
 	}
 	.mob-btnMenu {
 		margin-top: 11px;
-		max-width: 111px;
+		max-width: 150px;
 		padding: 0.5rem 1rem;
 
 		@include media('>=tablet') {

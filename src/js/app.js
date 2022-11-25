@@ -69,7 +69,7 @@ const menuBtn = document.querySelectorAll('.menuButton');
 
 const popupCall = document.getElementById('popupCall__mainID');
 const btnClosePopupCall = document.getElementById('popupCallBtnCloseID');
-const tarifWrapper = document.querySelectorAll('.prices-section__tarif-wrapper');
+const tarifWrapper = document.querySelectorAll('.prices-section__tarif');
 const NAV = document.querySelector('.js-burger');
 const BURGER = document.querySelector('.burger');
 const blockWrapperSteps = document.querySelector('.stepsWorking-section__wrapper1');
@@ -128,19 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	tarifWrapper.forEach((e) => {
 		e.addEventListener('click', () => {
-			if (e.classList.contains('active')) {
-				e.classList.remove('active');
-				e.classList.remove('addActive');
-				e.firstElementChild.classList.remove('active');
-			} else {
-				e.classList.add('active');
-				e.firstElementChild.classList.add('active');
-			}
-
-			// if  (!e.classList.contains('active')){
-			// 	e.classList.add('addActive');
-			// 	e.firstElementChild.classList.add('addActive');
-			// } 
+			e.classList.toggle('active');
 		});
 	});
 

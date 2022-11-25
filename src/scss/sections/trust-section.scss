@@ -9,7 +9,7 @@
 	}
 	.title__h2 {
 		color: $black;
-		font-size: 1.2rem;
+		font-size: 2.2rem;
 		font-family: $MazzardHBold;
 
 		@include media('>=tablet') {
@@ -346,10 +346,8 @@
 		}
 	}
 	.trustH2 {
-		margin-left: 16px;
 
 		@include media('>=desktop') {
-			margin-left: 30px;
 			font-size: 3.8rem;
 			margin-bottom: 9rem;
 		}
