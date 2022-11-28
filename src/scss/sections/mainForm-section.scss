@@ -1,7 +1,7 @@
 .mainFormShape {
     background-color: $black;
-    height: 6rem;
-    padding-bottom: 6rem;
+    height: 10rem;
+    padding-bottom: 10rem;
 	margin-bottom: -10px;
     border-radius: 100% 100% 0% 0%;
 	border-bottom: 1px solid $black;
@@ -33,11 +33,11 @@
 		padding: 0 1rem;
 
 		@include media('>=desktop') {
-			padding-top: 11rem;
+			padding-top: 7rem;
 		}
 
 		@include media('>=widescreen-lg') {
-			padding-top: 17rem;
+			padding-top: 13rem;
 		}
 	}
 }
@@ -45,12 +45,12 @@
 .mainForm-section.developPage {
 	
 	@include media('>=widescreen-lg') {
-		padding-bottom: 24rem;
+		padding-bottom: 20rem;
 	}
 	
 	.mainForm-section__wrapper {
 		@include media('>=widescreen-lg') {
-			padding-top: 15rem;
+			padding-top: 11rem;
 		}
 	}
 }
@@ -83,7 +83,7 @@
     &__wrapper {
         padding: 2rem;
         min-width: 100%;
-        text-align: center;
+        text-align: left;
 		padding-top: 2.5rem;
 
 		@include media('>=desktop') {
@@ -93,7 +93,7 @@
         .mainForm__title {
             font-size: 1.8rem;
 			font-family: $MontserratBold;
-			text-align: center;
+			text-align: left;
 
             @include media('>=395px') {
                 font-size: 1.8rem;

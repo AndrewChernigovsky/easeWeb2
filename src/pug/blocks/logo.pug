@@ -1,3 +1,9 @@
-div(class=logoClasses[0])
-    a(class=logoClasses[1] href="#no__scroll")
-        include ../modules/includes/pictures/page__index/content/logoPicture
+if mainPage
+	div(class=logoClasses[0])
+		a(class=logoClasses[1]+' no-link' href="#no__scroll")
+			include ../modules/includes/pictures/page__index/content/logoPicture
+
+if anotherPage
+	div(class=logoClasses[0])
+		a(class=logoClasses[1] href="../index.html")
+			include ../modules/includes/pictures/page__index/content/logoPicture

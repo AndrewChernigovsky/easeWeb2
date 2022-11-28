@@ -18,7 +18,7 @@
 
 	&__title-inner{
 		p {
-			font-size: 0.8rem;
+			font-size: 1.2rem;
 			font-family: $Montserrat;
 
 			@include media('>=phone-lg') {
@@ -32,7 +32,7 @@
 	}
 
 	&__title-inner.addTasksPageTarifHelp-TitleInner {
-		width: 150px;
+		width: 200px;
 
 		@include media('>=500px') {
 			width: 250px;
@@ -237,11 +237,11 @@
 		video {
 			width: 130px;
 			height: 130px;
-			top: -60px;
-			right: 80px;
+			top: -62px;
+			right: 26px;
 
 			@include media('>=395px') {
-				right: 12%;
+				right: 4%;
    				top: -80px;
 				width: 180px;
 				height: 180px;
@@ -285,12 +285,12 @@
 }
 
 .addTasksTitleWrapper {
-    right: 10%;
+    right: 25%;
     top: 20px;
     width: 220px;
 
 	@include media('>=395px') {
-		right: 14%;
+		right: 16%;
     	top: 38px;
 	}
 

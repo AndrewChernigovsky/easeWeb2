@@ -18,6 +18,15 @@ const BODY = document.querySelector('body');
 					.fadeTo(1000, 0);
 			}
 		});
+		$('.titleIntro-anima .animaH2').each(function (i) {
+			for (let z = 0; z < 1000; z++) {
+				$(this)
+					.delay(i++ * 1200)
+					.fadeTo(1000, 1)
+					.fadeTo(1000, 0);
+			}
+		});
+
 		$('.intro-section__image-wrapper .anima').each(function (i) {
 			for (let z = 0; z < 1000; z++) {
 				$(this)
@@ -74,7 +83,7 @@ const NAV = document.querySelector('.js-burger');
 const BURGER = document.querySelector('.burger');
 const blockWrapperSteps = document.querySelector('.stepsWorking-section__wrapper1');
 const blockContacts = document.querySelector('#contacts');
-// const lastBlockInnerID = document.querySelector('#stepsWorkingLastBlock');
+const lastBlockInnerID = document.querySelector('#stepsWorkingLastBlock');
 const contactsLink = document.querySelector('#contactsLink');
 
 const getCall = document.querySelector(".PopupCall button[type='submit']");
@@ -134,35 +143,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// let targetStepWorking = document.getElementById('stepsWorkingSectionWrapper1');
+let targetStepWorking = document.getElementById('stepsWorkingSectionWrapper1');
 
-// if (targetStepWorking) {
-// 	targetStepWorking.addEventListener('wheel', (event) => {
-// 		const toLeft = event.deltaY < 0 && targetStepWorking.scrollLeft > 0;
-// 		const toRight = event.deltaY > 0 && targetStepWorking.scrollLeft < targetStepWorking.scrollWidth - targetStepWorking.clientWidth;
-// 		let diff = targetStepWorking.scrollWidth / 2 + 20;
+let foo111 = function (event) {
+	const toLeft = event.deltaY < 0 && targetStepWorking.scrollLeft > 0;
+	const toRight = event.deltaY > 0 && targetStepWorking.scrollLeft < targetStepWorking.scrollWidth - targetStepWorking.clientWidth;
+	let diff = targetStepWorking.scrollWidth / 2 + 20;
 
-// 		if (toLeft || toRight) {
-// 			event.preventDefault();
-// 			targetStepWorking.scrollLeft += event.deltaY;
-// 		}
+	if (toLeft || toRight) {
+		event.preventDefault();
+		targetStepWorking.scrollLeft += event.deltaY;
+	}
 
-// 		if (targetStepWorking.scrollLeft >= diff || (targetStepWorking.scrollLeft <= diff - diff && event.deltaY < 0)) {
-// 			BODY.classList.remove('stop-scroll');
-// 		}
-// 	});
-// }
+	if (targetStepWorking.scrollLeft >= diff || (targetStepWorking.scrollLeft <= diff - diff && event.deltaY < 0)) {
+		BODY.classList.remove('stop-scroll');
+		// targetStepWorking.removeEventListener('wheel', foo111)
+	}
+	
+};
 
-// let optionsOuter = {
-// 	root: null,
-// 	rootMargin: '0% 0px 0% 0px',
-// 	threshold: 1,
-// };
-// let optionsList = {
-// 	root: null,
-// 	rootMargin: '50px',
-// 	threshold: 0.5,
-// };
+if (targetStepWorking && windowWidth >= 1024) {
+	targetStepWorking.addEventListener('wheel', foo111)
+}
+
+
+
+let optionsOuter = {
+	root: null,
+	rootMargin: '0% 0px 0% 0px',
+	threshold: 1,
+};
+let optionsList = {
+	root: null,
+	rootMargin: '50px',
+	threshold: 0.5,
+};
 
 let optionsSHAPE = {
 	root: null,
@@ -176,38 +191,32 @@ let optionsContacts = {
 	threshold: 1,
 };
 
-// let callbackOuter = function (entries, observer) {
-// 	entries.forEach((entry) => {
-// 		if (entry.isIntersecting) {
-// 			BODY.classList.add('stop-scroll');
-// 			BODY.style.width = `${windowWidth}` + 'px';
+let callbackOuter = function (entries, observer) {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			BODY.classList.add('stop-scroll');
 
-// 			let windowWidth = window.innerWidth;
+			window.addEventListener('resize', () => {
+				let windowWidth = window.innerWidth;
 
-// 			window.addEventListener('resize', () => {
-// 				BODY.style.width = `${windowWidth}` + 'px';
-// 				let windowWidth = window.innerWidth;
-
-// 				if (windowWidth <= 1024) {
-// 					observer.unobserve(entry.target);
-// 					return;
-// 				}
-// 			});
-// 			if (windowWidth <= 1024) {
-// 				observer.unobserve(entry.target);
-// 				return;
-// 			}
-// 		}
-// 	});
-// };
-// let callbackList = function (entries, observer) {
-// 	entries.forEach((entry) => {
-// 		if (entry.isIntersecting) {
-// 			BODY.classList.remove('stop-scroll');
-// 			BODY.style.width = `${windowWidthClient}` + 'px';
-// 		}
-// 	});
-// };
+				if (windowWidth <= 1024) {
+					observer.unobserve(entry.target);
+					return;
+				}
+			});
+		}
+	});
+};
+let callbackList = function (entries, observer) {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			BODY.classList.remove('stop-scroll');
+			console.log("пересек последний");
+			// BODY.style.width = `${windowWidthClient}` + 'px';
+			observer.unobserve(lastBlockInnerID);
+		}
+	});
+};
 
 let callbackContacts = function (entries, observer) {
 	entries.forEach((entry) => {
@@ -237,22 +246,18 @@ let callbackSHAPE = function (entries, observer) {
 	});
 };
 
-// let observerOuter = new IntersectionObserver(callbackOuter, optionsOuter);
-// let observerList = new IntersectionObserver(callbackList, optionsList);
+let observerOuter = new IntersectionObserver(callbackOuter, optionsOuter);
+let observerList = new IntersectionObserver(callbackList, optionsList);
 let observerSHAPE = new IntersectionObserver(callbackSHAPE, optionsSHAPE);
 let observerContacts = new IntersectionObserver(callbackContacts, optionsContacts);
 
-window.addEventListener('resize', ()=> {
-	console.log('1', document.documentElement.clientWidth)
-})
+// window.addEventListener('resize', ()=> {
+// 	BODY.style.width = `${windowWidthClient}` + 'px';
+// })
 
 if (blockWrapperSteps && window.innerWidth >= 1024) {
 	observerOuter.observe(blockWrapperSteps);
 	// alert('yes');
-}
-
-if (window.innerWidth <= 1024) {
-	// alert('small');
 }
 
 // if (lastBlockInnerID) {
@@ -263,16 +268,14 @@ if (blockContacts) {
 	observerContacts.observe(blockContacts);
 }
 if (SHAPE) {
-	if (observerSHAPE.observe(SHAPE)) {
-		SHAPE.unobserve();
-	}
+	observerSHAPE.observe(SHAPE);
 }
 
 const variant = document.querySelector('.variantSection-wrapper .stepsWorking-section__wrapper');
 const variant1 = document.querySelector('.variantSection-wrapper');
 const introSectionWrapper = document.querySelector('.intro-section__wrapper');
 
-if (variant) {
+if (variant  && windowWidth >= 1024) {
 	let el0 = variant.getBoundingClientRect();
 	let el1 = introSectionWrapper.getBoundingClientRect();
 	const screenWidth = window.screen.width;

@@ -186,6 +186,10 @@
 		.title__h1 {
 			margin-bottom: 0;
 
+
+			@include media('>=phone-lg') {
+				font-size: 2.8rem;
+			}
 			@include media('>=desktop') {
 				font-size: 6.6rem;
 			}
@@ -202,6 +206,10 @@
 
 			@include media('>=390px') {
 				font-size: 2.4rem;
+			}
+
+			@include media('>=phone-lg') {
+				font-size: 2.8rem;
 			}
 
 			@include media('>=tablet') {
@@ -224,6 +232,19 @@
 			margin-top: -25px;
 			height: 25px;
 			font-size: 1rem;
+
+			@include media('>=395px') {
+				max-width: 134px;
+				font-size: 1.2rem;
+			}
+		
+			@include media('>=phone-lg') {
+				max-width: 150px;
+				padding: 0.2rem 1rem;
+				margin-top: -29px;
+				height: 25px;
+				font-size: 1.4rem;
+			}
 
 			@include media('>=tablet') {
 				max-width: 180px;
@@ -293,11 +314,6 @@
 	&__h1-span {
 		font-family: $MazzardHBold;
 		text-transform: uppercase;
-
-		&:last-of-type {
-			display: none;
-			transition: $base-transition;
-		}
 	}
 	&__h1-span2 {
 		font-family: $MazzardHBold;
@@ -680,11 +696,30 @@
 			margin-bottom: -4.5rem;
 		}
 	}
+
+	.titleIntro-anima {
+		// span {
+		// 	animation: anima 2s ease-in-out infinite;
+		// }
+
+		// span:nth-child(1) {
+		// 	animation-delay: 0.5s;
+		// 	transition-delay: 2s;
+		// }
+
+		// span:nth-child(2) {
+		// 	animation-delay: 1.5s;
+		// 	transition-delay: 3s;
+		// }
+	}
 }
 
 @keyframes anima {
 	0% {
 		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
 	}
 	100% {
 		opacity: 1;
