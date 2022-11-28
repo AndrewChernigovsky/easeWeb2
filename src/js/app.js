@@ -18,14 +18,6 @@ const BODY = document.querySelector('body');
 					.fadeTo(1000, 0);
 			}
 		});
-		$('.titleIntro-anima .animaH2').each(function (i) {
-			for (let z = 0; z < 1000; z++) {
-				$(this)
-					.delay(i++ * 1200)
-					.fadeTo(1000, 1)
-					.fadeTo(1000, 0);
-			}
-		});
 
 		$('.intro-section__image-wrapper .anima').each(function (i) {
 			for (let z = 0; z < 1000; z++) {

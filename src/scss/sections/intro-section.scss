@@ -45,7 +45,7 @@
 			margin-bottom: 0;
 
 			@include media('>=desktop') {
-				margin-bottom: -2.5rem;
+				// margin-bottom: -2.5rem;
 			}
 		}
 	}
@@ -693,7 +693,7 @@
 		margin-bottom: 0.5rem;
 
 		@include media('>=desktop') {
-			margin-bottom: -4.5rem;
+			// margin-bottom: -4.5rem;
 		}
 	}
 
@@ -719,10 +719,10 @@
 		opacity: 0;
 	}
 	50% {
-		opacity: 0.5;
+		opacity: 1;
 	}
 	100% {
-		opacity: 1;
+		opacity: 0;
 	}
 }
 .title-company-introSection {
@@ -743,9 +743,23 @@
 		top: 0;
 		left: 0;
 		white-space: nowrap;
+		animation: anima 5s ease-in-out infinite;
 
 		@include media('>=tablet') {
 			top: 30px;
+		}
+		@include media('>=desktop') {
+			top: 0px;
+		}
+		@include media('>=widescreen-lg') {
+			top: 0px;
+		}
+
+		&:first-of-type {
+			animation-delay: 0.5s;
+		}
+		&:last-of-type {
+			animation-delay: 2.5s;
 		}
 	}
 }
