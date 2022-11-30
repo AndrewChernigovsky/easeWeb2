@@ -458,4 +458,31 @@
 		left: 0;
 		right: auto;
 	}
+
+	&__circle-text.anima,
+	&__circle-text1.anima1 {
+		animation: anima 8s ease-in-out infinite;
+
+		&:first-of-type {
+			animation-delay: 0s;
+			animation-duration: 6s;
+		}
+		&:nth-of-type(2){
+			animation-delay: 3s; 
+			animation-duration: 6s;
+			opacity: 0;
+		}
+	}
+}
+
+@keyframes anima {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }

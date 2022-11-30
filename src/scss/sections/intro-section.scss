@@ -743,8 +743,8 @@
 		top: 0;
 		left: 0;
 		white-space: nowrap;
+		display: block;
 		animation: anima 5s ease-in-out infinite;
-
 		@include media('>=tablet') {
 			top: 30px;
 		}
@@ -756,10 +756,12 @@
 		}
 
 		&:first-of-type {
-			animation-delay: 0.5s;
+			animation-delay: 0s;
 		}
 		&:last-of-type {
 			animation-delay: 2.5s;
+			opacity: 0;
+			// clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 0% 100%);
 		}
 	}
 }
@@ -830,10 +832,25 @@
 		}
 
 		@include media('>=widescreen-lg') {
-			top: 69px;
+			top: 65px;
     		left: 508px;
 		}
 	}
+
+	span.an1 {
+		animation: anima 5s ease-in-out infinite;
+
+		&:first-of-type {
+			animation-delay: 0s;
+		}
+		&:nth-of-type(2){
+			animation-delay: 2.5s;
+			opacity: 0;
+			// clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 0% 100%);
+		}
+	}
+
+
 	.intro-section__h1-span2 {
 		color: $black;
 		font-size: 2.2rem;
@@ -892,6 +909,26 @@
 	@include media('>=widescreen-lg') {
 		padding-top: 12rem;
 		padding-bottom: 23rem;
+	}
+
+	span.a1 {
+		animation: anima 8s ease-in-out infinite;
+
+		&:first-of-type {
+			animation-delay: 0s;
+			animation-duration: 6s;
+		}
+		&:nth-of-type(2){
+			animation-delay: 3s; 
+			animation-duration: 6s;
+			opacity: 0;
+		}
+		&:nth-of-type(3){
+			// animation-delay: 4.5s;
+			// animation-duration: 6s;
+			// opacity: 0;
+			display: none;
+		}
 	}
 }
 .intro-section.addTasksPage-introSection {

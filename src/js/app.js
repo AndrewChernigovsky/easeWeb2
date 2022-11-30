@@ -37,24 +37,6 @@ const BODY = document.querySelector('body');
 					);
 			}
 		});
-		// $('.circles-section__circle-text-wrapper .anima').each(function (i) {
-		// 	for (let z = 0; z < 1000; z++) {
-		// 		$(this)
-		// 			.delay(i++ * 2000)
-		// 			.fadeTo(0, 0)
-		// 			.fadeTo(1000, 1)
-		// 			.fadeTo(1000, 0);
-		// 	}
-		// });
-		// $('.circles-section__circle-text-wrapper .anima1').each(function (i) {
-		// 	for (let z = 0; z < 1000; z++) {
-		// 		$(this)
-		// 			.delay(i++ * 2000)
-		// 			.fadeTo(0, 0)
-		// 			.fadeTo(1000, 1)
-		// 			.fadeTo(1000, 0);
-		// 	}
-		// });
 
 		inputmask();
 
@@ -332,253 +314,253 @@ if (nameInput2){
 	nameInput2.addEventListener('blur', updateValueblur2);
 }
 
-function updateValuePhone1(e) {
+// function updateValuePhone1(e) {
 
-	let valuePhone = e.target.value;
-	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-	let p = document.createElement('p');
+// 	let valuePhone = e.target.value;
+// 	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+// 	let p = document.createElement('p');
 
-	if(!valuePhone.match(re) === true) {
-		jsformButton1.setAttribute('disabled', 'disabled')
+// 	if(!valuePhone.match(re) === true) {
+// 		// jsformButton1.setAttribute('disabled', 'disabled')
 
-		if(e.target.classList.contains('valid')){
-			e.target.classList.remove('valid');
-		}
+// 		if(e.target.classList.contains('valid')){
+// 			e.target.classList.remove('valid');
+// 		}
 
-		if(e.target.classList.contains('invalid')){
-			e.target.classList.remove('invalid');
-		}
-	} else {
-		jsformButton1.removeAttribute('disabled', ' ')
-		e.target.classList.remove('invalid');
-		e.target.classList.add('valid');
-	}
-}
-function updateValuePhone2(e) {
+// 		if(e.target.classList.contains('invalid')){
+// 			e.target.classList.remove('invalid');
+// 		}
+// 	} else {
+// 		// jsformButton1.removeAttribute('disabled', ' ')
+// 		e.target.classList.remove('invalid');
+// 		e.target.classList.add('valid');
+// 	}
+// }
+// function updateValuePhone2(e) {
 
-	let valuePhone = e.target.value;
-	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-	let p = document.createElement('p');
+// 	let valuePhone = e.target.value;
+// 	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+// 	let p = document.createElement('p');
 
-	if(!valuePhone.match(re) === true) {
-		jsformButton2.setAttribute('disabled', 'disabled')
+// 	if(!valuePhone.match(re) === true) {
+// 		jsformButton2.setAttribute('disabled', 'disabled')
 
-		if(e.target.classList.contains('valid')){
-			e.target.classList.remove('valid');
-		}
+// 		if(e.target.classList.contains('valid')){
+// 			e.target.classList.remove('valid');
+// 		}
 
-		if(e.target.classList.contains('invalid')){
-			e.target.classList.remove('invalid');
-		}
-	} else {
-		jsformButton2.removeAttribute('disabled', ' ')
-		e.target.classList.remove('invalid');
-		e.target.classList.add('valid');
-	}
-}
-function updateValuePhone(e) {
+// 		if(e.target.classList.contains('invalid')){
+// 			e.target.classList.remove('invalid');
+// 		}
+// 	} else {
+// 		jsformButton2.removeAttribute('disabled', ' ')
+// 		e.target.classList.remove('invalid');
+// 		e.target.classList.add('valid');
+// 	}
+// }
+// function updateValuePhone(e) {
 
-	let valuePhone = e.target.value;
-	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-	let p = document.createElement('p');
+// 	let valuePhone = e.target.value;
+// 	let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+// 	let p = document.createElement('p');
 
-	if(!valuePhone.match(re) === true) {
-		jsformButton.setAttribute('disabled', 'disabled')
+// 	if(!valuePhone.match(re) === true) {
+// 		jsformButton.setAttribute('disabled', 'disabled')
 
-		if(e.target.classList.contains('valid')){
-			e.target.classList.remove('valid');
-		}
+// 		if(e.target.classList.contains('valid')){
+// 			e.target.classList.remove('valid');
+// 		}
 
-		if(e.target.classList.contains('invalid')){
-			e.target.classList.remove('invalid');
-		}
-	} else {
-		jsformButton.removeAttribute('disabled', ' ')
-		e.target.classList.remove('invalid');
-		e.target.classList.add('valid');
-	}
-}
-function updateValueName(e) {
+// 		if(e.target.classList.contains('invalid')){
+// 			e.target.classList.remove('invalid');
+// 		}
+// 	} else {
+// 		jsformButton.removeAttribute('disabled', ' ')
+// 		e.target.classList.remove('invalid');
+// 		e.target.classList.add('valid');
+// 	}
+// }
+// function updateValueName(e) {
 
-	let valueName = e.target.value;
+// 	let valueName = e.target.value;
 
-	if(!valueName === "") {
-		jsformButton.setAttribute('disabled', 'disabled')
+// 	if(!valueName === "") {
+// 		jsformButton.setAttribute('disabled', 'disabled')
 
-		if(e.target.classList.contains('valid')){
-			e.target.classList.remove('valid');
-		}
+// 		if(e.target.classList.contains('valid')){
+// 			e.target.classList.remove('valid');
+// 		}
 
-		if(e.target.classList.contains('invalid')){
-			e.target.classList.remove('invalid');
-		}
-	} else {
-		jsformButton.removeAttribute('disabled', ' ')
-		e.target.classList.remove('invalid');
-		e.target.classList.add('valid');
-	}
-}
-function updateValueName1(e) {
+// 		if(e.target.classList.contains('invalid')){
+// 			e.target.classList.remove('invalid');
+// 		}
+// 	} else {
+// 		jsformButton.removeAttribute('disabled', ' ')
+// 		e.target.classList.remove('invalid');
+// 		e.target.classList.add('valid');
+// 	}
+// }
+// function updateValueName1(e) {
 
-	let valueName = e.target.value;
+// 	let valueName = e.target.value;
 
-	if(!valueName === "") {
-		jsformButton1.setAttribute('disabled', 'disabled')
+// 	if(!valueName === "") {
+// 		jsformButton1.setAttribute('disabled', 'disabled')
 
-		if(e.target.classList.contains('valid')){
-			e.target.classList.remove('valid');
-		}
+// 		if(e.target.classList.contains('valid')){
+// 			e.target.classList.remove('valid');
+// 		}
 
-		if(e.target.classList.contains('invalid')){
-			e.target.classList.remove('invalid');
-		}
-	} else {
-		jsformButton1.removeAttribute('disabled', ' ')
-		e.target.classList.remove('invalid');
-		e.target.classList.add('valid');
-	}
-}
-function updateValueName2(e) {
+// 		if(e.target.classList.contains('invalid')){
+// 			e.target.classList.remove('invalid');
+// 		}
+// 	} else {
+// 		jsformButton1.removeAttribute('disabled', ' ')
+// 		e.target.classList.remove('invalid');
+// 		e.target.classList.add('valid');
+// 	}
+// }
+// function updateValueName2(e) {
 
-	let valueName = e.target.value;
+// 	let valueName = e.target.value;
 
-	if(!valueName === "") {
-		jsformButton2.setAttribute('disabled', 'disabled')
+// 	if(!valueName === "") {
+// 		jsformButton2.setAttribute('disabled', 'disabled')
 
-		if(e.target.classList.contains('valid')){
-			e.target.classList.remove('valid');
-		}
+// 		if(e.target.classList.contains('valid')){
+// 			e.target.classList.remove('valid');
+// 		}
 
-		if(e.target.classList.contains('invalid')){
-			e.target.classList.remove('invalid');
-		}
-	} else {
-		jsformButton2.removeAttribute('disabled', ' ')
-		e.target.classList.remove('invalid');
-		e.target.classList.add('valid');
-	}
-}
-function updateValueblur(e) {
+// 		if(e.target.classList.contains('invalid')){
+// 			e.target.classList.remove('invalid');
+// 		}
+// 	} else {
+// 		jsformButton2.removeAttribute('disabled', ' ')
+// 		e.target.classList.remove('invalid');
+// 		e.target.classList.add('valid');
+// 	}
+// }
+// function updateValueblur(e) {
 
-	if(e.target.classList.contains('valid')){
-		e.target.classList.remove('valid');
-	}
+// 	if(e.target.classList.contains('valid')){
+// 		e.target.classList.remove('valid');
+// 	}
 
-	if(e.target.classList.contains('invalid')){
-		e.target.classList.remove('invalid');
-	}
+// 	if(e.target.classList.contains('invalid')){
+// 		e.target.classList.remove('invalid');
+// 	}
 
-	jsformButton.removeAttribute('disabled', ' ')
-	e.target.classList.remove('invalid');
-}
-function updateValueblur2(e) {
+// 	jsformButton.removeAttribute('disabled', ' ')
+// 	e.target.classList.remove('invalid');
+// }
+// function updateValueblur2(e) {
 
-	if(e.target.classList.contains('valid')){
-		e.target.classList.remove('valid');
-	}
+// 	if(e.target.classList.contains('valid')){
+// 		e.target.classList.remove('valid');
+// 	}
 
-	if(e.target.classList.contains('invalid')){
-		e.target.classList.remove('invalid');
-	}
+// 	if(e.target.classList.contains('invalid')){
+// 		e.target.classList.remove('invalid');
+// 	}
 
-	jsformButton2.removeAttribute('disabled', ' ')
-	e.target.classList.remove('invalid');
-}
-function updateValueblur1(e) {
+// 	jsformButton2.removeAttribute('disabled', ' ')
+// 	e.target.classList.remove('invalid');
+// }
+// function updateValueblur1(e) {
 
-	if(e.target.classList.contains('valid')){
-		e.target.classList.remove('valid');
-	}
+// 	if(e.target.classList.contains('valid')){
+// 		e.target.classList.remove('valid');
+// 	}
 
-	if(e.target.classList.contains('invalid')){
-		e.target.classList.remove('invalid');
-	}
+// 	if(e.target.classList.contains('invalid')){
+// 		e.target.classList.remove('invalid');
+// 	}
 
-	jsformButton.removeAttribute('disabled', ' ')
-	e.target.classList.remove('invalid');
-}
+// 	jsformButton.removeAttribute('disabled', ' ')
+// 	e.target.classList.remove('invalid');
+// }
 
-if (jsForm) {
-	jsForm.addEventListener('submit', (e)=> {
-		let valuePhone = phoneInput.value;
-		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-		let p = document.createElement('p');
+// if (jsForm) {
+// 	jsForm.addEventListener('submit', (e)=> {
+// 		let valuePhone = phoneInput.value;
+// 		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+// 		let p = document.createElement('p');
 
-		if(!valuePhone.match(re) === true) {
-			e.preventDefault();
-			phoneInput.classList.add('invalid')
-			jsForm.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
-		}
-		if(valuePhone === ''){
-			jsForm.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите номер</p>"
-		} else {
-			phoneInput.classList.remove('invalid');
-			phoneInput.classList.add('valid')
-		}
-	})
-}
-if (jsForm1) {
-	jsForm1.addEventListener('submit', (e)=> {
-		let valuePhone = phoneInput1.value;
-		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-		let p = document.createElement('p');
+// 		if(!valuePhone.match(re) === true) {
+// 			e.preventDefault();
+// 			phoneInput.classList.add('invalid')
+// 			jsForm.appendChild(p);
+// 			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+// 		}
+// 		if(valuePhone === ''){
+// 			jsForm.appendChild(p);
+// 			p.innerHTML = "<p class='base-text'>введите номер</p>"
+// 		} else {
+// 			phoneInput.classList.remove('invalid');
+// 			phoneInput.classList.add('valid')
+// 		}
+// 	})
+// }
+// if (jsForm1) {
+// 	jsForm1.addEventListener('submit', (e)=> {
+// 		let valuePhone = phoneInput1.value;
+// 		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+// 		let p = document.createElement('p');
 
-		if(!valuePhone.match(re) === true) {
-			e.preventDefault();
-			phoneInput1.classList.add('invalid')
-		}
-		if(valuePhone === ''){
-			phoneInput1.classList.add('invalid')
-		} else {
-			phoneInput1.classList.remove('invalid');
-			phoneInput1.classList.add('valid')
-		}
-	})
-}
-if (jsForm2) {
-	jsForm2.addEventListener('submit', (e)=> {
-		let valuePhone = phoneInput2.value;
-		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-		let p = document.createElement('p');
+// 		if(!valuePhone.match(re) === true) {
+// 			e.preventDefault();
+// 			phoneInput1.classList.add('invalid')
+// 		}
+// 		if(valuePhone === ''){
+// 			phoneInput1.classList.add('invalid')
+// 		} else {
+// 			phoneInput1.classList.remove('invalid');
+// 			phoneInput1.classList.add('valid')
+// 		}
+// 	})
+// }
+// if (jsForm2) {
+// 	jsForm2.addEventListener('submit', (e)=> {
+// 		let valuePhone = phoneInput2.value;
+// 		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+// 		let p = document.createElement('p');
 
-		if(!valuePhone.match(re) === true) {
-			e.preventDefault();
-			phoneInput2.classList.add('invalid')
-			jsForm2.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
-		}
-		if(valuePhone === ''){
-			jsForm2.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите номер</p>"
-		} else {
-			phoneInput2.classList.remove('invalid');
-			phoneInput2.classList.add('valid')
-		}
-	})
-}
-if (jsFormPopup) {
-	jsFormPopup.addEventListener('submit', (e)=> {
-		let valuePhone = phoneInput3.value;
-		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-		let p = document.createElement('p');
+// 		if(!valuePhone.match(re) === true) {
+// 			e.preventDefault();
+// 			phoneInput2.classList.add('invalid')
+// 			jsForm2.appendChild(p);
+// 			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+// 		}
+// 		if(valuePhone === ''){
+// 			jsForm2.appendChild(p);
+// 			p.innerHTML = "<p class='base-text'>введите номер</p>"
+// 		} else {
+// 			phoneInput2.classList.remove('invalid');
+// 			phoneInput2.classList.add('valid')
+// 		}
+// 	})
+// }
+// if (jsFormPopup) {
+// 	jsFormPopup.addEventListener('submit', (e)=> {
+// 		let valuePhone = phoneInput3.value;
+// 		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+// 		let p = document.createElement('p');
 
-		if(!valuePhone.match(re) === true) {
-			e.preventDefault();
-			phoneInput3.classList.add('invalid')
-			jsFormPopup.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
-		}
-		if(valuePhone === ''){
-			jsFormPopup.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите номер</p>"
-		} else {
-			phoneInput3.classList.remove('invalid');
-			phoneInput3.classList.add('valid')
-		}
-	})
-}
+// 		if(!valuePhone.match(re) === true) {
+// 			e.preventDefault();
+// 			phoneInput3.classList.add('invalid')
+// 			jsFormPopup.appendChild(p);
+// 			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+// 		}
+// 		if(valuePhone === ''){
+// 			jsFormPopup.appendChild(p);
+// 			p.innerHTML = "<p class='base-text'>введите номер</p>"
+// 		} else {
+// 			phoneInput3.classList.remove('invalid');
+// 			phoneInput3.classList.add('valid')
+// 		}
+// 	})
+// }
 
 // let sections = document.querySelectorAll('.lazy_contentSection');
 

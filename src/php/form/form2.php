@@ -17,7 +17,7 @@ $token = '5667961004:AAE_j-IbnI30eLZPqx9ejXNKYEDO-N7-HRA';
 $chat_id = '-620731731';
 
 $mail->isHTML(true);
-$mail->setFrom('wordpress@izosimov-andrew.ru');
+$mail->setFrom('easeweb-info.ru@easeweb.ru');
 $mail->addAddress('easeweb@mail.ru');
 $mail->addAddress('easewebcompany@gmail.com');
 $mail->Subject = 'Easeweb | Обратный звонок';
