@@ -1,20 +1,18 @@
-extends ../../../../../../layout/forms/formQuize/formQuize
-
-block quize__wrapper1
-    div(class=classSliderMainSlide)
-        div(class=classSliderMainSlideWrapper)
-            div(class=classSliderMainSlideInner)
-                block quize__title-1
-                    h3(class=classTitleThird + margin__bottom__2rem) На какой бюджет вы расчитываете?
-                    block quize__1
-                       div(class=inputsWrapper)
-                        div(class=inputWrapper)
-                            input(class=inputRadioBtn type=typeRadio id=price1 name='price1'  value="price:20-25" checked)
-                            label(class=label for=price1) от 20 тысяч до 25
-                        div(class=inputWrapper)
-                            input(class=inputRadioBtn type=typeRadio id=price2 name='price1' value="price:30-25")
-                            label(class=label for=price2)  от 30 тысяч до 35
-                        div(class=inputWrapper)
-                            input(class=inputRadioBtn type=typeRadio id=price3 name='price1' value="price:50-100")
-                            label(class=label for=price3)  от 50 тысяч до 100
-                        p(class=quzieParagraph) Цена влияет на время создания и функционал сайта
+div(class=classSliderMainSlide)
+	div(class=classSliderMainSlideWrapper)
+		div(class=classSliderMainSlideInner)
+			div(class=ClassStepsWorkingSectionStepBlock)
+				div(class=ClassStepsWorkingSectionInner)
+					div(class=ClassStepsWorkingSectionLine)
+						div(class=ClassStepsWorkingSectionLineActive)
+							div(class=ClassStepsWorkingSectionLineCircle)
+								div
+									span 2
+					div(class=ClassStepsWorkingSectionStep)
+						div(class=ClassStepsWorkingSectionText1)
+							div
+								p Время реализации: от 2х дней
+						div(class=ClassStepsWorkingSectionBlock)
+							p(class=ClassStepsWorkingSectionTitle) Верстка
+							p(class=ClassStepsWorkingSectionText)
+								|	Основную часть сайтов EASEWEB пишет при помоще кода — это самый оптимальный вариант, так же можешь выбрать конструктор Tilda или WordPress

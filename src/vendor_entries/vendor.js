@@ -5,7 +5,7 @@ module.exports = {
   es5: [
     './node_modules/jquery/dist/jquery.js',
     // './node_modules/validate.js/validate.js',
-    // './node_modules/swiper/swiper-bundle.min.js',
+    './node_modules/swiper/swiper-bundle.min.js',
 
     // //select choices
     // './node_modules/choices.js/public/assets/scripts/choices.min.js',

@@ -1,11 +1,20 @@
-extends ../../../../../../layout/forms/formQuize/formQuize
-
-block quize__wrapper1
-    div(class=classSliderMainSlide)
-        div(class=classSliderMainSlideWrapper)
-            div(class=classSliderMainSlideInner)
-                block quize__title-1
-                    each val in sectionTitleTexts
-                        +h2(sectionTitleClass, val.pageIndex__sectionIntro_ParagraphTitle)
-                        +h2(sectionTitleClass, val.pageIndex__sectionIntro_ParagraphThirdTitle)
-                        button(type=button class=classButton id='btnOffer') пройти
+div(class=classSliderMainSlide)
+	div(class=classSliderMainSlideWrapper)
+		div(class=classSliderMainSlideInner)
+			div(class=ClassStepsWorkingSectionStepBlock)
+				div(class=ClassStepsWorkingSectionInner)
+					div(class=ClassStepsWorkingSectionLine)
+						div(class=ClassStepsWorkingSectionLineActive)
+							div(class=ClassStepsWorkingSectionLineCircle)
+								div
+									span 1
+					div(class=ClassStepsWorkingSectionStep)
+						div(class=ClassStepsWorkingSectionText1)
+							div
+								p Время реализации: 1 day
+						div(class=ClassStepsWorkingSectionBlock)
+	//- 						p(class=ClassStepsWorkingSectionTitle) Бриф
+	//- 						p(class=ClassStepsWorkingSectionText)
+	//- 							|	С тобой общается менеджер проекта и узнает, какой сайт нужен. Конультирует по реализации проекта, составляет
+	//- 							br
+	//- 							|	стратегию и техническое задание.

@@ -1,33 +1,26 @@
 .swiper {
   overflow: hidden;
   position: relative;
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
-    background-size: contain;
-    background-color: transparent;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: transparent;
-    background-position: center;
-    background-size: 50px;
-    background-repeat: no-repeat;
-    top: 50%;
-
-    @include media('>=tablet') {
-        display: block;
-    }
-  }
-
-  .swiper-button-prev {
-    background-image: url('../../images/icons/arrowLeftMainSlider.svg');
-  }
-  .swiper-button-next {
-    background-image: url('../../images/icons/arrowRightMainSlider.svg');
-  }
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+	display: none;
+	background-size: contain;
+	background-color: transparent;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-position: center;
+	background-size: 50px;
+	background-repeat: no-repeat;
+	top: 80%;
+
+	@include media('>=tablet') {
+		display: block;
+	}
+}
+
 
 .swiper-main {
   background-size: cover;
@@ -37,12 +30,17 @@
   &__wrapper {
     min-height: 350px;
     position: relative;
+	max-width: 100%;
   }
 
-  &__slide {
+  &__slide-wrapper {
+    max-width: max-content;
+	min-width: 100%;
 
+    // @include media('>=tablet') {
+    //   padding: 2rem;
+    // }
   }
-
   &__slide-inner {
     max-width: 100%;
     padding: 1rem;
@@ -59,7 +57,6 @@
     bottom: 35px;
     height: 4px;
   }
-
   .swiper-scrollbar-drag {
     background-color: $white;
     position: relative;
@@ -75,15 +72,12 @@
       right: 0;
     }
   }
-
   .input-mainWrapper {
     padding: 0 5rem 5rem 5rem;
   }
-
   .swiper-pagination {
     bottom: 0;
   }
-
   .swiper-pagination-bullet {
     width: 15px;
     height: 15px;
@@ -98,7 +92,7 @@
 
 .swiper-main.active {
   opacity: 1;
-  z-index: 333;
+//   z-index: 333;
   transition: $base-transition;
 }
 
@@ -109,18 +103,13 @@
   color: $black;
 }
 
-// .swiper-main-card1 {
-//     max-width: 60%;
-// }
-
-// .swiper-main-card2 {
-//     max-width: 80%;
-// }
-
-// .swiper-main-card3 {
-//     max-width: 100%;
-// }
-
-// .swiper-main-card4 {
-//     max-width: 80%;
-// }
+.swiper-main,
+.swiper-wrapper {
+	max-width: 100%;
+	min-width: 100%;
+}
+.swiper-main .swiper-slide {
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+}
