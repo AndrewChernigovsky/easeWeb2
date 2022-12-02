@@ -15,6 +15,7 @@
 	background-size: 50px;
 	background-repeat: no-repeat;
 	top: 80%;
+	color: $orange1;
 
 	@include media('>=tablet') {
 		display: block;
@@ -23,9 +24,6 @@
 
 
 .swiper-main {
-  background-size: cover;
-  margin: 0 auto;
-  position: absolute;
 
   &__wrapper {
     min-height: 350px;
@@ -37,9 +35,6 @@
     max-width: max-content;
 	min-width: 100%;
 
-    // @include media('>=tablet') {
-    //   padding: 2rem;
-    // }
   }
   &__slide-inner {
     max-width: 100%;
