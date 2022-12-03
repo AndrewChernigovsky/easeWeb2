@@ -29,15 +29,15 @@
 
     &__wrapper {
 		max-width: 100%;
-		min-height: 800px;
+		min-height: 180px;
 		min-width: 100%;
 		
 		@include media('>=390px') {
-			min-height: 800px;
+			min-height: 200px;
 		}
 
 		@include media('>=phone-lg') {
-			min-height: 800px;
+			min-height: 200px;
 		}
 
 		@include media(">=desktop") {
@@ -51,7 +51,6 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        overflow-x: scroll;
 		min-height: 200px;
 		max-width: inherit;
 		min-width: 100%;
@@ -299,6 +298,10 @@
 		@include media('>=tablet'){
 			margin-left: 20px;
 		}
+
+		&:first-of-type {
+			margin-left: 0;
+		}
 	}
 
     &__block {
@@ -312,7 +315,7 @@
 		margin-bottom: 2rem;
 		margin-left: 30px;
 		max-width: inherit;
-		min-width: 100%;
+		min-width: 85%;
 
 		@include media(">=390px") {
 			margin-bottom: 1.4rem;
@@ -321,6 +324,7 @@
 
 		@include media('>=phone-lg'){
 			min-height: 300px;
+			min-width: 90%;
 		}
 
 		@include media('>=tablet'){
@@ -332,6 +336,7 @@
 		@include media('>=desktop'){
 			min-height: 500px;
 			flex-basis: 52%;
+			min-width: 56%;
 		}
 
 		@include media('>=widescreen'){
@@ -341,7 +346,8 @@
 		@include media('>=widescreen-lg'){
 			padding: 5rem;
 			min-height: 500px;
-			flex-basis: 65%;
+			flex-basis: 50%;
+			min-width: 50%;
 		}
 
 		&:first-of-type {
@@ -354,7 +360,7 @@
         position: absolute;
 		left: -30px;
 		font-size: 2.2rem;
-		bottom: 85px;
+		bottom: 100px;
 
 		@include media(">=390px") {
 			font-size: 3.4rem;

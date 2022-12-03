@@ -26,9 +26,17 @@
 .swiper-main {
 
   &__wrapper {
-    min-height: 350px;
+    min-height: 200px;
     position: relative;
 	max-width: 100%;
+
+	@include media('>=390px') {
+		min-height: 200px;
+	}
+  }
+
+  &__wrapper.overflowXScroll {
+	overflow-x: scroll;
   }
 
   &__slide-wrapper {

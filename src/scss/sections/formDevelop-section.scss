@@ -355,13 +355,14 @@
 				}
 
 				@include media('>=desktop') {
-					height: 30px;
+					height: 47px;
 					top: 10px;
+					width: 17px;
 				}
 				@include media('>=widescreen-lg') {
 					height: 40px;
-					top: 18px;
-					right: -3px;
+					top: 20px;
+					right: 15px;
 				}
 			}
 		}

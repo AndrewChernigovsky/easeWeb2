@@ -8,7 +8,7 @@ const swiperMain = (() => {
 		loop: false,
 		preloadImages: true,
 		autoplay: {
-			delay: 500000,
+			delay: 7000,
 			disableOnInteraction: false,
 		},
 		// centerInsufficientSlides: true,

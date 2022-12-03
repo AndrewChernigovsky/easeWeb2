@@ -11,6 +11,7 @@ const BODY = document.querySelector('body');
 		scrollSmooth.init();
 		menuBurger.init();
 		swiperMain.init();
+		$('.swiper-wrapper').removeClass('overflowXScroll');
 
 		$('.intro-section__texts-inner .anima').each(function (i) {
 			for (let z = 0; z < 1000; z++) {
