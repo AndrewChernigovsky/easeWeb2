@@ -2,6 +2,7 @@ import menuBurger from './components/burger-menu';
 import scrollSmooth from './components/scroll-smooth';
 import inputmask from './components/inputMask';
 import swiperMain from './components/sliders/swiperMain';
+import swiperVariants from './components/sliders/swiperVariants';
 
 const overlay = document.querySelector('.overlay');
 const BODY = document.querySelector('body');
@@ -10,7 +11,14 @@ const BODY = document.querySelector('body');
 	$(() => {
 		scrollSmooth.init();
 		menuBurger.init();
-		swiperMain.init();
+		
+		if(swiperVariants) {
+			swiperMain.init();
+		}
+		if(swiperVariants) {
+			swiperVariants.init();
+		}
+		
 		$('.swiper-wrapper').removeClass('overflowXScroll');
 
 		$('.intro-section__texts-inner .anima').each(function (i) {

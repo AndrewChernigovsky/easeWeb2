@@ -1,14 +1,14 @@
-const swiperMain = (() => {
-	const accountantInit = new Swiper('#swiperMain', {
-		slidesPerView: 'auto',
-		spaceBetween: 0,
+const swiperVariants = (() => {
+	const accountantInit = new Swiper('#swiperVariants', {
+		slidesPerView: 2.2,
+		spaceBetween: 20,
 		speed: 800,
 		// centeredSlides: true,
 		grabCursor: true,
 		loop: false,
 		preloadImages: true,
 		autoplay: {
-			delay: 7000,
+			delay: 1500000,
 			disableOnInteraction: false,
 		},
 		// centerInsufficientSlides: true,
@@ -23,15 +23,18 @@ const swiperMain = (() => {
 		},
 
 		breakpoints: {
-			// 768: {
-			// 	spaceBetween: 50,
-			// },
-			// 1024: {
-			// 	spaceBetween: 80,
-			// },
-			// 1200: {
-			// 	spaceBetween: 100,
-			// },
+			480: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 2.2,
+			},
+			1024: {
+				slidesPerView: 1.5,
+			},
+			1200: {
+				slidesPerView: 2.2,
+			},
 		},
 	});
 	const init = () => {};
@@ -41,4 +44,4 @@ const swiperMain = (() => {
 	};
 })();
 
-export default swiperMain;
+export default swiperVariants;

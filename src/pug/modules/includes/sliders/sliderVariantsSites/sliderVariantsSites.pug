@@ -1,17 +1,15 @@
 extends ../../../../layout/sliders/sliderMain/sliderMain
 
 block mainWrapper
-    div(class=classSliderMain id=swiperMainID)
+    div(class=classSliderMain+'swiper-variants' id='swiperVariants')
         block wrapper
-            div(class=classSliderMainWrapper)
+            div(class=classSliderMainWrapper+' overflowXScroll')
                 block includes
                     include slide-blocks/slide1
                     include slide-blocks/slide2
                     include slide-blocks/slide3
                     include slide-blocks/slide4
 
-            block pagination
-                div(class=swiperPagination)
             block navigation
                 div(class=swiperButtonPrev)
                 div(class=swiperButtonNext)
