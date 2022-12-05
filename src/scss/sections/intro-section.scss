@@ -135,7 +135,7 @@
 
 		.mob-btnMenu {
 			@include media('>=phone-lg') {
-				max-width: 165px;
+				max-width: 200px;
 				font-size: 1.2rem;
 			}
 		}
@@ -871,7 +871,8 @@
 	}
 	.mob-btnMenu {
 		margin-top: 11px;
-		max-width: 150px;
+		max-width: 200px;
+   		white-space: nowrap;
 		padding: 0.5rem 1rem;
 
 		@include media('>=tablet') {

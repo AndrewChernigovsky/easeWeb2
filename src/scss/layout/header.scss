@@ -497,11 +497,9 @@
 }
 
 .mob-btnMenu {
-	max-width: 120px;
 	font-size: 1rem;
 	min-height: 20px;
-	
-    max-width: 150px;
+    max-width: 200px;
     font-size: 1.4rem;
 
 	@include media('>=desktop') {

@@ -193,6 +193,26 @@
 		}
 	}
 
+	&__line.line-menu {
+		background-color: $white;
+		max-width: calc(100% - 37px);
+		margin-top: -20px;
+
+		@include media('>=widescreen-lg') {
+			max-width: calc(100% - 60px);
+		}
+
+		@include media('>=1880px') {
+			max-width: calc(100% - 310px);
+		}
+
+		&::before,
+		&::after {
+			width: 1px;
+			background-color: $white;
+		}
+	}
+
 	.logo {
 		height: 30px;
 		margin-left: -2px;

@@ -1,6 +1,6 @@
 const swiperVariants = (() => {
 	const accountantInit = new Swiper('#swiperVariants', {
-		slidesPerView: 2.2,
+		slidesPerView: 1.5,
 		spaceBetween: 20,
 		speed: 800,
 		// centeredSlides: true,

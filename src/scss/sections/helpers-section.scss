@@ -11,6 +11,17 @@
 		align-items: stretch;
 		overflow-x: scroll;
 		padding-bottom: 2rem;
+
+		@include media('>=724px') {
+			overflow-x: auto;
+		}
+		@include media('>=1024px') {
+			overflow-x: scroll;
+		}
+
+		@include media('>=widescreen-lg') {
+			overflow-x: auto;
+		}
 	}
 
 	&__title {

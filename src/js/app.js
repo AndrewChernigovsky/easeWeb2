@@ -2,7 +2,6 @@ import menuBurger from './components/burger-menu';
 import scrollSmooth from './components/scroll-smooth';
 import inputmask from './components/inputMask';
 import swiperMain from './components/sliders/swiperMain';
-import swiperVariants from './components/sliders/swiperVariants';
 
 const overlay = document.querySelector('.overlay');
 const BODY = document.querySelector('body');
@@ -11,12 +10,9 @@ const BODY = document.querySelector('body');
 	$(() => {
 		scrollSmooth.init();
 		menuBurger.init();
-		
-		if(swiperVariants) {
+
+		if(swiperMain) {
 			swiperMain.init();
-		}
-		if(swiperVariants) {
-			swiperVariants.init();
 		}
 		
 		$('.swiper-wrapper').removeClass('overflowXScroll');
@@ -52,6 +48,17 @@ const BODY = document.querySelector('body');
 		inputmask();
 	});
 })(jQuery);
+
+window.addEventListener('load', function(){
+	var newVideo = document.getElementsByTagName('video');
+
+    Array.from(newVideo).forEach(e => {
+		e.autoplay = true;
+		e.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false)});
+});
 
 let windowWidth = window.innerWidth;
 // let windowWidthClient = window.clientWidth;
