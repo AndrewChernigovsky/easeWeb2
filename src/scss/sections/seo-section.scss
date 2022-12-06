@@ -134,10 +134,10 @@
 
 		@include media('>=tablet') {
 			min-width: 390px;
-			height: 500px;
+			height: 390px;
 		}
 		@include media('>=widescreen-lg') {
-			height: 700px;
+			height: 390px;
 		}
 	}
 

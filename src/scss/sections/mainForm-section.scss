@@ -2,7 +2,7 @@
     background-color: $black;
     height: 10rem;
     padding-bottom: 10rem;
-	margin-bottom: -10px;
+	// margin-bottom: -10px;
     border-radius: 100% 100% 0% 0%;
 	border-bottom: 1px solid $black;
 
@@ -84,7 +84,7 @@
         padding: 2rem;
         min-width: 100%;
         text-align: left;
-		padding-top: 2.5rem;
+		padding-top: 4.5rem;
 
 		@include media('>=desktop') {
 			padding: 11rem 9rem 10rem 9rem;

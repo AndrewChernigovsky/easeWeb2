@@ -3,6 +3,7 @@
 	width: 100%;
 	border-bottom: none;
 	margin-bottom: -0.6rem;
+	height: max-content;
 
 	@include media('>=tablet') {
 		border-bottom: 2px solid $white;

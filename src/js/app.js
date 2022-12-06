@@ -1,5 +1,5 @@
 import menuBurger from './components/burger-menu';
-import scrollSmooth from './components/scroll-smooth';
+// import scrollSmooth from './components/scroll-smooth';
 import inputmask from './components/inputMask';
 import swiperMain from './components/sliders/swiperMain';
 
@@ -8,7 +8,7 @@ const BODY = document.querySelector('body');
 
 (($) => {
 	$(() => {
-		scrollSmooth.init();
+		// scrollSmooth.init();
 		menuBurger.init();
 
 		if(swiperMain) {
@@ -92,11 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
 					NAV.classList.remove(active);
 					BURGER.classList.remove(active);
 					BODY.style.overflow = 'auto';
-					BODY.style.width = `${windowWidth}` + 'px';
+					// BODY.style.width = `${windowWidth}` + 'px';
 				} else {
 					BURGER.classList.remove(active);
 					BODY.style.overflow = 'auto';
-					BODY.style.width = `${windowWidth}` + 'px';
+					// BODY.style.width = `${windowWidth}` + 'px';
 				}
 			});
 			if (popupCall.classList.contains(active)) {
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				popupCall.classList.add(active);
 				BODY.style.overflow = 'hidden';
 				overlay.classList.add(active);
-				BODY.style.width = `${windowWidth}` + 'px';
+				// BODY.style.width = `${windowWidth}` + 'px';
 			}
 
 			overlay.addEventListener('click', () => {
@@ -115,12 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
 					overlay.classList.remove(active);
 					popupCall.classList.remove(active);
 					BODY.style.overflow = 'auto';
-				}
-			});
-
-			contactsLink.addEventListener('click', () => {
-				if (BODY.classList.contains('stop-scroll')) {
-					BODY.classList.remove('stop-scroll');
 				}
 			});
 		});
@@ -176,11 +170,11 @@ let optionsSHAPE = {
 	threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
 };
 
-let optionsContacts = {
-	root: null,
-	rootMargin: '0%',
-	threshold: 1,
-};
+// let optionsContacts = {
+// 	root: null,
+// 	rootMargin: '0%',
+// 	threshold: 1,
+// };
 
 // let callbackOuter = function (entries, observer) {
 // 	entries.forEach((entry) => {
@@ -209,13 +203,13 @@ let optionsContacts = {
 // 	});
 // };
 
-let callbackContacts = function (entries, observer) {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			BODY.classList.remove('stop-scroll');
-		}
-	});
-};
+// let callbackContacts = function (entries, observer) {
+// 	entries.forEach((entry) => {
+// 		if (entry.isIntersecting) {
+// 			BODY.classList.remove('stop-scroll');
+// 		}
+// 	});
+// };
 let callbackSHAPE = function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
@@ -240,7 +234,7 @@ let callbackSHAPE = function (entries, observer) {
 // let observerOuter = new IntersectionObserver(callbackOuter, optionsOuter);
 // let observerList = new IntersectionObserver(callbackList, optionsList);
 let observerSHAPE = new IntersectionObserver(callbackSHAPE, optionsSHAPE);
-let observerContacts = new IntersectionObserver(callbackContacts, optionsContacts);
+// let observerContacts = new IntersectionObserver(callbackContacts, optionsContacts);
 
 // window.addEventListener('resize', ()=> {
 // 	BODY.style.width = `${windowWidthClient}` + 'px';
@@ -255,9 +249,9 @@ let observerContacts = new IntersectionObserver(callbackContacts, optionsContact
 // 	observerList.observe(lastBlockInnerID);
 // }
 
-if (blockContacts) {
-	observerContacts.observe(blockContacts);
-}
+// if (blockContacts) {
+// 	observerContacts.observe(blockContacts);
+// }
 if (SHAPE) {
 	observerSHAPE.observe(SHAPE);
 }

@@ -1,7 +1,8 @@
 .PopupCall {
     display: none;
-    min-height: 500px;
-    min-width: calc(100% - 40px);
+	padding: 5rem 1rem 1rem 1rem;
+    min-height: max-content;
+   	min-width: inherit;
     max-width: 800px;
     background-color: $black;
     position: absolute;
@@ -9,26 +10,37 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 200;
+	
 
-    @include media('>=tablet') {
-        min-width: calc(100% - 100px);
+    @include media('>=phone') {
+		padding: 8rem 1rem 1rem 1rem;
+		// min-width: 80%;
     }
+	
 
-    @include media('>=desktop') {
-        min-width: calc(100% - 300px);
-    }
+    // @include media('>=tablet') {
+    //     min-width: calc(100% - 100px);
+    // }
 
-    @include media('>=widescreen-lg') {
-        min-width: calc(100% - 600px);
-    }
+    // @include media('>=desktop') {
+    //     min-width: calc(100% - 300px);
+    // }
+
+    // @include media('>=widescreen-lg') {
+    //     min-width: calc(100% - 600px);
+    // }
 
     &__wrapper {
         padding: 0;
         display: grid;
         gap: 2rem;
-
+		min-width: 100%;
 		@include media('>=tablet') {
 			padding: 4rem 2rem;
+		}
+
+		.js-formPopup {
+			max-width: 500px;
 		}
 
         .mainForm-polite {
@@ -36,6 +48,7 @@
             margin-top: 1rem;
             margin-bottom: 2rem;
             font-size: 1.2rem;
+			text-align: left;
 
             @include media('>=tablet') {
                 font-size: 1.8rem;
@@ -63,8 +76,8 @@
         display: block;
         height: 50px;
         width: 50px;
-        left: 0;
-        top: 0;
+        left: 18px;
+        top: 18px;
 
         &:hover::before,
         &:hover::after {
@@ -108,8 +121,8 @@
 
     .mainForm__button {
 		min-width: 100%;
-        font-size: 2.4rem;
-        height: 70px;
+        font-size: 2rem;
+        height: 50px;
         text-align: left;
         padding-left: 2rem;
 
@@ -128,14 +141,14 @@
         &::after {
             right: 8px;
             height: 42px;
-            top: 20px;
+            top: 10px;
             width: 17px;
 
             @include media('>=phone') {
-                right: 25px;
-                height: 45px;
+                // right: 25px;
+                // height: 45px;
                 top: 12px;
-                width: 30px;
+                // width: 30px;
             }
         }
     }
@@ -155,13 +168,14 @@
             font-family: $Montserrat;
             font-size: 2.4rem;
             border: 2px solid $white;
-            height: 70px;
+            height: 50px;
             min-width: 100%;
 
 			@include media('>=tablet') {
 				flex-basis: 50%;
 				max-width: 100%;
                 min-width: 100px;
+				height: 70px;
 			}
         }
     }
