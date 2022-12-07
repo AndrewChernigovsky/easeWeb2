@@ -7,11 +7,11 @@
     margin-top: -9px;
 
 	@include media('>=desktop') {
-		padding: 4rem 0 6rem 0;
+		padding: 4rem 0 3rem 0;
 	}
 
 	@include media('>=widescreen-lg') {
-		padding: 6rem 0 10rem 0;
+		padding: 6rem 0 5rem 0;
 	}
 
 	&__wrapper {
@@ -30,7 +30,7 @@
 
 		&:last-of-type{
 			padding: 0;
-		
+
 			&:before {
 				@extend %pseudo;
 				width:  calc(100% - 17px);
@@ -60,7 +60,7 @@
 			@include media('>=phone-lg') {
 				font-size: 1.2rem;
 			}
-	
+
 			@include media('>=desktop') {
 				font-size: 2.4rem;
 			}
@@ -82,7 +82,7 @@
 			@include media('>=phone-lg') {
 				font-size: 1rem;
 			}
-	
+
 			@include media('>=desktop') {
 				font-size: 2.4rem;
 			}
@@ -106,10 +106,10 @@
 				font-size: 3.8rem;
 			}
 
-			&:hover {
-				transition: $base-transition;
-				opacity: 0.6;
-			}
+			// &:hover {
+			// 	transition: $base-transition;
+
+			// }
 		}
 
 		&:first-of-type {
@@ -120,7 +120,7 @@
 			}
 
 			@include media('>=widescreen-lg') {
-				margin-bottom: 7.5rem;
+				margin-bottom: 5.5rem;
 			}
 		}
 
@@ -131,12 +131,12 @@
 			@include media('>=phone-lg') {
 				padding-top: 3rem;
 			}
-	
+
 			@include media('>=desktop') {
-				padding-top: 9rem;
+				padding-top: 5rem;
 			}
 			@include media('>=widescreen-lg') {
-				padding-top: 8rem;
+				padding-top: 5.5rem;
 			}
 		}
 
@@ -172,7 +172,7 @@
 			}
 
 			@include media('>=widescreen-lg') {
-				
+
 			}
 		}
 
@@ -217,6 +217,7 @@
 		height: 30px;
 		margin-left: -2px;
 		opacity: 50%;
+		margin-bottom: 2px;
 
 		@include media('>=phone-lg') {
 			height: 50px;
@@ -235,8 +236,8 @@
 			height: 30px;
 
 			@include media('>=desktop') {
-				width: 150px;
-				height: 150px;
+				width: 100px;
+				height: 100px;
 			}
 		}
 
@@ -246,8 +247,8 @@
 		}
 
 		@include media('>=desktop') {
-			width: 150px;
-			height: 150px;
+			width: 100px;
+			height: 100px;
 
 			svg {
 				width: 150px;
@@ -297,7 +298,7 @@
 	}
 	&__link {
 		color: $white;
-		font-family: $Montserrat;
+		font-family: $MontserratBold;
 		font-size: 0.6rem;
 		border-width: 0;
 		border-bottom: 1px solid transparent;

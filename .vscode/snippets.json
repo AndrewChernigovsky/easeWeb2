@@ -1,0 +1,19 @@
+{
+	"html": {
+	  "snippets": {
+		"abbr1": "ul>li*3",
+		"abbr2": "ol>li*3"
+	  }
+	},
+	"sass": {
+	  "snippets": {
+		"clw": "color: white",
+		"clb": "color: black"
+	  }
+	},
+	"pug": {
+	  "snippets": {
+		"mainS1": "section.main-section>div.main-section__wrapper>.container>div*3+p*3>span>a{text something}"
+	  }
+	}
+  }

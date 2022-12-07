@@ -41,24 +41,31 @@ nav(class=menuClasses[0])
 				li(class='menu-mob__item-last')
 					a(href='pages/addtasks.html' class='menu-mob__link') ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ
 			div(class='social-contacts')
-					a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
-						div(class='social-icons')
-							div(class='')
-								a(class='' href="https://t.me/Easeweb_mail")
-									+icon(
-										'0 0 25 25',
-										'25px',
-										'25px',
-										'images/sprite/sprite.svg#telegram'
-									)
-							div(class='')
-								a(class='' href="https://vk.com/easeweb")
-									+icon(
-										'0 0 25 25',
-										'25px',
-										'25px',
-										'images/sprite/sprite.svg#vk'
-									)
+				a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
+					div(class='social-icons')
+						div(class='')
+							a(class='' href="https://t.me/Easeweb_mail")
+								//- +icon(
+								//- 	'0 0 25 25',
+								//- 	'25px',
+								//- 	'25px',
+								//- 	'images/sprite/sprite.svg#telegram'
+								//- )
+								+pictureClassNamePng(
+									'telegram-icon',
+									'contacts, telegram, mail',
+									'webp',
+									'images/icons/telegram',
+									'images/icons/telegram',
+								)
+						div(class='')
+							a(class='' href="https://vk.com/easeweb")
+								+icon(
+									'0 0 25 25',
+									'25px',
+									'25px',
+									'images/sprite/sprite.svg#vk'
+								)
 		if seoPage
 			ul(class='menu-mob')
 				li(class='menu-mob__item-first')
@@ -76,30 +83,31 @@ nav(class=menuClasses[0])
 					a(href='seo.html' class='menu-mob__link'+ ' a__link' + ' active') ПРОДВИЖЕНИЕ САЙТОВ
 				ul
 					li(class='menu-mob__item')
-						a(href='seo.html#benefits' class='menu-mob__link a__link' + ' active') подробнее
+						a(href='#benefits' class='menu-mob__link a__link' + ' ') подробнее
 					li(class='menu-mob__item')
-						a(href='seo.html#price' class='menu-mob__link a__link' + ' active') тарифы
+						a(href='#price' class='menu-mob__link a__link' + ' ') тарифы
 				li(class='menu-mob__item-last')
 					a(href='addtasks.html' class='menu-mob__link') ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ
 			div(class='social-contacts')
-					a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
-						div(class='social-icons')
-							div(class='')
-								a(class='' href="https://t.me/Easeweb_mail")
-									+icon(
-										'0 0 25 25',
-										'25px',
-										'25px',
-										'../images/sprite/sprite.svg#telegram'
-									)
-							div(class='')
-								a(class='' href="https://vk.com/easeweb")
-									+icon(
-										'0 0 25 25',
-										'25px',
-										'25px',
-										'../images/sprite/sprite.svg#vk'
-									)
+				a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
+					div(class='social-icons')
+						div(class='')
+							a(class='' href="https://t.me/Easeweb_mail")
+								+pictureClassNamePng(
+									'telegram-icon',
+									'contacts, telegram, mail',
+									'webp',
+									'../images/icons/telegram',
+									'../images/icons/telegram',
+								)
+						div(class='')
+							a(class='' href="https://vk.com/easeweb")
+								+icon(
+									'0 0 25 25',
+									'25px',
+									'25px',
+									'../images/sprite/sprite.svg#vk'
+								)
 		if developPage
 			ul(class='menu-mob')
 				li(class='menu-mob__item-first')
@@ -123,24 +131,25 @@ nav(class=menuClasses[0])
 				li(class='menu-mob__item-last')
 					a(href='addtasks.html' class='menu-mob__link') ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ
 			div(class='social-contacts')
-					a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
-						div(class='social-icons')
-							div(class='')
-								a(class='' href="https://t.me/Easeweb_mail")
-									+icon(
-										'0 0 25 25',
-										'25px',
-										'25px',
-										'../images/sprite/sprite.svg#telegram'
-									)
-							div(class='')
-								a(class='' href="https://vk.com/easeweb")
-									+icon(
-										'0 0 25 25',
-										'25px',
-										'25px',
-										'../images/sprite/sprite.svg#vk'
-									)
+				a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
+					div(class='social-icons')
+						div(class='')
+							a(class='' href="https://t.me/Easeweb_mail")
+								+pictureClassNamePng(
+									'telegram-icon',
+									'contacts, telegram, mail',
+									'webp',
+									'../images/icons/telegram',
+									'../images/icons/telegram',
+								)
+						div(class='')
+							a(class='' href="https://vk.com/easeweb")
+								+icon(
+									'0 0 25 25',
+									'25px',
+									'25px',
+									'../images/sprite/sprite.svg#vk'
+								)
 		if addTasksPage
 			ul(class='menu-mob')
 				li(class='menu-mob__item-first')
@@ -164,24 +173,25 @@ nav(class=menuClasses[0])
 				li(class='menu-mob__item-last')
 					a(href='addtasks.html' class='menu-mob__link'+ ' a__link' + ' active') ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ
 			div(class='social-contacts')
-					a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
-						div(class='social-icons')
-							div(class='')
-								a(class='' href="https://t.me/Easeweb_mail")
-									+icon(
-										'0 0 25 25',
-										'25px',
-										'25px',
-										'../images/sprite/sprite.svg#telegram'
-									)
-							div(class='')
-								a(class='' href="https://vk.com/easeweb")
-									+icon(
-										'0 0 25 25',
-										'25px',
-										'25px',
-										'../images/sprite/sprite.svg#vk'
-									)
+				a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
+					div(class='social-icons')
+						div(class='')
+							a(class='' href="https://t.me/Easeweb_mail")
+								+pictureClassNamePng(
+									'telegram-icon',
+									'contacts, telegram, mail',
+									'webp',
+									'../images/icons/telegram',
+									'../images/icons/telegram',
+								)
+						div(class='')
+							a(class='' href="https://vk.com/easeweb")
+								+icon(
+									'0 0 25 25',
+									'25px',
+									'25px',
+									'../images/sprite/sprite.svg#vk'
+								)
 		if politePage
 			ul(class='menu-mob')
 				li(class='menu-mob__item-first')
@@ -205,21 +215,22 @@ nav(class=menuClasses[0])
 				li(class='menu-mob__item-last')
 					a(href='addtasks.html' class='menu-mob__link'+ ' a__link' + ' active') ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ
 			div(class='social-contacts')
-					a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
-						div(class='social-icons')
-							div(class='')
-								a(class='' href="https://t.me/Easeweb_mail")
-									+icon(
-										'0 0 25 25',
-										'25px',
-										'25px',
-										'../images/sprite/sprite.svg#telegram'
-									)
-							div(class='')
-								a(class='' href="https://vk.com/easeweb")
-									+icon(
-										'0 0 25 25',
-										'25px',
-										'25px',
-										'../images/sprite/sprite.svg#vk'
-									)
+				a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
+					div(class='social-icons')
+						div(class='')
+							a(class='' href="https://t.me/Easeweb_mail")
+								+pictureClassNamePng(
+									'telegram-icon',
+									'contacts, telegram, mail',
+									'webp',
+									'../images/icons/telegram',
+									'../images/icons/telegram',
+								)
+						div(class='')
+							a(class='' href="https://vk.com/easeweb")
+								+icon(
+									'0 0 25 25',
+									'25px',
+									'25px',
+									'../images/sprite/sprite.svg#vk'
+								)

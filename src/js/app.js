@@ -11,10 +11,10 @@ const BODY = document.querySelector('body');
 		// scrollSmooth.init();
 		menuBurger.init();
 
-		if(swiperMain) {
+		if (swiperMain) {
 			swiperMain.init();
 		}
-		
+
 		$('.swiper-wrapper').removeClass('overflowXScroll');
 
 		$('.intro-section__texts-inner .anima').each(function (i) {
@@ -45,19 +45,47 @@ const BODY = document.querySelector('body');
 			}
 		});
 
+		let link1 = $("a[href='#benefits']");
+		let link2 = $("a[href='#price']");
+
+		function foo() {
+			if ($('body').hasClass('overflow')) {
+				$('body').removeClass('overflow');
+				$('.js-burger').removeClass('active');
+				$('.js-burger-open').removeClass('active');
+			}
+			if ($('.overlay').hasClass('active')) {
+				$('.overlay').removeClass('active');
+				$('.js-burger').removeClass('active');
+				$('.js-burger-open').removeClass('active');
+			}
+		}
+
+		link1.on('click', function () {
+			foo();
+		});
+		link2.on('click', function () {
+			foo();
+		});
+
 		inputmask();
 	});
 })(jQuery);
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
 	var newVideo = document.getElementsByTagName('video');
 
-    Array.from(newVideo).forEach(e => {
+	Array.from(newVideo).forEach((e) => {
 		e.autoplay = true;
-		e.addEventListener('ended', function() {
-        this.currentTime = 0;
-        this.play();
-    }, false)});
+		e.addEventListener(
+			'ended',
+			function () {
+				this.currentTime = 0;
+				this.play();
+			},
+			false
+		);
+	});
 });
 
 let windowWidth = window.innerWidth;
@@ -83,7 +111,7 @@ const politeCheckbox = document.querySelector(".PopupCall input[type='checkbox']
 // const titlesAnima = document.querySelectorAll('.titleIntro-anima .animaH2');
 
 document.addEventListener('DOMContentLoaded', () => {
-	menuBtn.forEach(e=>{
+	menuBtn.forEach((e) => {
 		e.addEventListener('click', () => {
 			btnClosePopupCall.addEventListener('click', () => {
 				if (popupCall.classList.contains(active)) {
@@ -118,14 +146,13 @@ document.addEventListener('DOMContentLoaded', () => {
 				}
 			});
 		});
-	})
+	});
 
 	tarifWrapper.forEach((e) => {
 		e.addEventListener('click', () => {
 			e.classList.toggle('active');
 		});
 	});
-
 });
 
 // let targetStepWorking = document.getElementById('stepsWorkingSectionWrapper1');
@@ -144,14 +171,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // 		BODY.classList.remove('stop-scroll');
 // 		// targetStepWorking.removeEventListener('wheel', foo111)
 // 	}
-	
+
 // };
 
 // if (targetStepWorking && windowWidth >= 1024) {
 // 	targetStepWorking.addEventListener('wheel', foo111)
 // }
-
-
 
 // let optionsOuter = {
 // 	root: null,
@@ -278,7 +303,6 @@ if (SHAPE) {
 // 	});
 // }
 
-
 let jsForm = document.querySelector('.js-form');
 // let jsformButton = document.querySelector('.js-form button[type="submit"]');
 let jsForm1 = document.querySelector('.js-form1');
@@ -297,88 +321,86 @@ const phoneInput3 = document.querySelector('.js-formPopup input[data-mask="tel"]
 // const nameInput2 = document.querySelector('.js-form2 input[name="username"]');
 // const nameInput3 = document.querySelector('.js-formPopup input[name="username"]');
 
-
-
 if (jsForm) {
-	jsForm.addEventListener('submit', (e)=> {
+	jsForm.addEventListener('submit', (e) => {
 		let valuePhone = phoneInput.value;
 		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
 		let p = document.createElement('p');
 
-		if(!valuePhone.match(re) === true) {
+		if (!valuePhone.match(re) === true) {
 			e.preventDefault();
-			phoneInput.classList.add('invalid')
+			phoneInput.classList.add('invalid');
 			jsForm.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+			p.innerHTML = "<p class='base-text'>введите корректный номер</p>";
 		}
-		if(valuePhone === ''){
+		if (valuePhone === '') {
 			jsForm.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите номер</p>"
+			p.innerHTML = "<p class='base-text'>введите номер</p>";
 		} else {
 			phoneInput.classList.remove('invalid');
-			phoneInput.classList.add('valid')
+			phoneInput.classList.add('valid');
 		}
-	})
+	});
 }
 if (jsForm1) {
-	jsForm1.addEventListener('submit', (e)=> {
+	jsForm1.addEventListener('submit', (e) => {
 		let valuePhone = phoneInput1.value;
 		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
 		let p = document.createElement('p');
 
-		if(!valuePhone.match(re) === true) {
+		if (!valuePhone.match(re) === true) {
 			e.preventDefault();
-			phoneInput1.classList.add('invalid')
+			phoneInput1.classList.add('invalid');
 		}
-		if(valuePhone === ''){
-			phoneInput1.classList.add('invalid')
+		if (valuePhone === '') {
+			phoneInput1.classList.add('invalid');
 		} else {
 			phoneInput1.classList.remove('invalid');
-			phoneInput1.classList.add('valid')
+			phoneInput1.classList.add('valid');
 		}
-	})
+	});
 }
 if (jsForm2) {
-	jsForm2.addEventListener('submit', (e)=> {
+	jsForm2.addEventListener('submit', (e) => {
 		let valuePhone = phoneInput2.value;
 		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
 		let p = document.createElement('p');
 
-		if(!valuePhone.match(re) === true) {
+		if (!valuePhone.match(re) === true) {
 			e.preventDefault();
-			phoneInput2.classList.add('invalid')
+			phoneInput2.classList.add('invalid');
 			jsForm2.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+			p.innerHTML = "<p class='base-text'>введите корректный номер</p>";
 		}
-		if(valuePhone === ''){
+		if (valuePhone === '') {
 			jsForm2.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите номер</p>"
+			p.innerHTML = "<p class='base-text'>введите номер</p>";
 		} else {
 			phoneInput2.classList.remove('invalid');
-			phoneInput2.classList.add('valid')
+			phoneInput2.classList.add('valid');
 		}
-	})
+	});
 }
 if (jsFormPopup) {
-	jsFormPopup.addEventListener('submit', (e)=> {
+	jsFormPopup.addEventListener('submit', (e) => {
 		let valuePhone = phoneInput3.value;
 		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
 		let p = document.createElement('p');
 
-		if(!valuePhone.match(re) === true) {
+		if (!valuePhone.match(re) === true) {
 			e.preventDefault();
-			phoneInput3.classList.add('invalid')
+			phoneInput3.classList.add('invalid');
 			jsFormPopup.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите корректный номер</p>"
+			p.innerHTML = "<p class='base-text'>введите корректный номер</p>";
 		}
-		if(valuePhone === ''){
+		if (valuePhone === '') {
 			jsFormPopup.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите номер</p>"
+			p.innerHTML = "<p class='base-text'>введите номер</p>";
 		} else {
 			phoneInput3.classList.remove('invalid');
-			phoneInput3.classList.add('valid')
+			phoneInput3.classList.add('valid');
 		}
-	})
+	});
 }
 
 // let sections = document.querySelectorAll('.lazy_contentSection');
@@ -397,7 +419,6 @@ if (jsFormPopup) {
 // 		if (entry.isIntersecting) {
 // 			const lazyContent = entry.target
 // 			console.log("lazy loading ", lazyContent)
-
 
 // 			arr.forEach((el) => {
 // 				el.classList.remove("lazy_content")

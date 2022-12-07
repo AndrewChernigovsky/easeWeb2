@@ -14,7 +14,7 @@
 	background-position: center;
 	background-size: 50px;
 	background-repeat: no-repeat;
-	top: 80%;
+	top: 50%;
 	color: $orange1;
 
 	@include media('>=tablet') {
@@ -22,6 +22,16 @@
 	}
 }
 
+.swiper-button-prev {
+	@include media('>=desktop') {
+		left: 30px;
+	}
+}
+.swiper-button-next {
+	@include media('>=desktop') {
+		right: 30px;
+	}
+}
 
 .swiper-main {
 

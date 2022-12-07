@@ -21,6 +21,8 @@
     }
 
 	&__inner {
+		min-width: 100%;
+		
 		marquee {
 			font-size: 3.2rem;
 			font-family: $MontserratBold;

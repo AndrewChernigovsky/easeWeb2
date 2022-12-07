@@ -19,14 +19,14 @@ $mail->setFrom('easeweb-info.ru@easeweb.ru');
 $mail->addAddress('easeweb@mail.ru');
 $mail->addAddress('easewebcompany@gmail.com');
 $mail->Subject = 'Easeweb | Обратный звонок';
-$mail->Body    = '' . '<p style="color: #1662a8; font-size: 16px;"><strong>' . $fio . '</strong></p>' . "<p style='color: black; font-size: 24px;'>телефон<strong> \r\n" . '+'.$phone . '</strong></p>';
+$mail->Body = '' . '<p style="color: #1662a8; font-size: 16px;"><strong>' . $fio . '</strong></p>' . "<p style='color: black; font-size: 24px;'>телефон<strong> \r\n" . '+' . $phone . '</strong></p>';
 $mail->AltBody = '';
 
-if(!$mail->send()) {
-    echo 'Error';
+if (!$mail->send()) {
+	echo 'Error';
 	echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    header('location: thank-you.html');
+	header('location: thank-you.html');
 }
 
 $arr = array(
@@ -34,17 +34,16 @@ $arr = array(
 	'Телефон: ' => "+{$phone}"
 );
 
-foreach($arr as $key => $value) {
-$txt .= "<b>".$key."</b> ".$value."%0A";
-};
+foreach ($arr as $key => $value) {
+	$txt .= "<b>" . $key . "</b> " . $value . "%0A";
+}
+;
 
-$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
+$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
 
 if ($sendToTelegram) {
-header('Location: thank-you.html');
+	header('Location: thank-you.html');
 } else {
-echo "Error";
+	echo "Error";
 }
-
 ?>
-123
