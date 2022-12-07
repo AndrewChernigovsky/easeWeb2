@@ -43,11 +43,11 @@
 }
 
 .mainForm-section.developPage {
-	
+
 	@include media('>=widescreen-lg') {
 		padding-bottom: 20rem;
 	}
-	
+
 	.mainForm-section__wrapper {
 		@include media('>=widescreen-lg') {
 			padding-top: 11rem;
@@ -148,7 +148,7 @@
         @include media('>=390px') {
             padding: 3rem 0 2rem 0;
         }
-		
+
         @include media('>=phone-lg') {
             padding: 3rem 0 0 0;
         }
@@ -218,7 +218,7 @@
 				font-size: 2rem;
 				height: 50px;
 			}
-		
+
 			@include media('>=desktop') {
 				height: 70px;
 				font-size: 2.4rem;
@@ -261,13 +261,13 @@
 			font-size: 2rem;
 			height: 50px;
 		}
-	
+
         @include media('>=desktop') {
 			text-align: center;
 			height: 70px;
 			padding: 2rem;
 			font-size: 2rem;
-		
+
 
 			&:hover {
 				box-shadow: rgba(255, 255, 255, 0.5) 5px 4px 8px 1px inset,
@@ -348,7 +348,7 @@
 
 				@include media('>=desktop') {
 					font-size: 2.4rem;
-				}	
+				}
             };
         }
 
@@ -387,7 +387,7 @@
 				border: 10px solid transparent;
 				border-top: 10px solid $white;
 			}
-	
+
 			@include media('>=desktop') {
 				right: 10px;
 				top: 30px;
@@ -512,13 +512,13 @@ input.mainFormInput {
 	margin-top: 1rem;
 	font-size: 1rem;
 	max-width: 1080px;
-	text-align: center;
+	text-align: left;
 	min-width: 100%;
 
 	@include media('>=360px') {
 		font-size: 1.2rem;
 	}
-	
+
 	.mainForm-polite-link {
 		font-size: 1rem;
 		color: $white;

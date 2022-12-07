@@ -216,7 +216,7 @@
 	.logo {
 		height: 30px;
 		margin-left: -2px;
-		opacity: 50%;
+		// opacity: 0.5;
 		margin-bottom: 2px;
 
 		@include media('>=phone-lg') {
@@ -225,6 +225,7 @@
 
 		img {
 			height: 30px;
+			opacity: 0.5;
 
 			@include media('>=phone-lg') {
 				height: auto;
@@ -356,8 +357,6 @@
 		transform: scale(0);
 	}
 }
-
-
 
 .footer.politeFooter {
 	padding-top: 4rem;

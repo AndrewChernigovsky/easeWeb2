@@ -6,7 +6,7 @@
     position: relative;
     min-height: 160px;
 	padding-bottom: 2.7rem;
-	
+
 	cursor: grab;
 
 	@include media('>=phone-lg') {
@@ -130,6 +130,8 @@
 .variantSection-block .stepsWorking-section__text{
 	height: 0;
 	opacity: 0;
+	transition: $base-transition;
+	transition-duration: 1s;
 	position: static;
 	color: $black;
 	font-family: $Montserrat;

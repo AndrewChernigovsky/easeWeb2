@@ -155,11 +155,6 @@ input.invalid:focus {
 	border: 2px solid $red;
 }
 
-// .lazy_content {
-// 	display: none;
-// 	opacity: 0;
-// }
-
 .block {
 	display: block;
 	opacity: 1;
@@ -197,12 +192,12 @@ input.invalid:focus {
     @include media('>=phone-lg') {
     	font-size: 3.6rem;
     }
-  
+
     @include media('>=tablet') {
 		padding-bottom: 2rem;
     	font-size: 4.6rem;
     }
-  
+
     @include media('>=desktop') {
       padding-bottom: 3rem;
       font-size: 5.6rem;
@@ -216,12 +211,12 @@ input.invalid:focus {
     @include media('>=phone-lg') {
     	font-size: 2rem;
     }
-  
+
     @include media('>=tablet') {
 		margin-bottom: 2rem;
     	font-size: 2.8rem;
     }
-  
+
     @include media('>=desktop') {
     	font-size: 3.8rem;
     }
@@ -234,12 +229,12 @@ input.invalid:focus {
     @include media('>=phone-lg') {
     	font-size: 1.8rem;
     }
-  
+
     @include media('>=tablet') {
 		margin-bottom: 2rem;
     	font-size: 2.5rem;
     }
-  
+
     @include media('>=desktop') {
     	font-size: 3rem;
     }
@@ -259,7 +254,7 @@ input.invalid:focus {
 		margin-bottom: 2rem;
     }
     }
-	
+
 	p {
 		padding-left: 1rem;
 

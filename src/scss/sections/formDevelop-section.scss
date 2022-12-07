@@ -44,7 +44,7 @@
 
 	.formDevSec-Inner {
 		padding: 1rem;
-		border-radius: 15px;
+		border-radius: 10px;
 		box-shadow: 1px 2px 2px 1px  rgba(0, 0, 0, 0.07), 0px 0px 0px 1px rgba(0, 0, 0, 0.07);
 
 		@include media('>=phone-lg') {
@@ -190,13 +190,13 @@
 				font-size: 1.6rem;
 				height: 30px;
 				padding-right: 3rem;
-	
+
 				&::after {
 					height: 30px;
 					top: 8px;
 				}
 			}
-	
+
 			@include media(">=tablet") {
 				min-width: 30%;
 			}
@@ -261,7 +261,7 @@
 	@include media('>=395px') {
 		padding-bottom: 3.5rem;
 	}
-	
+
 	@include media('>=widescreen-lg') {
 		padding-bottom: 23.5rem;
 	}
@@ -374,7 +374,7 @@
 	}
 
 	.formDevelop__imageWrapper video {
-		
+
 		@include media('>=widescreen-lg') {
 			width: 320px;
 			margin-top: -30px;

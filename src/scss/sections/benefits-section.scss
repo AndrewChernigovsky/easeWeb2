@@ -78,13 +78,15 @@
 		&:last-of-type() {
 			padding-right: 2rem;
 			min-width: 100%;
+			gap: 1.5rem;
 
 			@include media('>=405px') {
 				min-width: 10%;
 			}
-			
+
 			@include media('>=desktop') {
 				padding-right: 4rem;
+				gap: 5rem;
 			}
 
 			&:before {
@@ -92,7 +94,7 @@
 				right: 6px;
 				top: -16px;
 				width: 1px;
-				height: 128px;
+				height: 138px;
 				background-color: $black;
 
 				@include media('>=desktop') {
@@ -186,7 +188,7 @@
 					top: 15px;
 					left: -35px;
 				}
-				
+
 				@include media('>=widescreen-lg') {
 					top: 42px;
 					left: -41px;
@@ -223,7 +225,7 @@
 					left: auto;
     				right: -40px;
 				}
-	
+
 				@include media('>=widescreen-lg') {
 					top: 42px;
 					right: -41px;

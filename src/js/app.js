@@ -1,5 +1,5 @@
 import menuBurger from './components/burger-menu';
-// import scrollSmooth from './components/scroll-smooth';
+import scrollSmooth from './components/scroll-smooth';
 import inputmask from './components/inputMask';
 import swiperMain from './components/sliders/swiperMain';
 
@@ -8,7 +8,7 @@ const BODY = document.querySelector('body');
 
 (($) => {
 	$(() => {
-		// scrollSmooth.init();
+		scrollSmooth.init();
 		menuBurger.init();
 
 		if (swiperMain) {
