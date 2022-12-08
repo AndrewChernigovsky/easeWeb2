@@ -319,7 +319,11 @@ const phoneInput3 = document.querySelector('.js-formPopup input[data-mask="tel"]
 // const nameInput = document.querySelector('.js-form input[name="username"]');
 // const nameInput1 = document.querySelector('.js-form1 input[name="username"]');
 // const nameInput2 = document.querySelector('.js-form2 input[name="username"]');
-// const nameInput3 = document.querySelector('.js-formPopup input[name="username"]');
+const nameInput3 = document.querySelector('.js-formPopup input[name="username"]');
+
+const invalid = '1px solid #ff1b50';
+
+const valid = '1px solid #00CC00';
 
 if (jsForm) {
 	jsForm.addEventListener('submit', (e) => {
@@ -329,16 +333,18 @@ if (jsForm) {
 
 		if (!valuePhone.match(re) === true) {
 			e.preventDefault();
-			phoneInput.classList.add('invalid');
-			jsForm.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите корректный номер</p>";
+			phoneInput.style.border = invalid;
 		}
 		if (valuePhone === '') {
-			jsForm.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите номер</p>";
+			e.preventDefault();
+			phoneInput.style.border = invalid;
 		} else {
-			phoneInput.classList.remove('invalid');
-			phoneInput.classList.add('valid');
+			// phoneInput.classList.remove('invalid');
+			// phoneInput.classList.add('valid');
+
+			phoneInput.style.border = invalid;
+			phoneInput.style.border = valid;
+
 		}
 	});
 }
@@ -370,11 +376,11 @@ if (jsForm2) {
 			e.preventDefault();
 			phoneInput2.classList.add('invalid');
 			jsForm2.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите корректный номер</p>";
+			// p.innerHTML = "<p class='base-text'>введите корректный номер</p>";
 		}
 		if (valuePhone === '') {
 			jsForm2.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите номер</p>";
+			// p.innerHTML = "<p class='base-text'>введите номер</p>";
 		} else {
 			phoneInput2.classList.remove('invalid');
 			phoneInput2.classList.add('valid');
@@ -384,54 +390,42 @@ if (jsForm2) {
 if (jsFormPopup) {
 	jsFormPopup.addEventListener('submit', (e) => {
 		let valuePhone = phoneInput3.value;
+		let valueName = nameInput3.value;
 		let re = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+		var nameRegex = /^[a-zA-Z\-]+$/;
 		let p = document.createElement('p');
 
 		if (!valuePhone.match(re) === true) {
 			e.preventDefault();
-			phoneInput3.classList.add('invalid');
+			phoneInput3.style.border = invalid;
+		}
+		if (!valueName.match(re) === true ) {
+			e.preventDefault();
+			nameInput3.style.border = invalid;
 			jsFormPopup.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите корректный номер</p>";
+			if(jsFormPopup.contains(p)) {
+				// p.remove()
+			} else {
+				p.innerHTML=  "<p style='color: white'>введите имя с буквы</p>";
+			}
+
+		} else {
+			nameInput3.style.border = invalid;
+			nameInput3.style.border = valid;
 		}
 		if (valuePhone === '') {
-			jsFormPopup.appendChild(p);
-			p.innerHTML = "<p class='base-text'>введите номер</p>";
+			e.preventDefault();
+			phoneInput3.style.border = invalid;
+
+
 		} else {
-			phoneInput3.classList.remove('invalid');
-			phoneInput3.classList.add('valid');
+			phoneInput3.style.border = invalid;
+			phoneInput3.style.border = valid;
+		}
+		if (valueName === '') {
+			e.preventDefault();
+
+			nameInput3.style.border = invalid;
 		}
 	});
 }
-
-// let sections = document.querySelectorAll('.lazy_contentSection');
-
-// let optionsLazy = {
-// 	root: null,
-// 	rootMargin: '0px',
-// 	threshold: 1,
-// };
-
-// let callbackLazy = function (entries, observer) {
-// 	entries.forEach((entry) => {
-
-// 		const arr = document.querySelectorAll('.lazy_content')
-
-// 		if (entry.isIntersecting) {
-// 			const lazyContent = entry.target
-// 			console.log("lazy loading ", lazyContent)
-
-// 			arr.forEach((el) => {
-// 				el.classList.remove("lazy_content")
-// 				el.classList.add("block")
-// 			})
-
-// 			observerLazy.unobserve(lazyContent);
-// 		}
-// 	});
-// };
-
-// let observerLazy = new IntersectionObserver(callbackLazy, optionsLazy);
-
-// Array.from(sections).forEach(e=>{
-// 	observerLazy.observe(e);
-// })

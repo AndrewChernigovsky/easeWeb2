@@ -10,13 +10,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 200;
-	
+
 
     @include media('>=phone') {
 		padding: 8rem 1rem 1rem 1rem;
 		// min-width: 80%;
     }
-	
+
 
     @include media('>=tablet') {
         min-width: 520px;
@@ -67,7 +67,7 @@
                 @include media('>=desktop') {
                     font-size: 2rem;
                 }
-    
+
             }
         }
     }
@@ -175,6 +175,7 @@
             border: 2px solid $white;
             height: 50px;
             min-width: 100%;
+			position: relative;
 
 			@include media('>=tablet') {
 				flex-basis: 50%;
