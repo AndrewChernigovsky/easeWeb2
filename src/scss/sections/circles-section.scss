@@ -91,7 +91,7 @@
 			@include media('>=phone-lg') {
 				font-size: 1.6rem;
 			}
-	
+
 			@include media('>=tablet') {
 				font-size: 2.2rem;
 			}
@@ -180,8 +180,19 @@
 	    top: 61px;
     	right: -65px;
 
+		&:first-of-type {
+			right: -62px;
+		}
+
 		@include media('>=phone-lg') {
 			right: -79px;
+
+			&:first-of-type {
+				right: -77px;
+			}
+			&:last-of-type {
+				right: -81px;
+			}
 		}
 
 		@include media('>=tablet') {
@@ -199,7 +210,7 @@
 		}
 
 		&::before {
-			left: -13px;
+			left: -12px;
 			top: 5px;
 
 			@include media('>=desktop') {
@@ -240,8 +251,8 @@
 		left: -39px;
 
 		@include media('>=phone-lg') {
-			top: 83px;
-			left: -38px;
+			top: 97px;
+    		left: -44px;
 		}
 
 		@include media('>=tablet') {
@@ -260,8 +271,16 @@
 		}
 
 		&:before {
-			left: 35px;
-			top: 2px;
+		    left: 39px;
+    		top: 5px;
+
+			@include media('>=390px') {
+				left: 37px;
+			}
+
+			@include media('>=phone-lg') {
+				left: 42px;
+			}
 
 			@include media('>=desktop') {
 				left: 65px;
@@ -280,8 +299,8 @@
 		text-transform: none;
 
 		@include media('>=phone-lg') {
-			top: 81px;
-			left: -93px;
+			top: 96px;
+			left: -95px;
 		}
 
 		@include media('>=tablet') {
@@ -302,7 +321,11 @@
 		&::before {
 			left: auto;
 			top: 6px;
-			right: -9px;
+			right: -13px;
+
+			@include media('>=390px') {
+				right: -11px;
+			}
 
 			@include media('>=desktop') {
 				top: 3px;
@@ -392,8 +415,9 @@
 		border: 1px solid $black;
 		bottom: 80px;
 		font-size: 1rem;
-		bottom: 57px;
-		left: -20px;
+		bottom: 12px;
+		left: -74px;
+		width: 400px;
 
 		@include media('>=phone-lg') {
 			font-size: 1.2rem;
@@ -468,7 +492,7 @@
 			animation-duration: 6s;
 		}
 		&:nth-of-type(2){
-			animation-delay: 3s; 
+			animation-delay: 3s;
 			animation-duration: 6s;
 			opacity: 0;
 		}
