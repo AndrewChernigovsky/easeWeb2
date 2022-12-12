@@ -237,7 +237,7 @@
 				max-width: 134px;
 				font-size: 1.2rem;
 			}
-		
+
 			@include media('>=phone-lg') {
 				max-width: 150px;
 				padding: 0.2rem 1rem;
@@ -583,11 +583,6 @@
 		z-index: -1;
 		width: 100%;
 	}
-	&__image.anima {
-		&:first-of-type {
-			z-index: -10;
-		}
-	}
 	&__texts {
 		position: absolute;
 		right: 0;
@@ -774,7 +769,7 @@
 		@include media('>=tablet') {
 			margin-bottom: 40px;
 		}
-	}	
+	}
 }
 .intro-section.seoPage-introSection {
 	min-height: 251px;
@@ -920,7 +915,7 @@
 			animation-duration: 6s;
 		}
 		&:nth-of-type(2){
-			animation-delay: 3s; 
+			animation-delay: 3s;
 			animation-duration: 6s;
 			opacity: 0;
 		}
@@ -941,4 +936,17 @@
 	@include media('>=widescreen-lg') {
 		padding-bottom: 47rem;
 	}
+}
+
+.intro-section__image.anima {
+    animation: move 5s linear alternate infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 2%);
+    }
+    100% {
+        transform: translate(0, -2%);
+    }
 }

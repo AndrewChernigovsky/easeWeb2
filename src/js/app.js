@@ -26,25 +26,6 @@ const BODY = document.querySelector('body');
 			}
 		});
 
-		$('.intro-section__image-wrapper .anima').each(function (i) {
-			for (let z = 0; z < 1000; z++) {
-				$(this)
-					.delay(0)
-					.animate(
-						{
-							top: '10px',
-						},
-						1000
-					)
-					.animate(
-						{
-							top: '-10px',
-						},
-						1000
-					);
-			}
-		});
-
 		let link1 = $("a[href='#benefits']");
 		let link2 = $("a[href='#price']");
 
