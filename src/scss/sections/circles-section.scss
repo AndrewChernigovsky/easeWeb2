@@ -197,21 +197,48 @@
 
 		@include media('>=tablet') {
 			right: -92px;
+
+			&:first-of-type {
+				right: -115px;
+			}
+			&:last-of-type {
+				right: -118px;
+			}
 		}
 
 		@include media('>=desktop') {
 			top: 168px;
 			right: -124px;
+
+			&:first-of-type {
+				right: -123px;
+			}
+			&:last-of-type {
+				right: -129px;
+			}
 		}
 
 		@include media('>=widescreen-lg') {
 			top: 227px;
-			right: -202px
+			right: -202px;
+
+			&:first-of-type {
+				right: -184px;
+   				top: 139px;
+			}
+			&:last-of-type {
+				right: -191px;
+   				top: 139px;
+			}
 		}
 
 		&::before {
 			left: -12px;
 			top: 5px;
+
+			@include media('>=tablet') {
+				left: -38px;
+			}
 
 			@include media('>=desktop') {
 				left: -27px;
@@ -256,13 +283,17 @@
 		}
 
 		@include media('>=tablet') {
-			left: -33px;
+			left: -65px;
 			top: 71px;
 		}
 
 		@include media('>=desktop') {
 			top: 145px;
 			left: -74px;
+		}
+
+		@include media('>=widescreen') {
+			left: -71px;
 		}
 
 		@include media('>=widescreen-lg') {
@@ -280,6 +311,10 @@
 
 			@include media('>=phone-lg') {
 				left: 42px;
+			}
+
+			@include media('>=tablet') {
+				left: 65px;
 			}
 
 			@include media('>=desktop') {
@@ -304,7 +339,7 @@
 		}
 
 		@include media('>=tablet') {
-			left: -116px;
+			left: -140px;
 			top: 71px;
 		}
 
@@ -313,8 +348,12 @@
     		left: -150px;
 		}
 
+		@include media('>=widescreen') {
+			left: -145px;
+		}
+
 		@include media('>=widescreen-lg') {
-			left: -242px;
+			left: -239px;
 			top: 224px;
 		}
 
@@ -325,6 +364,10 @@
 
 			@include media('>=390px') {
 				right: -11px;
+			}
+
+			@include media('>=tablet') {
+				right: -35px;
 			}
 
 			@include media('>=desktop') {
@@ -425,19 +468,31 @@
 
 		@include media('>=tablet') {
 			font-size: 2rem;
-			left: -23px;
+			left: -129px;
+			top: 148px;
+			height: 25px;
 		}
 
 		@include media('>=desktop') {
-		    bottom: 147px;
-    		right: -48px;
 			font-size: 3rem;
 			transform: rotate(39deg);
+			height: 36px;
+			left: -85px;
+			top: 181px;
+			width: 500px;
 		}
+
+
+		@include media('>=widescreen') {
+			top: 221px;
+		}
+
+
 		@include media('>=widescreen-lg') {
 			font-size: 3.8rem;
-			left: -54px;
-			bottom: 159px;
+			left: -113px;
+			top: 279px;
+			width: 680px;
 			transform: rotate(30deg);
 		}
 	}

@@ -404,6 +404,10 @@
 .tarifsHelp-section.developPage {
 	padding-bottom: 6.5rem;
 
+	@include media('>=phone-md') {
+		padding-bottom: 8.5rem;
+	}
+
 	@include media('>=phone-lg') {
 		padding-bottom: 20.5rem;
 	}
