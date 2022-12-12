@@ -34,14 +34,12 @@
 .variantSection-block .stepsWorking-section__block{
 	display: grid;
 	align-content: end;
-	flex-basis: auto;
 	min-height: 150px;
 	border: none;
 	border-radius: 40px;
 	box-shadow: inset 9px 43px 13px -41px rgba(0,0,0,0.25),
 				inset 1px 4px 20px 2px rgba(0,0,0,0.25);
 	box-shadow: inset -1px -1px 3px 0px rgba(0,0,0,0.25), inset 2px 2px 9px 0px rgba(0,0,0,0.25);
-	min-width: max-content;
 	overflow: hidden;
 	scroll-snap-align: start;
 
@@ -53,7 +51,7 @@
 		// width: 177px;
 	}
 	@include media('>=tablet') {
-		min-width: 325px;
+		// min-width: 325px;
     	min-height: 300px;
 
 		// min-width: 71px;
@@ -62,12 +60,13 @@
 
 	@include media('>=desktop') {
 		min-height: 545px;
+		border-radius: 75px;
 		// width: 577px;
 	}
 
 	@include media('>=widescreen-lg') {
 		min-height: 645px;
-		min-width: 471px;
+		// min-width: 471px;
 
 		// min-width: 71px;
 		// width: 577px;
@@ -77,7 +76,7 @@
 	&:active {
 
 		.stepsWorking-section__text {
-			height: 50px;
+			height: 75px;
 			transition: $base-transition;
 			transition-duration: 2s;
 			opacity: 1;
@@ -220,3 +219,15 @@
 // .variantSection-block4 {
 // 	width: 300px;
 // }
+
+.min-w {
+	min-width: 150px;
+
+	@include media('>=tablet') {
+		min-width: max-content;
+	}
+
+	@include media('>=widescreen-lg') {
+		// min-width: 471px;
+	}
+}
