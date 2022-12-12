@@ -540,6 +540,10 @@ input.mainFormInput {
 	.mainForm-polite-link.black {
 		color: $black;
 	}
+	
+	.mainForm-polite-link.bb-black {
+		border-bottom: 1px solid $black;
+	}
 
 	@include media('>=phone-lg') {
 		margin-top: 2rem;
