@@ -468,17 +468,16 @@
 	}
 
 	&__circle-runString3 {
-		transform: rotate(11deg);
+		transform: rotate(31deg);
 		position: absolute;
 		z-index: 1;
 		background-color: $white;
 		border: 1px solid $black;
-		bottom: 80px;
+		bottom: 45px;
 		font-size: 1rem;
-		bottom: 12px;
 		left: -74px;
-		width: 600px;
 		height: 15px;
+		width: 152%;
 
 		&_string {
 			animation: slidein 50s linear infinite;
@@ -490,18 +489,20 @@
 		}
 
 		@include media('>=phone-md') {
-			transform: rotate(16deg);
+			transform: rotate(36deg);
+			bottom: 50px;
 		}
 
 		@include media('>=phone-lg') {
 			font-size: 1.2rem;
 			transform: rotate(20deg);
+			bottom: 70px;
 		}
 
 		@include media('>=tablet') {
 			font-size: 2rem;
 			left: -129px;
-			top: 148px;
+			bottom: 100px;
 			height: 25px;
 			transform: rotate(17deg);
 		}
