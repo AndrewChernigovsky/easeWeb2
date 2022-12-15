@@ -43,29 +43,12 @@ nav(class=menuClasses[0])
 			div(class='social-contacts')
 				a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
 					div(class='social-icons')
-						div(class='')
+						div
 							a(class='' href="https://t.me/Easeweb_mail")
-								//- +icon(
-								//- 	'0 0 25 25',
-								//- 	'25px',
-								//- 	'25px',
-								//- 	'images/sprite/sprite.svg#telegram'
-								//- )
-								+pictureClassNamePng(
-									'telegram-icon',
-									'contacts, telegram, mail',
-									'webp',
-									'images/icons/telegram',
-									'images/icons/telegram',
-								)
-						div(class='')
+								+pictureClassNamePng('telegram-icon','contacts, telegram, mail','webp','images/icons/telegram','images/icons/telegram')
+						div
 							a(class='' href="https://vk.com/easeweb")
-								+icon(
-									'0 0 25 25',
-									'25px',
-									'25px',
-									'images/sprite/sprite.svg#vk'
-								)
+								+icon('0 0 25 25',	'25px', '25px', 'images/sprite/sprite.svg#vk')
 		if seoPage
 			ul(class='menu-mob')
 				li(class='menu-mob__item-first')
