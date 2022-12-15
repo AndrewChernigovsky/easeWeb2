@@ -9,6 +9,10 @@ block head
 	include ../../partials/head/head
 
 block content
+	//- <!-- Google Tag Manager (noscript) -->
+	noscript
+		iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-KXD4BJT" height="0" width="0" style="display:none;visibility:hidden")
+	//- <!-- End Google Tag Manager (noscript) -->
 	div(class='overlay')
 	button(type=button class="btnclose", id='btnclose')
 		span(class='spanbtnclose')
