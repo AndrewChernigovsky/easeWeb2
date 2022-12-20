@@ -11,6 +11,7 @@
   "author": "Ristars",
   "license": "MIT",
   "devDependencies": {
+    "@awea/gulp-pretty-html": "^1.0.1",
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
     "babelify": "^10.0.0",
@@ -31,6 +32,7 @@
     "gulp-debug": "^4.0.0",
     "gulp-eslint": "^6.0.0",
     "gulp-file-include": "^2.1.1",
+    "gulp-format-html": "^1.4.0",
     "gulp-gm": "0.0.9",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlhint": "^3.0.0",
@@ -47,6 +49,7 @@
     "gulp-svgstore": "^9.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^3.0.0",
+    "gulp-util": "^3.0.8",
     "htmlhint-stylish": "^1.0.3",
     "imagemin-webp": "^6.0.0",
     "path": "^0.12.7",

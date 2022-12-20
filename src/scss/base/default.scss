@@ -272,3 +272,8 @@ input.invalid:focus {
 	}
   }
 }
+
+.cool-h2 {
+	overflow: hidden;
+	clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+}

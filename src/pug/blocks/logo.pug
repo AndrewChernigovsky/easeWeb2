@@ -1,10 +1,9 @@
 if mainPage
 	div(class=logoClasses[0])
 		a(class=logoClasses[1]+' no-link' href="#no__scroll")
-			include ../modules/includes/pictures/page__index/content/logoPicture
+			+icon(logoIcons.viewBox = '0 0 150 150',logoIcons.width = '170',logoIcons.height = '170',logoIcons.id)
 
 if anotherPage || politePage
 	div(class=logoClasses[0])
 		a(class=logoClasses[1] href="../index.html")
-			include ../modules/includes/pictures/page__index/content/logoPicture
-			
+			+icon(logoIcons.viewBox = '0 0 150 150',logoIcons.width = '170',logoIcons.height = '170',logoIcons.id = logoIconsPath2)

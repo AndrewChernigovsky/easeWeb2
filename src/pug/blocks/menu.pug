@@ -1,6 +1,14 @@
 nav(class=menuClasses[0])
 	div(class=menuClasses[1])
-		include logo
+		//- include logo
+		div(class=logoClasses[0])
+			a(class=logoClasses[1]+' no-link' href="#no__scroll")
+				+icon(
+					logoIcons.viewBox = '0 0 150 150',
+					logoIcons.width = '170',
+					logoIcons.height = '170',
+					logoIcons.id
+					)
 	div(class=menuClasses[2])
 		each ul in menuClasses
 			if ul === navUlClasses
@@ -24,196 +32,207 @@ nav(class=menuClasses[0])
 					a(href='#' class='menu-mob__link'+ ' a__link' + ' active') easeweb
 				li
 					a(href='pages/develop.html' class='menu-mob__link'+ ' a__link') РАЗРАБОТКА САЙТОВ
-				ul
-					li(class='menu-mob__item')
-						a(href='pages/develop.html#variants' class='menu-mob__link') виды сайтов
-					li(class='menu-mob__item')
-						a(href='pages/develop.html#variantshtml' class='menu-mob__link') варианты верстки
-					li(class='menu-mob__item')
-						a(href='pages/develop.html#price' class='menu-mob__link') тарифы
+				li
+					ul
+						li(class='menu-mob__item')
+							a(href='pages/develop.html#variants' class='menu-mob__link') виды сайтов
+						li(class='menu-mob__item')
+							a(href='pages/develop.html#variantshtml' class='menu-mob__link') варианты верстки
+						li(class='menu-mob__item')
+							a(href='pages/develop.html#price' class='menu-mob__link') тарифы
 				li
 					a(href='pages/seo.html' class='menu-mob__link'+ ' a__link') ПРОДВИЖЕНИЕ САЙТОВ
-				ul
-					li(class='menu-mob__item')
-						a(href='pages/seo.html#benefits' class='menu-mob__link') подробнее
-					li(class='menu-mob__item')
-						a(href='pages/seo.html#price' class='menu-mob__link') тарифы
+				li
+					ul
+						li(class='menu-mob__item')
+							a(href='pages/seo.html#benefits' class='menu-mob__link') подробнее
+						li(class='menu-mob__item')
+							a(href='pages/seo.html#price' class='menu-mob__link') тарифы
 				li(class='menu-mob__item-last')
 					a(href='pages/addtasks.html' class='menu-mob__link') ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ
 			div(class='social-contacts')
 				a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
-					div(class='social-icons')
-						div
-							a(class='' href="https://t.me/Easeweb_mail")
-								+pictureClassNamePng('telegram-icon','contacts, telegram, mail','webp','images/icons/telegram','images/icons/telegram')
-						div
-							a(class='' href="https://vk.com/easeweb")
-								+icon('0 0 25 25',	'25px', '25px', 'images/sprite/sprite.svg#vk')
+				div(class='social-icons')
+					div
+						a(class='' href="https://t.me/Easeweb_mail")
+							+pictureClassNamePng('telegram-icon','contacts, telegram, mail','webp','images/icons/telegram','images/icons/telegram')
+					div
+						a(class='' href="https://vk.com/easeweb")
+							+icon('0 0 25 25',	'25px', '25px', 'images/sprite/sprite.svg#vk')
 		if seoPage
 			ul(class='menu-mob')
 				li(class='menu-mob__item-first')
 					a(href='../index.html' class='menu-mob__link'+ ' a__link') easeweb
 				li
 					a(href='develop.html' class='menu-mob__link'+ ' a__link') РАЗРАБОТКА САЙТОВ
-				ul
-					li(class='menu-mob__item')
-						a(href='develop.html#variants' class='menu-mob__link') виды сайтов
-					li(class='menu-mob__item')
-						a(href='develop.html#variantshtml' class='menu-mob__link') варианты верстки
-					li(class='menu-mob__item')
-						a(href='develop.html#price' class='menu-mob__link') тарифы
+				li
+					ul
+						li(class='menu-mob__item')
+							a(href='develop.html#variants' class='menu-mob__link') виды сайтов
+						li(class='menu-mob__item')
+							a(href='develop.html#variantshtml' class='menu-mob__link') варианты верстки
+						li(class='menu-mob__item')
+							a(href='develop.html#price' class='menu-mob__link') тарифы
 				li
 					a(href='seo.html' class='menu-mob__link'+ ' a__link' + ' active') ПРОДВИЖЕНИЕ САЙТОВ
-				ul
-					li(class='menu-mob__item')
-						a(href='#benefits' class='menu-mob__link a__link' + ' ') подробнее
-					li(class='menu-mob__item')
-						a(href='#price' class='menu-mob__link a__link' + ' ') тарифы
+				li
+					ul
+						li(class='menu-mob__item')
+							a(href='#benefits' class='menu-mob__link a__link' + ' ') подробнее
+						li(class='menu-mob__item')
+							a(href='#price' class='menu-mob__link a__link' + ' ') тарифы
 				li(class='menu-mob__item-last')
 					a(href='addtasks.html' class='menu-mob__link') ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ
 			div(class='social-contacts')
 				a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
-					div(class='social-icons')
-						div(class='')
-							a(class='' href="https://t.me/Easeweb_mail")
-								+pictureClassNamePng(
-									'telegram-icon',
-									'contacts, telegram, mail',
-									'webp',
-									'../images/icons/telegram',
-									'../images/icons/telegram',
-								)
-						div(class='')
-							a(class='' href="https://vk.com/easeweb")
-								+icon(
-									'0 0 25 25',
-									'25px',
-									'25px',
-									'../images/sprite/sprite.svg#vk'
-								)
+				div(class='social-icons')
+					div(class='')
+						a(class='' href="https://t.me/Easeweb_mail")
+							+pictureClassNamePng(
+								'telegram-icon',
+								'contacts, telegram, mail',
+								'webp',
+								'../images/icons/telegram',
+								'../images/icons/telegram',
+							)
+					div(class='')
+						a(class='' href="https://vk.com/easeweb")
+							+icon(
+								'0 0 25 25',
+								'25px',
+								'25px',
+								'../images/sprite/sprite.svg#vk'
+							)
 		if developPage
 			ul(class='menu-mob')
 				li(class='menu-mob__item-first')
 					a(href='../index.html' class='menu-mob__link'+ ' a__link') easeweb
 				li
 					a(href='develop.html' class='menu-mob__link'+ ' a__link' + ' active') РАЗРАБОТКА САЙТОВ
-				ul
-					li(class='menu-mob__item')
-						a(href='develop.html#variants' class='menu-mob__link a__link' + ' active') виды сайтов
-					li(class='menu-mob__item')
-						a(href='develop.html#variantshtml' class='menu-mob__link a__link' + ' active') варианты верстки
-					li(class='menu-mob__item')
-						a(href='develop.html#price' class='menu-mob__link a__link' + ' active') тарифы
+				li
+					ul
+						li(class='menu-mob__item')
+							a(href='develop.html#variants' class='menu-mob__link a__link' + ' active') виды сайтов
+						li(class='menu-mob__item')
+							a(href='develop.html#variantshtml' class='menu-mob__link a__link' + ' active') варианты верстки
+						li(class='menu-mob__item')
+							a(href='develop.html#price' class='menu-mob__link a__link' + ' active') тарифы
 				li
 					a(href='seo.html' class='menu-mob__link'+ ' a__link') ПРОДВИЖЕНИЕ САЙТОВ
-				ul
-					li(class='menu-mob__item')
-						a(href='seo.html#benefits' class='menu-mob__link') подробнее
-					li(class='menu-mob__item')
-						a(href='seo.html#price' class='menu-mob__link') тарифы
+				li
+					ul
+						li(class='menu-mob__item')
+							a(href='seo.html#benefits' class='menu-mob__link') подробнее
+						li(class='menu-mob__item')
+							a(href='seo.html#price' class='menu-mob__link') тарифы
 				li(class='menu-mob__item-last')
 					a(href='addtasks.html' class='menu-mob__link') ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ
 			div(class='social-contacts')
 				a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
-					div(class='social-icons')
-						div(class='')
-							a(class='' href="https://t.me/Easeweb_mail")
-								+pictureClassNamePng(
-									'telegram-icon',
-									'contacts, telegram, mail',
-									'webp',
-									'../images/icons/telegram',
-									'../images/icons/telegram',
-								)
-						div(class='')
-							a(class='' href="https://vk.com/easeweb")
-								+icon(
-									'0 0 25 25',
-									'25px',
-									'25px',
-									'../images/sprite/sprite.svg#vk'
-								)
+				div(class='social-icons')
+					div(class='')
+						a(class='' href="https://t.me/Easeweb_mail")
+							+pictureClassNamePng(
+								'telegram-icon',
+								'contacts, telegram, mail',
+								'webp',
+								'../images/icons/telegram',
+								'../images/icons/telegram',
+							)
+					div(class='')
+						a(class='' href="https://vk.com/easeweb")
+							+icon(
+								'0 0 25 25',
+								'25px',
+								'25px',
+								'../images/sprite/sprite.svg#vk'
+							)
 		if addTasksPage
 			ul(class='menu-mob')
 				li(class='menu-mob__item-first')
 					a(href='../index.html' class='menu-mob__link'+ ' a__link') easeweb
 				li
 					a(href='develop.html' class='menu-mob__link'+ ' a__link') РАЗРАБОТКА САЙТОВ
-				ul
-					li(class='menu-mob__item')
-						a(href='develop.html#variants' class='menu-mob__link') виды сайтов
-					li(class='menu-mob__item')
-						a(href='develop.html#variantshtml' class='menu-mob__link') варианты верстки
-					li(class='menu-mob__item')
-						a(href='develop.html#price' class='menu-mob__link') тарифы
+				li
+					ul
+						li(class='menu-mob__item')
+							a(href='develop.html#variants' class='menu-mob__link') виды сайтов
+						li(class='menu-mob__item')
+							a(href='develop.html#variantshtml' class='menu-mob__link') варианты верстки
+						li(class='menu-mob__item')
+							a(href='develop.html#price' class='menu-mob__link') тарифы
 				li
 					a(href='seo.html' class='menu-mob__link'+ ' a__link') ПРОДВИЖЕНИЕ САЙТОВ
-				ul
-					li(class='menu-mob__item')
-						a(href='seo.html#benefits' class='menu-mob__link') подробнее
-					li(class='menu-mob__item')
-						a(href='seo.html#price' class='menu-mob__link') тарифы
+
+				li
+					ul
+						li(class='menu-mob__item')
+							a(href='seo.html#benefits' class='menu-mob__link') подробнее
+						li(class='menu-mob__item')
+							a(href='seo.html#price' class='menu-mob__link') тарифы
 				li(class='menu-mob__item-last')
 					a(href='addtasks.html' class='menu-mob__link'+ ' a__link' + ' active') ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ
 			div(class='social-contacts')
 				a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
-					div(class='social-icons')
-						div(class='')
-							a(class='' href="https://t.me/Easeweb_mail")
-								+pictureClassNamePng(
-									'telegram-icon',
-									'contacts, telegram, mail',
-									'webp',
-									'../images/icons/telegram',
-									'../images/icons/telegram',
-								)
-						div(class='')
-							a(class='' href="https://vk.com/easeweb")
-								+icon(
-									'0 0 25 25',
-									'25px',
-									'25px',
-									'../images/sprite/sprite.svg#vk'
-								)
+				div(class='social-icons')
+					div(class='')
+						a(class='' href="https://t.me/Easeweb_mail")
+							+pictureClassNamePng(
+								'telegram-icon',
+								'contacts, telegram, mail',
+								'webp',
+								'../images/icons/telegram',
+								'../images/icons/telegram',
+							)
+					div(class='')
+						a(class='' href="https://vk.com/easeweb")
+							+icon(
+								'0 0 25 25',
+								'25px',
+								'25px',
+								'../images/sprite/sprite.svg#vk'
+							)
 		if politePage
 			ul(class='menu-mob')
 				li(class='menu-mob__item-first')
 					a(href='../index.html' class='menu-mob__link'+ ' a__link') easeweb
 				li
 					a(href='develop.html' class='menu-mob__link'+ ' a__link') РАЗРАБОТКА САЙТОВ
-				ul
-					li(class='menu-mob__item')
-						a(href='develop.html#variants' class='menu-mob__link') виды сайтов
-					li(class='menu-mob__item')
-						a(href='develop.html#variantshtml' class='menu-mob__link') варианты верстки
-					li(class='menu-mob__item')
-						a(href='develop.html#price' class='menu-mob__link') тарифы
+				li
+					ul
+						li(class='menu-mob__item')
+							a(href='develop.html#variants' class='menu-mob__link') виды сайтов
+						li(class='menu-mob__item')
+							a(href='develop.html#variantshtml' class='menu-mob__link') варианты верстки
+						li(class='menu-mob__item')
+							a(href='develop.html#price' class='menu-mob__link') тарифы
 				li
 					a(href='seo.html' class='menu-mob__link'+ ' a__link') ПРОДВИЖЕНИЕ САЙТОВ
-				ul
-					li(class='menu-mob__item')
-						a(href='seo.html#benefits' class='menu-mob__link') подробнее
-					li(class='menu-mob__item')
-						a(href='seo.html#price' class='menu-mob__link') тарифы
+				li
+					ul
+						li(class='menu-mob__item')
+							a(href='seo.html#benefits' class='menu-mob__link') подробнее
+						li(class='menu-mob__item')
+							a(href='seo.html#price' class='menu-mob__link') тарифы
 				li(class='menu-mob__item-last')
 					a(href='addtasks.html' class='menu-mob__link'+ ' a__link' + ' active') ДОПОЛНИТЕЛЬНЫЕ ЗАДАЧИ
 			div(class='social-contacts')
 				a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
-					div(class='social-icons')
-						div(class='')
-							a(class='' href="https://t.me/Easeweb_mail")
-								+pictureClassNamePng(
-									'telegram-icon',
-									'contacts, telegram, mail',
-									'webp',
-									'../images/icons/telegram',
-									'../images/icons/telegram',
-								)
-						div(class='')
-							a(class='' href="https://vk.com/easeweb")
-								+icon(
-									'0 0 25 25',
-									'25px',
-									'25px',
-									'../images/sprite/sprite.svg#vk'
-								)
+				div(class='social-icons')
+					div(class='')
+						a(class='' href="https://t.me/Easeweb_mail")
+							+pictureClassNamePng(
+								'telegram-icon',
+								'contacts, telegram, mail',
+								'webp',
+								'../images/icons/telegram',
+								'../images/icons/telegram',
+							)
+					div(class='')
+						a(class='' href="https://vk.com/easeweb")
+							+icon(
+								'0 0 25 25',
+								'25px',
+								'25px',
+								'../images/sprite/sprite.svg#vk'
+							)

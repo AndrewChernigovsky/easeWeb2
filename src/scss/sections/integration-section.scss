@@ -22,16 +22,6 @@
 
 	&__inner {
 		min-width: 100%;
-		
-		marquee {
-			font-size: 3.2rem;
-			font-family: $MontserratBold;
-			height: 100%;
-
-			@include media(">=desktop") {
-				font-size: 6.4rem;
-			}
-		}
 	}
 
     .title__h2 {
@@ -127,5 +117,62 @@
 		padding-left: 0%;
 		opacity: 1;
 		transform: translateX(0%);
+	}
+}
+
+.integration-line {
+	position: relative;
+	min-height: 60px;
+
+	@include media(">=desktop") {
+		min-height: 100px;
+	}
+
+	&__string {
+		animation: slidein 11s linear infinite;
+		white-space: nowrap;
+		position: absolute;
+		z-index: 1;
+		background-color: transparent;
+		padding-left: 100%;
+		font-size: 3.2rem;
+		font-family: $MontserratBold;
+		height: 100%;
+
+		@include media(">=desktop") {
+			font-size: 6.4rem;
+		}
+
+		// &::before {
+		// 	@extend %pseudo;
+		// 	// padding-left: 100%;
+		// 	// padding-right: 50%;
+		// 	z-index: 1;
+		// 	min-width: 50%;
+		// 	min-height: 100%;
+		// 	background-color: $white;
+		// }
+	}
+
+	&:nth-of-type(2) span {
+		animation: slidein 11s linear infinite;
+	}
+	&:nth-of-type(3) span {
+		animation: slidein 11s linear infinite;
+	}
+}
+
+
+@keyframes slidein {
+	0% {
+		transform: translateX(0%);
+	}
+
+	50% {
+		padding-left: 100%;
+	}
+
+	100% {
+		transform: translateX(-100%);
 	}
 }
