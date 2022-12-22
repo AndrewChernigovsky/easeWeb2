@@ -1,14 +1,17 @@
-div(class=logoClasses[0] + ' logo1')
-	a(class=logoClasses[1] href="../index.html")
-		if mainPage
+if mainPage
+	div(class=logoClasses[0] + ' logo1')
+		a(class=logoClasses[1] href="#")
 			+pictureClassNamePng(
 				'',
 				'logo-image',
 				webp,
-				'../../images/content/png/logoGifPng',
-				'../../images/content/png/logoGifPng'
+				'images/content/png/logoGifPng',
+				'images/content/png/logoGifPng'
 				)
-		if !mainPage
+
+if !mainPage
+	div(class=logoClasses[0] + ' logo1')
+		a(class=logoClasses[1] href="../index.html")
 			+pictureClassNamePng(
 				'',
 				'logo-image',

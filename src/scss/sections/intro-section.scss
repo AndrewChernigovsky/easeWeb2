@@ -950,3 +950,55 @@
         transform: translate(0, -2%);
     }
 }
+
+.intro-newYear-text.paragraph-base {
+	color: $black;
+	font-family: $MazzardHBold;
+
+
+	span {
+		position: relative;
+		z-index: 1;
+		margin: 10px;
+
+		&::after {
+			@extend %pseudo;
+			background-color: $orange2;
+			width: 60px;
+			height: 60px;
+			padding: 1rem;
+			border-radius: 50%;
+			top: -17px;
+			left: -5px;
+			z-index: -1;
+			animation: moves 1s linear;
+		}
+	}
+}
+
+.intro-newYear-block {
+	display: flex;
+	align-items: center;
+
+	img {
+		margin-left: 2rem;
+	}
+
+	@include media('>=desktop') {
+		margin-top: 160px;
+    	margin-bottom: -140px;
+	}
+}
+
+.treeNewYear {
+	width: 80px;
+}
+
+@keyframes moves {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 0;
+    }
+}

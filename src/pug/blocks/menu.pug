@@ -2,29 +2,58 @@ nav(class=menuClasses[0])
 	div(class=menuClasses[1])
 		//- include logo
 		div(class=logoClasses[0])
-			a(class=logoClasses[1]+' no-link' href="#no__scroll")
-				+icon(
-					logoIcons.viewBox = '0 0 150 150',
-					logoIcons.width = '170',
-					logoIcons.height = '170',
-					logoIcons.id
-					)
+			if mainPage
+				a(class=logoClasses[1]+' no-link' href="#no__scroll")
+					+icon(
+						logoIcons.viewBox = '0 0 150 150',
+						logoIcons.width = '170',
+						logoIcons.height = '170',
+						logoIcons.id
+						)
+			if !mainPage
+				a(class=logoClasses[1]+' no-link' href="../index.html")
+					+icon(
+						logoIcons.viewBox = '0 0 150 150',
+						logoIcons.width = '170',
+						logoIcons.height = '170',
+						logoIcons.id
+						)
 	div(class=menuClasses[2])
 		each ul in menuClasses
 			if ul === navUlClasses
-				ul(class=ul)
-					li(class=menuClasses[4])
-						if mainPage
-							a(class=menuClasses[5] href="#service")= 'Услуги'
-						else
-							a(class=menuClasses[5] href="../index.html#service")= 'Услуги'
-					li(class=menuClasses[4])
-						if mainPage
-							a(class=menuClasses[5] href="#contacts" id='contactsLink')= 'Контакты'
-						else
-							a(class=menuClasses[5] href="../index.html#contacts" id='contactsLink')= 'Контакты'
-					li(class=menuClasses[4])
-						a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
+				//- ul(class=ul)
+					//- li(class=menuClasses[4])
+					//- 	if mainPage
+					//- 		a(class=menuClasses[5] href="#service")= 'Услуги'
+					//- 	else
+					//- 		a(class=menuClasses[5] href="../index.html#service")= 'Услуги'
+					//- li(class=menuClasses[4])
+
+					//- li(class=menuClasses[4]+ ' contactsall')
+					//- 	a(class=menuClasses[5] href=`tel:${footerMain.tel}`)= footerMain.tel
+
+						//- if mainPage
+						//- 	div(class='social-icons desk')
+						//- 		div
+						//- 			a(class='' href="https://t.me/Easeweb_mail")
+						//- 				+pictureClassNamePng('telegram-icon','contacts, telegram, mail','webp','images/icons/telegram','images/icons/telegram')
+						//- 		div
+						//- 			a(class='' href="https://vk.com/easeweb")
+						//- 				+icon('0 0 25 25',	'25px', '25px', 'images/sprite/sprite.svg#vk')
+						//- 		div
+						//- 			a(class='' href="https://wa.me/message/TPO23WUDDBNMK1")
+						//- 				+icon('0 0 25 25',	'25px', '25px', 'images/sprite/sprite.svg#vk')
+						//- if !mainPage
+						//- 	div(class='social-icons desk')
+						//- 		div
+						//- 			a(class='' href="https://t.me/Easeweb_mail")
+						//- 				+pictureClassNamePng('telegram-icon','contacts, telegram, mail','webp','../images/icons/telegram','../images/icons/telegram')
+						//- 		div
+						//- 			a(class='' href="https://vk.com/easeweb")
+						//- 				+icon('0 0 25 25',	'25px', '25px', '../images/sprite/sprite.svg#vk')
+						//- 		div
+						//- 			a(class='' href="https://wa.me/message/TPO23WUDDBNMK1")
+						//- 				+icon('0 0 25 25',	'25px', '25px', '../images/sprite/sprite.svg#vk')
 				button(class=menuButton) Заказать звонок
 		if mainPage
 			ul(class='menu-mob')

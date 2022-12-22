@@ -14,6 +14,13 @@ block content
 	noscript
 		iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-KXD4BJT" height="0" width="0" style="display:none;visibility:hidden")
 	//- <!-- End Google Tag Manager (noscript) -->
+	script
+		include ../../js/my-target.js
+	//- <!-- /Top.Mail.Ru counter -->
+	noscript
+		div
+			Img(src="https://top-fwz1.mail.ru/counter?id=3277148;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru")
+
 	div(class='overlay')
 	button(type=button class="btnclose", id='btnclose')
 		span(class='spanbtnclose')
@@ -23,6 +30,7 @@ block content
 		include ../sections/intro-section/intro-section
 		include ../sections/helpers-section/helpers-section
 		include ../sections/cools-section/cools-section
+		include ../sections/newYear-section/newYear-section
 		include ../sections/stepsWorking-section/stepsWorking-section
 		include ../sections/integration-section/integration-section
 		include ../sections/mainForm-section/mainForm-section

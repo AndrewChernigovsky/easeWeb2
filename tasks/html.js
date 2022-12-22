@@ -9,8 +9,7 @@ module.exports = function (options) {
 	return () => {
 		return src(`assets/**/*.html`)
 			.pipe(formatHtml())
-			.pipe(dest('assets/'))
-			.pipe(gulpif(options.isProduction, dest('production/')))
+			.pipe(dest('assets/'), gulpif(options.isProduction, dest('production/')))
 			.pipe(bs.stream());
 	};
 };
