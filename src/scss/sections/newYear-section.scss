@@ -10,7 +10,8 @@
 	}
 
 	&__wrapper {
-
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 	}
 
 	&__block1 {
@@ -32,16 +33,16 @@
 		}
 
 		.newYear-orangePercent1 {
-			width: 200px;
-			height: 200px;
+			width: 300px;
+			height: 300px;
 			border-radius: 50%;
 			background-color: $orange2;
-			animation: moves1 5s linear infinite;
+			position: absolute;
+			z-index: -1;
+			animation: moves1 6s linear infinite;
 		}
 		.newYear-orangePercent2 {
-			position: absolute;
-			top: 0;
-			left: 0;
+			text-align: left;
 		}
 	}
 
@@ -54,7 +55,7 @@
 		top: -2rem;
 
 		@include media('>=desktop') {
-			min-height: 300px;
+			min-height: 430px;
 			width: 360px;
 		}
 	}
@@ -69,87 +70,111 @@
 		top: -2rem;
 		min-height: inherit;
 	}
+
+	&__block2 {
+		svg {
+			@include media('>=desktop') {
+				width: 250px;
+				height: 250px;
+			}
+		}
+	}
+}
+
+.bigSell {
+	@include media('>=desktop') {
+		font-size: 9rem;
+	}
+}
+
+.bigSell.left {
+	margin-left: 120px;
+}
+
+.newYear-text-cost {
+	display: flex;
+	justify-content: flex-end;
+	width: 90%;
+}
+.newYear-text-cost1 {
+	text-align: left;
+
+	div {
+		display: flex;
+		justify-content: flex-start;
+
+		.base-text {
+			font-family: $MazzardHBold;
+		}
+
+		span {
+			margin-left: 2rem;
+			color: $orange2;
+		}
+	}
 }
 
 @keyframes moves1 {
     0% {
-		padding-left: 0;
-		padding-top: 0;
-    }
-    10% {
-		padding-left: 5%;
-		padding-top: 0%;
+		margin-left: -8px;
+		margin-top: -10px;
     }
     20% {
-		padding-top: 8%;
+		margin-top: 15px;
+		margin-left: 0px;
+
 	}
-    30% {
-		padding-left: 8%;
-    }
     40% {
-		padding-top: 10%;
-    }
-    50% {
-		padding-left: 10%;
+		margin-left: 24px;
+		margin-top: 10px;
     }
     60% {
-		padding-top: 12%;
+		margin-top: 15px;
+		margin-left: 0px;
+    }
+    80% {
+		margin-left: 20px;
     }
     100% {
-		padding-left: 0%;
-		padding-top: 0%;
+		margin-left: -8px;
+		margin-top: -10px;
     }
 }
 
-// @keyframes moves1 {
-//     0% {
-//         transform: translate(0%, 0%);
-//     }
-//     10% {
-//         background-position: (10%,10%);
-//     }
-//     20% {
-//        background-position: (20%, 30%);
-//     }
-//     30% {
-//         background-position: (25%, 25%);
-//     }
-//     // 40% {
-//   	// 	background-position: (-10%, -10%);
-//     // }
-//     // 50% {
-//     //     background-position: (0%, 0%);
-//     // }
-//     // 60% {
-//     //  	background-position: (0%, 0%);
-//     // }
-//     100% {
-//         transform: translate(50%, 50%);
-//     }
-// }
-// @keyframes moves1 {
-//     0% {
-//         background-position: (0%, 0%);
-//     }
-//     10% {
-//         background-position: (10%,10%);
-//     }
-//     20% {
-//        background-position: (20%, 20%);
-//     }
-//     30% {
-//         background-position: (10%, 10%);
-//     }
-//     40% {
-//   		background-position: (-10%, -10%);
-//     }
-//     50% {
-//         background-position: (0%, 0%);
-//     }
-//     60% {
-//      	background-position: (0%, 0%);
-//     }
-//     100% {
-//          background-position: (0%, 0%);
-//     }
-// }
+
+.btn-call {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	width: 60px;
+	height: 60px;
+	border: 1px solid $black;
+	border-radius: 50%;
+	padding: 1rem;
+	z-index: 1000;
+	background-color: $white;
+
+	a {
+		animation: movie 6s linear infinite;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	@include media('>=desktop') {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@keyframes movie {
+  35% {transform: rotate(0) translate(0, 0);}
+	40% {transform: rotate(5deg) translate(0, -2px);}
+	45% {transform: rotate(-3deg) translate(0, -2px);}
+	50% {transform: rotate(5deg) translate(0, -2px);}
+	55% {transform: rotate(-3deg) translate(0, -2px);}
+	60% {transform: rotate(5deg) translate(0, -2px);}
+	65% {transform: rotate(-3deg) translate(0, -2px);}
+	70% {transform: rotate(0) translate(0, 0);}
+}
