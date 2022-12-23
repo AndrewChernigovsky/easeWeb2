@@ -899,12 +899,12 @@
 
 	@include media('>=desktop') {
 		padding-top: 6rem;
-		padding-bottom: 25rem;
+		padding-bottom: 40rem;
 	}
 
 	@include media('>=widescreen-lg') {
 		padding-top: 12rem;
-		padding-bottom: 23rem;
+		padding-bottom: 60rem;
 	}
 
 	span.a1 {
