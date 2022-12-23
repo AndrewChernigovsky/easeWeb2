@@ -325,33 +325,34 @@
 	}
 
 	.seoPrice-section__card ul {
-		padding-bottom: 5rem;
+		padding-bottom: 10rem;
 		padding-left: 1.6rem;
 
 		@include media(">=phone") {
-			padding-bottom: 5.4rem;
+			padding-bottom: 10.4rem;
 		}
 
 		@include media(">=phone-lg") {
-			padding-bottom: 5.4rem;
+			padding-bottom: 10.4rem;
 		}
 
 		@include media(">=tablet") {
-			padding-bottom: 6.4rem;
+			padding-bottom: 15.4rem;
 		}
 
 		@include media(">=desktop") {
-			padding-bottom: 10.4rem;
+			padding-bottom: 20.4rem;
 			padding-left: 2.8rem;
 		}
 
 		@include media(">=widescreen-lg") {
-			padding-bottom: 17.4rem;
+			padding-bottom: 22.4rem;
 		}
 	}
 
 	.seoPrice__date {
 		padding-bottom: 0;
+		margin-bottom: 2rem;
 		font-size: 1.2rem;
 
 		@include media(">=phone-lg") {
@@ -385,7 +386,7 @@
 		}
 	}
 
-	.seoPrice-section__card-footer { 
+	.seoPrice-section__card-footer {
 		padding-bottom: 0.8rem;
 		padding-left: 0.9rem;
 
@@ -404,5 +405,67 @@
 		@include media(">=widescreen-lg") {
 			padding-bottom: 2.5rem;
 		}
+
+		p.NewYear-SeoPrice {
+			text-decoration: line-through;
+			color: $gray;
+			font-size: 1.4rem;
+
+			@include media('>=tablet') {
+				font-size: 2rem;
+			}
+
+			@include media('>=desktop') {
+				font-size: 2.5rem;
+			}
+
+			@include media(">=widescreen-lg") {
+				font-size: 3.2rem;
+			}
+		}
 	}
+}
+
+p.NewYear-SeoPrice,
+span.NewYear-SeoPrice {
+	text-decoration: line-through;
+	color: $gray;
+	font-size: 1.4rem;
+
+	@include media('>=tablet') {
+		font-size: 2rem;
+	}
+
+	@include media('>=desktop') {
+		font-size: 2.5rem;
+	}
+
+	@include media(">=widescreen-lg") {
+		font-size: 3.2rem;
+	}
+}
+
+span.NewYear-SeoPrice {
+	position: absolute;
+	bottom: 35px;
+
+
+	@include media('>=tablet') {
+		bottom: 35px;
+
+	}
+
+	@include media('>=desktop') {
+		bottom: 105px;
+
+	}
+
+	@include media(">=widescreen-lg") {
+		bottom: 115px;
+
+	}
+}
+
+.orangePrice {
+	color: $orange2;
 }

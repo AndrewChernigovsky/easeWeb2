@@ -218,6 +218,9 @@
 				@include media('>=desktop') {
 					height: 700px;
 				}
+				@include media('>=widescreen-lg') {
+					height: 750px;
+				}
 			}
 
 			&:hover {
