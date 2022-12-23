@@ -954,7 +954,17 @@
 .intro-newYear-text.paragraph-base {
 	color: $black;
 	font-family: $MazzardHBold;
+	font-size: 1.2rem;
 
+	@include media('>=phone-md') {
+		font-size: 1.4rem;
+	}
+	@include media('>=tablet') {
+		font-size: 1.8rem;
+	}
+	@include media('>=desktop') {
+		font-size: 2.4rem;
+	}
 
 	span {
 		position: relative;
@@ -964,14 +974,36 @@
 		&::after {
 			@extend %pseudo;
 			background-color: $orange2;
-			width: 60px;
-			height: 60px;
 			padding: 1rem;
 			border-radius: 50%;
-			top: -17px;
-			left: -5px;
 			z-index: -1;
 			animation: moves 1s linear;
+
+
+				@include media('>=phone-sm') {
+					width: 40px;
+					height: 40px;
+					left: -6px;
+    				top: -14px;
+				}
+				@include media('>=phone-md') {
+					width: 50px;
+					height: 50px;
+					left: -7px;
+					top: -17px;
+				}
+				@include media('>=tablet') {
+					width: 50px;
+					height: 50px;
+					left: -2px;
+				}
+
+				@include media('>=desktop') {
+					width: 60px;
+					height: 60px;
+					top: -17px;
+					left: 0px;
+				}
 		}
 	}
 }
