@@ -3,31 +3,33 @@
 	padding-bottom: 4rem;
 	padding-top: 2rem;
 
-
-	@include media('>=tablet') {
+	@include media(">=tablet") {
 		padding-top: 15rem;
 		padding-bottom: 15rem;
 	}
-	@include media('>=desktop') {
+	@include media(">=desktop") {
 		padding-top: 15rem;
 		padding-bottom: 15rem;
 	}
-	@include media('>=widescreen-lg') {
+	@include media(">=widescreen-lg") {
 		padding-top: 10rem;
 		padding-bottom: 20rem;
 	}
 
 	&__wrapper {
+		// display: grid;
+		// grid-template-columns: 1fr 1fr;
+
+		align-items: center;
+		justify-content: center;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
 
-
-		@include media('>=tablet') {
+		@include media(">=tablet") {
 			align-items: center;
 			justify-content: center;
 			display: flex;
 		}
-		@include media('>=desktop') {
+		@include media(">=desktop") {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			justify-content: flex-start;
@@ -42,44 +44,65 @@
 		.title__h2 {
 			margin-bottom: 0;
 			margin-left: 0;
+			white-space: nowrap;
+			font-size: 2.2rem;
 
-
-			@include media('>=tablet') {
+			@include media(">=phone-lg") {
+				font-size: 3.2rem;
+			}
+			@include media(">=tablet") {
 				font-size: 4.8rem;
-				white-space: nowrap;
 			}
-			@include media('>=desktop') {
+			@include media(">=tablet") {
+				font-size: 4.8rem;
+			}
+			@include media(">=desktop") {
 				font-size: 6.8rem;
-				white-space: nowrap;
 			}
-			@include media('>=widescreen-lg') {
+			@include media(">=widescreen-lg") {
 				font-size: 7.6rem;
-				white-space: nowrap;
 			}
 		}
 
 		.newYear-orangePercent {
-			width: 300px;
-			height: 300px;
 			border-radius: 50%;
 			color: $white;
 			font-size: 4rem;
 			font-family: $MazzardHBold;
 			position: relative;
+
+			@include media(">=tablet") {
+				width: 300px;
+				height: 300px;
+			}
 		}
 
 		.newYear-orangePercent1 {
-			width: 300px;
-			height: 300px;
+			width: 150px;
+			height: 150px;
 			border-radius: 50%;
 			background-color: $orange2;
 			position: absolute;
 			z-index: -1;
-			animation: moves1 6s linear infinite;
+			right: -100px;
+    		top: -47px;
+			animation: moves2 6s linear infinite;
+
+			@include media(">=tablet") {
+				width: 300px;
+				height: 300px;
+				right: auto;
+				top: auto;
+				animation: moves1 6s linear infinite;
+			}
 		}
 		.newYear-orangePercent2 {
-			text-align: left;
+			text-align: right;
 			position: relative;
+
+			@include media(">=tablet") {
+				text-align: left;
+			}
 		}
 	}
 
@@ -90,39 +113,51 @@
 		position: absolute;
 		left: -2rem;
 		top: -2rem;
+		height: 220px;
+		width: 310px;
 
-		@include media('>=tablet') {
+		@include media(">=phone-lg") {
+			width: 440px;
+			height: 240px;
+		}
+		@include media(">=tablet") {
 			height: 447px;
 			width: 360px;
 		}
-		@include media('>=desktop') {
+		@include media(">=desktop") {
 			height: 447px;
 			width: 360px;
 		}
-		@include media('>=widescreen-lg') {
+		@include media(">=widescreen-lg") {
 			height: 447px;
 			width: 360px;
 		}
 	}
 
-
 	&__inner4 {
 		padding: 1rem;
 		border-radius: 10px;
-		box-shadow: 1px 2px 2px 1px  rgba(0, 0, 0, 0.07), 0px 0px 0px 1px rgba(0, 0, 0, 0.07);
+		box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.07), 0px 0px 0px 1px rgba(0, 0, 0, 0.07);
 		width: 100%;
 		left: -2rem;
 		top: -2rem;
 
-		@include media('>=tablet') {
+		height: 190px;
+		width: 280px;
+
+		@include media(">=phone-lg") {
+			width: 410px;
+			height: 210px;
+		}
+		@include media(">=tablet") {
 			height: 417px;
 			width: 330px;
 		}
-		@include media('>=desktop') {
+		@include media(">=desktop") {
 			height: 417px;
 			width: 330px;
 		}
-		@include media('>=widescreen-lg') {
+		@include media(">=widescreen-lg") {
 			height: 417px;
 			width: 330px;
 		}
@@ -130,11 +165,22 @@
 
 	&__block2 {
 		position: relative;
+		margin-top: -300px;
 
+
+
+		@include media(">=phone-lg") {
+			margin-top: -320px;
+		}
+
+		@include media(">=tablet") {
+			margin-top: 0;
+		}
 		a {
-			position: absolute;
+			// position: absolute;
 
-			@include media('>=tablet') {
+			@include media(">=tablet") {
+				position: absolute;
 
 				&:nth-of-type(1) {
 					top: -60px;
@@ -149,8 +195,7 @@
 					left: -10px;
 				}
 			}
-			@include media('>=desktop') {
-
+			@include media(">=desktop") {
 				&:nth-of-type(1) {
 					top: 140px;
 					left: -80px;
@@ -165,8 +210,7 @@
 				}
 			}
 
-			@include media('>=widescreen-lg') {
-
+			@include media(">=widescreen-lg") {
 				&:nth-of-type(1) {
 					top: 80px;
 					left: 0px;
@@ -183,15 +227,20 @@
 		}
 
 		svg {
-			@include media('>=tablet') {
+			width: 70px;
+			height: 70px;
+			margin-left: -10px;
+
+			@include media(">=tablet") {
 				width: 100px;
 				height: 100px;
+				margin-left: 0px;
 			}
-			@include media('>=desktop') {
+			@include media(">=desktop") {
 				width: 150px;
 				height: 150px;
 			}
-			@include media('>=widescreen-lg') {
+			@include media(">=widescreen-lg") {
 				width: 200px;
 				height: 200px;
 			}
@@ -200,16 +249,29 @@
 }
 
 .bigSell {
+	margin-top: 20px;
+	margin-bottom: -40px;
+	font-size: 6rem;
 
-	@include media('>=tablet') {
+	&:nth-of-type(odd) {
+		display: none;
+	}
+
+	@include media(">=tablet") {
+		font-size: 9rem;
+		margin-top: 0;
+		margin-bottom: 0;
+
+		&:nth-of-type(odd) {
+			display: block;
+		}
+	}
+
+	@include media(">=desktop") {
 		font-size: 9rem;
 	}
 
-	@include media('>=desktop') {
-		font-size: 9rem;
-	}
-
-	@include media('>=widescreen-lg') {
+	@include media(">=widescreen-lg") {
 		font-size: 9rem;
 	}
 }
@@ -224,25 +286,30 @@
 	width: 100%;
 	color: $black;
 	line-height: 2;
+	margin-top: 120px;
 
-	@include media('>=tablet') {
+	@include media(">=phone-lg") {
+		justify-content: flex-start;
+	}
+	@include media(">=tablet") {
 		position: absolute;
 		right: -325px;
-    	bottom: -38px;
+		bottom: -38px;
+		margin-top: 0;
+		justify-content: flex-end;
 	}
 
-	@include media('>=desktop') {
+	@include media(">=desktop") {
 		position: absolute;
 		right: -345px;
-    	bottom: -18px;
+		bottom: -18px;
 	}
 
-	@include media('>=widescreen-lg') {
+	@include media(">=widescreen-lg") {
 		position: absolute;
 		right: -345px;
-    	bottom: -18px;
+		bottom: -18px;
 	}
-
 }
 .newYear-text-cost1 {
 	text-align: left;
@@ -263,33 +330,58 @@
 }
 
 @keyframes moves1 {
-    0% {
+	0% {
 		margin-left: -10px;
 		margin-top: -10px;
-    }
-    20% {
+	}
+	20% {
 		margin-top: 15px;
 		margin-left: 0px;
-
 	}
-    40% {
+	40% {
 		margin-left: 10px;
 		margin-top: 5px;
-    }
-    60% {
+	}
+	60% {
 		margin-left: 20px;
 		margin-top: 0px;
-    }
-    80% {
+	}
+	80% {
 		margin-left: 10px;
 		// margin-top: 15px;
-    }
-    100% {
+	}
+	100% {
 		margin-left: -10px;
 		margin-top: -10px;
-    }
+	}
 }
 
+@keyframes moves2 {
+	0% {
+		right: 60px;
+		top:  -20px;
+	}
+	20% {
+		right: 30px;
+		top:  -35px;
+	}
+	40% {
+		right: 0px;
+		top:  -45px;
+	}
+	60% {
+		right: -10px;
+		top:  -55px;
+	}
+	80% {
+		right: 20px;
+		top:  -30px;
+	}
+	100% {
+		right: 60px;
+		top:  -20px;
+	}
+}
 
 .btn-call {
 	position: fixed;
@@ -311,19 +403,35 @@
 		}
 	}
 
-	@include media('>=widescreen-lg') {
+	@include media(">=widescreen-lg") {
 		width: 100px;
 		height: 100px;
 	}
 }
 
 @keyframes movie {
-  35% {transform: rotate(0) translate(0, 0);}
-	40% {transform: rotate(5deg) translate(0, -2px);}
-	45% {transform: rotate(-3deg) translate(0, -2px);}
-	50% {transform: rotate(5deg) translate(0, -2px);}
-	55% {transform: rotate(-3deg) translate(0, -2px);}
-	60% {transform: rotate(5deg) translate(0, -2px);}
-	65% {transform: rotate(-3deg) translate(0, -2px);}
-	70% {transform: rotate(0) translate(0, 0);}
+	35% {
+		transform: rotate(0) translate(0, 0);
+	}
+	40% {
+		transform: rotate(5deg) translate(0, -2px);
+	}
+	45% {
+		transform: rotate(-3deg) translate(0, -2px);
+	}
+	50% {
+		transform: rotate(5deg) translate(0, -2px);
+	}
+	55% {
+		transform: rotate(-3deg) translate(0, -2px);
+	}
+	60% {
+		transform: rotate(5deg) translate(0, -2px);
+	}
+	65% {
+		transform: rotate(-3deg) translate(0, -2px);
+	}
+	70% {
+		transform: rotate(0) translate(0, 0);
+	}
 }
