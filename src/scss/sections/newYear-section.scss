@@ -4,7 +4,15 @@
 	padding-top: 2rem;
 
 
+	@include media('>=tablet') {
+		padding-top: 15rem;
+		padding-bottom: 15rem;
+	}
 	@include media('>=desktop') {
+		padding-top: 15rem;
+		padding-bottom: 15rem;
+	}
+	@include media('>=widescreen-lg') {
 		padding-top: 10rem;
 		padding-bottom: 20rem;
 	}
@@ -12,6 +20,20 @@
 	&__wrapper {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+
+
+		@include media('>=tablet') {
+			align-items: center;
+			justify-content: center;
+			display: flex;
+		}
+		@include media('>=desktop') {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			justify-content: flex-start;
+			align-items: flex-start;
+			padding-left: 2rem;
+		}
 	}
 
 	&__block1 {
@@ -20,6 +42,20 @@
 		.title__h2 {
 			margin-bottom: 0;
 			margin-left: 0;
+
+
+			@include media('>=tablet') {
+				font-size: 4.8rem;
+				white-space: nowrap;
+			}
+			@include media('>=desktop') {
+				font-size: 6.8rem;
+				white-space: nowrap;
+			}
+			@include media('>=widescreen-lg') {
+				font-size: 7.6rem;
+				white-space: nowrap;
+			}
 		}
 
 		.newYear-orangePercent {
@@ -43,6 +79,7 @@
 		}
 		.newYear-orangePercent2 {
 			text-align: left;
+			position: relative;
 		}
 	}
 
@@ -54,8 +91,16 @@
 		left: -2rem;
 		top: -2rem;
 
+		@include media('>=tablet') {
+			height: 447px;
+			width: 360px;
+		}
 		@include media('>=desktop') {
-			min-height: 430px;
+			height: 447px;
+			width: 360px;
+		}
+		@include media('>=widescreen-lg') {
+			height: 447px;
 			width: 360px;
 		}
 	}
@@ -68,21 +113,103 @@
 		width: 100%;
 		left: -2rem;
 		top: -2rem;
-		min-height: inherit;
+
+		@include media('>=tablet') {
+			height: 417px;
+			width: 330px;
+		}
+		@include media('>=desktop') {
+			height: 417px;
+			width: 330px;
+		}
+		@include media('>=widescreen-lg') {
+			height: 417px;
+			width: 330px;
+		}
 	}
 
 	&__block2 {
-		svg {
+		position: relative;
+
+		a {
+			position: absolute;
+
+			@include media('>=tablet') {
+
+				&:nth-of-type(1) {
+					top: -60px;
+					left: -80px;
+				}
+				&:nth-of-type(2) {
+					top: -120px;
+					left: 10px;
+				}
+				&:nth-of-type(3) {
+					top: 20px;
+					left: -10px;
+				}
+			}
 			@include media('>=desktop') {
-				width: 250px;
-				height: 250px;
+
+				&:nth-of-type(1) {
+					top: 140px;
+					left: -80px;
+				}
+				&:nth-of-type(2) {
+					top: 30px;
+					left: 100px;
+				}
+				&:nth-of-type(3) {
+					top: 250px;
+					left: 20px;
+				}
+			}
+
+			@include media('>=widescreen-lg') {
+
+				&:nth-of-type(1) {
+					top: 80px;
+					left: 0px;
+				}
+				&:nth-of-type(2) {
+					top: -20px;
+					left: 250px;
+				}
+				&:nth-of-type(3) {
+					top: 220px;
+					left: 200px;
+				}
+			}
+		}
+
+		svg {
+			@include media('>=tablet') {
+				width: 100px;
+				height: 100px;
+			}
+			@include media('>=desktop') {
+				width: 150px;
+				height: 150px;
+			}
+			@include media('>=widescreen-lg') {
+				width: 200px;
+				height: 200px;
 			}
 		}
 	}
 }
 
 .bigSell {
+
+	@include media('>=tablet') {
+		font-size: 9rem;
+	}
+
 	@include media('>=desktop') {
+		font-size: 9rem;
+	}
+
+	@include media('>=widescreen-lg') {
 		font-size: 9rem;
 	}
 }
@@ -94,7 +221,28 @@
 .newYear-text-cost {
 	display: flex;
 	justify-content: flex-end;
-	width: 90%;
+	width: 100%;
+	color: $black;
+	line-height: 2;
+
+	@include media('>=tablet') {
+		position: absolute;
+		right: -325px;
+    	bottom: -38px;
+	}
+
+	@include media('>=desktop') {
+		position: absolute;
+		right: -345px;
+    	bottom: -18px;
+	}
+
+	@include media('>=widescreen-lg') {
+		position: absolute;
+		right: -345px;
+    	bottom: -18px;
+	}
+
 }
 .newYear-text-cost1 {
 	text-align: left;
@@ -116,7 +264,7 @@
 
 @keyframes moves1 {
     0% {
-		margin-left: -8px;
+		margin-left: -10px;
 		margin-top: -10px;
     }
     20% {
@@ -125,18 +273,19 @@
 
 	}
     40% {
-		margin-left: 24px;
-		margin-top: 10px;
+		margin-left: 10px;
+		margin-top: 5px;
     }
     60% {
-		margin-top: 15px;
-		margin-left: 0px;
+		margin-left: 20px;
+		margin-top: 0px;
     }
     80% {
-		margin-left: 20px;
+		margin-left: 10px;
+		// margin-top: 15px;
     }
     100% {
-		margin-left: -8px;
+		margin-left: -10px;
 		margin-top: -10px;
     }
 }
@@ -162,7 +311,7 @@
 		}
 	}
 
-	@include media('>=desktop') {
+	@include media('>=widescreen-lg') {
 		width: 100px;
 		height: 100px;
 	}
